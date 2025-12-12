@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziraat Fakültesi Akıllı Sınav Programı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .sayfa { display: none; min-height: 100vh; animation: fadeIn 0.3s ease-in-out; }
+        .sayfa.aktif { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Renk Paleti */
+        .comu-blue { background-color: #004a99; }
+        .comu-red { background-color: #e53e3e; } 
+        .comu-purple { background-color: #6b46c1; }
+        .comu-orange { background-color: #ed8936; } 
+        
+        /* Tablo Stilleri */
+        .program-tablosu { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        .program-tablosu th, .program-tablosu td {
+            border: 1px solid #cbd5e1; padding: 4px; text-align: center;
+            height: 80px; vertical-align: top; 
+            font-size: 11px; line-height: 1.3;
+        }
+        .program-tablosu th { background-color: #e2e8f0; font-weight: 700; color: #1e293b; font-size: 11px; vertical-align: middle; }
+        .program-tablosu td .ders-kutu {
+            background-color: #fff5f5; 
+            border-left: 4px solid #c53030; 
+            padding: 4px; border-radius: 4px; height: 100%; display: flex; flex-direction: column; justify-content: center;
+            cursor: default;
+            transition: all 0.2s;
+        }
+        .program-tablosu td .ders-kutu:hover { background-color: #fed7d7; }
+        
+        /* FSD/SKS Liste Tablosu */
+        .liste-tablosu { width: 100%; border-collapse: collapse; }
+        .liste-tablosu th { background-color: #004a99; color: white; padding: 12px; text-align: left; }
+        .liste-tablosu td { border-bottom: 1px solid #e2e8f0; padding: 12px; color: #334155; }
+        .liste-tablosu tr:nth-child(even) { background-color: #f8fafc; }
+        .liste-tablosu tr:hover { background-color: #f1f5f9; }
+
+        .saat-sutunu { width: 60px; font-weight: bold; background-color: #f1f5f9; color: #475569; vertical-align: middle; font-size: 11px !important; }
+        
+        /* Mobil uyumluluk için tablo sütun genişliği */
+        @media (max-width: 768px) {
+            .program-tablosu th, .program-tablosu td { font-size: 9px; padding: 2px; }
+            .program-tablosu td .ders-kutu { font-size: 8px; line-height: 1.2; }
+            .saat-sutunu { width: 50px; font-size: 10px !important; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <div id="sayfa-anasayfa" class="sayfa aktif p-6 max-w-lg mx-auto pt-12">
+        <div class="text-center flex flex-col items-center">
+            <div class="mb-6 p-2">
+                <img src="https://cdn.comu.edu.tr/cms/ziraatfak/foto/logo.png" 
+                     alt="Ziraat Fakültesi Logo" 
+                     class="w-32 h-32 object-contain mx-auto drop-shadow-xl"
+                     onerror="this.style.display='none'"> 
+            </div>
+            
+            <h1 class="text-2xl font-bold text-gray-900 leading-tight">Çanakkale Onsekiz Mart Üniversitesi</h1>
+            <h2 class="text-xl font-semibold text-gray-700 mb-8 mt-2">ZİRAAT FAKÜLTESİ</h2>
+            
+            <div class="comu-red text-white p-6 rounded-xl shadow-xl mb-8 w-full transform transition hover:scale-105 duration-300">
+                <h3 class="text-2xl font-bold tracking-wide">FİNAL SINAV PROGRAMI</h3>
+                <p class="text-red-200 text-sm mt-2">2025/2026 GÜZ YARIYILI</p>
+                <p class="text-red-200 text-sm mt-2"> (Mobil Uyumlu Filtreleme Modülü) </p>
+            </div>
+
+            <div class="space-y-4 w-full">
+                <button onclick="sayfaGecis('sayfa-filtre', 'sinav')" class="w-full comu-red text-white text-xl font-bold p-5 rounded-xl shadow-lg hover:bg-red-700 transition active:scale-95 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-graduation-cap"></i> Sınav Programı Görüntüle
+                </button>
+                <div id="veri-durumu-gosterim" class="p-4 bg-red-100 text-red-800 rounded-xl text-sm border border-red-300 font-medium text-center hidden">
+                     <i class="fa-solid fa-exclamation-triangle mr-1"></i> Sınav Verisi Yüklenemedi! Lütfen veriyi kontrol edin.
+                </div>
+                <div id="veri-yuklendi-gosterim" class="p-4 bg-blue-50 text-blue-800 rounded-xl text-sm border border-blue-200 font-medium text-center hidden">
+                     <i class="fa-solid fa-check-circle mr-1"></i> Sınav Verisi Başarıyla Yüklendi.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sayfa-filtre" class="sayfa p-4 max-w-lg mx-auto">
+        <button onclick="sayfaGecis('sayfa-anasayfa')" class="mb-6 text-blue-700 font-bold text-lg flex items-center hover:underline">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Ana Sayfa
+        </button>
+        
+        <div class="comu-red text-white p-4 rounded-xl shadow-lg text-center mb-8">
+            <h3 class="text-xl font-bold">SINAV FİLTRELEME</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 space-y-8">
+            
+            <div>
+                <h4 class="text-blue-800 font-bold text-lg mb-4 flex items-center border-b-2 border-blue-100 pb-2">
+                    <i class="fa-solid fa-user-graduate mr-2"></i> ÖĞRENCİ GİRİŞİ
+                </h4>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">BÖLÜM SEÇİNİZ</label>
+                        <select id="filter-bolum" class="w-full p-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-gray-800 font-medium">
+                            <option value="">Seçiniz...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">SINIF/ŞUBE SEÇİNİZ</label>
+                        <select id="filter-sube" class="w-full p-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-gray-800 font-medium">
+                            <option value="">Seçiniz...</option>
+                        </select>
+                    </div>
+                    <button onclick="programiGoster('ogrenci')" class="w-full comu-red text-white font-bold text-lg p-3 rounded-xl shadow hover:bg-red-700 transition">
+                        Programı Göster
+                    </button>
+
+                    <div class="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-dashed border-gray-200">
+                        <button onclick="ozelDersleriGoster('FSD')" class="bg-orange-500 text-white text-sm font-bold p-3 rounded-xl shadow hover:bg-orange-600 transition text-center">
+                            <i class="fa-solid fa-list-check mr-1"></i> FSD Sınavları
+                        </button>
+                        <button onclick="ozelDersleriGoster('SKS')" class="bg-teal-600 text-white text-sm font-bold p-3 rounded-xl shadow hover:bg-teal-700 transition text-center">
+                            <i class="fa-solid fa-list-check mr-1"></i> SKS Sınavları
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative flex py-2 items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="flex-shrink-0 mx-4 text-gray-400 text-xs font-bold uppercase">veya</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+
+            <div>
+                <h4 class="text-purple-800 font-bold text-lg mb-4 flex items-center border-b-2 border-purple-100 pb-2">
+                    <i class="fa-solid fa-chalkboard-user mr-2"></i> AKADEMİSYEN GİRİŞİ
+                </h4>
+                <div class="space-y-4">
+                     <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">ÖĞRETİM ELEMANI SEÇİNİZ</label>
+                        <select id="filter-ogretmen" class="w-full p-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 outline-none text-gray-800 font-medium">
+                            <option value="">Seçiniz...</option>
+                        </select>
+                    </div>
+                    <button onclick="programiGoster('ogretmen')" class="w-full comu-purple text-white font-bold text-lg p-3 rounded-xl shadow hover:bg-purple-800 transition">
+                        Programı Göster
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sayfa-sonuc" class="sayfa p-2 w-full mx-auto max-w-6xl">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 mt-2 gap-4">
+            <button onclick="sayfaGecis('sayfa-filtre')" class="text-blue-700 font-bold text-sm flex items-center bg-white px-4 py-2 rounded-lg shadow border border-blue-100 hover:bg-blue-50">
+                <i class="fa-solid fa-filter mr-2"></i> Sorgu Ekranına Dön
+            </button>
+            
+            <div class="text-left md:text-right flex-1">
+                <h3 class="text-lg font-bold text-red-900" id="sonuc-baslik-ana">Sınav Programı</h3>
+                <p class="text-xs font-semibold text-gray-600" id="sonuc-baslik-detay">-</p>
+            </div>
+        </div>
+
+        <div id="tablo-container" class="space-y-8">
+            </div>
+
+        <div id="liste-container" class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hidden">
+            <div class="overflow-x-auto">
+                <table class="liste-tablosu">
+                    <thead>
+                        <tr>
+                            <th>Ders/Sınav Adı</th>
+                            <th>Öğretim Elemanı</th>
+                            <th>Tarih</th>
+                            <th>Saat</th>
+                            <th>Sınav Yeri</th>
+                        </tr>
+                    </thead>
+                    <tbody id="liste-govde"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="sonuc-yok" class="hidden bg-red-50 border border-red-200 text-red-700 p-6 rounded-xl text-center font-bold text-sm shadow-sm mt-4">
+            <i class="fa-solid fa-circle-exclamation text-2xl mb-2 block"></i>
+            Kriterlere uygun sınav bulunamadı.
+        </div>
+    </div>
+
+    <script>
+        // ************************************************************************
+        // 1. ADIM: VERİ YAPIŞTIRMA ALANI
+        // Excel'deki "Final VT.xlsx - Final Program.csv" verilerini buraya yapıştırın.
+        // ************************************************************************
+        const exceldenKopyalananVeri = `
+Sıra	BÖLÜM	SINIF	Ders Kodu	Dersin Adı	DERSİ VEREN ÖĞRETİM ELEMANI	GÜN	SINAV SAATİ	09:00	10:30	11:45	12:00	13:00	13:30	14:00	15:00	16:00	.	.	.	.	.	.	.	SINAVIN YAPILACAĞI YER	SINAVIN YAPILACAĞI YER (EK SINIF)
+49	TYS	1	 ZTY-1013	Peyzaj Mimarlığı	Arda AKÇAL	2025-12-29		x																201	
+288	TB	1	ZTB-1007 / TBİ-1009	Kariyer Planlama	Onur Hocaoğlu	2025-12-29		x																Prof.Dr H. TURHAN	
+312	BB	1	ZBB-1009 / BHB-1105	Matematik	Saniye CAN	2025-12-29		x																01	
+313	BK	1	ZBK-1009 / BTK-1109	Matematik	Saniye CAN	2025-12-29		x																AMFİ	AMFİ
+317	TBT	1	ZBY-1009 / TRB-1005	Matematik	Saniye CAN	2025-12-29		x																113	
+318	TE	1	ZTE-1009 / TAE-1005	Matematik	Saniye CAN	2025-12-29		x																AMFİ	
+314	TM	1	ZTM-1009 / TMT-1005	Matematik	Saniye CAN	2025-12-29		x																02	
+315	TO	1	ZTO-1007 / TBB-1005	Matematik	Saniye CAN	2025-12-29		x																101	
+316	ZO	1	ZTN-1009 / ZOO-1005	Matematik	Saniye CAN	2025-12-29		x																102	
+23	BK	1	BTK-1005	Temel Bilgi Teknoloji Kullanımı	Ali Kürşat ŞAHİN	2025-12-29			x															Bölüm Odası	
+85	TB	2	ZTB-2015	Biyokimya	Cahit AKGÜL	2025-12-29			x															202	
+86	TBT	2	ZBY-2005 / TRB-2005	Biyokimya	Cahit AKGÜL	2025-12-29			x															203	
+91	BK	2	ZBK-2013 / BTK-2005	Genel Sebzecilik	Canan Öztokat KUZUCU	2025-12-29			x															113	
+171	TO	2	ZTO-2001 / TBB-2001	Analitik Kimya	Gülşen SAĞLIKOĞLU	2025-12-29			x															01	
+175	TM	2	ZTM-2007/ TMT-2007	Mühendislik Termodinamiği	Habib KOCABIYIK	2025-12-29			x															TM. Uyg.Lab.	
+181	ZO	2	ZTN-2007	Biyokimya	Hande Işıl AKBAĞ	2025-12-29			x															102	
+182	ZO	3	ZOO-3001	Hayvan Besleme Biyokimyası	Hande Işıl AKBAĞ	2025-12-29			x															101	
+191	TE	2	ZTE-2017	Ekoloji	Harun BAYTEKİN	2025-12-29			x															105	
+225	BB	1	ZBB-1007 / BHB-1013	Kariyer Planlama 	M. Ali GÜNDOĞDU	2025-12-29			x															02	
+340	TE	1	ZTE-1007 / TAE-1013	Kariyer Planlama	Selma KAYALAK	2025-12-29			x															01	
+386	TYS	1	TYS-1101	Temel Bilgi Teknolojisi Kullanımı	Umut MUCAN	2025-12-29			x															Bilgisayar Lab.	
+387	TYS	1	ZTY-1005	Temel Bilgisayar Uygulamaları	Umut MUCAN	2025-12-29			x															Bilgisayar Lab.	
+392	TM	1	ZTM-1007	Mühendisliğe Giriş	Ünal ÜRKMEZ	2025-12-29			x															201	
+319	TM	3	TMT-3105	Ergonomi	Sarp Korkut SÜMER	2025-12-29					x													TM. Uyg.Lab.	
+327	BB	3	BHB-3007	Bahçe Bitki Organik Tarım	Seçkin KAYA	2025-12-29					x													201	
+331	TYS	3	TYS-3001	Kırsal Yerleşim Planlaması	Sefa AKSU	2025-12-29					x													102	
+339	TE	3	TAE-3005	İstatistik II	Selma KAYALAK	2025-12-29					x													101	
+360	ZO	3	ZOO-3005	Araştırma ve Deneme Yöntemleri	Soner YİĞİT	2025-12-29					x													Prof.Dr H. TURHAN	
+361	BK	3	BTK-3007	Böcek Sistematiği	Şahin KÖK	2025-12-29					x													113	
+378	TBT	3	TRB-3003	Bitki Doku Kültürü	Uğur SARI	2025-12-29					x													202	
+10	BK	4	BTK-4021	Depolanmış Ürün Hastalıkları	Ahmet ULUDAĞ	2025-12-29							x											205	
+72	TE	4	TAE-4011	Uluslararası Pazarlama	Bengü EVEREST	2025-12-29							x											Bölüm Odası	
+92	BB	4	BHB-4013	Kültür Sebzeleri I	Canan Öztokat KUZUCU	2025-12-29							x											113	
+142	TB	4	TBİ-4001	Çayır Mera Yönetimi	Fırat ALATÜRK	2025-12-29							x											102	
+159	TYS	4	TYS-4009	Su Kaynaklarının Planlanması	Gökhan ÇAMOĞLU	2025-12-29							x											103	
+185	TBT	4	TRB-4003	Genetik Mühendisliği	Hanife YANDAYAN	2025-12-29							x											203	
+198	TO	4	TBB-4011	Jeomorfoloji	Hüseyin EKİNCİ	2025-12-29							x											101	
+205	TM	4	TMT-4115	Sulama Makinaları ve Teknolojileri	İsmail KAVDIR	2025-12-29							x											TM. Uyg.Lab.	
+218	ZO	4	ZOO-4003	Kanatlı Hayvan Besleme	Kemal ÇELİK	2025-12-29							x											Prof.Dr H. TURHAN	
+32	ZO	2	ZTN-2001	Toprak Bilimi ve Bitki Besleme	Ali SUNGUR	2025-12-29									x									02	
+136	BK	2	ZBK-2017	Tarla Bitkileri	Fatih KAHRIMAN	2025-12-29									x									113	
+137	TO	2	ZTO-2015	Tarla Bitkileri	Fatih KAHRIMAN	2025-12-29									x									113	
+51	BB	2	ZBB-2013 / BHB-2011	Tarımsal Mekanizasyon	Gıyasettin ÇİÇEK	2025-12-29									x									Prof.Dr H. TURHAN	
+52	TYS	2	ZTY-2007 / TYS-2011	Tarımsal Mekanizasyon	Gıyasettin ÇİÇEK	2025-12-29									x									Prof.Dr H. TURHAN	
+233	TB	2	TBİ-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	2025-12-29									x									201	
+234	TBT	2	ZBY-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	2025-12-29									x									201	
+348	TE	2	TAE-2003	Kırsal Sosyoloji	Sema Ezgi YÜCEER PALA	2025-12-29									x									103	
+30	BB	2	ZBB-2015 / BHB-2015	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+28	BK	2	BTK-2015	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+29	TBT	2	TRB-2009	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+31	ZO	2	ZOO-2009	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+246	TYS	2	TYS-2005	Akışkanlar Mekaniği	Muharrem Yetiş YAVUZ	2025-12-30		x																101	
+357	TE	2	ZTE-2001	Ekonomi	Sibel TAN	2025-12-30		x																102	
+358	TE	2	TAE-2001	Tarım Ekonomisi	Sibel TAN	2025-12-30		x																102	
+397	TB	2	ZTB-2011	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
+399	TM	2	TMT-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
+398	TM	2	ZTM-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
+54	TE	3	TAE-3003	Mikro Ekonomi	Arif SEMERCİ	2025-12-30			x															201	
+66	ZO	3	ZOO-3003	Hayvan Anatomisi	Baver COŞKUN	2025-12-30			x															101	
+83	TO	3	TBB-3003	Toprak Biyolojisi	Cafer TÜRKMEN	2025-12-30			x															01	
+241	TM	3	TMT-3107	Makine Elemanları	Mehmet YAZAR	2025-12-30			x															102	
+249	BB	3	BHB-3001	Araştırma ve Deneme Metotları	Murat ŞEKER	2025-12-30			x															Prof.Dr H. TURHAN	
+256	TYS	3	TYS-3011	Toprak ve Su Koruma Mühendisliği	Murat TEKİNER	2025-12-30			x															02	
+364	TBT	3	TRB-3005	Biyoteknolojiye Giriş	Şemun TAYYAR	2025-12-30			x															202	
+377	BK	3	BTK-3009	Böcek Morfolojisi ve Fizyolojisi	Uğur GÖZEL	2025-12-30			x															113	
+56	TE	4	TAE-4013	Tarıma Dayalı Sanayi	Arif SEMERCİ	2025-12-30				x														201	
+122	ZO	4	ZOO-4023	Tarımsal Proje Hazırlama Tekniği	Duygu AKTÜRK	2025-12-30				x														103	
+188	TBT	4	TRB-4015	Moleküler Biyolojide Kullanılan Yöntemler	Hanife YANDAYAN	2025-12-30				x														102	
+190	TB	4	TBİ-4011	Çim Tekniği	Harun BAYTEKİN	2025-12-30				x														101	
+306	TM	4	TMT-4001	Hassas Tarım Teknolojileri	Sakine ÖZPINAR	2025-12-30				x														TM. Uyg.Lab.	
+330	BB	4	BHB-4017	Topraksız Tarım	Seçkin KAYA	2025-12-30				x														105	
+384	TYS	4	TYS-4013	Mesleki Bilgisayar Programları I	Umut MUCAN	2025-12-30				x														Bilgisayar Lab.	
+148	BB	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+149	BK	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+150	TB	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												01	
+151	TBT	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+152	TE	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+154	TM	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												Prof.Dr H. TURHAN	
+153	TO	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												Prof.Dr H. TURHAN	
+155	TYS	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												113	
+156	ZO	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												113	
+294	BB	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+295	BK	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+292	TB	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										01	
+293	TBT	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+299	TE	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+296	TM	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										Prof.Dr H. TURHAN	
+300	TO	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										Prof.Dr H. TURHAN	
+297	TYS	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										113	
+298	ZO	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										113	
+27	BK	4	BTK-4011	Organik Tarımda Zararlılarla Mücadele	Ali ÖZPINAR	2025-12-30									x									201	
+43	TB	4	TBİ-4015	Yemeklik Tane Baklagiller	Altıngül ÖZASLAN PARLAK	2025-12-30									x									202	
+59	ZO	4	ZOO-4015	Çevre ve Sürdürülebilirliği	Aynur KONYALI	2025-12-30									x									Bölüm Odası	
+138	ZO	4	ZOO-4011	Hayvan Yetiştirme	Feyzi UĞUR	2025-12-30									x									101	
+226	BB	4	BHB-4015	Subtropik İklim Meyve Türleri	M. Ali GÜNDOĞDU	2025-12-30									x									202	
+14	BK	2	ZBK-2007	Akıllı Tarım	Ali KARANFİL	2025-12-30																		113	
+365	ZO	2	ZOO-2007	Tarımsal Biyoteknoloji	Şemun TAYYAR	2025-12-30																		201	
+238	TB	1	ZTB-1001 / TBİ-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																Prof.Dr H. TURHAN	
+239	TBT	1	ZBY-1001 / TRB-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																113	
+240	TM	1	ZTM-1001 / TMT-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																101	
+285	BB	1	ZBB-1001 / BHB-1101	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
+286	TE	1	ZTE-1001 / TAE-1101	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
+287	TO	1	ZTO-1001 / TBB-1001	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
+352	BK	1	ZBK-1001 / BTK-1111	Fizik	Sibel ŞEN	2025-12-31		x																202	
+353	TYS	1	ZTY-1001 / TYS-1007	Fizik	Sibel ŞEN	2025-12-31		x																201	
+354	ZO	1	ZTN-1001 / ZOO-1001	Fizik	Sibel ŞEN	2025-12-31		x																102	
+55	TE	2	ZTE-2013	Mikro Ekonomi	Arif SEMERCİ	2025-12-31			x															103	
+99	ZO	2	ZTN-2003 / ZOO-2005	Hayvan ve Çevresi	Cemil TÖLÜ	2025-12-31			x															202	
+134	TB	2	ZTB-2003 / TBİ-2003	İstatistik	Fatih KAHRIMAN	2025-12-31			x															AMFİ	
+135	TYS	2	ZTY-2001	İstatistik	Fatih KAHRIMAN	2025-12-31			x															AMFİ	
+53	BK	2	ZBK-2005	Teknik Resim	Gıyasettin ÇİÇEK	2025-12-31			x															101	
+177	BB	2	ZBB-2009 / BHB-2007	Gıda Bilimi ve Güvenliği	Hakan ENGİN	2025-12-31			x															201	
+311	TM	2	ZTM-2003 / TMT-2009	Diferansiyel Denklemler	Saniye CAN	2025-12-31			x															113	
+368	TO	2	ZTO-2003	Coğrafi Bilgi Sistemleri	Timuçin EVEREST	2025-12-31			x															203	
+385	TBT	2	ZBY-2013	Teknik Resim	Umut MUCAN	2025-12-31			x															105	
+26	BK	4	BTK-4003	Meyve ve Bağ Zararlıları	Ali ÖZPINAR	2026-01-02		x																Prof.Dr H. TURHAN	
+62	TB	4	TBİ-4013	Tahıl Baklagil ve Yem Bitkileri Hastalıkları	Baboo Ali	2026-01-02		x																101	
+69	ZO	4	ZOO-4009	Hayvan Hastalıkları	Baver COŞKUN	2026-01-02		x																201	
+145	TM	4	TMT-4123	Tarımda Makina Kullanım Teknikleri	Gıyasettin ÇİÇEK	2026-01-02		x																TM. Uyg.Lab.	
+255	TYS	4	TYS-4007	Toprak Su Yapılarının Tasarımı	Murat TEKİNER	2026-01-02		x																103	
+402	TO	4	TBB-4003	Sürdürülebilir Toprak Verimliliği	Yakup ÇIKILI	2026-01-02		x																202	
+121	TE	4	TAE-4009	Tarımsal Proje Haz. Tek. II (ZORUNLU)	Duygu AKTÜRK	2026-01-02			x															Bölüm Odası	
+132	BK	2	ZBK-2001 / BTK-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	2026-01-02			x															AMFİ	
+133	TB	2	ZTB-2001 / TBİ-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	2026-01-02			x															AMFİ	
+174	TM	2	ZTM-2011 / TMT-2011	Bilgisayar Destekli Tasarım I	Habib KOCABIYIK	2026-01-02			x															Bilgisayar Lab.	
+206	TE	2	TAE-2005	Tarım Makinaları	İsmail KAVDIR	2026-01-02			x															101	
+207	TE	2	ZTE-2009	Tarımsal Mekanizasyon	İsmail KAVDIR	2026-01-02			x															101	
+250	BB	2	ZBB-2003 / BHB-2003	Genetik	Murat ŞEKER	2026-01-02			x															113	
+262	TYS	2	ZTY-2003	Teknik Resim	Murat YILDIRIM	2026-01-02			x															01	
+283	TO	2	ZTO-2005	Ölçme Bilgisi	Okan ERKEN	2026-01-02			x															201	
+282	ZO	2	ZOO-2013	Ölçme Bilgisi	Okan ERKEN	2026-01-02			x															202	
+373	TBT	2	ZBY-2001 / TRB-2001	İstatistik	Tuğba SÖKÜT ACAR	2026-01-02			x															02	
+5	BB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+7	BK	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+1	TB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+8	TBT	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													Prof.Dr H. TURHAN	
+2	TE	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+3	TO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													Prof.Dr H. TURHAN	
+6	TYS	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													113	
+4	ZO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													113	
+38	BB	3	BHB-3005	Genel Bağcılık	Alper DARDENİZ	2026-01-02					x													201	
+180	ZO	4	ZOO-4005	Hayvan Islahına Giriş	Hakan ERDEM	2026-01-02					x													202	
+243	TB	3	TBİ-3007	Araştırma Deneme Metotları	Mevlüt AKÇURA	2026-01-02					x													02	
+242	TO	3	TBB-3005	Araştırma ve Deneme Yöntemleri	Mevlüt Akçura	2026-01-02					x													102	
+269	TM	1	ZTM-1005	Biyoloji	Mustafa Kemal AKBULUT	2026-01-02					x													101	
+270	TM	1	TMT-1107	Mühendislik Biyolojisi	Mustafa Kemal AKBULUT	2026-01-02					x													101	
+16	BK	4	BTK-4009	Endüstri Bitkileri Hastalıkları	Ali KARANFİL	2026-01-02							x											113	
+213	TYS	2	TYS-2003	Sulama Gübreleme İlişkileri	İsmail TAŞ	2026-01-02							x											202	
+224	BB	2	ZBB-2005 / BHB-2013	İstatistik	M. Ali GÜNDOĞDU	2026-01-02							x											Prof.Dr H. TURHAN	
+351	ZO	2	ZTN-2033	Bahçe Bitkileri	Serkan CANDAR	2026-01-02							x											101	
+371	TO	2	ZTO-2009 / TBB-2013	Genel Sebzecilik	Tolga SARIYER	2026-01-02							x											201	
+162	BB	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+163	BK	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+164	TB	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+165	TBT	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+166	TE	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+167	TM	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									Prof.Dr H. TURHAN	
+168	TO	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									Prof.Dr H. TURHAN	
+169	TYS	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									113	
+170	ZO	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									113	
+67	TBT	2	ZBY-2017 / TRB-2007	Hayvan Anatomisi Fizyolojisi	Baver COŞKUN	2026-01-05		x																203	
+104	TO	2	ZTO-2013	Entomoloji	Çiğdem GÜNEŞ	2026-01-05		x																201	
+105	ZO	2	ZTN-2023	Entomoloji	Çiğdem GÜNEŞ	2026-01-05		x																201	
+194	BB	2	ZBB-2001 / BHB-2001	Bitki Fizyolojisi	Harun ÇOBAN	2026-01-05		x																101	
+259	TYS	2	TYS-2001	Mühendislik Ölçmeleri	Murat YILDIRIM	2026-01-05		x																02	
+336	TB	2	ZTB-2005	Ekonomi	Selma KAYALAK	2026-01-05		x																113	
+337	TM	2	ZTM-2005	Ekonomi	Selma KAYALAK	2026-01-05		x																113	
+383	TE	2	ZTE-2015	Coğrafi Bilgi Sistemleri	Umut MUCAN	2026-01-05		x																Bilgisayar Lab.	
+404	BK	2	ZBK-2015	Toprak Bilimi ve Bitki Besleme	Yasemin KAVDIR	2026-01-05		x																202	
+34	FSD	3	FSD	Toprak ve İnsan 	Ali SUNGUR	2026-01-05			x															02	
+37	FSD	3	FSD	Laboratuvar Tekniği 	Ali SÜMER	2026-01-05			x															AMFİ	
+117	FSD	3	FSD-3009	Tarımsal İşletmelerde Proje Hazırlama Tekniği ve Fizibilite	Duygu AKTÜRK	2026-01-05			x															Bölüm Odası	
+131	FSD	3	FSD-3007	Fidancılık Teknikleri	F. Cem KUZUCU	2026-01-05			x															202	
+178	FSD	3	FSD-3005	İyi Tarım Uygulamaları	Hakan ENGİN	2026-01-05			x															101	
+212	FSD	3	FSD-3057	Kuraklık ve Su Kaynakları	İsmail TAŞ	2026-01-05			x															Bölüm Odası	
+223	FSD	3	FSD	Bitki Korumada Yeni Gelişmeler	Levent EFİL	2026-01-05			x															205	
+227	FSD	3	FSD-3069	Zeytin Yetiştiriciliği ve Zeytinyağı Üretimi	M. Ali GÜNDOĞDU	2026-01-05			x															Bölüm Odası	
+257	FSD	3	FSD-3023	Bilgisayar Destekli Çizim	Murat YILDIRIM	2026-01-05			x															204	
+324	FSD	3	FSD	Bitki Hekimliği	Savaş KORKMAZ	2026-01-05			x															113	
+329	FSD	3	FSD-3001	Organik Tarımın Temel İlkeleri	Seçkin KAYA	2026-01-05			x															201	
+332	FSD	3	FSD-3029	Kırsal Yerleşim ve Kalkınma Planlaması	Sefa AKSU	2026-01-05			x															Bölüm Odası	
+355	FSD	3	FSD-3011	Avrupa Birliği Ortak Tarım Politikası ve Türk Tarımı	Sibel TAN	2026-01-05			x															203	
+362	FSD	3	FSD	Zararlılarla Alternatif Mücadele	Şahin KÖK	2026-01-05			x															Bölüm Odası	
+401	FSD	3	FSD	Gübreler ve Gübreleme	Yakup ÇIKILI	2026-01-05			x															Prof.Dr H. TURHAN	
+403	FSD	3	FSD	Topraksız Tarım Teknikleri	Yakup ÇIKILI	2026-01-05			x															Prof.Dr H. TURHAN	
+438	SKS	4	SKS-4051	Sportif Balıkçılık	Ali İŞMEN	2026-01-05					x													103	
+20	SKS	4	SKS-4019	Adli Entomoloji	Ali Kürşat ŞAHİN	2026-01-05					x													202	
+103	SKS	4	SKS-4009	Böceklerin Dünyası	Çiğdem GÜNEŞ	2026-01-05					x													201	
+412	SKS	4	SKS-4057	Anadolu'da Beslenme Tarihi	Çilem Yavşan	2026-01-05					x													105	
+173	SKS	4	SKS-4003	Spor ve İletişim	Güner GÜNAY	2026-01-05					x													Hasan Mefsuf Spr. Sln	
+179	SKS	4	SKS-4005	Meyve ve Sebzelerin İnsan Bes.Sağ.Açısından Önemi	Hakan ENGİN	2026-01-05					x													AMFİ	AMFİ
+437	SKS	4	SKS-4055	Temel ve İleri Fotoğrafçılık Teknikleri	Zayde Ayvaz	2026-01-05					x													01	
+9	BK	1	ZBK-1005 / BTK-1003	Botanik	Ahmet ULUDAĞ	2026-01-05							x											Prof.Dr H. TURHAN	
+247	TYS	1	ZTY-1007 / TYS-1017	Kariyer Planlama	Muharrem Yetiş YAVUZ	2026-01-05							x											201	
+338	ZO	1	ZTN-1011	Ekonomi	Selma KAYALAK	2026-01-05							x											202	
+342	BB	1	ZBB-1003 / BHB-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+345	TB	1	ZTB-1003 / TBİ-1003	Kimya	Sema EKİCİ	2026-01-05							x											01	02
+343	TBT	1	ZBY-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+344	TE	1	ZTE-1003 / TAE-1003	Kimya	Sema EKİCİ	2026-01-05							x											113	101
+346	TM	1	ZTM-1003 / TMT-1003	Kimya	Sema EKİCİ	2026-01-05							x											102	
+347	TO	1	ZTO-1003 / TBB-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+33	TO	3	TBB-3011	Toprak Kimyası	Ali SUNGUR	2026-01-05									x									102	
+57	TE	3	TAE-3011	Tarımsal Kuruluşlar ve Organizasyon	Arif SEMERCİ	2026-01-05									x									202	
+144	BK	3	BTK-3013	Tarımsal Savaşım I	Figen MERT	2026-01-05									x									113	
+197	TYS	1	TYS-1003	Jeoloji	Hüseyin EKİNCİ	2026-01-05									x									103	
+217	TBT	3	TRB-3009	Enstrümental Analiz	İsmet KAYA	2026-01-05									x									01	
+252	TYS	3	TYS-3007	Sistem Mühendisliği	Murat TEKİNER	2026-01-05									x									02	
+304	TB	3	TBİ-3011	Endüstri Bitkileri I	Ramazan ÇAKMAKÇI	2026-01-05									x									Prof.Dr H. TURHAN	
+310	TM	3	TMT-3111	Toprak İşleme Makinaları	Sakine ÖZPINAR	2026-01-05									x									101	
+410	BB	3	BHB-3015	Üzümsü Meyveler	Zeliha GÖKBAYRAK	2026-01-05									x									201	
+143	BK	4	BTK-4007	Tahıl ve Baklagil Hastalıkları	Figen MERT	2026-01-05																		113	
+11	ZO	2	ZTN-2025	Fitopatoloji	Ahmet ULUDAĞ	2026-01-06		x																205	
+61	TBT	2	ZBY-2009	Hayvansal Üretim	Aynur KONYALI	2026-01-06		x																101	
+60	TYS	2	ZTY-2005 / TYS-2009	Hayvansal Üretim	Aynur KONYALI	2026-01-06		x																101	
+215	TB	2	ZTB-2009 / TBİ-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	2026-01-06		x																113	
+216	TO	2	TBB-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	2026-01-06		x																113	
+309	BK	2	ZBK-2011 / BTK-2013	Tarımsal Mekanizasyon	Sakine ÖZPINAR	2026-01-06		x																Prof.Dr H. TURHAN	
+382	TE	2	ZTE-2011	Bilgisayar Destekli Tasarım	Umut MUCAN	2026-01-06		x																Bilgisayar Lab.	
+24	BK	3	BTK-3003	Böcek Ekolojisi	Ali ÖZPINAR	2026-01-06			x															Prof.Dr H. TURHAN	
+26	TM	3	TMT-3101.1	Araştırma Deneme Yöntemleri	Burcu Mestav	2026-01-06			x															01	
+290	TB	3	TBİ-3003	Biyoteknoloji	Onur Sinan TÜRKMEN	2026-01-06			x															201	
+291	TE	3	TAE-3017	Makroekonomi	Özge Can NİYAZ ALTINOK	2026-01-06			x															101	
+334	TYS	3	TYS-3009	Zemin Mekaniği	Sefa AKSU	2026-01-06			x															02	
+380	TBT	3	TRB-3007	Mesleki İngilizce I	Uğur SARI	2026-01-06			x															202	
+405	TO	3	TBB-3001	Toprak Fiziği	Yasemin KAVDIR	2026-01-06			x															102	
+48	BB	4	BHB-4005	Kesme Çiçek Yetiştirme Teknikleri	Arda AKÇAL	2026-01-06					x													202	
+65	TB	4	TBİ-4005	Tohumluk Bilimi ve Teknolojisi	Bahri İZCİ	2026-01-06					x													Prof.Dr H. TURHAN	
+80	BK	4	BTK-4025	Bitki Koruma Ürünlerinin Organizasyonu	Burak POLAT	2026-01-06					x													205	
+123	TE	4	TAE-4001	Üretim Ekonomisi	Duygu AKTÜRK	2026-01-06					x													113	
+220	ZO	4	ZOO-4001	Yem Toksikolojisi	Kemal ÇELİK	2026-01-06					x													201	
+114	BK	1	ZBK-1003 / BTK-1007	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
+115	TYS	1	ZTY-1003 / TYS-1009	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
+116	ZO	1	ZTN-1003 / ZOO-1003	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
+127	TE	1	TAE-1011	Temel Bilgi Teknoloji Kullanımı	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
+129	TO	1	ZTO-1011	Temel Bilgisayar Programları	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
+130	BB	1	ZBB-1011 - BHB-1007	Temel Bilgisayar Uygulamaları 	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
+200	TB	1	ZTB-1011	Tarım Hukuku	İlker KARAÖNDER	2026-01-06							x											101	
+229	TM	1	ZTM-1013 / TMT-1013	Kariyer Planlama	M. Burak BÜYÜKCAN	2026-01-06							x											201	
+15	TYS	2	TYS-2007	Bitki Koruma	Ali KARANFİL	2026-01-06									x									203	
+22	BK	2	ZBK-2003	İstatistik	Ali Kürşat ŞAHİN	2026-01-06									x									113	
+36	ZO	2	ZTN-2005	Bitki Fizyolojisi	Ali SÜMER	2026-01-06									x									201	
+44	TM	2	ZTM-2013	Statik	Anıl ÇAY	2026-01-06									x									202	
+45	TM	2	TMT-2013	Statik ve Mukavemet	Anıl ÇAY	2026-01-06									x									202	
+289	TB	2	ZTB-2013	Tarla Tarımı	Onur Hocaoğlu	2026-01-06									x									Prof.Dr H. TURHAN	
+68	ZO	3	ZOO-3013	Hayvan Fizyolojisi	Baver COŞKUN	2026-01-07		x																201	
+211	TYS	3	TYS-3003	Hidroloji	İsmail TAŞ	2026-01-07		x																202	
+251	BB	3	BHB-3013	Tropik İklim Meyve Türleri	Murat ŞEKER	2026-01-07		x																Prof.Dr H. TURHAN	
+356	TE	3	TAE-3009	Doğal Kaynaklar ve Çevre Ekonomisi	Sibel TAN	2026-01-07		x																113	
+100	ZO	4	ZOO-4019	Hayvan ve Organik Üretim	Cemil TÖLÜ	2026-01-07			x															103	
+147	TO	4	TBB-4019	Örtüaltı Yetiştiriciliğinde Gübreleme	Gizem Aksu	2026-01-07			x															201	
+192	TB	4	TBİ-4009	Sürdürülebilir Tarım	Harun BAYTEKİN	2026-01-07			x															202	
+204	BK	4	BTK-4013	Depolanmış Ürün Zararlıları	İsmail KASAP	2026-01-07			x															102	
+208	TYS	4	TYS-4017	Atık Su Yönetimi	İsmail TAŞ	2026-01-07			x															203	
+308	TM	4	TMT-4119	Koruyucu Toprak İşleme ve Doğrudan Ekim	Sakine ÖZPINAR	2026-01-07			x															101	
+379	TBT	4	TRB-4009	Biyoinformatik I	Uğur SARI	2026-01-07			x															105	
+46	TM	1	TMT-1009	Temel Bilgi Teknolojisi Kullanımı	Anıl ÇAY	2026-01-07					x													Bilgisayar Lab.	
+47	TM	1	ZTM-1011	Temel Bilgisayar Uygulamaları	Anıl ÇAY	2026-01-07					x													Bilgisayar Lab.	
+96	TBT	1	ZBY-1007 / TRB-1011	Kariyer Planlama	Cem Ömer EGESEL	2026-01-07					x													Prof.Dr H. TURHAN	
+184	ZO	1	ZTN-1005 / ZOO-1007	Botanik	Hanife AKYALÇIN	2026-01-07					x													113	
+277	BB	1	BHB-1009	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+278	BK	1	BTK-1001	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+279	TE	1	TAE-1109	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+280	TO	1	ZTO-1009 / TBB-1007	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+281	TYS	1	ZTY-1011 / TYS-1005	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+40	TYS	2	ZTY-2013 / TYS-2017	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-07							x											Prof.Dr H. TURHAN	
+41	ZO	2	ZTN-2009	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-07							x											Prof.Dr H. TURHAN	
+94	BK	2	BTK-2003	Genetik	Cem Ömer EGESEL	2026-01-07							x											101	
+139	TO	2	TBB-2015	Hayvan Yetiştirme	Feyzi UĞUR	2026-01-07							x											201	
+140	BB	2	ZBB-2017	Hayvansal Üretim	Feyzi UĞUR	2026-01-07							x											201	
+141	TO	2	ZTO-2011	Hayvansal Üretim	Feyzi UĞUR	2026-01-07							x											202	
+202	TBT	2	ZBY-2003 / TRB-2003	Genetik	İskender TİRYAKİ	2026-01-07							x											113	103
+237	TE	2	ZTE-2003	İstatistik	Mehmet MENDEŞ	2026-01-07							x											204	
+328	TB	2	TBİ-2013	Genel Sebzecilik	Seçkin KAYA	2026-01-07							x											102	
+231	TM	2	ZTM-2015	Ölçme Kontrol ve Otomasyon	M. Burak BÜYÜKCAN	2026-01-07									x									TM. Uyg.Lab.	
+323	BK	3	BTK-3011	Bitki Bakteriyolojisi	Savaş KORKMAZ	2026-01-07									x									113	
+50	BB	3	BHB-3003	Süs Bitkileri Yetiştiriciliği	Arda AKÇAL	2026-01-08		x																113	
+71	TE	3	TAE-3013	Tarımsal Pazarlama	Bengü EVEREST	2026-01-08		x																01	
+186	TBT	3	TRB-3001	Moleküler Biyoloji	Hanife YANDAYAN	2026-01-08		x																101	
+221	ZO	3	ZOO-3007	Yemler Bilgisi ve Teknolojisi	Kemal ÇELİK	2026-01-08		x																102	
+244	TB	3	TBİ-3001	Tahıllar	Mevlüt AKÇURA	2026-01-08		x																Prof.Dr H. TURHAN	
+333	TYS	3	TYS-3005	Sera Yapım Tekniği	Sefa AKSU	2026-01-08		x																202	
+369	TO	3	TBB-3009	Kartoğrafya	Timuçin EVEREST	2026-01-08		x																02	
+406	TM	3	TMT-3003 	Akışkanlar Mekaniği	Yavuz Hakan ÖZDEMİR	2026-01-08		x																201	
+74	BK	4	BTK-4005.1	Bitki Klinikleri	Bölüm Öğr. Elem - BK	2026-01-08			x															Prof.Dr H. TURHAN	
+119	TE	4	TAE-4003	Tarımsal Muhasebe (ZORUNLU)	Duygu AKTÜRK	2026-01-08			x															113	
+161	TYS	4	TYS-4011	Uzaktan Algılama	Gökhan ÇAMOĞLU	2026-01-08			x															101	
+219	ZO	4	ZOO-4021 / 18ZOO487	Yem Katkıları	Kemal ÇELİK	2026-01-08			x															202	
+268	TO	4	TBB-4013	Toprak ve Su Koruma	Mustafa BAŞARAN	2026-01-08			x															201	
+58	ZO	1	ZTN-1007 / ZOO-1009	Bilim, Üniversite ve Kariyer	Aynur KONYALI	2026-01-08					x													102	104
+87	BB	1	ZBB-1005 / BHB-1011	Botanik	Canan Öztokat KUZUCU	2026-01-08					x													201	
+88	TE	1	ZTE-1005 / TAE-1107	Botanik	Canan Öztokat KUZUCU	2026-01-08					x													202	
+124	TBT	1	TRB-1003	Genel Kimya I	Elif KARACAN YELDİR	2026-01-08					x													103	
+321	TM	1	İSG-1001	İş Sağlığı ve Güvenliği I	Sarp Korkut SÜMER	2026-01-08					x													TM. Uyg.Lab.	
+326	BK	1	ZBK-1007 / BTK-1013	Kariyer Planlama	Savaş KORKMAZ	2026-01-08					x													Prof.Dr H. TURHAN	
+220	TB	1		Matametik	Selin TÜRKMEN	2026-01-08					x													113	
+335	TYS	1	TYS-1011	Matametik	Selin TÜRKMEN	2026-01-08					x													101	
+93	TBT	2	ZBY-2007 / TRB-2013	Bitki Fizyolojisi	Cem Ömer EGESEL	2026-01-08							x											101	
+193	TYS	2	ZTY-2011 / TYS-2015	Bahçe Bitkileri	Harun ÇOBAN	2026-01-08							x											102	
+253	BB	2	ZBB-2011 / BHB-2009	Tarımsal Yapılar ve Sulama	Murat TEKİNER	2026-01-08							x											Prof.Dr H. TURHAN	
+254	BK	2	ZBK-2009 / BTK-2011	Tarımsal Yapılar ve Sulama	Murat TEKİNER	2026-01-08							x											113	
+260	TE	2	ZTE-2007 / TAE-2011	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	2026-01-08							x											201	
+261	TM	2	ZTM-2009 / TMT-2003	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	2026-01-08							x											202	
+63	TB	2	ZTB-2017	Temel Bilgisayar Programları	Onur Sinan TÜRKMEN	2026-01-08							x											Bilgisayar Lab.	
+393	ZO	2	ZOO-2011	Tarım Makineleri	Ünal ÜRKMEZ	2026-01-08							x											02	
+395	TO	2	TBB-2011	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	2026-01-08							x											02	
+394	ZO	2	ZTN-2027	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	2026-01-08							x											02	
+12	BK	3	BTK-3001	Herboloji	Ahmet ULUDAĞ	2026-01-08									x									113	
+42	ZO	2	ZOO-2001	Yem Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-08									x									103	
+195	BB	4	BHB-4041	Üzüm Kurutma Tekniği	Harun ÇOBAN	2026-01-08									x									105	
+275	TYS	2	ZTY-2017	Bitki Fizyolojisi	Okan ERKEN	2026-01-08									x									205	
+13	ZO	4	ZOO-4017	Tavuk Yetiştirme	Ali KARABAYIR	2026-01-09		x																102	
+19	BK	4	BTK-4017	Süs Bitkileri Hastalıkları	Ali KARANFİL	2026-01-09		x																103	
+35	TO	4	TBB-4017	Bitki Besin Maddesi Semptomları	Ali SÜMER	2026-01-09		x																201	
+125	BB	4	BHB-4009	Ilıman İklim Meyve Türleri	Engin GÜR	2026-01-09		x																202	
+187	TB	4	TBİ-4007	Moleküler Biyoloji	Hanife YANDAYAN	2026-01-09		x																101	
+201	TBT	4	TRB-4001	Bitki Islahında Biyoteknolojik Uygulamalar	İskender TİRYAKİ	2026-01-09		x																203	
+210	TYS	4	TYS-4001	Drenaj Sistemlerinin Tasarımı	İsmail TAŞ	2026-01-09		x																105	
+307	TM	4	TMT-4121	Hayvansal Üretim Makinaları ve Teknolojileri	Sakine ÖZPINAR	2026-01-09		x																205	
+17	BK	1	ZBK-1011	Mikrobiyoloji	Ali KARANFİL	2026-01-09			x															113	
+97	TBT	3	TRB-3013	Tarımda Kalite ve Standardizasyon	Cem Ömer EGESEL	2026-01-09			x															01	
+113	TE	3	TAE-3007	Tarım Tarihi ve Deontolojisi	Damla ÖZSAYIN	2026-01-09			x															105	
+235	TBT	1	TRB-1007	Temel Bilgi Teknolojisi Kullanımı	M. Burak BÜYÜKCAN	2026-01-09			x															Bölüm Odası	
+302	TE	1	ZTE-1011	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	2026-01-09			x															101	
+301	TE	2	TAE-2009	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	2026-01-09			x															202	
+322	TM	3	TMT-3113	Termik Motorlar	Sarp Korkut SÜMER	2026-01-09			x															TM. Uyg.Lab.	
+325	BK	3	BTK-3005	Bitki Virolojisi	Savaş KORKMAZ	2026-01-09			x															Prof.Dr H. TURHAN	
+374	TB	1	ZTB-1005 / TBİ-1007	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															02	
+375	TO	1	ZTO-1005 / TBB-1009	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															102	
+376	TYS	1	TYS-1015	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															103	
+381	TBT	1	ZBY-1011	Temel Bilgisayar Uygulamaları	Uğur SARI	2026-01-09			x															Bilgisayar Lab.	
+388	ZO	3	ZOO-3011	Hayvan Barınakları	Ünal KIZIL	2026-01-09			x															201	
+400	TO	3	TBB-3007	Bitki Fizyolojisi	Yakup ÇIKILI	2026-01-09			x															203	
+108	BB	1	BHB-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
+109	BK	2	BTK-2007	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
+110	TB	2	TBİ-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
+111	TM	2	TMT-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
+112	TO	2	ZTO-2007 / TBB-2003	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
+107	ZO	2	ZTN-2015	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
+157	BB	2	ZBB-2007	Akıllı Tarım	Gökhan ÇAMOĞLU	2026-01-09					x													202	
+236	TYS	2	ZTY-2009 / TYS-2013	Diferansiyel Denklemler	Mehmet GÜMÜŞ	2026-01-09					x													201	
+366	TBT	2	ZBY-2015 / TRB-2011	Organik Kimya	Şirin GÜLTEN	2026-01-09					x													02	
+176	BB	3	BHB-3009	Fide ve Fidan Yetiştiriciliği	F. Cem KUZUCU	2026-01-09							x											Prof.Dr H. TURHAN	
+273	TBT	1	TRB-1109 - ZBY-1005	Botanik	Okan ACAR	2026-01-09							x											101	
+349	TB	3	TBİ-3005	Tarımsal Yayım ve Haberleşme	Sema Ezgi YÜCEER PALA	2026-01-09							x											201	
+266	BK	2	BTK-2009	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+267	TB	2	ZTB-2007 / TBİ-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+263	TE	2	ZTE-2005 / TAE-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+264	TO	2	ZTO-2017 / TBB-2005	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+265	ZO	2	ZOO-2003	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+390	TYS	2	ZTY-2015 / TYS-2019	Statik	Ünal KIZIL	2026-01-09									x									Prof.Dr H. TURHAN	
+199	TO	4	TBB-4001	Toprak Genesisi ve Sınıflandırma	Hüseyin EKİNCİ	2026-01-09																		101	
+222	BK	4	BTK-4027	Bitki Korumada Pestisit Uygulamaları	Levent EFİL	2026-01-09																		202	
+271	BB	4	BHB-4019	Bahçe Ürünlerinin Muhafaza ve Pazara Hazırlık	Neslihan EKİNCİ	2026-01-09																		201	
+`;
+
+
+        let islenmisVeri = [];
+        const saatBasliklari = [
+            "09:00:00", "10:30:00", "11:45:00", "12:00:00", 
+            "13:00:00", "13:30:00", "14:00:00", "15:00:00", "16:00:00"
+        ];
+        const saatBaslangicIndex = 8; // '09:00:00' sütununun indisi
+
+        // Dil ayarları
+        const monthNamesTR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+        const dayNamesTR = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+
+        // HATA DÜZELTMESİ: Tarih formatlama fonksiyonu (YYYY-MM-DD -> DD Ay YYYY Gün)
+        function formatDateTR(dateString) {
+            // Verinin 'YYYY-MM-DD' formatında olduğunu varsayarak parçala
+            const parts = dateString.split('-');
+            if (parts.length !== 3) {
+                console.error("HATA: Tarih formatı 'YYYY-MM-DD' değil:", dateString);
+                return dateString; // Hata durumunda ham veriyi döndür
+            }
+
+            const year = parseInt(parts[0]);
+            // Ay (0-11 arası olduğu için 1 eksiltiyoruz)
+            const month = parseInt(parts[1]) - 1; 
+            const day = parseInt(parts[2]);
+
+            if (isNaN(year) || isNaN(month) || isNaN(day)) {
+                console.error("HATA: Tarih bileşenleri sayıya çevrilemiyor:", dateString);
+                return dateString;
+            }
+
+            // Date objesini UTC (saat dilimi bağımsız) olarak oluşturmak, gün kaymasını engeller.
+            const date = new Date(year, month, day); 
+            
+            // Yıl ve Ay'ın geçerli olduğundan emin ol
+            if (date.getFullYear() !== year || date.getMonth() !== month) {
+                 // Eğer tarih bileşenleri geçerli bir tarih oluşturmuyorsa
+                 console.error("HATA: Geçersiz tarih objesi oluşturuldu:", dateString);
+                 return dateString;
+            }
+
+            const dayName = dayNamesTR[date.getDay()];
+            const monthName = monthNamesTR[date.getMonth()];
+            
+            return `${day} ${monthName} ${year} ${dayName}`;
+        }
+
+        // Veri İşleme Fonksiyonu
+        function veriyiIsle() {
+            islenmisVeri = [];
+            let basarili = false; // Veri yükleme durumunu kontrol etmek için
+
+            const satirlar = exceldenKopyalananVeri.trim().split('\n');
+            const veriSatirlari = satirlar.slice(1); 
+
+            veriSatirlari.forEach(satir => {
+                const sutunlar = satir.split('\t');
+                
+                if (sutunlar.length < 26) return; 
+
+                const bolum = sutunlar[1] ? sutunlar[1].trim() : "";
+                const sinif = sutunlar[2] ? sutunlar[2].trim() : ""; 
+                const dersAdi = sutunlar[4];
+                const hoca = sutunlar[5];
+                const tarih = sutunlar[6]; 
+                const derslik = sutunlar[24];
+                const ekDerslik = sutunlar[25];
+
+                // HATA DÜZELTMESİ: Tarih formatını kesin olarak kontrol et
+                const tarihRegex = /^\d{4}-\d{2}-\d{2}$/;
+                if (!hoca || hoca.length < 3 || !tarihRegex.test(tarih)) return;
+
+                // Saat sütunlarını kontrol et
+                for (let i = 0; i < saatBasliklari.length; i++) {
+                    const saatIndex = saatBaslangicIndex + i;
+                    const saatDurumu = sutunlar[saatIndex] ? sutunlar[saatIndex].toString().trim().toLowerCase() : "";
+
+                    if (saatDurumu === 'x') {
+                        islenmisVeri.push({
+                            bolum: bolum,
+                            sinif: sinif,
+                            ogretimElemani: hoca,
+                            dersAdi: dersAdi,
+                            tarih: tarih, 
+                            derslik: derslik || '',
+                            ekDerslik: ekDerslik || '',
+                            saatMetni: saatBasliklari[i] 
+                        });
+                        basarili = true;
+                    }
+                }
+            });
+            
+            // Veri yükleme durumunu Ana Sayfa'da göster
+            document.getElementById('veri-yuklendi-gosterim').classList.toggle('hidden', !basarili);
+            document.getElementById('veri-durumu-gosterim').classList.toggle('hidden', basarili);
+
+            filtreleriDoldur();
+        }
+
+        function filtreleriDoldur() {
+            const bolumler = new Set();
+            const siniflar = new Set(); 
+            const ogretmenler = new Set();
+            
+            islenmisVeri.forEach(v => {
+                if (v.bolum !== 'FSD' && v.bolum !== 'SKS') {
+                    if(v.bolum && v.bolum.length <= 5 && isNaN(v.bolum)) bolumler.add(v.bolum);
+                    if(v.sinif && !isNaN(v.sinif)) siniflar.add(v.sinif); 
+                }
+                if(v.ogretimElemani) ogretmenler.add(v.ogretimElemani);
+            });
+            
+            const bolumSelect = document.getElementById('filter-bolum');
+            const subeSelect = document.getElementById('filter-sube');
+            const ogretmenSelect = document.getElementById('filter-ogretmen');
+
+            bolumSelect.innerHTML = '<option value="">Seçiniz...</option>';
+            subeSelect.innerHTML = '<option value="">Seçiniz...</option>';
+            ogretmenSelect.innerHTML = '<option value="">Seçiniz...</option>';
+
+            [...bolumler].sort().forEach(b => bolumSelect.innerHTML += `<option value="${b}">${b}</option>`);
+            [...siniflar].sort((a, b) => Number(a) - Number(b)).forEach(s => subeSelect.innerHTML += `<option value="${s}">${s}. Sınıf</option>`);
+            [...ogretmenler].sort().forEach(h => ogretmenSelect.innerHTML += `<option value="${h}">${h}</option>`);
+        }
+
+        // Programı Filtreleme ve Tabloları Oluşturma Fonksiyonu
+        function programiGoster(tip) {
+            const bolum = document.getElementById('filter-bolum').value;
+            const sinif = document.getElementById('filter-sube').value;
+            const hoca = document.getElementById('filter-ogretmen').value;
+            
+            let baslik, altBaslik;
+            
+            let filtrelenmis = islenmisVeri.filter(ders => {
+                if (tip === 'ogrenci' && (ders.bolum === 'FSD' || ders.bolum === 'SKS')) return false; 
+                
+                if (tip === 'ogrenci') {
+                    return (bolum === '' || ders.bolum === bolum) && 
+                           (sinif === '' || ders.sinif === sinif);
+                } else if (tip === 'ogretmen') {
+                    return ders.ogretimElemani === hoca;
+                }
+                return false;
+            });
+            
+            if (tip === 'ogrenci') {
+                baslik = "Öğrenci Sınav Programı";
+                altBaslik = `${bolum || 'Tüm Bölümler'} ${sinif ? sinif + '. Sınıf' : ''}`;
+            } else if (tip === 'ogretmen') {
+                baslik = "Akademisyen Sınav Programı";
+                altBaslik = hoca;
+            }
+            document.getElementById('sonuc-baslik-ana').innerText = baslik;
+            document.getElementById('sonuc-baslik-detay').innerText = altBaslik;
+
+            const tabloContainer = document.getElementById('tablo-container');
+            tabloContainer.innerHTML = '';
+            document.getElementById('liste-container').classList.add('hidden');
+            document.getElementById('sonuc-yok').classList.add('hidden');
+
+            if (filtrelenmis.length === 0) {
+                document.getElementById('sonuc-yok').classList.remove('hidden');
+                sayfaGecis('sayfa-sonuc');
+                return;
+            }
+
+            // 1. Hafta ve 2. Hafta ayrımı
+            const tumTarihler = [...new Set(filtrelenmis.map(d => d.tarih))].sort();
+            const hafta1Tarihleri = tumTarihler.slice(0, 5); 
+            const hafta2Tarihleri = tumTarihler.slice(5); 
+
+            const haftalar = [
+                { no: 1, tarihler: hafta1Tarihleri, veri: filtrelenmis.filter(d => hafta1Tarihleri.includes(d.tarih)) },
+                { no: 2, tarihler: hafta2Tarihleri, veri: filtrelenmis.filter(d => hafta2Tarihleri.includes(d.tarih)) }
+            ].filter(h => h.veri.length > 0);
+
+            // Tabloları oluştur
+            haftalar.forEach(hafta => {
+                const { no, tarihler, veri } = hafta;
+                
+                const benzersizSaatler = [...new Set(veri.map(d => d.saatMetni))].sort((a, b) => {
+                    if (a < b) return -1;
+                    if (a > b) return 1;
+                    return 0;
+                });
+
+                if (benzersizSaatler.length === 0) return;
+
+                const tableDiv = document.createElement('div');
+                tableDiv.classList.add('bg-white', 'rounded-xl', 'shadow-lg', 'overflow-hidden', 'overflow-x-auto', 'border', 'border-gray-200', 'p-4', 'mb-8');
+                
+                let tabloHTML = `
+                    <h4 class="text-xl font-bold text-gray-700 mb-4 text-center p-2 bg-gray-50 border-b border-gray-200">
+                        <i class="fa-solid fa-calendar-alt mr-2"></i> SINAV PROGRAMI - ${no}. TABLE
+                    </h4>
+                    <table class="program-tablosu">
+                        <thead>
+                            <tr>
+                                <th class="saat-sutunu">Saat</th>
+                                ${tarihler.map(t => `<th id="th-${t}">${formatDateTR(t)}</th>`).join('')}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${benzersizSaatler.map(saat => `
+                                <tr id="row-${saat.replace(/:/g, '')}">
+                                    <td class="saat-sutunu">${saat.substring(0, 5)}</td> 
+                                    ${tarihler.map(tarih => `<td id="cell-${tarih}-${saat.replace(/:/g, '')}"></td>`).join('')}
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `;
+                tableDiv.innerHTML = tabloHTML;
+                tabloContainer.appendChild(tableDiv);
+
+                // Hücreleri doldur
+                veri.forEach(ders => {
+                    const saatId = ders.saatMetni.replace(/:/g, '');
+                    const cellId = `cell-${ders.tarih}-${saatId}`;
+                    const cell = document.getElementById(cellId);
+                    
+                    if (cell) {
+                        let derslikMetni = ders.derslik;
+                        if (ders.ekDerslik && ders.ekDerslik !== '-' && ders.ekDerslik.trim() !== '') {
+                            derslikMetni += ` / Ek: ${ders.ekDerslik}`;
+                        }
+
+                        cell.innerHTML = `
+                            <div class="ders-kutu">
+                                <div class="font-bold text-red-900 truncate text-xs">${ders.dersAdi}</div>
+                                <div class="text-gray-700 font-semibold text-[10px] mt-1">${derslikMetni || '-'}</div>
+                                <div class="text-gray-500 text-[9px] italic mt-1 truncate"> 
+                                    ${tip === 'ogrenci' ? ders.ogretimElemani : (ders.bolum + ' ' + ders.sinif)}
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+            });
+
+            sayfaGecis('sayfa-sonuc');
+        }
+
+        // FSD ve SKS Derslerini Liste Olarak Göster
+        function ozelDersleriGoster(tip) {
+            const filtrelenmis = islenmisVeri.filter(ders => ders.bolum === tip);
+            
+            const listeGovde = document.getElementById('liste-govde');
+            listeGovde.innerHTML = '';
+            
+            document.getElementById('tablo-container').innerHTML = '';
+            document.getElementById('sonuc-yok').classList.add('hidden');
+            document.getElementById('liste-container').classList.remove('hidden');
+
+            document.getElementById('sonuc-baslik-ana').innerText = `${tip} Sınavları (Liste Görünümü)`;
+            document.getElementById('sonuc-baslik-detay').innerText = `${filtrelenmis.length} adet sınav listeleniyor.`;
+
+            if (filtrelenmis.length === 0) {
+                document.getElementById('sonuc-yok').classList.remove('hidden');
+            } else {
+                filtrelenmis.sort((a, b) => new Date(a.tarih) - new Date(b.tarih));
+
+                filtrelenmis.forEach(ders => {
+                    let derslikMetni = ders.derslik;
+                    if (ders.ekDerslik && ders.ekDerslik !== '-' && ders.ekDerslik.trim() !== '') {
+                        derslikMetni += ` / Ek: ${ders.ekDerslik}`;
+                    }
+
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td class="font-bold text-blue-800">${ders.dersAdi}</td>
+                        <td>${ders.ogretimElemani}</td>
+                        <td><span class="bg-red-100 text-red-800 py-1 px-2 rounded text-xs font-bold">${formatDateTR(ders.tarih)}</span></td>
+                        <td>${ders.saatMetni.substring(0, 5)}</td>
+                        <td class="font-bold text-gray-700">${derslikMetni || '-'}</td>
+                    `;
+                    listeGovde.appendChild(tr);
+                });
+            }
+            sayfaGecis('sayfa-sonuc');
+        }
+
+        function sayfaGecis(id) {
+            document.querySelectorAll('.sayfa').forEach(s => s.classList.remove('aktif'));
+            document.getElementById(id).classList.add('aktif');
+            if (id === 'sayfa-filtre') {
+                 // Filtre ekranına dönerken filtreleri sıfırla
+                document.getElementById('filter-bolum').selectedIndex = 0;
+                document.getElementById('filter-sube').selectedIndex = 0;
+                document.getElementById('filter-ogretmen').selectedIndex = 0;
+            }
+        }
+
+        // Sayfa yüklendiğinde veriyi işle
+        document.addEventListener('DOMContentLoaded', () => {
+            veriyiIsle();
+        });
+    </script>
+</body>
+</html>
