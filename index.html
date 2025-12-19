@@ -202,176 +202,84 @@
         // Excel'deki "Final VT.xlsx - Final Program.csv" verilerini buraya yapıştırın.
         // ************************************************************************
         const exceldenKopyalananVeri = `
-Sıra	BÖLÜM	SINIF	Ders Kodu	Dersin Adı	DERSİ VEREN ÖĞRETİM ELEMANI	GÜN	SINAV SAATİ	09:00	10:30	11:45	12:00	13:00	13:30	14:00	15:00	16:00	.	.	.	.	.	.	.	SINAVIN YAPILACAĞI YER	SINAVIN YAPILACAĞI YER (EK SINIF)
-49	TYS	1	 ZTY-1013	Peyzaj Mimarlığı	Arda AKÇAL	2025-12-29		x																201	
-288	TB	1	ZTB-1007 / TBİ-1009	Kariyer Planlama	Onur Hocaoğlu	2025-12-29		x																Prof.Dr H. TURHAN	
+Sıra	BÖLÜM	SINIF	Ders Kodu	Dersin Adı	DERSİ VEREN ÖĞRETİM ELEMANI	GÜN	SINAV SAATİ	09:00	10:30	11:45	12:00	13:00	13:30	14:00	15:00	16:30	.	.	.	.	.	.	.	SINAVIN YAPILACAĞI YER	SINAVIN YAPILACAĞI YER (EK SINIF)
 312	BB	1	ZBB-1009 / BHB-1105	Matematik	Saniye CAN	2025-12-29		x																01	
-313	BK	1	ZBK-1009 / BTK-1109	Matematik	Saniye CAN	2025-12-29		x																AMFİ	AMFİ
-317	TBT	1	ZBY-1009 / TRB-1005	Matematik	Saniye CAN	2025-12-29		x																113	
-318	TE	1	ZTE-1009 / TAE-1005	Matematik	Saniye CAN	2025-12-29		x																AMFİ	
-314	TM	1	ZTM-1009 / TMT-1005	Matematik	Saniye CAN	2025-12-29		x																02	
-315	TO	1	ZTO-1007 / TBB-1005	Matematik	Saniye CAN	2025-12-29		x																101	
-316	ZO	1	ZTN-1009 / ZOO-1005	Matematik	Saniye CAN	2025-12-29		x																102	
-23	BK	1	BTK-1005	Temel Bilgi Teknoloji Kullanımı	Ali Kürşat ŞAHİN	2025-12-29			x															Bölüm Odası	
-85	TB	2	ZTB-2015	Biyokimya	Cahit AKGÜL	2025-12-29			x															202	
-86	TBT	2	ZBY-2005 / TRB-2005	Biyokimya	Cahit AKGÜL	2025-12-29			x															203	
-91	BK	2	ZBK-2013 / BTK-2005	Genel Sebzecilik	Canan Öztokat KUZUCU	2025-12-29			x															113	
-171	TO	2	ZTO-2001 / TBB-2001	Analitik Kimya	Gülşen SAĞLIKOĞLU	2025-12-29			x															01	
-175	TM	2	ZTM-2007/ TMT-2007	Mühendislik Termodinamiği	Habib KOCABIYIK	2025-12-29			x															TM. Uyg.Lab.	
-181	ZO	2	ZTN-2007	Biyokimya	Hande Işıl AKBAĞ	2025-12-29			x															102	
-182	ZO	3	ZOO-3001	Hayvan Besleme Biyokimyası	Hande Işıl AKBAĞ	2025-12-29			x															101	
-191	TE	2	ZTE-2017	Ekoloji	Harun BAYTEKİN	2025-12-29			x															105	
 225	BB	1	ZBB-1007 / BHB-1013	Kariyer Planlama 	M. Ali GÜNDOĞDU	2025-12-29			x															02	
-340	TE	1	ZTE-1007 / TAE-1013	Kariyer Planlama	Selma KAYALAK	2025-12-29			x															01	
-386	TYS	1	TYS-1101	Temel Bilgi Teknolojisi Kullanımı	Umut MUCAN	2025-12-29			x															Bilgisayar Lab.	
-387	TYS	1	ZTY-1005	Temel Bilgisayar Uygulamaları	Umut MUCAN	2025-12-29			x															Bilgisayar Lab.	
-392	TM	1	ZTM-1007	Mühendisliğe Giriş	Ünal ÜRKMEZ	2025-12-29			x															201	
-319	TM	3	TMT-3105	Ergonomi	Sarp Korkut SÜMER	2025-12-29					x													TM. Uyg.Lab.	
-327	BB	3	BHB-3007	Bahçe Bitki Organik Tarım	Seçkin KAYA	2025-12-29					x													201	
-331	TYS	3	TYS-3001	Kırsal Yerleşim Planlaması	Sefa AKSU	2025-12-29					x													102	
-339	TE	3	TAE-3005	İstatistik II	Selma KAYALAK	2025-12-29					x													101	
-360	ZO	3	ZOO-3005	Araştırma ve Deneme Yöntemleri	Soner YİĞİT	2025-12-29					x													Prof.Dr H. TURHAN	
-361	BK	3	BTK-3007	Böcek Sistematiği	Şahin KÖK	2025-12-29					x													113	
-378	TBT	3	TRB-3003	Bitki Doku Kültürü	Uğur SARI	2025-12-29					x													202	
-10	BK	4	BTK-4021	Depolanmış Ürün Hastalıkları	Ahmet ULUDAĞ	2025-12-29							x											205	
-72	TE	4	TAE-4011	Uluslararası Pazarlama	Bengü EVEREST	2025-12-29							x											Bölüm Odası	
-92	BB	4	BHB-4013	Kültür Sebzeleri I	Canan Öztokat KUZUCU	2025-12-29							x											113	
-142	TB	4	TBİ-4001	Çayır Mera Yönetimi	Fırat ALATÜRK	2025-12-29							x											102	
-159	TYS	4	TYS-4009	Su Kaynaklarının Planlanması	Gökhan ÇAMOĞLU	2025-12-29							x											103	
-185	TBT	4	TRB-4003	Genetik Mühendisliği	Hanife YANDAYAN	2025-12-29							x											203	
-198	TO	4	TBB-4011	Jeomorfoloji	Hüseyin EKİNCİ	2025-12-29							x											101	
-205	TM	4	TMT-4115	Sulama Makinaları ve Teknolojileri	İsmail KAVDIR	2025-12-29							x											TM. Uyg.Lab.	
-218	ZO	4	ZOO-4003	Kanatlı Hayvan Besleme	Kemal ÇELİK	2025-12-29							x											Prof.Dr H. TURHAN	
-32	ZO	2	ZTN-2001	Toprak Bilimi ve Bitki Besleme	Ali SUNGUR	2025-12-29									x									02	
-136	BK	2	ZBK-2017	Tarla Bitkileri	Fatih KAHRIMAN	2025-12-29									x									113	
-137	TO	2	ZTO-2015	Tarla Bitkileri	Fatih KAHRIMAN	2025-12-29									x									113	
-51	BB	2	ZBB-2013 / BHB-2011	Tarımsal Mekanizasyon	Gıyasettin ÇİÇEK	2025-12-29									x									Prof.Dr H. TURHAN	
-52	TYS	2	ZTY-2007 / TYS-2011	Tarımsal Mekanizasyon	Gıyasettin ÇİÇEK	2025-12-29									x									Prof.Dr H. TURHAN	
-233	TB	2	TBİ-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	2025-12-29									x									201	
-234	TBT	2	ZBY-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	2025-12-29									x									201	
-348	TE	2	TAE-2003	Kırsal Sosyoloji	Sema Ezgi YÜCEER PALA	2025-12-29									x									103	
-30	BB	2	ZBB-2015 / BHB-2015	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
-28	BK	2	BTK-2015	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
-29	TBT	2	TRB-2009	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
-31	ZO	2	ZOO-2009	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
-246	TYS	2	TYS-2005	Akışkanlar Mekaniği	Muharrem Yetiş YAVUZ	2025-12-30		x																101	
-357	TE	2	ZTE-2001	Ekonomi	Sibel TAN	2025-12-30		x																102	
-358	TE	2	TAE-2001	Tarım Ekonomisi	Sibel TAN	2025-12-30		x																102	
-397	TB	2	ZTB-2011	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
-399	TM	2	TMT-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
-398	TM	2	ZTM-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
-54	TE	3	TAE-3003	Mikro Ekonomi	Arif SEMERCİ	2025-12-30			x															201	
-66	ZO	3	ZOO-3003	Hayvan Anatomisi	Baver COŞKUN	2025-12-30			x															101	
-83	TO	3	TBB-3003	Toprak Biyolojisi	Cafer TÜRKMEN	2025-12-30			x															01	
-241	TM	3	TMT-3107	Makine Elemanları	Mehmet YAZAR	2025-12-30			x															102	
-249	BB	3	BHB-3001	Araştırma ve Deneme Metotları	Murat ŞEKER	2025-12-30			x															Prof.Dr H. TURHAN	
-256	TYS	3	TYS-3011	Toprak ve Su Koruma Mühendisliği	Murat TEKİNER	2025-12-30			x															02	
-364	TBT	3	TRB-3005	Biyoteknolojiye Giriş	Şemun TAYYAR	2025-12-30			x															202	
-377	BK	3	BTK-3009	Böcek Morfolojisi ve Fizyolojisi	Uğur GÖZEL	2025-12-30			x															113	
-56	TE	4	TAE-4013	Tarıma Dayalı Sanayi	Arif SEMERCİ	2025-12-30				x														201	
-122	ZO	4	ZOO-4023	Tarımsal Proje Hazırlama Tekniği	Duygu AKTÜRK	2025-12-30				x														103	
-188	TBT	4	TRB-4015	Moleküler Biyolojide Kullanılan Yöntemler	Hanife YANDAYAN	2025-12-30				x														102	
-190	TB	4	TBİ-4011	Çim Tekniği	Harun BAYTEKİN	2025-12-30				x														101	
-306	TM	4	TMT-4001	Hassas Tarım Teknolojileri	Sakine ÖZPINAR	2025-12-30				x														TM. Uyg.Lab.	
-330	BB	4	BHB-4017	Topraksız Tarım	Seçkin KAYA	2025-12-30				x														105	
-384	TYS	4	TYS-4013	Mesleki Bilgisayar Programları I	Umut MUCAN	2025-12-30				x														Bilgisayar Lab.	
 148	BB	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
-149	BK	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
-150	TB	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												01	
-151	TBT	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
-152	TE	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
-154	TM	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												Prof.Dr H. TURHAN	
-153	TO	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												Prof.Dr H. TURHAN	
-155	TYS	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												113	
-156	ZO	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												113	
 294	BB	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
-295	BK	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
-292	TB	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										01	
-293	TBT	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
-299	TE	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
-296	TM	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										Prof.Dr H. TURHAN	
-300	TO	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										Prof.Dr H. TURHAN	
-297	TYS	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										113	
-298	ZO	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										113	
-27	BK	4	BTK-4011	Organik Tarımda Zararlılarla Mücadele	Ali ÖZPINAR	2025-12-30									x									201	
-43	TB	4	TBİ-4015	Yemeklik Tane Baklagiller	Altıngül ÖZASLAN PARLAK	2025-12-30									x									202	
-59	ZO	4	ZOO-4015	Çevre ve Sürdürülebilirliği	Aynur KONYALI	2025-12-30									x									Bölüm Odası	
-138	ZO	4	ZOO-4011	Hayvan Yetiştirme	Feyzi UĞUR	2025-12-30									x									101	
-226	BB	4	BHB-4015	Subtropik İklim Meyve Türleri	M. Ali GÜNDOĞDU	2025-12-30									x									202	
-14	BK	2	ZBK-2007	Akıllı Tarım	Ali KARANFİL	2025-12-30																		113	
-365	ZO	2	ZOO-2007	Tarımsal Biyoteknoloji	Şemun TAYYAR	2025-12-30																		201	
-238	TB	1	ZTB-1001 / TBİ-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																Prof.Dr H. TURHAN	
-239	TBT	1	ZBY-1001 / TRB-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																113	
-240	TM	1	ZTM-1001 / TMT-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																101	
 285	BB	1	ZBB-1001 / BHB-1101	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
-286	TE	1	ZTE-1001 / TAE-1101	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
-287	TO	1	ZTO-1001 / TBB-1001	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
-352	BK	1	ZBK-1001 / BTK-1111	Fizik	Sibel ŞEN	2025-12-31		x																202	
-353	TYS	1	ZTY-1001 / TYS-1007	Fizik	Sibel ŞEN	2025-12-31		x																201	
-354	ZO	1	ZTN-1001 / ZOO-1001	Fizik	Sibel ŞEN	2025-12-31		x																102	
-55	TE	2	ZTE-2013	Mikro Ekonomi	Arif SEMERCİ	2025-12-31			x															103	
-99	ZO	2	ZTN-2003 / ZOO-2005	Hayvan ve Çevresi	Cemil TÖLÜ	2025-12-31			x															202	
-134	TB	2	ZTB-2003 / TBİ-2003	İstatistik	Fatih KAHRIMAN	2025-12-31			x															AMFİ	
-135	TYS	2	ZTY-2001	İstatistik	Fatih KAHRIMAN	2025-12-31			x															AMFİ	
-53	BK	2	ZBK-2005	Teknik Resim	Gıyasettin ÇİÇEK	2025-12-31			x															101	
-177	BB	2	ZBB-2009 / BHB-2007	Gıda Bilimi ve Güvenliği	Hakan ENGİN	2025-12-31			x															201	
-311	TM	2	ZTM-2003 / TMT-2009	Diferansiyel Denklemler	Saniye CAN	2025-12-31			x															113	
-368	TO	2	ZTO-2003	Coğrafi Bilgi Sistemleri	Timuçin EVEREST	2025-12-31			x															203	
-385	TBT	2	ZBY-2013	Teknik Resim	Umut MUCAN	2025-12-31			x															105	
-26	BK	4	BTK-4003	Meyve ve Bağ Zararlıları	Ali ÖZPINAR	2026-01-02		x																Prof.Dr H. TURHAN	
-62	TB	4	TBİ-4013	Tahıl Baklagil ve Yem Bitkileri Hastalıkları	Baboo Ali	2026-01-02		x																101	
-69	ZO	4	ZOO-4009	Hayvan Hastalıkları	Baver COŞKUN	2026-01-02		x																201	
-145	TM	4	TMT-4123	Tarımda Makina Kullanım Teknikleri	Gıyasettin ÇİÇEK	2026-01-02		x																TM. Uyg.Lab.	
-255	TYS	4	TYS-4007	Toprak Su Yapılarının Tasarımı	Murat TEKİNER	2026-01-02		x																103	
-402	TO	4	TBB-4003	Sürdürülebilir Toprak Verimliliği	Yakup ÇIKILI	2026-01-02		x																202	
-121	TE	4	TAE-4009	Tarımsal Proje Haz. Tek. II (ZORUNLU)	Duygu AKTÜRK	2026-01-02			x															Bölüm Odası	
-132	BK	2	ZBK-2001 / BTK-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	2026-01-02			x															AMFİ	
-133	TB	2	ZTB-2001 / TBİ-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	2026-01-02			x															AMFİ	
-174	TM	2	ZTM-2011 / TMT-2011	Bilgisayar Destekli Tasarım I	Habib KOCABIYIK	2026-01-02			x															Bilgisayar Lab.	
-206	TE	2	TAE-2005	Tarım Makinaları	İsmail KAVDIR	2026-01-02			x															101	
-207	TE	2	ZTE-2009	Tarımsal Mekanizasyon	İsmail KAVDIR	2026-01-02			x															101	
-250	BB	2	ZBB-2003 / BHB-2003	Genetik	Murat ŞEKER	2026-01-02			x															113	
-262	TYS	2	ZTY-2003	Teknik Resim	Murat YILDIRIM	2026-01-02			x															01	
-283	TO	2	ZTO-2005	Ölçme Bilgisi	Okan ERKEN	2026-01-02			x															201	
-282	ZO	2	ZOO-2013	Ölçme Bilgisi	Okan ERKEN	2026-01-02			x															202	
-373	TBT	2	ZBY-2001 / TRB-2001	İstatistik	Tuğba SÖKÜT ACAR	2026-01-02			x															02	
 5	BB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
-7	BK	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
-1	TB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
-8	TBT	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													Prof.Dr H. TURHAN	
-2	TE	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
-3	TO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													Prof.Dr H. TURHAN	
-6	TYS	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													113	
-4	ZO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													113	
-38	BB	3	BHB-3005	Genel Bağcılık	Alper DARDENİZ	2026-01-02					x													201	
-180	ZO	4	ZOO-4005	Hayvan Islahına Giriş	Hakan ERDEM	2026-01-02					x													202	
-243	TB	3	TBİ-3007	Araştırma Deneme Metotları	Mevlüt AKÇURA	2026-01-02					x													02	
-242	TO	3	TBB-3005	Araştırma ve Deneme Yöntemleri	Mevlüt Akçura	2026-01-02					x													102	
-269	TM	1	ZTM-1005	Biyoloji	Mustafa Kemal AKBULUT	2026-01-02					x													101	
-270	TM	1	TMT-1107	Mühendislik Biyolojisi	Mustafa Kemal AKBULUT	2026-01-02					x													101	
-16	BK	4	BTK-4009	Endüstri Bitkileri Hastalıkları	Ali KARANFİL	2026-01-02							x											113	
-213	TYS	2	TYS-2003	Sulama Gübreleme İlişkileri	İsmail TAŞ	2026-01-02							x											202	
-224	BB	2	ZBB-2005 / BHB-2013	İstatistik	M. Ali GÜNDOĞDU	2026-01-02							x											Prof.Dr H. TURHAN	
-351	ZO	2	ZTN-2033	Bahçe Bitkileri	Serkan CANDAR	2026-01-02							x											101	
-371	TO	2	ZTO-2009 / TBB-2013	Genel Sebzecilik	Tolga SARIYER	2026-01-02							x											201	
 162	BB	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
-163	BK	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
-164	TB	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
-165	TBT	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
-166	TE	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
-167	TM	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									Prof.Dr H. TURHAN	
-168	TO	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									Prof.Dr H. TURHAN	
-169	TYS	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									113	
-170	ZO	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									113	
-67	TBT	2	ZBY-2017 / TRB-2007	Hayvan Anatomisi Fizyolojisi	Baver COŞKUN	2026-01-05		x																203	
-104	TO	2	ZTO-2013	Entomoloji	Çiğdem GÜNEŞ	2026-01-05		x																201	
-105	ZO	2	ZTN-2023	Entomoloji	Çiğdem GÜNEŞ	2026-01-05		x																201	
+342	BB	1	ZBB-1003 / BHB-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+130	BB	1	ZBB-1011 - BHB-1007	Temel Bilgisayar Uygulamaları 	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
+277	BB	1	BHB-1009	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+87	BB	1	ZBB-1005 / BHB-1011	Botanik	Canan Öztokat KUZUCU	2026-01-08					x													201	
+108	BB	1	BHB-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
+51	BB	2	ZBB-2013 / BHB-2011	Tarımsal Mekanizasyon	Gıyasettin ÇİÇEK	2025-12-29									x									Prof.Dr H. TURHAN	
+30	BB	2	ZBB-2015 / BHB-2015	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+177	BB	2	ZBB-2009 / BHB-2007	Gıda Bilimi ve Güvenliği	Hakan ENGİN	2025-12-31			x															201	
+250	BB	2	ZBB-2003 / BHB-2003	Genetik	Murat ŞEKER	2026-01-02			x															113	
+224	BB	2	ZBB-2005 / BHB-2013	İstatistik	M. Ali GÜNDOĞDU	2026-01-02							x											Prof.Dr H. TURHAN	
 194	BB	2	ZBB-2001 / BHB-2001	Bitki Fizyolojisi	Harun ÇOBAN	2026-01-05		x																101	
-259	TYS	2	TYS-2001	Mühendislik Ölçmeleri	Murat YILDIRIM	2026-01-05		x																02	
-336	TB	2	ZTB-2005	Ekonomi	Selma KAYALAK	2026-01-05		x																113	
-337	TM	2	ZTM-2005	Ekonomi	Selma KAYALAK	2026-01-05		x																113	
-383	TE	2	ZTE-2015	Coğrafi Bilgi Sistemleri	Umut MUCAN	2026-01-05		x																Bilgisayar Lab.	
+140	BB	2	ZBB-2017	Hayvansal Üretim	Feyzi UĞUR	2026-01-07							x											201	
+253	BB	2	ZBB-2011 / BHB-2009	Tarımsal Yapılar ve Sulama	Murat TEKİNER	2026-01-08							x											Prof.Dr H. TURHAN	
+157	BB	2	ZBB-2007	Akıllı Tarım	Gökhan ÇAMOĞLU	2026-01-09					x													202	
+327	BB	3	BHB-3007	Bahçe Bitki Organik Tarım	Seçkin KAYA	2025-12-29					x													201	
+249	BB	3	BHB-3001	Araştırma ve Deneme Metotları	Murat ŞEKER	2025-12-31					x													Prof.Dr H. TURHAN	
+38	BB	3	BHB-3005	Genel Bağcılık	Alper DARDENİZ	2026-01-02					x													201	
+410	BB	3	BHB-3015	Üzümsü Meyveler	Zeliha GÖKBAYRAK	2026-01-05									x									201	
+251	BB	3	BHB-3013	Tropik İklim Meyve Türleri	Murat ŞEKER	2026-01-07		x																Prof.Dr H. TURHAN	
+50	BB	3	BHB-3003	Süs Bitkileri Yetiştiriciliği	Arda AKÇAL	2026-01-08		x																113	
+176	BB	3	BHB-3009	Fide ve Fidan Yetiştiriciliği	F. Cem KUZUCU	2026-01-09							x											Prof.Dr H. TURHAN	
+92	BB	4	BHB-4013	Kültür Sebzeleri I	Canan Öztokat KUZUCU	2025-12-29							x											113	
+330	BB	4	BHB-4017	Topraksız Tarım	Seçkin KAYA	2025-12-30				x														105	
+226	BB	4	BHB-4015	Subtropik İklim Meyve Türleri	M. Ali GÜNDOĞDU	2025-12-30									x									202	
+48	BB	4	BHB-4005	Kesme Çiçek Yetiştirme Teknikleri	Arda AKÇAL	2026-01-06					x													202	
+195	BB	4	BHB-4041	Üzüm Kurutma Tekniği	Harun ÇOBAN	2026-01-08									x									105	
+125	BB	4	BHB-4009	Ilıman İklim Meyve Türleri	Engin GÜR	2026-01-09		x																202	
+271	BB	4	BHB-4019	Bahçe Ürünlerinin Muhafaza ve Pazara Hazırlık	Neslihan EKİNCİ	2026-01-09										x								201	
+313	BK	1	ZBK-1009 / BTK-1109	Matematik	Saniye CAN	2025-12-29		x																AMFİ	AMFİ
+23	BK	1	BTK-1005	Temel Bilgi Teknoloji Kullanımı	Ali Kürşat ŞAHİN	2025-12-29			x															Bölüm Odası	
+149	BK	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+295	BK	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+352	BK	1	ZBK-1001 / BTK-1111	Fizik	Sibel ŞEN	2025-12-31		x																202	
+7	BK	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+163	BK	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+9	BK	1	ZBK-1005 / BTK-1003	Botanik	Ahmet ULUDAĞ	2026-01-05							x											Prof.Dr H. TURHAN	
+114	BK	1	ZBK-1003 / BTK-1007	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
+278	BK	1	BTK-1001	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+326	BK	1	ZBK-1007 / BTK-1013	Kariyer Planlama	Savaş KORKMAZ	2026-01-08					x													Prof.Dr H. TURHAN	
+17	BK	1	ZBK-1011	Mikrobiyoloji	Ali KARANFİL	2026-01-09			x															113	
+91	BK	2	ZBK-2013 / BTK-2005	Genel Sebzecilik	Canan Öztokat KUZUCU	2025-12-29			x															113	
+136	BK	2	ZBK-2017	Tarla Bitkileri	Fatih KAHRIMAN	2025-12-29									x									113	
+28	BK	2	BTK-2015	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+14	BK	2	ZBK-2007	Akıllı Tarım	Ali KARANFİL	2025-12-30										x								113	
+53	BK	2	ZBK-2005	Teknik Resim	Gıyasettin ÇİÇEK	2025-12-31			x															101	
+132	BK	2	ZBK-2001 / BTK-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	2026-01-02			x															AMFİ	
 404	BK	2	ZBK-2015	Toprak Bilimi ve Bitki Besleme	Yasemin KAVDIR	2026-01-05		x																202	
+309	BK	2	ZBK-2011 / BTK-2013	Tarımsal Mekanizasyon	Sakine ÖZPINAR	2026-01-06		x																Prof.Dr H. TURHAN	
+22	BK	2	ZBK-2003	İstatistik	Ali Kürşat ŞAHİN	2026-01-06									x									113	
+94	BK	2	BTK-2003	Genetik	Cem Ömer EGESEL	2026-01-07							x											101	
+254	BK	2	ZBK-2009 / BTK-2011	Tarımsal Yapılar ve Sulama	Murat TEKİNER	2026-01-08							x											113	
+109	BK	2	BTK-2007	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
+266	BK	2	BTK-2009	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+361	BK	3	BTK-3007	Böcek Sistematiği	Şahin KÖK	2025-12-29										x								113	
+377	BK	3	BTK-3009	Böcek Morfolojisi ve Fizyolojisi	Uğur GÖZEL	2025-12-30			x															113	
+24	BK	3	BTK-3003	Böcek Ekolojisi	Ali ÖZPINAR	2026-01-06			x															Prof.Dr H. TURHAN	
+144	BK	3	BTK-3013	Tarımsal Savaşım I	Figen MERT	2026-01-06										x								113	
+323	BK	3	BTK-3011	Bitki Bakteriyolojisi	Savaş KORKMAZ	2026-01-07									x									113	
+12	BK	3	BTK-3001	Herboloji	Ahmet ULUDAĞ	2026-01-08									x									113	
+325	BK	3	BTK-3005	Bitki Virolojisi	Savaş KORKMAZ	2026-01-09			x															Prof.Dr H. TURHAN	
+10	BK	4	BTK-4021	Depolanmış Ürün Hastalıkları	Ahmet ULUDAĞ	2025-12-29							x											205	
+27	BK	4	BTK-4011	Organik Tarımda Zararlılarla Mücadele	Ali ÖZPINAR	2025-12-30									x									201	
+26	BK	4	BTK-4003	Meyve ve Bağ Zararlıları	Ali ÖZPINAR	2026-01-02		x																Prof.Dr H. TURHAN	
+16	BK	4	BTK-4009	Endüstri Bitkileri Hastalıkları	Ali KARANFİL	2026-01-02							x											113	
+143	BK	4	BTK-4007	Tahıl ve Baklagil Hastalıkları	Figen MERT	2026-01-05										x								113	
+80	BK	4	BTK-4025	Bitki Koruma Ürünlerinin Organizasyonu	Burak POLAT	2026-01-06					x													205	
+204	BK	4	BTK-4013	Depolanmış Ürün Zararlıları	İsmail KASAP	2026-01-07			x															102	
+74	BK	4	BTK-4005.1	Bitki Klinikleri	Bölüm Öğr. Elem - BK	2026-01-08			x															Prof.Dr H. TURHAN	
+19	BK	4	BTK-4017	Süs Bitkileri Hastalıkları	Ali KARANFİL	2026-01-09		x																103	
+222	BK	4	BTK-4027	Bitki Korumada Pestisit Uygulamaları	Levent EFİL	2026-01-09										x								202	
 34	FSD	3	FSD	Toprak ve İnsan 	Ali SUNGUR	2026-01-05			x															02	
 37	FSD	3	FSD	Laboratuvar Tekniği 	Ali SÜMER	2026-01-05			x															AMFİ	
 117	FSD	3	FSD-3009	Tarımsal İşletmelerde Proje Hazırlama Tekniği ve Fizibilite	Duygu AKTÜRK	2026-01-05			x															Bölüm Odası	
@@ -395,174 +303,265 @@ Sıra	BÖLÜM	SINIF	Ders Kodu	Dersin Adı	DERSİ VEREN ÖĞRETİM ELEMANI	GÜN	S
 173	SKS	4	SKS-4003	Spor ve İletişim	Güner GÜNAY	2026-01-05					x													Hasan Mefsuf Spr. Sln	
 179	SKS	4	SKS-4005	Meyve ve Sebzelerin İnsan Bes.Sağ.Açısından Önemi	Hakan ENGİN	2026-01-05					x													AMFİ	AMFİ
 437	SKS	4	SKS-4055	Temel ve İleri Fotoğrafçılık Teknikleri	Zayde Ayvaz	2026-01-05					x													01	
-9	BK	1	ZBK-1005 / BTK-1003	Botanik	Ahmet ULUDAĞ	2026-01-05							x											Prof.Dr H. TURHAN	
-247	TYS	1	ZTY-1007 / TYS-1017	Kariyer Planlama	Muharrem Yetiş YAVUZ	2026-01-05							x											201	
-338	ZO	1	ZTN-1011	Ekonomi	Selma KAYALAK	2026-01-05							x											202	
-342	BB	1	ZBB-1003 / BHB-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+288	TB	1	ZTB-1007 / TBİ-1009	Kariyer Planlama	Onur Hocaoğlu	2025-12-29		x																Prof.Dr H. TURHAN	
+150	TB	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												01	
+292	TB	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										01	
+238	TB	1	ZTB-1001 / TBİ-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																Prof.Dr H. TURHAN	
+1	TB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+164	TB	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
 345	TB	1	ZTB-1003 / TBİ-1003	Kimya	Sema EKİCİ	2026-01-05							x											01	02
-343	TBT	1	ZBY-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
-344	TE	1	ZTE-1003 / TAE-1003	Kimya	Sema EKİCİ	2026-01-05							x											113	101
-346	TM	1	ZTM-1003 / TMT-1003	Kimya	Sema EKİCİ	2026-01-05							x											102	
-347	TO	1	ZTO-1003 / TBB-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
-33	TO	3	TBB-3011	Toprak Kimyası	Ali SUNGUR	2026-01-05									x									102	
-57	TE	3	TAE-3011	Tarımsal Kuruluşlar ve Organizasyon	Arif SEMERCİ	2026-01-05									x									202	
-144	BK	3	BTK-3013	Tarımsal Savaşım I	Figen MERT	2026-01-05									x									113	
-197	TYS	1	TYS-1003	Jeoloji	Hüseyin EKİNCİ	2026-01-05									x									103	
-217	TBT	3	TRB-3009	Enstrümental Analiz	İsmet KAYA	2026-01-05									x									01	
-252	TYS	3	TYS-3007	Sistem Mühendisliği	Murat TEKİNER	2026-01-05									x									02	
-304	TB	3	TBİ-3011	Endüstri Bitkileri I	Ramazan ÇAKMAKÇI	2026-01-05									x									Prof.Dr H. TURHAN	
-310	TM	3	TMT-3111	Toprak İşleme Makinaları	Sakine ÖZPINAR	2026-01-05									x									101	
-410	BB	3	BHB-3015	Üzümsü Meyveler	Zeliha GÖKBAYRAK	2026-01-05									x									201	
-143	BK	4	BTK-4007	Tahıl ve Baklagil Hastalıkları	Figen MERT	2026-01-05																		113	
-11	ZO	2	ZTN-2025	Fitopatoloji	Ahmet ULUDAĞ	2026-01-06		x																205	
-61	TBT	2	ZBY-2009	Hayvansal Üretim	Aynur KONYALI	2026-01-06		x																101	
-60	TYS	2	ZTY-2005 / TYS-2009	Hayvansal Üretim	Aynur KONYALI	2026-01-06		x																101	
-215	TB	2	ZTB-2009 / TBİ-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	2026-01-06		x																113	
-216	TO	2	TBB-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	2026-01-06		x																113	
-309	BK	2	ZBK-2011 / BTK-2013	Tarımsal Mekanizasyon	Sakine ÖZPINAR	2026-01-06		x																Prof.Dr H. TURHAN	
-382	TE	2	ZTE-2011	Bilgisayar Destekli Tasarım	Umut MUCAN	2026-01-06		x																Bilgisayar Lab.	
-24	BK	3	BTK-3003	Böcek Ekolojisi	Ali ÖZPINAR	2026-01-06			x															Prof.Dr H. TURHAN	
-26	TM	3	TMT-3101.1	Araştırma Deneme Yöntemleri	Burcu Mestav	2026-01-06			x															01	
-290	TB	3	TBİ-3003	Biyoteknoloji	Onur Sinan TÜRKMEN	2026-01-06			x															201	
-291	TE	3	TAE-3017	Makroekonomi	Özge Can NİYAZ ALTINOK	2026-01-06			x															101	
-334	TYS	3	TYS-3009	Zemin Mekaniği	Sefa AKSU	2026-01-06			x															02	
-380	TBT	3	TRB-3007	Mesleki İngilizce I	Uğur SARI	2026-01-06			x															202	
-405	TO	3	TBB-3001	Toprak Fiziği	Yasemin KAVDIR	2026-01-06			x															102	
-48	BB	4	BHB-4005	Kesme Çiçek Yetiştirme Teknikleri	Arda AKÇAL	2026-01-06					x													202	
-65	TB	4	TBİ-4005	Tohumluk Bilimi ve Teknolojisi	Bahri İZCİ	2026-01-06					x													Prof.Dr H. TURHAN	
-80	BK	4	BTK-4025	Bitki Koruma Ürünlerinin Organizasyonu	Burak POLAT	2026-01-06					x													205	
-123	TE	4	TAE-4001	Üretim Ekonomisi	Duygu AKTÜRK	2026-01-06					x													113	
-220	ZO	4	ZOO-4001	Yem Toksikolojisi	Kemal ÇELİK	2026-01-06					x													201	
-114	BK	1	ZBK-1003 / BTK-1007	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
-115	TYS	1	ZTY-1003 / TYS-1009	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
-116	ZO	1	ZTN-1003 / ZOO-1003	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
-127	TE	1	TAE-1011	Temel Bilgi Teknoloji Kullanımı	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
-129	TO	1	ZTO-1011	Temel Bilgisayar Programları	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
-130	BB	1	ZBB-1011 - BHB-1007	Temel Bilgisayar Uygulamaları 	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
 200	TB	1	ZTB-1011	Tarım Hukuku	İlker KARAÖNDER	2026-01-06							x											101	
-229	TM	1	ZTM-1013 / TMT-1013	Kariyer Planlama	M. Burak BÜYÜKCAN	2026-01-06							x											201	
-15	TYS	2	TYS-2007	Bitki Koruma	Ali KARANFİL	2026-01-06									x									203	
-22	BK	2	ZBK-2003	İstatistik	Ali Kürşat ŞAHİN	2026-01-06									x									113	
-36	ZO	2	ZTN-2005	Bitki Fizyolojisi	Ali SÜMER	2026-01-06									x									201	
-44	TM	2	ZTM-2013	Statik	Anıl ÇAY	2026-01-06									x									202	
-45	TM	2	TMT-2013	Statik ve Mukavemet	Anıl ÇAY	2026-01-06									x									202	
+220	TB	1		Matametik	Selin TÜRKMEN	2026-01-08					x													113	
+374	TB	1	ZTB-1005 / TBİ-1007	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															02	
+85	TB	2	ZTB-2015	Biyokimya	Cahit AKGÜL	2025-12-29			x															202	
+233	TB	2	TBİ-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	2025-12-29									x									201	
+397	TB	2	ZTB-2011	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
+134	TB	2	ZTB-2003 / TBİ-2003	İstatistik	Fatih KAHRIMAN	2025-12-31			x															AMFİ	
+133	TB	2	ZTB-2001 / TBİ-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	2026-01-02			x															AMFİ	
+336	TB	2	ZTB-2005	Ekonomi	Selma KAYALAK	2026-01-05		x																113	
+215	TB	2	ZTB-2009 / TBİ-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	2026-01-06		x																113	
 289	TB	2	ZTB-2013	Tarla Tarımı	Onur Hocaoğlu	2026-01-06									x									Prof.Dr H. TURHAN	
-68	ZO	3	ZOO-3013	Hayvan Fizyolojisi	Baver COŞKUN	2026-01-07		x																201	
-211	TYS	3	TYS-3003	Hidroloji	İsmail TAŞ	2026-01-07		x																202	
-251	BB	3	BHB-3013	Tropik İklim Meyve Türleri	Murat ŞEKER	2026-01-07		x																Prof.Dr H. TURHAN	
-356	TE	3	TAE-3009	Doğal Kaynaklar ve Çevre Ekonomisi	Sibel TAN	2026-01-07		x																113	
-100	ZO	4	ZOO-4019	Hayvan ve Organik Üretim	Cemil TÖLÜ	2026-01-07			x															103	
-147	TO	4	TBB-4019	Örtüaltı Yetiştiriciliğinde Gübreleme	Gizem Aksu	2026-01-07			x															201	
+328	TB	2	TBİ-2013	Genel Sebzecilik	Seçkin KAYA	2026-01-07							x											102	
+63	TB	2	ZTB-2017	Temel Bilgisayar Programları	Onur Sinan TÜRKMEN	2026-01-08							x											Bilgisayar Lab.	
+110	TB	2	TBİ-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
+267	TB	2	ZTB-2007 / TBİ-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+243	TB	3	TBİ-3007	Araştırma Deneme Metotları	Mevlüt AKÇURA	2026-01-02										x								02	
+290	TB	3	TBİ-3003	Biyoteknoloji	Onur Sinan TÜRKMEN	2026-01-06			x															201	
+304	TB	3	TBİ-3011	Endüstri Bitkileri I	Ramazan ÇAKMAKÇI	2026-01-07		x																101	
+244	TB	3	TBİ-3001	Tahıllar	Mevlüt AKÇURA	2026-01-08		x																Prof.Dr H. TURHAN	
+349	TB	3	TBİ-3005	Tarımsal Yayım ve Haberleşme	Sema Ezgi YÜCEER PALA	2026-01-09							x											201	
+142	TB	4	TBİ-4001	Çayır Mera Yönetimi	Fırat ALATÜRK	2025-12-29							x											102	
+190	TB	4	TBİ-4011	Çim Tekniği	Harun BAYTEKİN	2025-12-30				x														101	
+43	TB	4	TBİ-4015	Yemeklik Tane Baklagiller	Altıngül ÖZASLAN PARLAK	2025-12-30									x									202	
+62	TB	4	TBİ-4013	Tahıl Baklagil ve Yem Bitkileri Hastalıkları	Baboo Ali	2026-01-02		x																101	
+65	TB	4	TBİ-4005	Tohumluk Bilimi ve Teknolojisi	Bahri İZCİ	2026-01-06					x													Prof.Dr H. TURHAN	
 192	TB	4	TBİ-4009	Sürdürülebilir Tarım	Harun BAYTEKİN	2026-01-07			x															202	
-204	BK	4	BTK-4013	Depolanmış Ürün Zararlıları	İsmail KASAP	2026-01-07			x															102	
-208	TYS	4	TYS-4017	Atık Su Yönetimi	İsmail TAŞ	2026-01-07			x															203	
-308	TM	4	TMT-4119	Koruyucu Toprak İşleme ve Doğrudan Ekim	Sakine ÖZPINAR	2026-01-07			x															101	
+317	TBT	1	ZBY-1009 / TRB-1005	Matematik	Saniye CAN	2025-12-29		x																113	
+151	TBT	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+293	TBT	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+239	TBT	1	ZBY-1001 / TRB-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																113	
+8	TBT	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													Prof.Dr H. TURHAN	
+165	TBT	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+343	TBT	1	ZBY-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+96	TBT	1	ZBY-1007 / TRB-1011	Kariyer Planlama	Cem Ömer EGESEL	2026-01-07					x													Prof.Dr H. TURHAN	
+124	TBT	1	TRB-1003	Genel Kimya I	Elif KARACAN YELDİR	2026-01-08					x													103	
+235	TBT	1	TRB-1007	Temel Bilgi Teknolojisi Kullanımı	M. Burak BÜYÜKCAN	2026-01-09			x															Bölüm Odası	
+381	TBT	1	ZBY-1011	Temel Bilgisayar Uygulamaları	Uğur SARI	2026-01-09			x															Bilgisayar Lab.	
+273	TBT	1	TRB-1109 - ZBY-1005	Botanik	Okan ACAR	2026-01-09							x											101	
+86	TBT	2	ZBY-2005 / TRB-2005	Biyokimya	Cahit AKGÜL	2025-12-29			x															203	
+234	TBT	2	ZBY-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	2025-12-29									x									201	
+29	TBT	2	TRB-2009	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+385	TBT	2	ZBY-2013	Teknik Resim	Umut MUCAN	2025-12-31			x															105	
+373	TBT	2	ZBY-2001 / TRB-2001	İstatistik	Tuğba SÖKÜT ACAR	2026-01-02			x															02	
+67	TBT	2	ZBY-2017 / TRB-2007	Hayvan Anatomisi Fizyolojisi	Baver COŞKUN	2026-01-05		x																203	
+61	TBT	2	ZBY-2009	Hayvansal Üretim	Aynur KONYALI	2026-01-06		x																101	
+202	TBT	2	ZBY-2003 / TRB-2003	Genetik	İskender TİRYAKİ	2026-01-07							x											113	103
+93	TBT	2	ZBY-2007 / TRB-2013	Bitki Fizyolojisi	Cem Ömer EGESEL	2026-01-08							x											101	
+366	TBT	2	ZBY-2015 / TRB-2011	Organik Kimya	Şirin GÜLTEN	2026-01-09					x													02	
+378	TBT	3	TRB-3003	Bitki Doku Kültürü	Uğur SARI	2025-12-29					x													202	
+364	TBT	3	TRB-3005	Biyoteknolojiye Giriş	Şemun TAYYAR	2025-12-30			x															202	
+217	TBT	3	TRB-3009	Enstrümental Analiz	İsmet KAYA	2026-01-05									x									01	
+380	TBT	3	TRB-3007	Mesleki İngilizce I	Uğur SARI	2026-01-06			x															202	
+186	TBT	3	TRB-3001	Moleküler Biyoloji	Hanife YANDAYAN	2026-01-08		x																101	
+97	TBT	3	TRB-3013	Tarımda Kalite ve Standardizasyon	Cem Ömer EGESEL	2026-01-09			x															01	
+185	TBT	4	TRB-4003	Genetik Mühendisliği	Hanife YANDAYAN	2025-12-29							x											203	
+188	TBT	4	TRB-4015	Moleküler Biyolojide Kullanılan Yöntemler	Hanife YANDAYAN	2025-12-30				x														102	
 379	TBT	4	TRB-4009	Biyoinformatik I	Uğur SARI	2026-01-07			x															105	
+201	TBT	4	TRB-4001	Bitki Islahında Biyoteknolojik Uygulamalar	İskender TİRYAKİ	2026-01-09		x																203	
+318	TE	1	ZTE-1009 / TAE-1005	Matematik	Saniye CAN	2025-12-29		x																AMFİ	
+340	TE	1	ZTE-1007 / TAE-1013	Kariyer Planlama	Selma KAYALAK	2025-12-29			x															01	
+152	TE	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												AMFİ	
+299	TE	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										AMFİ	
+286	TE	1	ZTE-1001 / TAE-1101	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
+2	TE	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													AMFİ	
+166	TE	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									AMFİ	
+344	TE	1	ZTE-1003 / TAE-1003	Kimya	Sema EKİCİ	2026-01-05							x											113	101
+127	TE	1	TAE-1011	Temel Bilgi Teknoloji Kullanımı	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
+279	TE	1	TAE-1109	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+88	TE	1	ZTE-1005 / TAE-1107	Botanik	Canan Öztokat KUZUCU	2026-01-08					x													202	
+302	TE	1	ZTE-1011	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	2026-01-09			x															101	
+191	TE	2	ZTE-2017	Ekoloji	Harun BAYTEKİN	2025-12-29			x															105	
+348	TE	2	TAE-2003	Kırsal Sosyoloji	Sema Ezgi YÜCEER PALA	2025-12-29									x									103	
+357	TE	2	ZTE-2001	Ekonomi	Sibel TAN	2025-12-30		x																102	
+358	TE	2	TAE-2001	Tarım Ekonomisi	Sibel TAN	2025-12-30		x																102	
+55	TE	2	ZTE-2013	Mikro Ekonomi	Arif SEMERCİ	2025-12-31			x															103	
+206	TE	2	TAE-2005	Tarım Makinaları	İsmail KAVDIR	2026-01-02			x															101	
+207	TE	2	ZTE-2009	Tarımsal Mekanizasyon	İsmail KAVDIR	2026-01-02			x															101	
+383	TE	2	ZTE-2015	Coğrafi Bilgi Sistemleri	Umut MUCAN	2026-01-05		x																Bilgisayar Lab.	
+382	TE	2	ZTE-2011	Bilgisayar Destekli Tasarım	Umut MUCAN	2026-01-06		x																Bilgisayar Lab.	
+237	TE	2	ZTE-2003	İstatistik	Mehmet MENDEŞ	2026-01-07							x											204	
+260	TE	2	ZTE-2007 / TAE-2011	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	2026-01-08							x											201	
+301	TE	2	TAE-2009	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	2026-01-09			x															202	
+263	TE	2	ZTE-2005 / TAE-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+339	TE	3	TAE-3005	İstatistik II	Selma KAYALAK	2025-12-29					x													101	
+54	TE	3	TAE-3003	Mikro Ekonomi	Arif SEMERCİ	2025-12-30			x															201	
+57	TE	3	TAE-3011	Tarımsal Kuruluşlar ve Organizasyon	Arif SEMERCİ	2026-01-05									x									202	
+291	TE	3	TAE-3017	Makroekonomi	Özge Can NİYAZ ALTINOK	2026-01-06			x															101	
+356	TE	3	TAE-3009	Doğal Kaynaklar ve Çevre Ekonomisi	Sibel TAN	2026-01-07		x																113	
+71	TE	3	TAE-3013	Tarımsal Pazarlama	Bengü EVEREST	2026-01-08		x																01	
+113	TE	3	TAE-3007	Tarım Tarihi ve Deontolojisi	Damla ÖZSAYIN	2026-01-09			x															105	
+72	TE	4	TAE-4011	Uluslararası Pazarlama	Bengü EVEREST	2025-12-29							x											Bölüm Odası	
+56	TE	4	TAE-4013	Tarıma Dayalı Sanayi	Arif SEMERCİ	2025-12-30				x														201	
+121	TE	4	TAE-4009	Tarımsal Proje Haz. Tek. II (ZORUNLU)	Duygu AKTÜRK	2026-01-02			x															Bölüm Odası	
+123	TE	4	TAE-4001	Üretim Ekonomisi	Duygu AKTÜRK	2026-01-06					x													113	
+119	TE	4	TAE-4003	Tarımsal Muhasebe (ZORUNLU)	Duygu AKTÜRK	2026-01-08			x															113	
+314	TM	1	ZTM-1009 / TMT-1005	Matematik	Saniye CAN	2025-12-29		x																02	
+392	TM	1	ZTM-1007	Mühendisliğe Giriş	Ünal ÜRKMEZ	2025-12-29			x															201	
+154	TM	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												Prof.Dr H. TURHAN	
+296	TM	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										Prof.Dr H. TURHAN	
+240	TM	1	ZTM-1001 / TMT-1001	Fizik	Mehmet TÜYSÜZ	2025-12-31		x																101	
+269	TM	1	ZTM-1005	Biyoloji	Mustafa Kemal AKBULUT	2026-01-02					x													101	
+270	TM	1	TMT-1107	Mühendislik Biyolojisi	Mustafa Kemal AKBULUT	2026-01-02					x													101	
+167	TM	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									Prof.Dr H. TURHAN	
+346	TM	1	ZTM-1003 / TMT-1003	Kimya	Sema EKİCİ	2026-01-05							x											102	
+229	TM	1	ZTM-1013 / TMT-1013	Kariyer Planlama	M. Burak BÜYÜKCAN	2026-01-06							x											201	
 46	TM	1	TMT-1009	Temel Bilgi Teknolojisi Kullanımı	Anıl ÇAY	2026-01-07					x													Bilgisayar Lab.	
 47	TM	1	ZTM-1011	Temel Bilgisayar Uygulamaları	Anıl ÇAY	2026-01-07					x													Bilgisayar Lab.	
-96	TBT	1	ZBY-1007 / TRB-1011	Kariyer Planlama	Cem Ömer EGESEL	2026-01-07					x													Prof.Dr H. TURHAN	
-184	ZO	1	ZTN-1005 / ZOO-1007	Botanik	Hanife AKYALÇIN	2026-01-07					x													113	
-277	BB	1	BHB-1009	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
-278	BK	1	BTK-1001	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
-279	TE	1	TAE-1109	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
-280	TO	1	ZTO-1009 / TBB-1007	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
-281	TYS	1	ZTY-1011 / TYS-1005	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
-40	TYS	2	ZTY-2013 / TYS-2017	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-07							x											Prof.Dr H. TURHAN	
-41	ZO	2	ZTN-2009	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-07							x											Prof.Dr H. TURHAN	
-94	BK	2	BTK-2003	Genetik	Cem Ömer EGESEL	2026-01-07							x											101	
-139	TO	2	TBB-2015	Hayvan Yetiştirme	Feyzi UĞUR	2026-01-07							x											201	
-140	BB	2	ZBB-2017	Hayvansal Üretim	Feyzi UĞUR	2026-01-07							x											201	
-141	TO	2	ZTO-2011	Hayvansal Üretim	Feyzi UĞUR	2026-01-07							x											202	
-202	TBT	2	ZBY-2003 / TRB-2003	Genetik	İskender TİRYAKİ	2026-01-07							x											113	103
-237	TE	2	ZTE-2003	İstatistik	Mehmet MENDEŞ	2026-01-07							x											204	
-328	TB	2	TBİ-2013	Genel Sebzecilik	Seçkin KAYA	2026-01-07							x											102	
-231	TM	2	ZTM-2015	Ölçme Kontrol ve Otomasyon	M. Burak BÜYÜKCAN	2026-01-07									x									TM. Uyg.Lab.	
-323	BK	3	BTK-3011	Bitki Bakteriyolojisi	Savaş KORKMAZ	2026-01-07									x									113	
-50	BB	3	BHB-3003	Süs Bitkileri Yetiştiriciliği	Arda AKÇAL	2026-01-08		x																113	
-71	TE	3	TAE-3013	Tarımsal Pazarlama	Bengü EVEREST	2026-01-08		x																01	
-186	TBT	3	TRB-3001	Moleküler Biyoloji	Hanife YANDAYAN	2026-01-08		x																101	
-221	ZO	3	ZOO-3007	Yemler Bilgisi ve Teknolojisi	Kemal ÇELİK	2026-01-08		x																102	
-244	TB	3	TBİ-3001	Tahıllar	Mevlüt AKÇURA	2026-01-08		x																Prof.Dr H. TURHAN	
-333	TYS	3	TYS-3005	Sera Yapım Tekniği	Sefa AKSU	2026-01-08		x																202	
-369	TO	3	TBB-3009	Kartoğrafya	Timuçin EVEREST	2026-01-08		x																02	
-406	TM	3	TMT-3003 	Akışkanlar Mekaniği	Yavuz Hakan ÖZDEMİR	2026-01-08		x																201	
-74	BK	4	BTK-4005.1	Bitki Klinikleri	Bölüm Öğr. Elem - BK	2026-01-08			x															Prof.Dr H. TURHAN	
-119	TE	4	TAE-4003	Tarımsal Muhasebe (ZORUNLU)	Duygu AKTÜRK	2026-01-08			x															113	
-161	TYS	4	TYS-4011	Uzaktan Algılama	Gökhan ÇAMOĞLU	2026-01-08			x															101	
-219	ZO	4	ZOO-4021 / 18ZOO487	Yem Katkıları	Kemal ÇELİK	2026-01-08			x															202	
-268	TO	4	TBB-4013	Toprak ve Su Koruma	Mustafa BAŞARAN	2026-01-08			x															201	
-58	ZO	1	ZTN-1007 / ZOO-1009	Bilim, Üniversite ve Kariyer	Aynur KONYALI	2026-01-08					x													102	104
-87	BB	1	ZBB-1005 / BHB-1011	Botanik	Canan Öztokat KUZUCU	2026-01-08					x													201	
-88	TE	1	ZTE-1005 / TAE-1107	Botanik	Canan Öztokat KUZUCU	2026-01-08					x													202	
-124	TBT	1	TRB-1003	Genel Kimya I	Elif KARACAN YELDİR	2026-01-08					x													103	
 321	TM	1	İSG-1001	İş Sağlığı ve Güvenliği I	Sarp Korkut SÜMER	2026-01-08					x													TM. Uyg.Lab.	
-326	BK	1	ZBK-1007 / BTK-1013	Kariyer Planlama	Savaş KORKMAZ	2026-01-08					x													Prof.Dr H. TURHAN	
-220	TB	1		Matametik	Selin TÜRKMEN	2026-01-08					x													113	
-335	TYS	1	TYS-1011	Matametik	Selin TÜRKMEN	2026-01-08					x													101	
-93	TBT	2	ZBY-2007 / TRB-2013	Bitki Fizyolojisi	Cem Ömer EGESEL	2026-01-08							x											101	
-193	TYS	2	ZTY-2011 / TYS-2015	Bahçe Bitkileri	Harun ÇOBAN	2026-01-08							x											102	
-253	BB	2	ZBB-2011 / BHB-2009	Tarımsal Yapılar ve Sulama	Murat TEKİNER	2026-01-08							x											Prof.Dr H. TURHAN	
-254	BK	2	ZBK-2009 / BTK-2011	Tarımsal Yapılar ve Sulama	Murat TEKİNER	2026-01-08							x											113	
-260	TE	2	ZTE-2007 / TAE-2011	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	2026-01-08							x											201	
+175	TM	2	ZTM-2007/ TMT-2007	Mühendislik Termodinamiği	Habib KOCABIYIK	2025-12-29									x									TM. Uyg.Lab.	
+399	TM	2	TMT-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
+398	TM	2	ZTM-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	2025-12-30		x																AMFİ	
+311	TM	2	ZTM-2003 / TMT-2009	Diferansiyel Denklemler	Saniye CAN	2025-12-31			x															113	
+174	TM	2	ZTM-2011 / TMT-2011	Bilgisayar Destekli Tasarım I	Habib KOCABIYIK	2026-01-02			x															Bilgisayar Lab.	
+337	TM	2	ZTM-2005	Ekonomi	Selma KAYALAK	2026-01-05		x																113	
+44	TM	2	ZTM-2013	Statik	Anıl ÇAY	2026-01-06									x									202	
+45	TM	2	TMT-2013	Statik ve Mukavemet	Anıl ÇAY	2026-01-06									x									202	
+231	TM	2	ZTM-2015	Ölçme Kontrol ve Otomasyon	M. Burak BÜYÜKCAN	2026-01-07									x									TM. Uyg.Lab.	
 261	TM	2	ZTM-2009 / TMT-2003	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	2026-01-08							x											202	
-63	TB	2	ZTB-2017	Temel Bilgisayar Programları	Onur Sinan TÜRKMEN	2026-01-08							x											Bilgisayar Lab.	
-393	ZO	2	ZOO-2011	Tarım Makineleri	Ünal ÜRKMEZ	2026-01-08							x											02	
-395	TO	2	TBB-2011	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	2026-01-08							x											02	
-394	ZO	2	ZTN-2027	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	2026-01-08							x											02	
-12	BK	3	BTK-3001	Herboloji	Ahmet ULUDAĞ	2026-01-08									x									113	
-42	ZO	2	ZOO-2001	Yem Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-08									x									103	
-195	BB	4	BHB-4041	Üzüm Kurutma Tekniği	Harun ÇOBAN	2026-01-08									x									105	
-275	TYS	2	ZTY-2017	Bitki Fizyolojisi	Okan ERKEN	2026-01-08									x									205	
-13	ZO	4	ZOO-4017	Tavuk Yetiştirme	Ali KARABAYIR	2026-01-09		x																102	
-19	BK	4	BTK-4017	Süs Bitkileri Hastalıkları	Ali KARANFİL	2026-01-09		x																103	
-35	TO	4	TBB-4017	Bitki Besin Maddesi Semptomları	Ali SÜMER	2026-01-09		x																201	
-125	BB	4	BHB-4009	Ilıman İklim Meyve Türleri	Engin GÜR	2026-01-09		x																202	
-187	TB	4	TBİ-4007	Moleküler Biyoloji	Hanife YANDAYAN	2026-01-09		x																101	
-201	TBT	4	TRB-4001	Bitki Islahında Biyoteknolojik Uygulamalar	İskender TİRYAKİ	2026-01-09		x																203	
-210	TYS	4	TYS-4001	Drenaj Sistemlerinin Tasarımı	İsmail TAŞ	2026-01-09		x																105	
-307	TM	4	TMT-4121	Hayvansal Üretim Makinaları ve Teknolojileri	Sakine ÖZPINAR	2026-01-09		x																205	
-17	BK	1	ZBK-1011	Mikrobiyoloji	Ali KARANFİL	2026-01-09			x															113	
-97	TBT	3	TRB-3013	Tarımda Kalite ve Standardizasyon	Cem Ömer EGESEL	2026-01-09			x															01	
-113	TE	3	TAE-3007	Tarım Tarihi ve Deontolojisi	Damla ÖZSAYIN	2026-01-09			x															105	
-235	TBT	1	TRB-1007	Temel Bilgi Teknolojisi Kullanımı	M. Burak BÜYÜKCAN	2026-01-09			x															Bölüm Odası	
-302	TE	1	ZTE-1011	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	2026-01-09			x															101	
-301	TE	2	TAE-2009	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	2026-01-09			x															202	
-322	TM	3	TMT-3113	Termik Motorlar	Sarp Korkut SÜMER	2026-01-09			x															TM. Uyg.Lab.	
-325	BK	3	BTK-3005	Bitki Virolojisi	Savaş KORKMAZ	2026-01-09			x															Prof.Dr H. TURHAN	
-374	TB	1	ZTB-1005 / TBİ-1007	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															02	
-375	TO	1	ZTO-1005 / TBB-1009	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															102	
-376	TYS	1	TYS-1015	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															103	
-381	TBT	1	ZBY-1011	Temel Bilgisayar Uygulamaları	Uğur SARI	2026-01-09			x															Bilgisayar Lab.	
-388	ZO	3	ZOO-3011	Hayvan Barınakları	Ünal KIZIL	2026-01-09			x															201	
-400	TO	3	TBB-3007	Bitki Fizyolojisi	Yakup ÇIKILI	2026-01-09			x															203	
-108	BB	1	BHB-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
-109	BK	2	BTK-2007	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
-110	TB	2	TBİ-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
 111	TM	2	TMT-2005	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
+319	TM	3	TMT-3105	Ergonomi	Sarp Korkut SÜMER	2025-12-29					x													TM. Uyg.Lab.	
+241	TM	3	TMT-3107	Makine Elemanları	Mehmet YAZAR	2025-12-30			x															102	
+310	TM	3	TMT-3111	Toprak İşleme Makinaları	Sakine ÖZPINAR	2026-01-05									x									101	
+26	TM	3	TMT-3101.1	Araştırma Deneme Yöntemleri	Burcu Mestav	2026-01-06			x															01	
+406	TM	3	TMT-3003 	Akışkanlar Mekaniği	Yavuz Hakan ÖZDEMİR	2026-01-08		x																201	
+322	TM	3	TMT-3113	Termik Motorlar	Sarp Korkut SÜMER	2026-01-09			x															TM. Uyg.Lab.	
+205	TM	4	TMT-4115	Sulama Makinaları ve Teknolojileri	İsmail KAVDIR	2025-12-29							x											TM. Uyg.Lab.	
+306	TM	4	TMT-4001	Hassas Tarım Teknolojileri	Sakine ÖZPINAR	2025-12-30				x														TM. Uyg.Lab.	
+145	TM	4	TMT-4123	Tarımda Makina Kullanım Teknikleri	Gıyasettin ÇİÇEK	2026-01-02		x																TM. Uyg.Lab.	
+308	TM	4	TMT-4119	Koruyucu Toprak İşleme ve Doğrudan Ekim	Sakine ÖZPINAR	2026-01-07			x															101	
+307	TM	4	TMT-4121	Hayvansal Üretim Makinaları ve Teknolojileri	Sakine ÖZPINAR	2026-01-09		x																205	
+315	TO	1	ZTO-1007 / TBB-1005	Matematik	Saniye CAN	2025-12-29		x																101	
+153	TO	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												Prof.Dr H. TURHAN	
+300	TO	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										Prof.Dr H. TURHAN	
+287	TO	1	ZTO-1001 / TBB-1001	Fizik	Oktay YILMAZ	2025-12-31		x																AMFİ	
+3	TO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													Prof.Dr H. TURHAN	
+168	TO	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									Prof.Dr H. TURHAN	
+347	TO	1	ZTO-1003 / TBB-1003	Kimya	Sema EKİCİ	2026-01-05							x											AMFİ	
+129	TO	1	ZTO-1011	Temel Bilgisayar Programları	F. Cem KUZUCU	2026-01-06							x											Bilgisayar Lab.	
+280	TO	1	ZTO-1009 / TBB-1007	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+375	TO	1	ZTO-1005 / TBB-1009	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															102	
+171	TO	2	ZTO-2001 / TBB-2001	Analitik Kimya	Gülşen SAĞLIKOĞLU	2025-12-29			x															01	
+137	TO	2	ZTO-2015	Tarla Bitkileri	Fatih KAHRIMAN	2025-12-29									x									113	
+368	TO	2	ZTO-2003	Coğrafi Bilgi Sistemleri	Timuçin EVEREST	2025-12-31			x															203	
+283	TO	2	ZTO-2005	Ölçme Bilgisi	Okan ERKEN	2026-01-02			x															201	
+371	TO	2	ZTO-2009 / TBB-2013	Genel Sebzecilik	Tolga SARIYER	2026-01-02							x											201	
+104	TO	2	ZTO-2013	Entomoloji	Çiğdem GÜNEŞ	2026-01-05		x																201	
+216	TO	2	TBB-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	2026-01-06		x																113	
+139	TO	2	TBB-2015	Hayvan Yetiştirme	Feyzi UĞUR	2026-01-07							x											201	
+141	TO	2	ZTO-2011	Hayvansal Üretim	Feyzi UĞUR	2026-01-07							x											202	
+395	TO	2	TBB-2011	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	2026-01-08							x											02	
 112	TO	2	ZTO-2007 / TBB-2003	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													102	
-107	ZO	2	ZTN-2015	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
-157	BB	2	ZBB-2007	Akıllı Tarım	Gökhan ÇAMOĞLU	2026-01-09					x													202	
-236	TYS	2	ZTY-2009 / TYS-2013	Diferansiyel Denklemler	Mehmet GÜMÜŞ	2026-01-09					x													201	
-366	TBT	2	ZBY-2015 / TRB-2011	Organik Kimya	Şirin GÜLTEN	2026-01-09					x													02	
-176	BB	3	BHB-3009	Fide ve Fidan Yetiştiriciliği	F. Cem KUZUCU	2026-01-09							x											Prof.Dr H. TURHAN	
-273	TBT	1	TRB-1109 - ZBY-1005	Botanik	Okan ACAR	2026-01-09							x											101	
-349	TB	3	TBİ-3005	Tarımsal Yayım ve Haberleşme	Sema Ezgi YÜCEER PALA	2026-01-09							x											201	
-266	BK	2	BTK-2009	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
-267	TB	2	ZTB-2007 / TBİ-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
-263	TE	2	ZTE-2005 / TAE-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
 264	TO	2	ZTO-2017 / TBB-2005	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
-265	ZO	2	ZOO-2003	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+83	TO	3	TBB-3003	Toprak Biyolojisi	Cafer TÜRKMEN	2025-12-30			x															01	
+242	TO	3	TBB-3005	Araştırma ve Deneme Yöntemleri	Mevlüt Akçura	2026-01-02										x								102	
+33	TO	3	TBB-3011	Toprak Kimyası	Ali SUNGUR	2026-01-05									x									102	
+405	TO	3	TBB-3001	Toprak Fiziği	Yasemin KAVDIR	2026-01-06			x															102	
+369	TO	3	TBB-3009	Kartoğrafya	Timuçin EVEREST	2026-01-08		x																02	
+400	TO	3	TBB-3007	Bitki Fizyolojisi	Yakup ÇIKILI	2026-01-09			x															203	
+198	TO	4	TBB-4011	Jeomorfoloji	Hüseyin EKİNCİ	2025-12-29							x											101	
+402	TO	4	TBB-4003	Sürdürülebilir Toprak Verimliliği	Yakup ÇIKILI	2026-01-02		x																202	
+147	TO	4	TBB-4019	Örtüaltı Yetiştiriciliğinde Gübreleme	Gizem Aksu	2026-01-07			x															201	
+268	TO	4	TBB-4013	Toprak ve Su Koruma	Mustafa BAŞARAN	2026-01-08			x															201	
+35	TO	4	TBB-4017	Bitki Besin Maddesi Semptomları	Ali SÜMER	2026-01-09		x																201	
+199	TO	4	TBB-4001	Toprak Genesisi ve Sınıflandırma	Hüseyin EKİNCİ	2026-01-09										x								101	
+49	TYS	1	 ZTY-1013	Peyzaj Mimarlığı	Arda AKÇAL	2025-12-29		x																201	
+386	TYS	1	TYS-1101	Temel Bilgi Teknolojisi Kullanımı	Umut MUCAN	2025-12-29			x															Bilgisayar Lab.	
+387	TYS	1	ZTY-1005	Temel Bilgisayar Uygulamaları	Umut MUCAN	2025-12-29			x															Bilgisayar Lab.	
+155	TYS	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												113	
+297	TYS	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										113	
+353	TYS	1	ZTY-1001 / TYS-1007	Fizik	Sibel ŞEN	2025-12-31		x																201	
+6	TYS	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													113	
+169	TYS	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									113	
+247	TYS	1	ZTY-1007 / TYS-1017	Kariyer Planlama	Muharrem Yetiş YAVUZ	2026-01-05							x											201	
+197	TYS	1	TYS-1003	Jeoloji	Hüseyin EKİNCİ	2026-01-05									x									103	
+115	TYS	1	ZTY-1003 / TYS-1009	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
+281	TYS	1	ZTY-1011 / TYS-1005	Meteoroloji	Okan ERKEN	2026-01-07					x													AMFİ	
+335	TYS	1	TYS-1011	Matametik	Selin TÜRKMEN	2026-01-08					x													101	
+376	TYS	1	TYS-1015	Botanik	Tülay TÜTENOCAKLI	2026-01-09			x															103	
+52	TYS	2	ZTY-2007 / TYS-2011	Tarımsal Mekanizasyon	Gıyasettin ÇİÇEK	2025-12-29									x									Prof.Dr H. TURHAN	
+246	TYS	2	TYS-2005	Akışkanlar Mekaniği	Muharrem Yetiş YAVUZ	2025-12-30		x																101	
+135	TYS	2	ZTY-2001	İstatistik	Fatih KAHRIMAN	2025-12-31			x															AMFİ	
+262	TYS	2	ZTY-2003	Teknik Resim	Murat YILDIRIM	2026-01-02			x															01	
+213	TYS	2	TYS-2003	Sulama Gübreleme İlişkileri	İsmail TAŞ	2026-01-02							x											202	
+259	TYS	2	TYS-2001	Mühendislik Ölçmeleri	Murat YILDIRIM	2026-01-05		x																02	
+60	TYS	2	ZTY-2005 / TYS-2009	Hayvansal Üretim	Aynur KONYALI	2026-01-06		x																101	
+15	TYS	2	TYS-2007	Bitki Koruma	Ali KARANFİL	2026-01-06									x									203	
+40	TYS	2	ZTY-2013 / TYS-2017	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-07							x											Prof.Dr H. TURHAN	
+193	TYS	2	ZTY-2011 / TYS-2015	Bahçe Bitkileri	Harun ÇOBAN	2026-01-08							x											102	
+275	TYS	2	ZTY-2017	Bitki Fizyolojisi	Okan ERKEN	2026-01-08									x									205	
+236	TYS	2	ZTY-2009 / TYS-2013	Diferansiyel Denklemler	Mehmet GÜMÜŞ	2026-01-09					x													201	
 390	TYS	2	ZTY-2015 / TYS-2019	Statik	Ünal KIZIL	2026-01-09									x									Prof.Dr H. TURHAN	
-199	TO	4	TBB-4001	Toprak Genesisi ve Sınıflandırma	Hüseyin EKİNCİ	2026-01-09																		101	
-222	BK	4	BTK-4027	Bitki Korumada Pestisit Uygulamaları	Levent EFİL	2026-01-09																		202	
-271	BB	4	BHB-4019	Bahçe Ürünlerinin Muhafaza ve Pazara Hazırlık	Neslihan EKİNCİ	2026-01-09																		201	
+331	TYS	3	TYS-3001	Kırsal Yerleşim Planlaması	Sefa AKSU	2025-12-29					x													102	
+256	TYS	3	TYS-3011	Toprak ve Su Koruma Mühendisliği	Murat TEKİNER	2025-12-30			x															02	
+252	TYS	3	TYS-3007	Sistem Mühendisliği	Murat TEKİNER	2026-01-05									x									02	
+334	TYS	3	TYS-3009	Zemin Mekaniği	Sefa AKSU	2026-01-06			x															02	
+211	TYS	3	TYS-3003	Hidroloji	İsmail TAŞ	2026-01-07		x																202	
+333	TYS	3	TYS-3005	Sera Yapım Tekniği	Sefa AKSU	2026-01-08		x																202	
+159	TYS	4	TYS-4009	Su Kaynaklarının Planlanması	Gökhan ÇAMOĞLU	2025-12-29							x											103	
+384	TYS	4	TYS-4013	Mesleki Bilgisayar Programları I	Umut MUCAN	2025-12-30				x														Bilgisayar Lab.	
+255	TYS	4	TYS-4007	Toprak Su Yapılarının Tasarımı	Murat TEKİNER	2026-01-02		x																103	
+208	TYS	4	TYS-4017	Atık Su Yönetimi	İsmail TAŞ	2026-01-07			x															203	
+161	TYS	4	TYS-4011	Uzaktan Algılama	Gökhan ÇAMOĞLU	2026-01-08			x															101	
+210	TYS	4	TYS-4001	Drenaj Sistemlerinin Tasarımı	İsmail TAŞ	2026-01-09		x																105	
+316	ZO	1	ZTN-1009 / ZOO-1005	Matematik	Saniye CAN	2025-12-29		x																102	
+156	ZO	1	ATA-1101	Atatürk İlk. ve İnk. Tarihi	Gökhan BAYRAM	2025-12-30						x												113	
+298	ZO	1	TDİ-1001	Türk Dili I 	Özgür ÜSTÜN	2025-12-30								x										113	
+354	ZO	1	ZTN-1001 / ZOO-1001	Fizik	Sibel ŞEN	2025-12-31		x																102	
+4	ZO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Adem Yavuz VURAL	2026-01-02					x													113	
+170	ZO	1	YDİ-1101	Yabancı Dil I (İngilizce)	Gökhan HINIZ	2026-01-02									x									113	
+338	ZO	1	ZTN-1011	Ekonomi	Selma KAYALAK	2026-01-05							x											202	
+116	ZO	1	ZTN-1003 / ZOO-1003	Kimya	Diğdem ERDENER ÇIRALI	2026-01-06							x											AMFİ	
+184	ZO	1	ZTN-1005 / ZOO-1007	Botanik	Hanife AKYALÇIN	2026-01-07					x													113	
+58	ZO	1	ZTN-1007 / ZOO-1009	Bilim, Üniversite ve Kariyer	Aynur KONYALI	2026-01-08					x													102	104
+181	ZO	2	ZTN-2007	Biyokimya	Hande Işıl AKBAĞ	2025-12-29			x															102	
+32	ZO	2	ZTN-2001	Toprak Bilimi ve Bitki Besleme	Ali SUNGUR	2025-12-29									x									02	
+31	ZO	2	ZOO-2009	Toprak Bilgisi	Ali SUNGUR	2025-12-30		x																113	
+365	ZO	2	ZOO-2007	Tarımsal Biyoteknoloji	Şemun TAYYAR	2025-12-30										x								201	
+99	ZO	2	ZTN-2003 / ZOO-2005	Hayvan ve Çevresi	Cemil TÖLÜ	2025-12-31			x															202	
+282	ZO	2	ZOO-2013	Ölçme Bilgisi	Okan ERKEN	2026-01-02			x															202	
+351	ZO	2	ZTN-2033	Bahçe Bitkileri	Serkan CANDAR	2026-01-02							x											101	
+105	ZO	2	ZTN-2023	Entomoloji	Çiğdem GÜNEŞ	2026-01-05		x																201	
+11	ZO	2	ZTN-2025	Fitopatoloji	Ahmet ULUDAĞ	2026-01-06		x																205	
+36	ZO	2	ZTN-2005	Bitki Fizyolojisi	Ali SÜMER	2026-01-06									x									201	
+41	ZO	2	ZTN-2009	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-07							x											Prof.Dr H. TURHAN	
+393	ZO	2	ZOO-2011	Tarım Makineleri	Ünal ÜRKMEZ	2026-01-08							x											02	
+394	ZO	2	ZTN-2027	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	2026-01-08							x											02	
+42	ZO	2	ZOO-2001	Yem Bitkileri	Altıngül ÖZASLAN PARLAK	2026-01-08									x									103	
+107	ZO	2	ZTN-2015	Tarım Ekonomisi	Damla ÖZSAYIN	2026-01-09					x													101	
+265	ZO	2	ZOO-2003	Gıda Bilimi ve Güvenliği	Murat ZORBA	2026-01-09									x									AMFİ	
+182	ZO	3	ZOO-3001	Hayvan Besleme Biyokimyası	Hande Işıl AKBAĞ	2025-12-29			x															101	
+360	ZO	3	ZOO-3005	Araştırma ve Deneme Yöntemleri	Soner YİĞİT	2025-12-29					x													Prof.Dr H. TURHAN	
+66	ZO	3	ZOO-3003	Hayvan Anatomisi	Baver COŞKUN	2025-12-30			x															101	
+68	ZO	3	ZOO-3013	Hayvan Fizyolojisi	Baver COŞKUN	2026-01-07		x																201	
+221	ZO	3	ZOO-3007	Yemler Bilgisi ve Teknolojisi	Kemal ÇELİK	2026-01-08		x																102	
+388	ZO	3	ZOO-3011	Hayvan Barınakları	Ünal KIZIL	2026-01-09			x															201	
+218	ZO	4	ZOO-4003	Kanatlı Hayvan Besleme	Kemal ÇELİK	2025-12-29							x											Prof.Dr H. TURHAN	
+122	ZO	4	ZOO-4023	Tarımsal Proje Hazırlama Tekniği	Duygu AKTÜRK	2025-12-30				x														103	
+59	ZO	4	ZOO-4015	Çevre ve Sürdürülebilirliği	Aynur KONYALI	2025-12-30									x									Bölüm Odası	
+138	ZO	4	ZOO-4011	Hayvan Yetiştirme	Feyzi UĞUR	2025-12-30									x									101	
+69	ZO	4	ZOO-4009	Hayvan Hastalıkları	Baver COŞKUN	2026-01-02		x																201	
+180	ZO	4	ZOO-4005	Hayvan Islahına Giriş	Hakan ERDEM	2026-01-02					x													202	
+220	ZO	4	ZOO-4001	Yem Toksikolojisi	Kemal ÇELİK	2026-01-06					x													201	
+100	ZO	4	ZOO-4019	Hayvan ve Organik Üretim	Cemil TÖLÜ	2026-01-07			x															103	
+219	ZO	4	ZOO-4021 / 18ZOO487	Yem Katkıları	Kemal ÇELİK	2026-01-08			x															202	
+13	ZO	4	ZOO-4017	Tavuk Yetiştirme	Ali KARABAYIR	2026-01-09		x																102	
 `;
 
 
         let islenmisVeri = [];
         const saatBasliklari = [
             "09:00:00", "10:30:00", "11:45:00", "12:00:00", 
-            "13:00:00", "13:30:00", "14:00:00", "15:00:00", "16:00:00"
+            "13:00:00", "13:30:00", "14:00:00", "15:00:00", "16:30:00"
         ];
         const saatBaslangicIndex = 8; // '09:00:00' sütununun indisi
 
