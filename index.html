@@ -20,25 +20,48 @@
             position: sticky;
             top: 0;
             background-color: #003366;
-            padding: 15px 0;
-            text-align: center;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        .navbar a {
+        .nav-logo {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 2px solid #ffcc00;
+        }
+        .nav-links a {
             color: #fff;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 0 10px;
             font-weight: bold;
             font-size: 14px;
             transition: color 0.3s;
         }
-        .navbar a:hover {
+        .nav-links a:hover {
             color: #ffcc00;
+        }
+        .poster-container {
+            max-width: 900px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .poster-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .container {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 20px auto 40px auto;
             padding: 40px;
             background-color: #fff;
             box-shadow: 0 0 15px rgba(0,0,0,0.05);
@@ -73,12 +96,20 @@
 <body>
 
     <div class="navbar">
-        <a href="#tr">TÜRKÇE</a> |
-        <a href="#en">ENGLISH</a> |
-        <a href="#de">DEUTSCH</a> |
-        <a href="#fr">FRANÇAIS</a> |
-        <a href="#it">ITALIANO</a> |
-        <a href="#es">ESPAÑOL</a>
+        <img src="ziraat logoR2.jpg" alt="ÇOMÜ Ziraat Fakültesi Logosu" class="nav-logo">
+        <div class="nav-links">
+            <a href="#tr">TÜRKÇE</a> |
+            <a href="#en">ENGLISH</a> |
+            <a href="#de">DEUTSCH</a> |
+            <a href="#fr">FRANÇAIS</a> |
+            <a href="#it">ITALIANO</a> |
+            <a href="#es">ESPAÑOL</a>
+        </div>
+    </div>
+
+    <!-- Poster Alanı -->
+    <div class="poster-container">
+        <img src="broşürson2.jpg" alt="ÇOMÜ Ziraat Fakültesi Tanıtım Broşürü">
     </div>
 
     <div class="container">
@@ -89,7 +120,7 @@
             <h3>ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ ZİRAAT FAKÜLTESİ</h3>
             <p>Fakültemiz 1995 yılında Ezine’ye bağlı Üvecik köyünde iki bölümle Eğitim-Öğretim faaliyetlerine başlamış, 1998 yılından itibaren Terzioğlu Kampüsüne taşınmıştır. Eğitim-Öğretim faaliyetleri, 9 bölüm altında, 82 öğretim üyesi olmak üzere toplam 97 öğretim elemanı ile devam etmektedir[cite: 1].</p>
             <p>Fakültemiz çatısı altında bulunan dokuz bölüm ile toplam 1359 kayıtlı lisans öğrencimiz, 277 adet Lisans üstü düzeyde kayıtlı öğrencimiz, ile Eğitim-Öğretim faaliyetlerini sürdürmekteyiz. Kuruluşundan günümüze, 4000 civarında Ziraat Mühendisi mezun edilmiştir. Ayrıca tüm bölümlerimizde yüksek lisans ve doktora programları mevcuttur[cite: 1].</p>
-            <p>Ziraat Fakültemiz, uygulamaya dayalı güçlü eğitim modeliyle, akademik üretkenliği ve uluslararası iş birlikleriyle Türkiye’nin önde gelen ziraat fakültelerinden biridir. Sahada yetişen öğrencilerimiz, bilimle desteklenmiş programlarımızla yalnızca bugünün değil, geleceğin tarım profesyonelleri olarak mezun olmaktadır[cite: 1]. Gerek Avrupa’daki üniversitelerle kurulan köprüler, gerekse Çanakkale Teknopark ’ta ve Fakültemiz dâhilinde dış kaynaklı yürütülen Ar-Ge faaliyetleri fakültemizin bilimsel ve stratejik gücünü yansıtmaktadır[cite: 1].</p>
+            <p>Ziraat Fakültemiz, uygulamaya dayalı güçlü eğitim modeliyle, akademik üretkenliği ve uluslararası iş birlikleriyle Türkiye’nin önde gelen ziraat fakültelerinden biridir. Sahada yetişen öğrencilerimiz, bilimle desteklenmiş programlarımızla yalnızca bugünün değil, geleceğin tarım profesyonelleri olarak mezun olmaktadır. Gerek Avrupa’daki üniversitelerle kurulan köprüler, gerekse Çanakkale Teknopark’ta ve Fakültemiz dâhilinde dış kaynaklı yürütülen Ar-Ge faaliyetleri fakültemizin bilimsel ve stratejik gücünü yansıtmaktadır[cite: 1].</p>
             
             <h3>Sunulan Programlar[cite: 1]</h3>
             <p>ÇOMÜ Ziraat Fakültesi, ziraat mühendisliği alanında güçlü bir akademik kadro ile eğitim vermektedir. Öğrencilerimize çeşitli seviyelerde eğitim imkânları sunulmaktadır[cite: 1]:</p>
@@ -109,42 +140,34 @@
 
             <h3>Kariyer Olanakları[cite: 1]</h3>
             <p><strong>Mezunlarımız, Tarımın Geleceğini Şekillendiriyor[cite: 1]</strong></p>
-            <p>ÇOMÜ Ziraat Fakültesi mezunları, aldıkları uygulamalı eğitim ve kazandıkları çok yönlü yetkinlikler sayesinde hem kamu hem özel sektörde geniş kariyer imkânlarına sahiptir[cite: 1].</p>
-            <p>Tarım ve Orman Bakanlığı, Tarımsal Araştırma Enstitüleri, il ve ilçe tarım müdürlükleri, kooperatifler, tohumculuk ve gübre firmaları, gıda üretim ve denetim kuruluşları, arazi ıslah ve sulama projeleri, peyzaj uygulama firmaları ve tarımsal danışmanlık ofisleri gibi birçok alanda görev almaktadırlar[cite: 1].</p>
-            <p>Ayrıca lisansüstü eğitimle akademik kariyer yapma olanağı da güçlüdür[cite: 1].</p>
+            <p>ÇOMÜ Ziraat Fakültesi mezunları, aldıkları uygulamalı eğitim ve kazandıkları çok yönlü yetkinlikler sayesinde hem kamu hem özel sektörde geniş kariyer imkânlarına sahiptir[cite: 1]. Tarım ve Orman Bakanlığı, Tarımsal Araştırma Enstitüleri, il ve ilçe tarım müdürlükleri, kooperatifler, tohumculuk ve gübre firmaları, gıda üretim ve denetim kuruluşları, arazi ıslah ve sulama projeleri, peyzaj uygulama firmaları ve tarımsal danışmanlık ofisleri gibi birçok alanda görev almaktadırlar[cite: 1]. Ayrıca lisansüstü eğitimle akademik kariyer yapma olanağı da güçlüdür[cite: 1].</p>
 
             <h3>Staj ve İşyeri Eğitimi İmkânları[cite: 1]</h3>
             <p>Fakültemizde uygulanan 7+1 iş yeri eğitimi modeli sayesinde öğrenciler, mezun olmadan önce sektörde doğrudan deneyim kazanmakta; yerel ve ulusal firmalarla kurulan iş birlikleri sayesinde tarla, laboratuvar ve işletme ortamlarında birebir uygulama yapabilmektedirler[cite: 1]. Ayrıca TÜBİTAK stajyer araştırmacı programları, Erasmus+ staj hareketliliği ve öğrenci projeleri sayesinde farklı coğrafyalarda da mesleki deneyim edinmeleri teşvik edilmektedir[cite: 1].</p>
 
             <h3>Araştırma ve Proje İmkanları[cite: 1]</h3>
             <p><strong>Disiplinlerarası Altyapı, Uygulama Odaklı Proje Kültürü[cite: 1]</strong></p>
-            <p>ÇOMÜ Ziraat Fakültesi, farklı uzmanlık alanlarını kapsayan 9 akademik bölümüyle güçlü bir araştırma ve proje altyapısına sahiptir[cite: 1]. Her bölüm, kendi alanına özgü donanımlı laboratuvarlar, uygulama seraları, deneme tarlaları ve özel araştırma merkezleri ile öğrenci ve akademisyenlerine özgün projeler üretme imkânı sunmaktadır[cite: 1].</p>
-            <p>Bitki Koruma, Bahçe Bitkileri, Tarla Bitkileri ve Zootekni bölümlerimizde, biyotik ve abiyotik streslere karşı geliştirilmiş çeşit denemeleri, entegre zararlı yönetimi, genetik ıslah ve hayvan refahı üzerine yoğun çalışmalar yürütülmektedir[cite: 1].</p>
-            <p>Toprak Bilimi ve Bitki Besleme ile Tarımsal Yapılar ve Sulama bölümleri, toprak sağlığı, gübreleme teknikleri, sulama sistemleri ve arazi yönetimi üzerine özgün analizler ve Ar-Ge faaliyetleri gerçekleştirmektedir[cite: 1].</p>
-            <p>Tarımsal Biyoteknoloji bölümü, moleküler biyoloji, genetik mühendisliği ve bitki genom çalışmalarıyla çağdaş biyoteknolojik yaklaşımları öğrencilerle buluştururken;[cite: 1]</p>
-            <p>Tarım Makineleri ve Teknolojileri Mühendisliği bölümü ise sensör teknolojileri, otonom tarım robotları ve mekanizasyon üzerine ileri düzey mühendislik projeleri üretmektedir[cite: 1].</p>
-            <p>Tarım Ekonomisi bölümü, kırsal kalkınma, tarımsal politika analizi ve tarım işletmeciliği üzerine ekonomik modellemelerle sektöre yön veren çözümlemeler geliştirmektedir[cite: 1].</p>
+            <p>ÇOMÜ Ziraat Fakültesi, farklı uzmanlık alanlarını kapsayan 9 akademik bölümüyle güçlü bir araştırma ve proje altyapısına sahiptir[cite: 1]. Her bölüm, kendi alanına özgü donanımlı laboratuvarlar, uygulama seraları, deneme tarlaları ve özel araştırma merkezleri ile öğrenci ve akademisyenlerine özgün projeler üretme imkânı sunmaktadır[cite: 1]. Bitki Koruma, Bahçe Bitkileri, Tarla Bitkileri ve Zootekni bölümlerimizde, biyotik ve abiyotik streslere karşı geliştirilmiş çeşit denemeleri, entegre zararlı yönetimi, genetik ıslah ve hayvan refahı üzerine yoğun çalışmalar yürütülmektedir[cite: 1]. Toprak Bilimi ve Bitki Besleme ile Tarımsal Yapılar ve Sulama bölümleri, toprak sağlığı, gübreleme teknikleri, sulama sistemleri ve arazi yönetimi üzerine özgün analizler ve Ar-Ge faaliyetleri gerçekleştirmektedir[cite: 1]. Tarımsal Biyoteknoloji bölümü, moleküler biyoloji, genetik mühendisliği ve bitki genom çalışmalarıyla çağdaş biyoteknolojik yaklaşımları öğrencilerle buluştururken; Tarım Makineleri ve Teknolojileri Mühendisliği bölümü ise sensör teknolojileri, otonom tarım robotları ve mekanizasyon üzerine ileri düzey mühendislik projeleri üretmektedir[cite: 1]. Tarım Ekonomisi bölümü, kırsal kalkınma, tarımsal politika analizi ve tarım işletmeciliği üzerine ekonomik modellemelerle sektöre yön veren çözümlemeler geliştirmektedir[cite: 1].</p>
 
             <h3>Öğrenci Projeleri ve Bilimsel Başarılar[cite: 1]</h3>
             <p>Her bölümde lisans düzeyindeki öğrenciler, danışman akademisyenlerin rehberliğinde TÜBİTAK 2209-A/B, BAP ve dış kaynaklı projelerde yer almakta; birçok öğrencimiz uluslararası öğrenci kongreleri, disiplinlerarası yarışmalar ve inovasyon temelli etkinliklerde ödüller kazanmaktadır[cite: 1]. Bu projeler, sadece bilimsel literatüre değil, aynı zamanda bölgesel kalkınmaya da doğrudan katkı sunmaktadır[cite: 1].</p>
 
             <h3>Erasmus+, Farabi ve Uluslararası Hareketlilik[cite: 1]</h3>
-            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine uluslararası düzeyde eğitim ve araştırma tecrübesi kazandırmayı hedeflemektedir[cite: 1].</p>
-            <p>Erasmus+ değişim programı kapsamında, aktif iş birliği yürütülen 20'yi aşkın Avrupa üniversitesi ile öğrencilerimiz bir ya da iki dönem boyunca eğitim alabilmekte, staj yapabilmektedir[cite: 1].</p>
-            <p>Farabi değişim programı ile Türkiye içindeki birçok üniversitede akademik hareketlilik fırsatları sunulmaktadır[cite: 1].</p>
-            <p>Ayrıca, fakültemizde öğrenim gören uluslararası öğrenciler ve projelere katılan yabancı akademisyenlerle çok kültürlü bir öğrenme ortamı oluşturulmakta, farklı tarım sistemlerinin karşılaştırmalı analizi teşvik edilmektedir[cite: 1].</p>
+            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine uluslararası düzeyde eğitim ve araştırma tecrübesi kazandırmayı hedeflemektedir[cite: 1]. Erasmus+ değişim programı kapsamında, aktif iş birliği yürütülen 20'yi aşkın Avrupa üniversitesi ile öğrencilerimiz bir ya da iki dönem boyunca eğitim alabilmekte, staj yapabilmektedir[cite: 1]. Farabi değişim programı ile Türkiye içindeki birçok üniversitede akademik hareketlilik fırsatları sunulmaktadır[cite: 1]. Ayrıca, fakültemizde öğrenim gören uluslararası öğrenciler ve projelere katılan yabancı akademisyenlerle çok kültürlü bir öğrenme ortamı oluşturulmakta, farklı tarım sistemlerinin karşılaştırmalı analizi teşvik edilmektedir[cite: 1].</p>
 
             <h3>Sosyal ve Kültürel Aktiviteler[cite: 1]</h3>
             <p><strong>Sadece Mesleğe Değil, Hayata Hazırlayan Bir Eğitim Ortamı[cite: 1]</strong></p>
             <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine sadece akademik değil; sosyal, kültürel ve sportif anlamda da zengin bir üniversite deneyimi sunmaktadır[cite: 1]. Öğrencilerimiz ilgi alanlarına göre çeşitli kulüpler ve öğrenci topluluklarıyla etkinlikler düzenlemekte, bilimsel projeler kadar sosyal sorumluluk çalışmalarına da aktif olarak katılmaktadır[cite: 1].</p>
 
             <h3>Kampüs Yaşamı, Spor ve Sanat[cite: 1]</h3>
-            <p>Fakültemiz, Çanakkale Boğazı’na sıfır konumda yer alan, doğayla iç içe bir kampüsün parçasıdır[cite: 1]. Öğrencilerimiz kampüs içerisinde yer alan Kapalı Spor Salonu, Fitness Merkezi, Olimpik Yüzme Havuzu gibi tesislerden ücretsiz olarak faydalanabilmektedir[cite: 1].</p>
+            <p>Fakültemiz, Çanakkale Boğazı’na sıfır konumda yer alan, doğayla iç içe bir kampüsün parçasıdır[cite: 1]. Öğrencilerimiz kampüs içerisinde yer alan Kapalı Spor Salonu, Fitness Merkezi, Olimpik Yüzme Havuzu gibi tesislerden ücretsiz olarak faydalanabilmektedir[cite: 1]. Ayrıca fakültemize ait 400 kişilik modern amfi salonu, bilimsel seminerlerden kültürel etkinliklere kadar birçok organizasyona ev sahipliği yapmaktadır[cite: 1].</p>
 
             <h3>Sıkça Sorulan Sorular (SSS)[cite: 1]</h3>
             <ul>
                 <li><strong>Ziraat Fakültesi’nde hangi bölümler var?</strong> Fakültemizde 9 bölüm bulunmaktadır: Bahçe Bitkileri, Bitki Koruma, Tarım Ekonomisi, Tarla Bitkileri, Tarımsal Biyoteknoloji, Tarımsal Yapılar ve Sulama, Tarım Makineleri ve Teknolojileri, Toprak Bilimi ve Bitki Besleme, Zootekni[cite: 1].</li>
                 <li><strong>Ziraat Fakültesi mezunları hangi unvanla mezun olur?</strong> Mezunlarımız “Ziraat Mühendisi” unvanını alır. Hangi bölümden mezun olunursa olunsun bu unvan geçerlidir[cite: 1].</li>
+                <li><strong>Eğitim süresi ne kadar?</strong> Lisans eğitimi 4 yıldır. Zorunlu hazırlık programı yoktur, eğitim dili Türkçedir[cite: 1].</li>
+                <li><strong>İngilizce destekli ders veya Erasmus imkânı var mı?</strong> Evet, birçok ders İngilizce kaynaklı destek almaktadır. Ayrıca Erasmus+ kapsamında Avrupa'da eğitim alma ve staj yapma fırsatları mevcuttur[cite: 1].</li>
             </ul>
         </div>
 
@@ -155,6 +178,25 @@
             <p>Our faculty began its educational activities in 1995 in the Üvecik village of Ezine with two departments, and relocated to the Terzioğlu Campus in 1998[cite: 1]. Educational activities continue under 9 departments with a total of 97 academic staff members, 82 of whom are faculty members[cite: 1].</p>
             <p>We continue our educational activities with a total of 1359 registered undergraduate students and 277 graduate students across the nine departments under the umbrella of our faculty[cite: 1]. Since its establishment, around 4000 Agricultural Engineers have graduated[cite: 1]. Additionally, master's and doctoral programs are available in all our departments[cite: 1].</p>
             <p>Our Faculty of Agriculture is one of the leading agriculture faculties in Turkey with its strong application-based education model, academic productivity, and international collaborations[cite: 1]. Our students, trained in the field, graduate not only as today's but also as tomorrow's agricultural professionals through our science-supported programs[cite: 1]. Both the bridges built with universities in Europe and the externally funded R&D activities carried out within the Çanakkale Technopark and our Faculty reflect the scientific and strategic strength of our institution[cite: 1].</p>
+
+            <h3>Offered Programs[cite: 1]</h3>
+            <p>ÇOMÜ Faculty of Agriculture provides education with a strong academic staff in the field of agricultural engineering. Various levels of educational opportunities are offered to our students[cite: 1]:</p>
+            <ul>
+                <li><strong>Undergraduate Programs:</strong> Undergraduate education is provided in 9 different departments of our faculty[cite: 1].</li>
+                <li><strong>Master's Programs:</strong> With master's programs focused on academic and applied research, students can deepen their knowledge[cite: 1].</li>
+                <li><strong>Doctoral Programs:</strong> Doctoral education is offered in various disciplines for students who want to increase their scientific research capacity[cite: 1].</li>
+            </ul>
+
+            <h3>Infrastructure Facilities[cite: 1]</h3>
+            <p>ÇOMÜ Faculty of Agriculture has a wide and modern infrastructure to provide a contemporary education and research environment[cite: 1]:</p>
+            <ul>
+                <li><strong>Laboratories:</strong> There are specialized laboratories for soil analysis, plant biotechnology, pest detection, food quality, and more[cite: 1].</li>
+                <li><strong>Library:</strong> A large library affiliated with our faculty is enriched with printed and digital resources[cite: 1].</li>
+            </ul>
+
+            <h3>Career Opportunities[cite: 1]</h3>
+            <p><strong>Our Graduates Are Shaping the Future of Agriculture[cite: 1]</strong></p>
+            <p>ÇOMÜ Faculty of Agriculture graduates have a wide range of career opportunities in both the public and private sectors[cite: 1]. They work in the Ministry of Agriculture and Forestry, research institutes, seed companies, and private agricultural consulting offices[cite: 1].</p>
         </div>
 
         <!-- DEUTSCH -->
@@ -163,6 +205,7 @@
             <h3>ÇANAKKALE ONSEKİZ MART UNIVERSITÄT LANDWIRTSCHAFTLICHE FAKULTÄT[cite: 1]</h3>
             <p>Unsere Fakultät nahm ihre Bildungs- und Lehraktivitäten im Jahr 1995 im Dorf Üvecik, das zu Ezine gehört, mit zwei Abteilungen auf und wurde 1998 auf den Terzioğlu-Campus verlegt[cite: 1]. Die Bildungs- und Lehraktivitäten werden in 9 Abteilungen mit insgesamt 97 Lehrkräften, darunter 82 Fakultätsmitglieder, fortgesetzt[cite: 1].</p>
             <p>Wir setzen unsere Bildungs- und Lehraktivitäten mit insgesamt 1359 eingeschriebenen Bachelor-Studenten und 277 eingeschriebenen Master- und Doktoranden in den neun Abteilungen unserer Fakultät fort[cite: 1]. Seit ihrer Gründung haben etwa 4000 Agraringenieure ihren Abschluss gemacht[cite: 1]. Darüber hinaus werden in allen unseren Abteilungen Master- und Promotionsprogramme angeboten[cite: 1].</p>
+            <p>Unsere Landwirtschaftliche Fakultät ist mit ihrem starken, praxisorientierten Bildungsmodell, ihrer akademischen Produktivität und ihren internationalen Kooperationen eine der führenden landwirtschaftlichen Fakultäten in der Türkei[cite: 1].</p>
         </div>
 
         <!-- FRANÇAIS -->
