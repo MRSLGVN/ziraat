@@ -16,11 +16,24 @@
             padding: 0;
             background-color: #f4f6f9;
         }
+        .top-poster {
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .top-poster img {
+            max-width: 900px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
         .navbar {
             position: sticky;
             top: 0;
             background-color: #003366;
-            padding: 10px 20px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,40 +41,20 @@
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        .nav-logo {
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            margin-right: 20px;
-            object-fit: cover;
-            border: 2px solid #ffcc00;
-        }
         .nav-links a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 12px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 15px;
             transition: color 0.3s;
         }
         .nav-links a:hover {
             color: #ffcc00;
         }
-        .poster-container {
-            max-width: 900px;
-            margin: 20px auto 0 auto;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .poster-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
         .container {
             max-width: 900px;
-            margin: 20px auto 40px auto;
+            margin: 30px auto 40px auto;
             padding: 40px;
             background-color: #fff;
             box-shadow: 0 0 15px rgba(0,0,0,0.05);
@@ -95,8 +88,13 @@
 </head>
 <body>
 
+    <!-- Afiş En Üstte -->
+    <div class="top-poster">
+        <img src="https://ziraat.comu.edu.tr/ziraat-logo-r174.html" alt="ÇOMÜ Ziraat Fakültesi Afiş">
+    </div>
+
+    <!-- Yapışkan Menü -->
     <div class="navbar">
-        <img src="ziraat logoR2.jpg" alt="ÇOMÜ Ziraat Fakültesi Logosu" class="nav-logo">
         <div class="nav-links">
             <a href="#tr">TÜRKÇE</a> |
             <a href="#en">ENGLISH</a> |
@@ -107,129 +105,537 @@
         </div>
     </div>
 
-    <!-- Poster Alanı -->
-    <div class="poster-container">
-        <img src="broşürson2.jpg" alt="ÇOMÜ Ziraat Fakültesi Tanıtım Broşürü">
-    </div>
-
     <div class="container">
 
         <!-- TÜRKÇE -->
         <div id="tr" class="lang-section">
             <h2>TÜRKÇE</h2>
-            <h3>ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ ZİRAAT FAKÜLTESİ</h3>
-            <p>Fakültemiz 1995 yılında Ezine’ye bağlı Üvecik köyünde iki bölümle Eğitim-Öğretim faaliyetlerine başlamış, 1998 yılından itibaren Terzioğlu Kampüsüne taşınmıştır. Eğitim-Öğretim faaliyetleri, 9 bölüm altında, 82 öğretim üyesi olmak üzere toplam 97 öğretim elemanı ile devam etmektedir[cite: 1].</p>
-            <p>Fakültemiz çatısı altında bulunan dokuz bölüm ile toplam 1359 kayıtlı lisans öğrencimiz, 277 adet Lisans üstü düzeyde kayıtlı öğrencimiz, ile Eğitim-Öğretim faaliyetlerini sürdürmekteyiz. Kuruluşundan günümüze, 4000 civarında Ziraat Mühendisi mezun edilmiştir. Ayrıca tüm bölümlerimizde yüksek lisans ve doktora programları mevcuttur[cite: 1].</p>
-            <p>Ziraat Fakültemiz, uygulamaya dayalı güçlü eğitim modeliyle, akademik üretkenliği ve uluslararası iş birlikleriyle Türkiye’nin önde gelen ziraat fakültelerinden biridir. Sahada yetişen öğrencilerimiz, bilimle desteklenmiş programlarımızla yalnızca bugünün değil, geleceğin tarım profesyonelleri olarak mezun olmaktadır. Gerek Avrupa’daki üniversitelerle kurulan köprüler, gerekse Çanakkale Teknopark’ta ve Fakültemiz dâhilinde dış kaynaklı yürütülen Ar-Ge faaliyetleri fakültemizin bilimsel ve stratejik gücünü yansıtmaktadır[cite: 1].</p>
+            <h3>ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ ZİRAAT FAKÜLTESİ[cite: 3]</h3>
+            <p>Fakültemiz 1995 yılında Ezine’ye bağlı Üvecik köyünde iki bölümle Eğitim-Öğretim faaliyetlerine başlamış, 1998 yılından itibaren Terzioğlu Kampüsüne taşınmıştır. Eğitim-Öğretim faaliyetleri, 9 bölüm altında, 82 öğretim üyesi olmak üzere toplam 97 öğretim elemanı ile devam etmektedir[cite: 3].</p>
+            <p>Fakültemiz çatısı altında bulunan dokuz bölüm ile toplam 1359 kayıtlı lisans öğrencimiz, 277 adet Lisans üstü düzeyde kayıtlı öğrencimiz, ile Eğitim-Öğretim faaliyetlerini sürdürmekteyiz. Kuruluşundan günümüze, 4000 civarında Ziraat Mühendisi mezun edilmiştir. Ayrıca tüm bölümlerimizde yüksek lisans ve doktora programları mevcuttur[cite: 3].</p>
+            <p>Ziraat Fakültemiz, uygulamaya dayalı güçlü eğitim modeliyle, akademik üretkenliği ve uluslararası iş birlikleriyle Türkiye’nin önde gelen ziraat fakültelerinden biridir. Sahada yetişen öğrencilerimiz, bilimle desteklenmiş programlarımızla yalnızca bugünün değil, geleceğin tarım profesyonelleri olarak mezun olmaktadır. Gerek Avrupa’daki üniversitelerle kurulan köprüler, gerekse Çanakkale Teknopark ’ta ve Fakültemiz dâhilinde dış kaynaklı yürütülen Ar-Ge faaliyetleri fakültemizin bilimsel ve stratejik gücünü yansıtmaktadır[cite: 3].</p>
             
-            <h3>Sunulan Programlar[cite: 1]</h3>
-            <p>ÇOMÜ Ziraat Fakültesi, ziraat mühendisliği alanında güçlü bir akademik kadro ile eğitim vermektedir. Öğrencilerimize çeşitli seviyelerde eğitim imkânları sunulmaktadır[cite: 1]:</p>
+            <h3>Sunulan Programlar[cite: 3]</h3>
+            <p>ÇOMÜ Ziraat Fakültesi, ziraat mühendisliği alanında güçlü bir akademik kadro ile eğitim vermektedir. Öğrencilerimize çeşitli seviyelerde eğitim imkânları sunulmaktadır[cite: 3]:</p>
             <ul>
-                <li><strong>Lisans Programları:</strong> Fakültemizin 9 farklı bölümünde lisans eğitimi verilmektedir. Bölümler, öğrencilerin tarımsal üretimden teknolojik yeniliklere, hayvancılıktan ekonomik analizlere kadar geniş bir yelpazede uzmanlaşmasına olanak sağlar[cite: 1].</li>
-                <li><strong>Yüksek Lisans Programları:</strong> Akademik ve uygulamalı araştırma odaklı yüksek lisans programlarıyla, öğrenciler uzmanlık alanlarında derinleşebilir, ulusal ve uluslararası projelerde görev alabilir[cite: 1].</li>
-                <li><strong>Doktora Programları:</strong> Bilimsel araştırma kapasitesini artırmak isteyen öğrenciler için çeşitli disiplinlerde doktora eğitimi sunulmaktadır. Doktora öğrencileri, fakültenin Ar-Ge merkezleri ve laboratuvarlarında yenilikçi projeler geliştirmektedir[cite: 1].</li>
+                <li><strong>Lisans Programları:</strong> Fakültemizin 9 farklı bölümünde lisans eğitimi verilmektedir. Bölümler, öğrencilerin tarımsal üretimden teknolojik yeniliklere, hayvancılıktan ekonomik analizlere kadar geniş bir yelpazede uzmanlaşmasına olanak sağlar[cite: 3].</li>
+                <li><strong>Yüksek Lisans Programları:</strong> Akademik ve uygulamalı araştırma odaklı yüksek lisans programlarıyla, öğrenciler uzmanlık alanlarında derinleşebilir, ulusal ve uluslararası projelerde görev alabilir[cite: 3].</li>
+                <li><strong>Doktora Programları:</strong> Bilimsel araştırma kapasitesini artırmak isteyen öğrenciler için çeşitli disiplinlerde doktora eğitimi sunulmaktadır. Doktora öğrencileri, fakültenin Ar-Ge merkezleri ve laboratuvarlarında yenilikçi projeler geliştirmektedir[cite: 3].</li>
             </ul>
 
-            <h3>Alt Yapı Olanakları[cite: 1]</h3>
-            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine ve akademisyenlerine çağdaş eğitim ve araştırma ortamı sağlamak için geniş ve modern altyapıya sahiptir[cite: 1]:</p>
+            <h3>Alt Yapı Olanakları[cite: 3]</h3>
+            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine ve akademisyenlerine çağdaş eğitim ve araştırma ortamı sağlamak için geniş ve modern altyapıya sahiptir[cite: 3]:</p>
             <ul>
-                <li><strong>Laboratuvarlar:</strong> Her bölümün ihtiyaçlarına göre donatılmış toprak analiz, bitki biyoteknolojisi, zararlı ve hastalık tespiti, gıda kalite kontrol, sulama sistemleri, tarım makineleri ve zootekni laboratuvarları bulunmaktadır[cite: 1].</li>
-                <li><strong>Kütüphane:</strong> Fakültemize bağlı geniş bir kütüphane, basılı ve dijital kaynaklarla zenginleştirilmiştir. Öğrenciler güncel kitap, dergi ve makalelere erişebilir; çalışma salonlarında bireysel ve grup çalışmaları yapabilirler[cite: 1].</li>
-                <li><strong>Bilgisayar Altyapısı:</strong> Modern bilgisayar laboratuvarları, yüksek hızlı internet erişimi ve veri tabanı sistemleriyle donatılmıştır. Ayrıca, uzaktan eğitim ve çevrimiçi kaynaklara erişim için güçlü bir dijital altyapı mevcuttur[cite: 1].</li>
+                <li><strong>Laboratuvarlar:</strong> Her bölümün ihtiyaçlarına göre donatılmış toprak analiz, bitki biyoteknolojisi, zararlı ve hastalık tespiti, gıda kalite kontrol, sulama sistemleri, tarım makineleri ve zootekni laboratuvarları bulunmaktadır[cite: 3].</li>
+                <li><strong>Kütüphane:</strong> Fakültemize bağlı geniş bir kütüphane, basılı ve dijital kaynaklarla zenginleştirilmiştir. Öğrenciler güncel kitap, dergi ve makalelere erişebilir; çalışma salonlarında bireysel ve grup çalışmaları yapabilirler[cite: 3].</li>
+                <li><strong>Bilgisayar Altyapısı:</strong> Modern bilgisayar laboratuvarları, yüksek hızlı internet erişimi ve veri tabanı sistemleriyle donatılmıştır. Ayrıca, uzaktan eğitim ve çevrimiçi kaynaklara erişim için güçlü bir dijital altyapı mevcuttur[cite: 3].</li>
             </ul>
 
-            <h3>Kariyer Olanakları[cite: 1]</h3>
-            <p><strong>Mezunlarımız, Tarımın Geleceğini Şekillendiriyor[cite: 1]</strong></p>
-            <p>ÇOMÜ Ziraat Fakültesi mezunları, aldıkları uygulamalı eğitim ve kazandıkları çok yönlü yetkinlikler sayesinde hem kamu hem özel sektörde geniş kariyer imkânlarına sahiptir[cite: 1]. Tarım ve Orman Bakanlığı, Tarımsal Araştırma Enstitüleri, il ve ilçe tarım müdürlükleri, kooperatifler, tohumculuk ve gübre firmaları, gıda üretim ve denetim kuruluşları, arazi ıslah ve sulama projeleri, peyzaj uygulama firmaları ve tarımsal danışmanlık ofisleri gibi birçok alanda görev almaktadırlar[cite: 1]. Ayrıca lisansüstü eğitimle akademik kariyer yapma olanağı da güçlüdür[cite: 1].</p>
+            <h3>Kariyer Olanakları[cite: 3]</h3>
+            <p><strong>Mezunlarımız, Tarımın Geleceğini Şekillendiriyor[cite: 3]</strong></p>
+            <p>ÇOMÜ Ziraat Fakültesi mezunları, aldıkları uygulamalı eğitim ve kazandıkları çok yönlü yetkinlikler sayesinde hem kamu hem özel sektörde geniş kariyer imkânlarına sahiptir[cite: 3]. Tarım ve Orman Bakanlığı, Tarımsal Araştırma Enstitüleri, il ve ilçe tarım müdürlükleri, kooperatifler, tohumculuk ve gübre firmaları, gıda üretim ve denetim kuruluşları, arazi ıslah ve sulama projeleri, peyzaj uygulama firmaları ve tarımsal danışmanlık ofisleri gibi birçok alanda görev almaktadırlar[cite: 3]. Ayrıca lisansüstü eğitimle akademik kariyer yapma olanağı da güçlüdür[cite: 3].</p>
 
-            <h3>Staj ve İşyeri Eğitimi İmkânları[cite: 1]</h3>
-            <p>Fakültemizde uygulanan 7+1 iş yeri eğitimi modeli sayesinde öğrenciler, mezun olmadan önce sektörde doğrudan deneyim kazanmakta; yerel ve ulusal firmalarla kurulan iş birlikleri sayesinde tarla, laboratuvar ve işletme ortamlarında birebir uygulama yapabilmektedirler[cite: 1]. Ayrıca TÜBİTAK stajyer araştırmacı programları, Erasmus+ staj hareketliliği ve öğrenci projeleri sayesinde farklı coğrafyalarda da mesleki deneyim edinmeleri teşvik edilmektedir[cite: 1].</p>
+            <h3>Staj ve İşyeri Eğitimi İmkânları[cite: 3]</h3>
+            <p>Fakültemizde uygulanan 7+1 iş yeri eğitimi modeli sayesinde öğrenciler, mezun olmadan önce sektörde doğrudan deneyim kazanmakta; yerel ve ulusal firmalarla kurulan iş birlikleri sayesinde tarla, laboratuvar ve işletme ortamlarında birebir uygulama yapabilmektedirler[cite: 3]. Ayrıca TÜBİTAK stajyer araştırmacı programları, Erasmus+ staj hareketliliği ve öğrenci projeleri sayesinde farklı coğrafyalarda da mesleki deneyim edinmeleri teşvik edilmektedir[cite: 3].</p>
 
-            <h3>Araştırma ve Proje İmkanları[cite: 1]</h3>
-            <p><strong>Disiplinlerarası Altyapı, Uygulama Odaklı Proje Kültürü[cite: 1]</strong></p>
-            <p>ÇOMÜ Ziraat Fakültesi, farklı uzmanlık alanlarını kapsayan 9 akademik bölümüyle güçlü bir araştırma ve proje altyapısına sahiptir[cite: 1]. Her bölüm, kendi alanına özgü donanımlı laboratuvarlar, uygulama seraları, deneme tarlaları ve özel araştırma merkezleri ile öğrenci ve akademisyenlerine özgün projeler üretme imkânı sunmaktadır[cite: 1]. Bitki Koruma, Bahçe Bitkileri, Tarla Bitkileri ve Zootekni bölümlerimizde, biyotik ve abiyotik streslere karşı geliştirilmiş çeşit denemeleri, entegre zararlı yönetimi, genetik ıslah ve hayvan refahı üzerine yoğun çalışmalar yürütülmektedir[cite: 1]. Toprak Bilimi ve Bitki Besleme ile Tarımsal Yapılar ve Sulama bölümleri, toprak sağlığı, gübreleme teknikleri, sulama sistemleri ve arazi yönetimi üzerine özgün analizler ve Ar-Ge faaliyetleri gerçekleştirmektedir[cite: 1]. Tarımsal Biyoteknoloji bölümü, moleküler biyoloji, genetik mühendisliği ve bitki genom çalışmalarıyla çağdaş biyoteknolojik yaklaşımları öğrencilerle buluştururken; Tarım Makineleri ve Teknolojileri Mühendisliği bölümü ise sensör teknolojileri, otonom tarım robotları ve mekanizasyon üzerine ileri düzey mühendislik projeleri üretmektedir[cite: 1]. Tarım Ekonomisi bölümü, kırsal kalkınma, tarımsal politika analizi ve tarım işletmeciliği üzerine ekonomik modellemelerle sektöre yön veren çözümlemeler geliştirmektedir[cite: 1].</p>
+            <h3>Araştırma ve Proje İmkanları[cite: 3]</h3>
+            <p><strong>Disiplinlerarası Altyapı, Uygulama Odaklı Proje Kültürü[cite: 3]</strong></p>
+            <p>ÇOMÜ Ziraat Fakültesi, farklı uzmanlık alanlarını kapsayan 9 akademik bölümüyle güçlü bir araştırma ve proje altyapısına sahiptir. Her bölüm, kendi alanına özgü donanımlı laboratuvarlar, uygulama seraları, deneme tarlaları ve özel araştırma merkezleri ile öğrenci ve akademisyenlerine özgün projeler üretme imkânı sunmaktadır[cite: 3].</p>
+            <p>Bitki Koruma, Bahçe Bitkileri, Tarla Bitkileri ve Zootekni bölümlerimizde, biyotik ve abiyotik streslere karşı geliştirilmiş çeşit denemeleri, entegre zararlı yönetimi, genetik ıslah ve hayvan refahı üzerine yoğun çalışmalar yürütülmektedir[cite: 3]. Toprak Bilimi ve Bitki Besleme ile Tarımsal Yapılar ve Sulama bölümleri, toprak sağlığı, gübreleme teknikleri, sulama sistemleri ve arazi yönetimi üzerine özgün analizler ve Ar-Ge faaliyetleri gerçekleştirmektedir[cite: 3]. Tarımsal Biyoteknoloji bölümü, moleküler biyoloji, genetik mühendisliği ve bitki genom çalışmalarıyla çağdaş biyoteknolojik yaklaşımları öğrencilerle buluştururken; Tarım Makineleri ve Teknolojileri Mühendisliği bölümü ise sensör teknolojileri, otonom tarım robotları ve mekanizasyon üzerine ileri düzey mühendislik projeleri üretmektedir[cite: 3]. Tarım Ekonomisi bölümü, kırsal kalkınma, tarımsal politika analizi ve tarım işletmeciliği üzerine ekonomik modellemelerle sektöre yön veren çözümlemeler geliştirmektedir[cite: 3].</p>
 
-            <h3>Öğrenci Projeleri ve Bilimsel Başarılar[cite: 1]</h3>
-            <p>Her bölümde lisans düzeyindeki öğrenciler, danışman akademisyenlerin rehberliğinde TÜBİTAK 2209-A/B, BAP ve dış kaynaklı projelerde yer almakta; birçok öğrencimiz uluslararası öğrenci kongreleri, disiplinlerarası yarışmalar ve inovasyon temelli etkinliklerde ödüller kazanmaktadır[cite: 1]. Bu projeler, sadece bilimsel literatüre değil, aynı zamanda bölgesel kalkınmaya da doğrudan katkı sunmaktadır[cite: 1].</p>
+            <h3>Öğrenci Projeleri ve Bilimsel Başarılar[cite: 3]</h3>
+            <p>Her bölümde lisans düzeyindeki öğrenciler, danışman akademisyenlerin rehberliğinde TÜBİTAK 2209-A/B, BAP ve dış kaynaklı projelerde yer almakta; birçok öğrencimiz uluslararası öğrenci kongreleri, disiplinlerarası yarışmalar ve inovasyon temelli etkinliklerde ödüller kazanmaktadır. Bu projeler, sadece bilimsel literatüre değil, aynı zamanda bölgesel kalkınmaya da doğrudan katkı sunmaktadır[cite: 3].</p>
 
-            <h3>Erasmus+, Farabi ve Uluslararası Hareketlilik[cite: 1]</h3>
-            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine uluslararası düzeyde eğitim ve araştırma tecrübesi kazandırmayı hedeflemektedir[cite: 1]. Erasmus+ değişim programı kapsamında, aktif iş birliği yürütülen 20'yi aşkın Avrupa üniversitesi ile öğrencilerimiz bir ya da iki dönem boyunca eğitim alabilmekte, staj yapabilmektedir[cite: 1]. Farabi değişim programı ile Türkiye içindeki birçok üniversitede akademik hareketlilik fırsatları sunulmaktadır[cite: 1]. Ayrıca, fakültemizde öğrenim gören uluslararası öğrenciler ve projelere katılan yabancı akademisyenlerle çok kültürlü bir öğrenme ortamı oluşturulmakta, farklı tarım sistemlerinin karşılaştırmalı analizi teşvik edilmektedir[cite: 1].</p>
+            <h3>Erasmus+, Farabi ve Uluslararası Hareketlilik[cite: 3]</h3>
+            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine uluslararası düzeyde eğitim ve araştırma tecrübesi kazandırmayı hedeflemektedir[cite: 3]. Erasmus+ değişim programı kapsamında, aktif iş birliği yürütülen 20'yi aşkın Avrupa üniversitesi ile öğrencilerimiz bir ya da iki dönem boyunca eğitim alabilmekte, staj yapabilmektedir[cite: 3]. Farabi değişim programı ile Türkiye içindeki birçok üniversitede akademik hareketlilik fırsatları sunulmaktadır[cite: 3]. Ayrıca, fakültemizde öğrenim gören uluslararası öğrenciler ve projelere katılan yabancı akademisyenlerle çok kültürlü bir öğrenme ortamı oluşturulmakta, farklı tarım sistemlerinin karşılaştırmalı analizi teşvik edilmektedir[cite: 3].</p>
 
-            <h3>Sosyal ve Kültürel Aktiviteler[cite: 1]</h3>
-            <p><strong>Sadece Mesleğe Değil, Hayata Hazırlayan Bir Eğitim Ortamı[cite: 1]</strong></p>
-            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine sadece akademik değil; sosyal, kültürel ve sportif anlamda da zengin bir üniversite deneyimi sunmaktadır[cite: 1]. Öğrencilerimiz ilgi alanlarına göre çeşitli kulüpler ve öğrenci topluluklarıyla etkinlikler düzenlemekte, bilimsel projeler kadar sosyal sorumluluk çalışmalarına da aktif olarak katılmaktadır[cite: 1].</p>
+            <h3>Sosyal ve Kültürel Aktiviteler[cite: 3]</h3>
+            <p><strong>Sadece Mesleğe Değil, Hayata Hazırlayan Bir Eğitim Ortamı[cite: 3]</strong></p>
+            <p>ÇOMÜ Ziraat Fakültesi, öğrencilerine sadece akademik değil; sosyal, kültürel ve sportif anlamda da zengin bir üniversite deneyimi sunmaktadır. Öğrencilerimiz ilgi alanlarına göre çeşitli kulüpler ve öğrenci topluluklarıyla etkinlikler düzenlemekte, bilimsel projeler kadar sosyal sorumluluk çalışmalarına da aktif olarak katılmaktadır[cite: 3].</p>
+            <p><strong>Öğrenci Kulüpleri ve Topluluklar[cite: 3]</strong><br>Fakültemiz bünyesinde yer alan Zootekni Topluluğu, Bitki Koruma Öğrenci Topluluğu, Tarımsal Biyoteknoloji Kulübü, Toprak ve Çevre Kulübü, Tarım Ekonomisi Topluluğu gibi bölüm bazlı kulüplerin yanı sıra, üniversite genelinde faaliyet gösteren doğa yürüyüş grupları, fotoğraf kulübü, tiyatro atölyeleri gibi birçok topluluk öğrencilere ilgi alanlarını keşfetme ve geliştirme fırsatı sunmaktadır[cite: 3].</p>
 
-            <h3>Kampüs Yaşamı, Spor ve Sanat[cite: 1]</h3>
-            <p>Fakültemiz, Çanakkale Boğazı’na sıfır konumda yer alan, doğayla iç içe bir kampüsün parçasıdır[cite: 1]. Öğrencilerimiz kampüs içerisinde yer alan Kapalı Spor Salonu, Fitness Merkezi, Olimpik Yüzme Havuzu gibi tesislerden ücretsiz olarak faydalanabilmektedir[cite: 1]. Ayrıca fakültemize ait 400 kişilik modern amfi salonu, bilimsel seminerlerden kültürel etkinliklere kadar birçok organizasyona ev sahipliği yapmaktadır[cite: 1].</p>
+            <h3>Kampüs Yaşamı, Spor ve Sanat[cite: 3]</h3>
+            <p>Fakültemiz, Çanakkale Boğazı’na sıfır konumda yer alan, doğayla iç içe bir kampüsün parçasıdır. Öğrencilerimiz kampüs içerisinde yer alan: Kapalı Spor Salonu, Fitness Merkezi, Olimpik Yüzme Havuzu gibi tesislerden ücretsiz olarak faydalanabilmektedir[cite: 3]. Ayrıca fakültemize ait 400 kişilik modern amfi salonu, bilimsel seminerlerden kültürel etkinliklere kadar birçok organizasyona ev sahipliği yapmaktadır[cite: 3].</p>
 
-            <h3>Sıkça Sorulan Sorular (SSS)[cite: 1]</h3>
+            <h3>Kültürel Zenginlik: Çanakkale[cite: 3]</h3>
+            <p>Fakültemiz, tarihi ve kültürel kimliğiyle öne çıkan Çanakkale ilinde yer almakta; öğrencilerimiz Troya, Gelibolu Yarımadası, Assos gibi tarihî ve doğal mekânlara yakın olmanın ayrıcalığını yaşamaktadır. Şehir merkezine olan yakınlık ve güvenli yaşam ortamı, Çanakkale’yi öğrenciler için cazip bir öğrenim merkezi haline getirmektedir[cite: 3].</p>
+
+            <h3>Aday Öğrenciler İçin Ekstra Bilgiler ve Avantajlar[cite: 3]</h3>
             <ul>
-                <li><strong>Ziraat Fakültesi’nde hangi bölümler var?</strong> Fakültemizde 9 bölüm bulunmaktadır: Bahçe Bitkileri, Bitki Koruma, Tarım Ekonomisi, Tarla Bitkileri, Tarımsal Biyoteknoloji, Tarımsal Yapılar ve Sulama, Tarım Makineleri ve Teknolojileri, Toprak Bilimi ve Bitki Besleme, Zootekni[cite: 1].</li>
-                <li><strong>Ziraat Fakültesi mezunları hangi unvanla mezun olur?</strong> Mezunlarımız “Ziraat Mühendisi” unvanını alır. Hangi bölümden mezun olunursa olunsun bu unvan geçerlidir[cite: 1].</li>
-                <li><strong>Eğitim süresi ne kadar?</strong> Lisans eğitimi 4 yıldır. Zorunlu hazırlık programı yoktur, eğitim dili Türkçedir[cite: 1].</li>
-                <li><strong>İngilizce destekli ders veya Erasmus imkânı var mı?</strong> Evet, birçok ders İngilizce kaynaklı destek almaktadır. Ayrıca Erasmus+ kapsamında Avrupa'da eğitim alma ve staj yapma fırsatları mevcuttur[cite: 1].</li>
+                <li><strong>Güçlü Uygulamalı Eğitim:</strong> Fakültemiz, teorinin yanı sıra sahada, laboratuvarda ve teknolojik test merkezlerinde uygulama ağırlıklı eğitim modeliyle mezunlarını donanımlı ve sektöre hazır bireyler olarak yetiştirir[cite: 3].</li>
+                <li><strong>Geniş Akademik Ağ ve Projeler:</strong> TÜBİTAK, Avrupa Birliği projeleri, Erasmus+ ve diğer ulusal/uluslararası iş birlikleri sayesinde öğrenciler bilimsel araştırma ve yenilik süreçlerine doğrudan katılır[cite: 3].</li>
+                <li><strong>İleri Teknoloji ve Araçlar:</strong> Drone destekli görüntüleme, tarım robotları, akıllı algılama sistemleri gibi çağdaş teknolojilerle donatılmış laboratuvarlar ve test merkezleri öğrencilerin çağın gerekliliklerine uygun deneyim kazanmasını sağlar[cite: 3].</li>
+                <li><strong>Çanakkale’nin Eşsiz Konumu:</strong> Tarih, kültür ve doğanın iç içe geçtiği Çanakkale’de öğrenim görmek, sadece mesleki değil, sosyal ve kültürel gelişim açısından da büyük fırsattır[cite: 3].</li>
+                <li><strong>Kariyer Olanakları ve Mezun Başarıları:</strong> Fakültemiz mezunları kamu kurumları, özel sektör, Ar-Ge, danışmanlık ve girişimcilik alanlarında önemli görevler üstlenmekte, istihdam oranımız yüksektir[cite: 3].</li>
+                <li><strong>Canlı Öğrenci Toplulukları:</strong> Bölüm ve fakülte kulüpleri, sosyal ve kültürel etkinliklerle öğrenciler sosyal becerilerini geliştirirken, ağ kurma fırsatları yakalar[cite: 3].</li>
+                <li><strong>Modern Kampüs ve Sosyal İmkanlar:</strong> Boğaza sıfır konumda, spor salonu, olimpik yüzme havuzu ve geniş yeşil alanlarıyla keyifli ve sağlıklı bir kampüs hayatı sunar[cite: 3].</li>
+                <li><strong>Uluslararası Öğrenci Profili:</strong> Fakültemizde farklı ülkelerden gelen öğrencilerle çok kültürlü bir ortamda eğitim alma fırsatı vardır; bu da küresel perspektifinizi genişletir[cite: 3].</li>
+                <li><strong>7+1 İş Yeri Eğitim Modeli:</strong> Sektörle iç içe eğitim sayesinde öğrenciler, mezun olmadan önce iş deneyimi kazanarak iş dünyasına güçlü bir başlangıç yapar[cite: 3].</li>
+            </ul>
+
+            <h3>Sıkça Sorulan Sorular (SSS)[cite: 3]</h3>
+            <ul>
+                <li><strong>Ziraat Fakültesi’nde hangi bölümler var?</strong> Fakültemizde 9 bölüm bulunmaktadır: Bahçe Bitkileri, Bitki Koruma, Tarım Ekonomisi, Tarla Bitkileri, Tarımsal Biyoteknoloji, Tarımsal Yapılar ve Sulama, Tarım Makineleri ve Teknolojileri, Toprak Bilimi ve Bitki Besleme, Zootekni[cite: 3].</li>
+                <li><strong>Ziraat Fakültesi mezunları hangi unvanla mezun olur?</strong> Mezunlarımız “Ziraat Mühendisi” unvanını alır. Hangi bölümden mezun olunursa olunsun bu unvan geçerlidir[cite: 3].</li>
+                <li><strong>Eğitim süresi ne kadar?</strong> Lisans eğitimi 4 yıldır. Zorunlu hazırlık programı yoktur, eğitim dili Türkçedir[cite: 3].</li>
+                <li><strong>İngilizce destekli ders veya Erasmus imkânı var mı?</strong> Evet, birçok ders İngilizce kaynaklı destek almaktadır. Ayrıca Erasmus+ kapsamında Avrupa'da eğitim alma ve staj yapma fırsatları mevcuttur[cite: 3].</li>
+                <li><strong>Uygulamalı eğitim var mı? Yoksa tamamen teorik mi?</strong> Fakültemiz, uygulamalı eğitimi merkeze alan bir model benimser. Seralar, tarlalar, laboratuvarlar ve test merkezlerinde yoğun uygulamalı dersler verilmektedir[cite: 3].</li>
+                <li><strong>Staj yapmamız zorunlu mu? Nerelerde yapabiliriz?</strong> Evet, zorunlu staj uygulaması vardır. Bakanlıklarda, özel şirketlerde, araştırma enstitülerinde ya da üniversitenin kendi birimlerinde yapılabilir[cite: 3].</li>
+                <li><strong>7+1 iş yeri eğitimi nedir?</strong> Son sınıfın bir dönemini doğrudan sektörde geçirme modelidir. Öğrenciler firmalarda deneyim kazanır ve mezun olmadan sahaya hazırlanır[cite: 3].</li>
+                <li><strong>Laboratuvar olanakları nasıl?</strong> Fakültemizde her bölüme özel donanımlı laboratuvarlar bulunmaktadır. Toprak, bitki, gıda, biyoteknoloji, entomoloji gibi birçok alanda aktif laboratuvar kullanımı mümkündür[cite: 3].</li>
+                <li><strong>Kampüs olanakları neler?</strong> Kampüsümüzde spor salonu, fitness merkezi, olimpik yüzme havuzu, yemekhane, kütüphane ve öğrenci kulüpleri mevcuttur. Kampüs, Çanakkale Boğazı’na sıfır konumdadır[cite: 3].</li>
+                <li><strong>Yurt imkânı var mı?</strong> Kredi Yurtlar Kurumu’na bağlı devlet yurtları ve özel yurtlar mevcuttur. Kampüse yürüme mesafesinde konaklama seçenekleri bulunur[cite: 3].</li>
+                <li><strong>Ziraat Fakültesi mezunu ne iş yapar?</strong> Gıda üretiminden bitki ıslahına, çiftlik yönetiminden danışmanlığa kadar geniş bir alanda çalışabilir. Kamuya atanabilir, özel sektörde çalışabilir ya da kendi işini kurabilir[cite: 3].</li>
+                <li><strong>Atanma şansı var mı? KPSS ile kamuya geçiş mümkün mü?</strong> Evet. Tarım ve Orman Bakanlığı, il müdürlükleri, araştırma enstitüleri gibi kamu kurumlarında kadro açıldıkça KPSS ile atanmak mümkündür[cite: 3].</li>
+                <li><strong>Kendi işimizi kurabilir miyiz?</strong> Evet. Mezunlarımız kendi seralarını, çiftliklerini, danışmanlık ofislerini kurarak girişimcilik yolunu seçebilmektedir[cite: 3].</li>
+                <li><strong>Bölümler arası geçiş mümkün mü?</strong> Belirli akademik başarı ve kontenjan şartlarını sağlayan öğrenciler için yatay geçiş ve çift anadal olanakları mümkündür[cite: 3].</li>
+                <li><strong>ÇOMÜ Ziraat Fakültesi'nin akademik kadrosu güçlü mü?</strong> Evet. Alanında uzman, birçok ulusal ve uluslararası projede görev almış, yayın yapmış güçlü bir akademik kadroya sahiptir[cite: 3].</li>
+                <li><strong>Araştırma projelerine öğrenci katılabilir mi?</strong> Evet. TÜBİTAK 2209-A, BAP gibi projelerde lisans öğrencileri de görev alabilir, araştırma tecrübesi kazanabilir[cite: 3].</li>
+                <li><strong>Yabancı öğrenci var mı?</strong> Evet. Yurtdışı burs programları (YTB, Erasmus) kapsamında birçok farklı ülkeden lisans ve lisansüstü öğrenciler fakültemizde eğitim almaktadır[cite: 3].</li>
+                <li><strong>Çanakkale’de öğrenci hayatı nasıl?</strong> Güvenli, sakin ve öğrenci dostu bir şehirdir. Kültürel etkinlikler, deniz kıyısı sosyal alanlar ve tarihî mekânlar öğrencilere keyifli bir yaşam sunar[cite: 3].</li>
+                <li><strong>Ziraat Fakültesi’nde okurken Erasmus veya yurt dışı staj fırsatı yakalamak zor mu?</strong> Hayır, kesinlikle değil. Erasmus+ programı kapsamında Avrupa'daki birçok üniversite ile anlaşmamız bulunuyor. Başvuru şartlarını sağlayan öğrencilerimiz hem eğitim hem de staj hareketliliğinden kolaylıkla faydalanabiliyor. Ayrıca yabancı dil düzeyi için üniversitemiz destekleyici kurslar ve sınav hazırlıkları da sunmaktadır[cite: 3].</li>
+                <li><strong>Ziraat Fakültesi'nde hangi alanlara yönelerek uzmanlaşabilirim?</strong> Eğitim sürecinde bölüm dersleri, seçmeli dersler ve uygulamalı projeler sayesinde bitki sağlığı, tarımsal analiz, biyoteknoloji, sulama sistemleri, tarım makineleri, hayvancılık ve tarım ekonomisi gibi birçok alanda uzmanlaşma fırsatı sunulmaktadır. Ayrıca lisansüstü programlarla bu alanlarda derinleşmek mümkündür[cite: 3].</li>
             </ul>
         </div>
 
         <!-- ENGLISH -->
         <div id="en" class="lang-section">
             <h2>ENGLISH</h2>
-            <h3>ÇANAKKALE ONSEKİZ MART UNIVERSITY FACULTY OF AGRICULTURE[cite: 1]</h3>
-            <p>Our faculty began its educational activities in 1995 in the Üvecik village of Ezine with two departments, and relocated to the Terzioğlu Campus in 1998[cite: 1]. Educational activities continue under 9 departments with a total of 97 academic staff members, 82 of whom are faculty members[cite: 1].</p>
-            <p>We continue our educational activities with a total of 1359 registered undergraduate students and 277 graduate students across the nine departments under the umbrella of our faculty[cite: 1]. Since its establishment, around 4000 Agricultural Engineers have graduated[cite: 1]. Additionally, master's and doctoral programs are available in all our departments[cite: 1].</p>
-            <p>Our Faculty of Agriculture is one of the leading agriculture faculties in Turkey with its strong application-based education model, academic productivity, and international collaborations[cite: 1]. Our students, trained in the field, graduate not only as today's but also as tomorrow's agricultural professionals through our science-supported programs[cite: 1]. Both the bridges built with universities in Europe and the externally funded R&D activities carried out within the Çanakkale Technopark and our Faculty reflect the scientific and strategic strength of our institution[cite: 1].</p>
+            <h3>ÇANAKKALE ONSEKİZ MART UNIVERSITY FACULTY OF AGRICULTURE[cite: 3]</h3>
+            <p>Our faculty began its educational activities in 1995 in the Üvecik village of Ezine with two departments, and relocated to the Terzioğlu Campus in 1998. Educational activities continue under 9 departments with a total of 97 academic staff members, 82 of whom are faculty members[cite: 3].</p>
+            <p>We continue our educational activities with a total of 1359 registered undergraduate students and 277 graduate students across the nine departments under the umbrella of our faculty. Since its establishment, around 4000 Agricultural Engineers have graduated. Additionally, master's and doctoral programs are available in all our departments[cite: 3].</p>
+            <p>Our Faculty of Agriculture is one of the leading agriculture faculties in Turkey with its strong application-based education model, academic productivity, and international collaborations. Our students, trained in the field, graduate not only as today's but also as tomorrow's agricultural professionals through our science-supported programs. Both the bridges built with universities in Europe and the externally funded R&D activities carried out within the Çanakkale Technopark and our Faculty reflect the scientific and strategic strength of our institution[cite: 3].</p>
 
-            <h3>Offered Programs[cite: 1]</h3>
-            <p>ÇOMÜ Faculty of Agriculture provides education with a strong academic staff in the field of agricultural engineering. Various levels of educational opportunities are offered to our students[cite: 1]:</p>
+            <h3>Offered Programs[cite: 3]</h3>
+            <p>ÇOMÜ Faculty of Agriculture provides education with a strong academic staff in the field of agricultural engineering. Various levels of educational opportunities are offered to our students[cite: 3]:</p>
             <ul>
-                <li><strong>Undergraduate Programs:</strong> Undergraduate education is provided in 9 different departments of our faculty[cite: 1].</li>
-                <li><strong>Master's Programs:</strong> With master's programs focused on academic and applied research, students can deepen their knowledge[cite: 1].</li>
-                <li><strong>Doctoral Programs:</strong> Doctoral education is offered in various disciplines for students who want to increase their scientific research capacity[cite: 1].</li>
+                <li><strong>Undergraduate Programs:</strong> Undergraduate education is provided in 9 different departments of our faculty. The departments allow students to specialize in a wide range of areas from agricultural production to technological innovations, and from animal husbandry to economic analysis[cite: 3].</li>
+                <li><strong>Master's Programs:</strong> With master's programs focused on academic and applied research, students can deepen their knowledge in their areas of expertise and take part in national and international projects[cite: 3].</li>
+                <li><strong>Doctoral Programs:</strong> Doctoral education is offered in various disciplines for students who want to increase their scientific research capacity. Doctoral students develop innovative projects in the faculty's R&D centers and laboratories[cite: 3].</li>
             </ul>
 
-            <h3>Infrastructure Facilities[cite: 1]</h3>
-            <p>ÇOMÜ Faculty of Agriculture has a wide and modern infrastructure to provide a contemporary education and research environment[cite: 1]:</p>
+            <h3>Infrastructure Facilities[cite: 3]</h3>
+            <p>ÇOMÜ Faculty of Agriculture has a wide and modern infrastructure to provide a contemporary education and research environment for its students and academicians[cite: 3]:</p>
             <ul>
-                <li><strong>Laboratories:</strong> There are specialized laboratories for soil analysis, plant biotechnology, pest detection, food quality, and more[cite: 1].</li>
-                <li><strong>Library:</strong> A large library affiliated with our faculty is enriched with printed and digital resources[cite: 1].</li>
+                <li><strong>Laboratories:</strong> There are laboratories for soil analysis, plant biotechnology, pest and disease detection, food quality control, irrigation systems, agricultural machinery, and zootechnics, equipped according to the needs of each department[cite: 3].</li>
+                <li><strong>Library:</strong> A large library affiliated with our faculty is enriched with printed and digital resources. Students can access current books, journals, and articles, and can engage in individual and group studies in the reading rooms[cite: 3].</li>
+                <li><strong>Computer Infrastructure:</strong> Modern computer laboratories are equipped with high-speed internet access and database systems. In addition, there is a strong digital infrastructure for distance education and access to online resources[cite: 3].</li>
             </ul>
 
-            <h3>Career Opportunities[cite: 1]</h3>
-            <p><strong>Our Graduates Are Shaping the Future of Agriculture[cite: 1]</strong></p>
-            <p>ÇOMÜ Faculty of Agriculture graduates have a wide range of career opportunities in both the public and private sectors[cite: 1]. They work in the Ministry of Agriculture and Forestry, research institutes, seed companies, and private agricultural consulting offices[cite: 1].</p>
+            <h3>Career Opportunities[cite: 3]</h3>
+            <p><strong>Our Graduates Are Shaping the Future of Agriculture</strong><br>ÇOMÜ Faculty of Agriculture graduates have a wide range of career opportunities in both the public and private sectors thanks to the applied education they receive and the versatile competencies they gain[cite: 3]. They work in many areas such as the Ministry of Agriculture and Forestry, Agricultural Research Institutes, provincial and district agriculture directorates, cooperatives, seed and fertilizer companies, food production and inspection organizations, land reclamation and irrigation projects, landscape application companies, and agricultural consulting offices[cite: 3]. Additionally, there is a strong possibility of pursuing an academic career through graduate education[cite: 3].</p>
+
+            <h3>Internship and Workplace Training Opportunities[cite: 3]</h3>
+            <p>Thanks to the 7+1 workplace training model implemented in our faculty, students gain direct experience in the sector before graduating. Through collaborations established with local and national companies, they can practice one-on-one in field, laboratory, and business environments[cite: 3]. Furthermore, gaining professional experience in different geographies is encouraged through TÜBİTAK intern researcher programs, Erasmus+ internship mobility, and student projects[cite: 3].</p>
+
+            <h3>Research and Project Opportunities[cite: 3]</h3>
+            <p><strong>Interdisciplinary Infrastructure, Application-Oriented Project Culture</strong><br>ÇOMÜ Faculty of Agriculture has a strong research and project infrastructure with its 9 academic departments covering different fields of expertise. Each department offers students and academicians the opportunity to produce original projects with its well-equipped laboratories, application greenhouses, trial fields, and special research centers[cite: 3].</p>
+            <p>In our Plant Protection, Horticulture, Field Crops, and Zootechnics departments, intensive studies are carried out on variety trials developed against biotic and abiotic stresses, integrated pest management, genetic breeding, and animal welfare[cite: 3]. The Soil Science and Plant Nutrition, and Agricultural Structures and Irrigation departments carry out original analyses and R&D activities on soil health, fertilization techniques, irrigation systems, and land management[cite: 3]. The Agricultural Biotechnology department brings contemporary biotechnological approaches to students with molecular biology, genetic engineering, and plant genome studies[cite: 3]. The Agricultural Machinery and Technologies Engineering department produces advanced engineering projects on sensor technologies, autonomous agricultural robots, and mechanization[cite: 3]. The Agricultural Economics department develops solutions that guide the sector with economic modeling on rural development, agricultural policy analysis, and agricultural business management[cite: 3].</p>
+
+            <h3>Student Projects and Scientific Achievements[cite: 3]</h3>
+            <p>Undergraduate students in every department take part in TÜBİTAK 2209-A/B, BAP, and externally funded projects under the guidance of advisor academicians. Many of our students win awards in international student congresses, interdisciplinary competitions, and innovation-based events. These projects directly contribute not only to scientific literature but also to regional development[cite: 3].</p>
+
+            <h3>Erasmus+, Farabi, and International Mobility[cite: 3]</h3>
+            <p>ÇOMÜ Faculty of Agriculture aims to provide its students with international education and research experience[cite: 3]. Within the scope of the Erasmus+ exchange program, our students can study or do internships for one or two semesters at more than 20 European universities with which active cooperation is maintained[cite: 3]. Through the Farabi exchange program, academic mobility opportunities are offered at many universities within Turkey[cite: 3]. In addition, a multicultural learning environment is created with international students studying at our faculty and foreign academicians participating in projects, and the comparative analysis of different agricultural systems is encouraged[cite: 3].</p>
+
+            <h3>Social and Cultural Activities[cite: 3]</h3>
+            <p><strong>An Educational Environment That Prepares You Not Only for a Profession But Also for Life</strong><br>ÇOMÜ Faculty of Agriculture offers its students a rich university experience not only academically but also socially, culturally, and athletically. Our students organize events with various clubs and student societies according to their interests, and actively participate in social responsibility efforts as well as scientific projects[cite: 3].</p>
+            <p><strong>Student Clubs and Societies</strong><br>In addition to department-based clubs within our faculty such as the Zootechnics Society, Plant Protection Student Society, Agricultural Biotechnology Club, Soil and Environment Club, and Agricultural Economics Society, many groups operating throughout the university—such as hiking groups, photography clubs, and theater workshops—offer students the opportunity to discover and develop their interests[cite: 3].</p>
+
+            <h3>Campus Life, Sports, and Arts[cite: 3]</h3>
+            <p>Our faculty is part of a campus intertwined with nature, located right on the shore of the Dardanelles (Çanakkale Strait). Our students can benefit from facilities located on the campus for free, such as the Indoor Sports Hall, Fitness Center, and Olympic Swimming Pool[cite: 3]. Additionally, the modern 400-seat amphitheater belonging to our faculty hosts many organizations ranging from scientific seminars to cultural events[cite: 3].</p>
+
+            <h3>Cultural Richness: Çanakkale[cite: 3]</h3>
+            <p>Our faculty is located in the province of Çanakkale, which stands out with its historical and cultural identity. Our students enjoy the privilege of being close to historical and natural sites such as Troy, the Gallipoli Peninsula, and Assos. Its proximity to the city center and safe living environment make Çanakkale an attractive educational hub for students[cite: 3].</p>
+
+            <h3>Extra Information and Advantages for Prospective Students[cite: 3]</h3>
+            <ul>
+                <li><strong>Strong Applied Education:</strong> In addition to theory, our faculty trains its graduates as well-equipped individuals ready for the sector through an application-oriented education model in the field, in laboratories, and in technological test centers[cite: 3].</li>
+                <li><strong>Extensive Academic Network and Projects:</strong> Thanks to TÜBİTAK, European Union projects, Erasmus+, and other national/international collaborations, students directly participate in scientific research and innovation processes[cite: 3].</li>
+                <li><strong>Advanced Technology and Tools:</strong> Laboratories and test centers equipped with modern technologies such as drone-supported imaging, agricultural robots, and smart sensing systems ensure that students gain experience in line with the requirements of the era[cite: 3].</li>
+                <li><strong>Çanakkale’s Unique Location:</strong> Studying in Çanakkale, where history, culture, and nature intertwine, is a great opportunity not only for professional but also for social and cultural development[cite: 3].</li>
+                <li><strong>Career Opportunities and Alumni Success:</strong> Our faculty graduates undertake important roles in public institutions, the private sector, R&D, consultancy, and entrepreneurship; our employment rate is high[cite: 3].</li>
+                <li><strong>Vibrant Student Communities:</strong> Through department and faculty clubs, and social and cultural events, students develop their social skills while capturing networking opportunities[cite: 3].</li>
+                <li><strong>Modern Campus and Social Facilities:</strong> Located right on the strait, it offers a pleasant and healthy campus life with its sports hall, Olympic swimming pool, and wide green areas[cite: 3].</li>
+                <li><strong>International Student Profile:</strong> There is an opportunity to receive education in a multicultural environment with students from different countries in our faculty; this broadens your global perspective[cite: 3].</li>
+                <li><strong>7+1 Workplace Training Model:</strong> Thanks to the education integrated with the sector, students make a strong start in the business world by gaining work experience before graduating[cite: 3].</li>
+            </ul>
+
+            <h3>Frequently Asked Questions (FAQ)[cite: 3]</h3>
+            <ul>
+                <li><strong>What departments are there in the Faculty of Agriculture?</strong> There are 9 departments in our faculty: Horticulture, Plant Protection, Agricultural Economics, Field Crops, Agricultural Biotechnology, Agricultural Structures and Irrigation, Agricultural Machinery and Technologies, Soil Science and Plant Nutrition, and Zootechnics[cite: 3].</li>
+                <li><strong>What title do Faculty of Agriculture graduates receive?</strong> Our graduates receive the title of "Agricultural Engineer" (Ziraat Mühendisi). This title is valid regardless of which department you graduate from[cite: 3].</li>
+                <li><strong>How long is the education period?</strong> Undergraduate education is 4 years. There is no mandatory preparatory program; the language of instruction is Turkish[cite: 3].</li>
+                <li><strong>Are there English-supported courses or Erasmus opportunities?</strong> Yes, many courses receive English resource support. Additionally, there are opportunities to study and do internships in Europe under the Erasmus+ program[cite: 3].</li>
+                <li><strong>Is there applied training? Or is it entirely theoretical?</strong> Our faculty adopts a model centered on applied education. Intensive applied courses are given in greenhouses, fields, laboratories, and test centers[cite: 3].</li>
+                <li><strong>Is it mandatory to do an internship? Where can we do it?</strong> Yes, there is a mandatory internship program. It can be done in ministries, private companies, research institutes, or the university's own units[cite: 3].</li>
+                <li><strong>What is 7+1 workplace training?</strong> It is a model of spending one semester of the senior year directly in the sector. Students gain experience in companies and get ready for the field before graduating[cite: 3].</li>
+                <li><strong>How are the laboratory facilities?</strong> There are specially equipped laboratories for each department in our faculty. Active laboratory use is possible in many fields such as soil, plant, food, biotechnology, and entomology[cite: 3].</li>
+                <li><strong>What are the campus facilities?</strong> Our campus has a sports hall, fitness center, Olympic swimming pool, dining hall, library, and student clubs. The campus is located right on the shore of the Dardanelles[cite: 3].</li>
+                <li><strong>Are there dormitory facilities?</strong> There are state dormitories affiliated with the Credit and Dormitories Institution (KYK) and private dormitories. There are accommodation options within walking distance of the campus[cite: 3].</li>
+                <li><strong>What does an Agriculture Faculty graduate do?</strong> They can work in a wide range of areas from food production to plant breeding, and from farm management to consulting. They can be appointed to the public sector, work in the private sector, or start their own business[cite: 3].</li>
+                <li><strong>Is there a chance of appointment? Is transitioning to the public sector via KPSS possible?</strong> Yes. As positions open up in public institutions such as the Ministry of Agriculture and Forestry, provincial directorates, and research institutes, it is possible to be appointed via KPSS[cite: 3].</li>
+                <li><strong>Can we start our own business?</strong> Yes. Our graduates can choose the path of entrepreneurship by establishing their own greenhouses, farms, and consulting offices[cite: 3].</li>
+                <li><strong>Is it possible to transfer between departments?</strong> Lateral transfer and double major opportunities are available for students who meet certain academic success and quota requirements[cite: 3].</li>
+                <li><strong>Is the academic staff of ÇOMÜ Faculty of Agriculture strong?</strong> Yes. It has a strong academic staff composed of experts in their fields who have taken part in many national and international projects and published extensively[cite: 3].</li>
+                <li><strong>Can students participate in research projects?</strong> Yes. Undergraduate students can also take part in projects such as TÜBİTAK 2209-A and BAP, and gain research experience[cite: 3].</li>
+                <li><strong>Are there international students?</strong> Yes. Many undergraduate and graduate students from different countries study at our faculty within the scope of international scholarship programs (YTB, Erasmus)[cite: 3].</li>
+                <li><strong>How is student life in Çanakkale?</strong> It is a safe, quiet, and student-friendly city. Cultural events, coastal social areas, and historical sites offer students a pleasant life[cite: 3].</li>
+                <li><strong>Is it difficult to get an Erasmus or abroad internship opportunity while studying at the Faculty of Agriculture?</strong> No, absolutely not. We have agreements with many universities in Europe within the scope of the Erasmus+ program. Our students who meet the application requirements can easily benefit from both education and internship mobility. Also, our university provides supportive courses and exam preparation for foreign language proficiency[cite: 3].</li>
+                <li><strong>In which fields can I specialize at the Faculty of Agriculture?</strong> During the education process, opportunities to specialize in many areas such as plant health, agricultural analysis, biotechnology, irrigation systems, agricultural machinery, animal husbandry, and agricultural economics are offered through departmental courses, elective courses, and applied projects. It is also possible to deepen your knowledge in these areas with graduate programs[cite: 3].</li>
+            </ul>
         </div>
 
         <!-- DEUTSCH -->
         <div id="de" class="lang-section">
             <h2>DEUTSCH</h2>
-            <h3>ÇANAKKALE ONSEKİZ MART UNIVERSITÄT LANDWIRTSCHAFTLICHE FAKULTÄT[cite: 1]</h3>
-            <p>Unsere Fakultät nahm ihre Bildungs- und Lehraktivitäten im Jahr 1995 im Dorf Üvecik, das zu Ezine gehört, mit zwei Abteilungen auf und wurde 1998 auf den Terzioğlu-Campus verlegt[cite: 1]. Die Bildungs- und Lehraktivitäten werden in 9 Abteilungen mit insgesamt 97 Lehrkräften, darunter 82 Fakultätsmitglieder, fortgesetzt[cite: 1].</p>
-            <p>Wir setzen unsere Bildungs- und Lehraktivitäten mit insgesamt 1359 eingeschriebenen Bachelor-Studenten und 277 eingeschriebenen Master- und Doktoranden in den neun Abteilungen unserer Fakultät fort[cite: 1]. Seit ihrer Gründung haben etwa 4000 Agraringenieure ihren Abschluss gemacht[cite: 1]. Darüber hinaus werden in allen unseren Abteilungen Master- und Promotionsprogramme angeboten[cite: 1].</p>
-            <p>Unsere Landwirtschaftliche Fakultät ist mit ihrem starken, praxisorientierten Bildungsmodell, ihrer akademischen Produktivität und ihren internationalen Kooperationen eine der führenden landwirtschaftlichen Fakultäten in der Türkei[cite: 1].</p>
+            <h3>ÇANAKKALE ONSEKİZ MART UNIVERSITÄT LANDWIRTSCHAFTLICHE FAKULTÄT[cite: 3]</h3>
+            <p>Unsere Fakultät nahm ihre Bildungs- und Lehraktivitäten im Jahr 1995 im Dorf Üvecik, das zu Ezine gehört, mit zwei Abteilungen auf und wurde 1998 auf den Terzioğlu-Campus verlegt. Die Bildungs- und Lehraktivitäten werden in 9 Abteilungen mit insgesamt 97 Lehrkräften, darunter 82 Fakultätsmitglieder, fortgesetzt[cite: 3].</p>
+            <p>Wir setzen unsere Bildungs- und Lehraktivitäten mit insgesamt 1359 eingeschriebenen Bachelor-Studenten und 277 eingeschriebenen Master- und Doktoranden in den neun Abteilungen unserer Fakultät fort. Seit ihrer Gründung haben etwa 4000 Agraringenieure ihren Abschluss gemacht. Darüber hinaus werden in allen unseren Abteilungen Master- und Promotionsprogramme angeboten[cite: 3].</p>
+            <p>Unsere Landwirtschaftliche Fakultät ist mit ihrem starken, praxisorientierten Bildungsmodell, ihrer akademischen Produktivität und ihren internationalen Kooperationen eine der führenden landwirtschaftlichen Fakultäten in der Türkei. Unsere in der Praxis ausgebildeten Studenten schließen durch unsere wissenschaftlich fundierten Programme nicht nur als landwirtschaftliche Fachkräfte von heute, sondern auch als die von morgen ab. Sowohl die mit Universitäten in Europa geschlagenen Brücken als auch die extern finanzierten F&E-Aktivitäten, die im Çanakkale Technopark und innerhalb unserer Fakultät durchgeführt werden, spiegeln die wissenschaftliche und strategische Stärke unserer Fakultät wider[cite: 3].</p>
+
+            <h3>Angebotene Programme[cite: 3]</h3>
+            <p>Die Landwirtschaftliche Fakultät der ÇOMÜ bietet mit einem starken akademischen Lehrkörper eine Ausbildung im Bereich der Agraringenieurwissenschaften an. Unseren Studenten werden auf verschiedenen Ebenen Bildungsmöglichkeiten geboten[cite: 3]:</p>
+            <ul>
+                <li><strong>Bachelorprogramme:</strong> In 9 verschiedenen Abteilungen unserer Fakultät wird eine Bachelorausbildung angeboten. Die Abteilungen ermöglichen es den Studenten, sich in einem breiten Spektrum zu spezialisieren, das von landwirtschaftlicher Produktion bis hin zu technologischen Innovationen und von Tierhaltung bis hin zu wirtschaftlichen Analysen reicht[cite: 3].</li>
+                <li><strong>Masterprogramme:</strong> Durch Masterprogramme mit Fokus auf akademische und angewandte Forschung können die Studenten ihr Wissen in ihren Fachgebieten vertiefen und an nationalen und internationalen Projekten teilnehmen[cite: 3].</li>
+                <li><strong>Promotionsprogramme:</strong> Für Studenten, die ihre wissenschaftliche Forschungskapazität erweitern möchten, wird eine Promotionsausbildung in verschiedenen Disziplinen angeboten. Doktoranden entwickeln in den F&E-Zentren und Laboren der Fakultät innovative Projekte[cite: 3].</li>
+            </ul>
+
+            <h3>Infrastruktur und Einrichtungen[cite: 3]</h3>
+            <p>Die Landwirtschaftliche Fakultät der ÇOMÜ verfügt über eine breite und moderne Infrastruktur, um ihren Studenten und Akademikern eine zeitgemäße Bildungs- und Forschungsumgebung zu bieten[cite: 3]:</p>
+            <ul>
+                <li><strong>Labore:</strong> Es gibt Labore für Bodenanalyse, Pflanzenbiotechnologie, Schädlings- und Krankheitserkennung, Lebensmittelqualitätskontrolle, Bewässerungssysteme, Landmaschinen und Tierzucht, die entsprechend den Anforderungen jeder Abteilung ausgestattet sind[cite: 3].</li>
+                <li><strong>Bibliothek:</strong> Eine große Bibliothek, die an unsere Fakultät angegliedert ist, wird mit gedruckten und digitalen Ressourcen bereichert. Studenten haben Zugang zu aktuellen Büchern, Zeitschriften und Artikeln und können in den Lesesälen Einzel- und Gruppenarbeiten durchführen[cite: 3].</li>
+                <li><strong>IT-Infrastruktur:</strong> Moderne Computerlabore sind mit High-Speed-Internetzugang und Datenbanksystemen ausgestattet. Darüber hinaus gibt es eine starke digitale Infrastruktur für den Fernunterricht und den Zugang zu Online-Ressourcen[cite: 3].</li>
+            </ul>
+
+            <h3>Karrieremöglichkeiten[cite: 3]</h3>
+            <p><strong>Unsere Absolventen gestalten die Zukunft der Landwirtschaft</strong><br>Die Absolventen der Landwirtschaftlichen Fakultät der ÇOMÜ haben dank der praxisnahen Ausbildung und der vielseitigen Kompetenzen, die sie erwerben, breite Karrieremöglichkeiten sowohl im öffentlichen als auch im privaten Sektor[cite: 3]. Sie sind in vielen Bereichen tätig, wie z.B. im Ministerium für Land- und Forstwirtschaft, in landwirtschaftlichen Forschungsinstituten, in landwirtschaftlichen Direktionen auf Provinz- und Bezirksebene, in Genossenschaften, Saatgut- und Düngemittelunternehmen, bei Organisationen zur Lebensmittelproduktion und -kontrolle, in Landgewinnungs- und Bewässerungsprojekten, in Landschaftsbauunternehmen und landwirtschaftlichen Beratungsbüros[cite: 3]. Darüber hinaus besteht eine große Chance, durch ein Aufbaustudium eine akademische Karriere zu verfolgen[cite: 3].</p>
+
+            <h3>Praktika und Berufsausbildungsmöglichkeiten[cite: 3]</h3>
+            <p>Dank des in unserer Fakultät angewandten 7+1-Berufsausbildungsmodells sammeln die Studenten bereits vor ihrem Abschluss direkte Erfahrungen in der Branche; Durch die Zusammenarbeit mit lokalen und nationalen Unternehmen können sie 1-zu-1-Praktika auf Feldern, in Laboren und in Betriebsumgebungen absolvieren[cite: 3]. Darüber hinaus wird durch TÜBİTAK-Forschungspraktikumsprogramme, Erasmus+-Praktikumsmobilität und Studentenprojekte die Sammlung beruflicher Erfahrungen in verschiedenen geografischen Regionen gefördert[cite: 3].</p>
+
+            <h3>Forschungs- und Projektmöglichkeiten[cite: 3]</h3>
+            <p><strong>Interdisziplinäre Infrastruktur, anwendungsorientierte Projektkultur</strong><br>Die Landwirtschaftliche Fakultät der ÇOMÜ verfügt mit ihren 9 akademischen Abteilungen, die verschiedene Fachgebiete abdecken, über eine starke Forschungs- und Projektinfrastruktur. Jede Abteilung bietet ihren Studenten und Akademikern mit ihren gut ausgestatteten Laboren, Versuchsgewächshäusern, Versuchsfeldern und speziellen Forschungszentren die Möglichkeit, originelle Projekte zu entwickeln[cite: 3].</p>
+            <p>In unseren Abteilungen für Pflanzenschutz, Gartenbau, Ackerbau und Tierzucht werden intensive Studien zu Sortenversuchen gegen biotischen und abiotischen Stress, integriertem Schädlingsmanagement, genetischer Züchtung und Tierwohl durchgeführt[cite: 3]. Die Abteilungen Bodenkunde und Pflanzenernährung sowie Landwirtschaftliche Bauten und Bewässerung führen originelle Analysen und F&E-Aktivitäten zu Bodengesundheit, Düngetechniken, Bewässerungssystemen und Landmanagement durch[cite: 3]. Die Abteilung für Agrarbiotechnologie bringt den Studenten zeitgemäße biotechnologische Ansätze mit Studien zu Molekularbiologie, Gentechnik und Pflanzengenomik näher[cite: 3]. Die Abteilung für Landmaschinen- und Technologie-Ingenieurwesen entwickelt fortschrittliche Ingenieurprojekte in den Bereichen Sensortechnologien, autonome landwirtschaftliche Roboter und Mechanisierung[cite: 3]. Die Abteilung für Agrarökonomie entwickelt zukunftsweisende Lösungen für die Branche durch ökonomische Modellierungen in den Bereichen ländliche Entwicklung, Agrarpolitikanalyse und landwirtschaftliches Betriebsmanagement[cite: 3].</p>
+
+            <h3>Studentenprojekte und wissenschaftliche Erfolge[cite: 3]</h3>
+            <p>Bachelor-Studenten in jeder Abteilung nehmen unter der Anleitung von akademischen Betreuern an TÜBİTAK 2209-A/B, BAP und extern finanzierten Projekten teil; Viele unserer Studenten gewinnen Preise auf internationalen Studentenkongressen, bei interdisziplinären Wettbewerben und innovationsbasierten Veranstaltungen. Diese Projekte leisten nicht nur einen direkten Beitrag zur wissenschaftlichen Literatur, sondern auch zur regionalen Entwicklung[cite: 3].</p>
+
+            <h3>Erasmus+, Farabi und internationale Mobilität[cite: 3]</h3>
+            <p>Die Landwirtschaftliche Fakultät der ÇOMÜ zielt darauf ab, ihren Studenten internationale Bildungs- und Forschungserfahrung zu vermitteln[cite: 3]. Im Rahmen des Erasmus+-Austauschprogramms können unsere Studenten ein oder zwei Semester an mehr als 20 europäischen Universitäten, mit denen aktive Kooperationen bestehen, studieren oder Praktika absolvieren[cite: 3]. Mit dem Farabi-Austauschprogramm werden akademische Mobilitätsmöglichkeiten an vielen Universitäten innerhalb der Türkei geboten[cite: 3]. Darüber hinaus wird durch internationale Studenten, die an unserer Fakultät studieren, und ausländische Akademiker, die an Projekten teilnehmen, ein multikulturelles Lernumfeld geschaffen und die vergleichende Analyse verschiedener landwirtschaftlicher Systeme gefördert[cite: 3].</p>
+
+            <h3>Soziale und kulturelle Aktivitäten[cite: 3]</h3>
+            <p><strong>Ein Bildungsumfeld, das nicht nur auf den Beruf, sondern auch auf das Leben vorbereitet</strong><br>Die Landwirtschaftliche Fakultät der ÇOMÜ bietet ihren Studenten nicht nur akademisch, sondern auch sozial, kulturell und sportlich ein reiches Universitätserlebnis. Unsere Studenten organisieren Veranstaltungen mit verschiedenen Clubs und Studentengemeinschaften entsprechend ihren Interessen und nehmen aktiv an wissenschaftlichen Projekten sowie an Arbeiten zur sozialen Verantwortung teil[cite: 3].</p>
+            <p><strong>Studentenclubs und Gemeinschaften</strong><br>Neben den abteilungsspezifischen Clubs innerhalb unserer Fakultät, wie der Gemeinschaft für Tierzucht, der Studentengemeinschaft für Pflanzenschutz, dem Club für Agrarbiotechnologie, dem Club für Boden und Umwelt sowie der Gemeinschaft für Agrarökonomie, bieten zahlreiche universitätsweite Gruppen wie Wandergruppen, Fotoclubs und Theaterwerkstätten den Studenten die Möglichkeit, ihre Interessen zu entdecken und weiterzuentwickeln[cite: 3].</p>
+
+            <h3>Campusleben, Sport und Kunst[cite: 3]</h3>
+            <p>Unsere Fakultät ist Teil eines Campus im Einklang mit der Natur, der direkt an der Dardanellen-Meerenge (Çanakkale) liegt. Unsere Studenten können die Einrichtungen auf dem Campus, wie zum Beispiel: Sporthalle, Fitnesscenter, Olympisches Schwimmbad kostenlos nutzen[cite: 3]. Darüber hinaus beherbergt das moderne Amphitheater unserer Fakultät mit 400 Sitzplätzen zahlreiche Veranstaltungen von wissenschaftlichen Seminaren bis hin zu kulturellen Events[cite: 3].</p>
+
+            <h3>Kultureller Reichtum: Çanakkale[cite: 3]</h3>
+            <p>Unsere Fakultät befindet sich in der Provinz Çanakkale, die sich durch ihre historische und kulturelle Identität auszeichnet; Unsere Studenten genießen das Privileg, in der Nähe historischer und natürlicher Stätten wie Troja, der Halbinsel Gallipoli und Assos zu sein. Die Nähe zum Stadtzentrum und das sichere Lebensumfeld machen Çanakkale zu einem attraktiven Studienort für Studenten[cite: 3].</p>
+
+            <h3>Zusätzliche Informationen und Vorteile für Studieninteressierte[cite: 3]</h3>
+            <ul>
+                <li><strong>Starke praxisorientierte Ausbildung:</strong> Unsere Fakultät bildet ihre Absolventen durch ein praxisorientiertes Ausbildungsmodell auf dem Feld, im Labor und in technologischen Testzentren neben der Theorie zu gut ausgestatteten und branchenbereiten Individuen aus[cite: 3].</li>
+                <li><strong>Großes akademisches Netzwerk und Projekte:</strong> Dank TÜBİTAK, EU-Projekten, Erasmus+ und anderen nationalen/internationalen Kooperationen nehmen die Studenten direkt an wissenschaftlichen Forschungs- und Innovationsprozessen teil[cite: 3].</li>
+                <li><strong>Fortschrittliche Technologien und Werkzeuge:</strong> Mit modernen Technologien ausgestattete Labore und Testzentren, wie z.B. drohnengestützte Bildgebung, landwirtschaftliche Roboter und intelligente Sensorsysteme, stellen sicher, dass die Studenten zeitgemäße Erfahrungen sammeln[cite: 3].</li>
+                <li><strong>Die einzigartige Lage von Çanakkale:</strong> Das Studium in Çanakkale, wo sich Geschichte, Kultur und Natur vereinen, ist nicht nur beruflich, sondern auch für die soziale und kulturelle Entwicklung eine große Chance[cite: 3].</li>
+                <li><strong>Karrieremöglichkeiten und Erfolge von Absolventen:</strong> Unsere Fakultätsabsolventen übernehmen wichtige Aufgaben in öffentlichen Einrichtungen, in der Privatwirtschaft, in Forschung und Entwicklung, in der Beratung und im Unternehmertum; unsere Beschäftigungsquote ist hoch[cite: 3].</li>
+                <li><strong>Lebendige Studentengemeinschaften:</strong> Durch Abteilungs- und Fakultätsclubs sowie soziale und kulturelle Veranstaltungen entwickeln Studenten ihre sozialen Fähigkeiten und nutzen Networking-Möglichkeiten[cite: 3].</li>
+                <li><strong>Moderner Campus und soziale Einrichtungen:</strong> Die Lage direkt am Meer bietet ein angenehmes und gesundes Campusleben mit einer Sporthalle, einem olympischen Schwimmbad und großen Grünflächen[cite: 3].</li>
+                <li><strong>Internationales Studentenprofil:</strong> An unserer Fakultät haben Sie die Möglichkeit, in einem multikulturellen Umfeld mit Studenten aus verschiedenen Ländern zu studieren; das erweitert Ihre globale Perspektive[cite: 3].</li>
+                <li><strong>7+1 Berufsausbildungsmodell:</strong> Dank der mit der Branche verflochtenen Ausbildung sammeln die Studenten vor ihrem Abschluss Berufserfahrung und starten stark in die Arbeitswelt[cite: 3].</li>
+            </ul>
+
+            <h3>Häufig gestellte Fragen (FAQ)[cite: 3]</h3>
+            <ul>
+                <li><strong>Welche Abteilungen gibt es an der Landwirtschaftlichen Fakultät?</strong> Es gibt 9 Abteilungen an unserer Fakultät: Gartenbau, Pflanzenschutz, Agrarökonomie, Ackerbau, Agrarbiotechnologie, Landwirtschaftliche Bauten und Bewässerung, Landmaschinen und -technologien, Bodenkunde und Pflanzenernährung sowie Tierzucht[cite: 3].</li>
+                <li><strong>Mit welchem Titel schließen die Absolventen der Landwirtschaftlichen Fakultät ab?</strong> Unsere Absolventen erhalten den Titel „Agraringenieur“ (Ziraat Mühendisi). Dieser Titel ist gültig, unabhängig davon, in welcher Abteilung der Abschluss gemacht wurde[cite: 3].</li>
+                <li><strong>Wie lange dauert die Ausbildung?</strong> Das Bachelorstudium dauert 4 Jahre. Es gibt kein obligatorisches Vorbereitungsprogramm, die Unterrichtssprache ist Türkisch[cite: 3].</li>
+                <li><strong>Gibt es englisch unterstützte Kurse oder Erasmus-Möglichkeiten?</strong> Ja, viele Kurse werden mit englischsprachigen Quellen unterstützt. Außerdem gibt es im Rahmen von Erasmus+ die Möglichkeit, in Europa zu studieren und Praktika zu absolvieren[cite: 3].</li>
+                <li><strong>Gibt es eine praktische Ausbildung? Oder ist sie rein theoretisch?</strong> Unsere Fakultät verfolgt ein Modell, das die praktische Ausbildung in den Mittelpunkt stellt. Intensive praxisbezogene Lehrveranstaltungen werden in Gewächshäusern, auf Feldern, in Laboren und in Testzentren abgehalten[cite: 3].</li>
+                <li><strong>Ist ein Praktikum obligatorisch? Wo können wir es machen?</strong> Ja, es gibt ein Pflichtpraktikum. Es kann in Ministerien, privaten Unternehmen, Forschungsinstituten oder in den eigenen Abteilungen der Universität absolviert werden[cite: 3].</li>
+                <li><strong>Was ist die 7+1-Berufsausbildung?</strong> Es ist ein Modell, bei dem ein Semester des letzten Studienjahres direkt in der Branche verbracht wird. Studenten sammeln Erfahrungen in Unternehmen und bereiten sich vor dem Abschluss auf das Berufsleben vor[cite: 3].</li>
+                <li><strong>Wie sind die Laboreinrichtungen?</strong> Unsere Fakultät verfügt über speziell ausgestattete Labore für jede Abteilung. Eine aktive Labornutzung ist in vielen Bereichen wie Boden, Pflanze, Lebensmittel, Biotechnologie und Entomologie möglich[cite: 3].</li>
+                <li><strong>Welche Möglichkeiten bietet der Campus?</strong> Auf unserem Campus gibt es eine Sporthalle, ein Fitnesscenter, ein olympisches Schwimmbad, eine Mensa, eine Bibliothek und Studentenclubs. Der Campus liegt direkt an der Dardanellen-Meerenge[cite: 3].</li>
+                <li><strong>Gibt es Wohnheimmöglichkeiten?</strong> Es gibt staatliche Wohnheime, die der Institution für Kredite und Wohnheime (KYK) angegliedert sind, sowie private Wohnheime. In fußläufiger Entfernung zum Campus gibt es Unterkunftsmöglichkeiten[cite: 3].</li>
+                <li><strong>Was macht ein Absolvent der Landwirtschaftlichen Fakultät?</strong> Sie können in einem breiten Spektrum arbeiten, von der Lebensmittelproduktion bis zur Pflanzenzüchtung, vom Farmmanagement bis zur Beratung. Sie können im öffentlichen Sektor angestellt werden, in der Privatwirtschaft arbeiten oder sich selbstständig machen[cite: 3].</li>
+                <li><strong>Gibt es eine Chance auf eine Festanstellung im öffentlichen Dienst? Ist der Übergang in den öffentlichen Sektor mit KPSS möglich?</strong> Ja. Es ist möglich, mit der KPSS (Auswahlprüfung für den öffentlichen Dienst) ernannt zu werden, sobald Stellen in öffentlichen Einrichtungen wie dem Ministerium für Land- und Forstwirtschaft, Provinzdirektionen oder Forschungsinstituten frei werden[cite: 3].</li>
+                <li><strong>Können wir unser eigenes Unternehmen gründen?</strong> Ja. Unsere Absolventen können den Weg des Unternehmertums wählen, indem sie ihre eigenen Gewächshäuser, Farmen und Beratungsbüros gründen[cite: 3].</li>
+                <li><strong>Ist ein Wechsel zwischen den Abteilungen möglich?</strong> Für Studenten, die bestimmte Voraussetzungen an den akademischen Erfolg und die Quoten erfüllen, sind ein horizontaler Wechsel und Doppelabschlussmöglichkeiten gegeben[cite: 3].</li>
+                <li><strong>Ist der akademische Lehrkörper der Landwirtschaftlichen Fakultät der ÇOMÜ stark?</strong> Ja. Sie verfügt über einen starken akademischen Lehrkörper, der aus Experten in ihren Fachgebieten besteht, die an vielen nationalen und internationalen Projekten mitgewirkt und viel publiziert haben[cite: 3].</li>
+                <li><strong>Können Studenten an Forschungsprojekten teilnehmen?</strong> Ja. Bachelor-Studenten können auch an Projekten wie TÜBİTAK 2209-A und BAP teilnehmen und Forschungserfahrung sammeln[cite: 3].</li>
+                <li><strong>Gibt es ausländische Studenten?</strong> Ja. Im Rahmen von Auslandstelependienprogrammen (YTB, Erasmus) studieren viele Bachelor- und Masterstudenten aus verschiedenen Ländern an unserer Fakultät[cite: 3].</li>
+                <li><strong>Wie ist das Studentenleben in Çanakkale?</strong> Es ist eine sichere, ruhige und studentenfreundliche Stadt. Kulturelle Veranstaltungen, soziale Bereiche an der Küste und historische Stätten bieten den Studenten ein angenehmes Leben[cite: 3].</li>
+                <li><strong>Ist es schwierig, während des Studiums an der Landwirtschaftlichen Fakultät ein Erasmus- oder Auslandspraktikum zu bekommen?</strong> Nein, absolut nicht. Wir haben Vereinbarungen mit vielen Universitäten in Europa im Rahmen des Erasmus+-Programms. Unsere Studenten, die die Bewerbungsvoraussetzungen erfüllen, können leicht sowohl von der Studien- als auch von der Praktikumsmobilität profitieren. Darüber hinaus bietet unsere Universität unterstützende Kurse und Prüfungsvorbereitungen für die Fremdsprachenkenntnisse an[cite: 3].</li>
+                <li><strong>Auf welche Bereiche kann ich mich während des Studiums an der Landwirtschaftlichen Fakultät spezialisieren?</strong> Während des Studiums werden durch abteilungsspezifische Kurse, Wahlfächer und angewandte Projekte Spezialisierungsmöglichkeiten in vielen Bereichen wie Pflanzengesundheit, landwirtschaftliche Analytik, Biotechnologie, Bewässerungssysteme, Landmaschinen, Tierhaltung und Agrarökonomie angeboten. Es ist auch möglich, dieses Wissen durch Aufbaustudiengänge zu vertiefen[cite: 3].</li>
+            </ul>
         </div>
 
         <!-- FRANÇAIS -->
         <div id="fr" class="lang-section">
             <h2>FRANÇAIS</h2>
-            <h3>UNIVERSITÉ ÇANAKKALE ONSEKİZ MART FACULTÉ D'AGRICULTURE[cite: 1]</h3>
-            <p>Notre faculté a commencé ses activités d'enseignement et d'éducation en 1995 dans le village d'Üvecik, rattaché à Ezine, avec deux départements, et a été transférée sur le campus de Terzioğlu à partir de 1998[cite: 1]. Les activités d'enseignement se poursuivent au sein de 9 départements avec un total de 97 membres du personnel enseignant, dont 82 professeurs[cite: 1].</p>
-            <p>Nous poursuivons nos activités d'enseignement avec un total de 1359 étudiants inscrits en premier cycle (licence) et 277 étudiants inscrits aux cycles supérieurs (master et doctorat) dans les neuf départements de notre faculté[cite: 1]. Depuis sa création, environ 4000 ingénieurs agronomes ont été diplômés[cite: 1]. De plus, des programmes de master et de doctorat sont disponibles dans tous nos départements[cite: 1].</p>
+            <h3>UNIVERSITÉ ÇANAKKALE ONSEKİZ MART FACULTÉ D'AGRICULTURE[cite: 3]</h3>
+            <p>Notre faculté a commencé ses activités d'enseignement et d'éducation en 1995 dans le village d'Üvecik, rattaché à Ezine, avec deux départements, et a été transférée sur le campus de Terzioğlu à partir de 1998. Les activités d'enseignement se poursuivent au sein de 9 départements avec un total de 97 membres du personnel enseignant, dont 82 professeurs[cite: 3].</p>
+            <p>Nous poursuivons nos activités d'enseignement avec un total de 1359 étudiants inscrits en premier cycle (licence) et 277 étudiants inscrits aux cycles supérieurs (master et doctorat) dans les neuf départements de notre faculté. Depuis sa création, environ 4000 ingénieurs agronomes ont été diplômés. De plus, des programmes de master et de doctorat sont disponibles dans tous nos départements[cite: 3].</p>
+            <p>Notre Faculté d'Agriculture est l'une des principales facultés d'agriculture de Turquie grâce à son modèle d'enseignement axé sur la pratique, sa productivité académique et ses collaborations internationales. Nos étudiants, formés sur le terrain, obtiennent leur diplôme non seulement en tant que professionnels de l'agriculture d'aujourd'hui, mais aussi de demain, grâce à nos programmes fondés sur la science. Les ponts établis avec les universités européennes ainsi que les activités de R&D financées par des fonds externes, menées au sein du Technoparc de Çanakkale et de notre Faculté, reflètent la force scientifique et stratégique de notre institution[cite: 3].</p>
+
+            <h3>Programmes Proposés[cite: 3]</h3>
+            <p>La Faculté d'Agriculture de la ÇOMÜ dispense un enseignement en ingénierie agronomique avec un corps professoral solide. Diverses opportunités de formation à différents niveaux sont offertes à nos étudiants[cite: 3] :</p>
+            <ul>
+                <li><strong>Programmes de Licence :</strong> L'enseignement de premier cycle est dispensé dans 9 départements différents de notre faculté. Ces départements permettent aux étudiants de se spécialiser dans un large éventail de domaines, allant de la production agricole aux innovations technologiques, et de l'élevage aux analyses économiques[cite: 3].</li>
+                <li><strong>Programmes de Master :</strong> Avec des programmes de master axés sur la recherche académique et appliquée, les étudiants peuvent approfondir leurs domaines d'expertise et participer à des projets nationaux et internationaux[cite: 3].</li>
+                <li><strong>Programmes de Doctorat :</strong> Une formation doctorale dans diverses disciplines est proposée aux étudiants qui souhaitent accroître leur capacité de recherche scientifique. Les doctorants développent des projets innovants dans les centres de R&D et les laboratoires de la faculté[cite: 3].</li>
+            </ul>
+
+            <h3>Infrastructures[cite: 3]</h3>
+            <p>La Faculté d'Agriculture de la ÇOMÜ dispose d'une infrastructure vaste et moderne pour offrir à ses étudiants et à ses universitaires un environnement d'enseignement et de recherche contemporain[cite: 3] :</p>
+            <ul>
+                <li><strong>Laboratoires :</strong> Il existe des laboratoires d'analyse des sols, de biotechnologie végétale, de détection des ravageurs et des maladies, de contrôle de la qualité des aliments, de systèmes d'irrigation, de machines agricoles et de zootechnie, équipés selon les besoins de chaque département[cite: 3].</li>
+                <li><strong>Bibliothèque :</strong> Une grande bibliothèque rattachée à notre faculté est enrichie de ressources imprimées et numériques. Les étudiants peuvent accéder à des livres, revues et articles récents, et peuvent effectuer des travaux individuels ou en groupe dans les salles d'étude[cite: 3].</li>
+                <li><strong>Infrastructure Informatique :</strong> Des laboratoires informatiques modernes sont équipés d'un accès Internet haut débit et de systèmes de bases de données. De plus, une solide infrastructure numérique est disponible pour l'enseignement à distance et l'accès aux ressources en ligne[cite: 3].</li>
+            </ul>
+
+            <h3>Opportunités de Carrière[cite: 3]</h3>
+            <p><strong>Nos Diplômés Façonnent l'Avenir de l'Agriculture</strong><br>Les diplômés de la Faculté d'Agriculture de la ÇOMÜ disposent de vastes opportunités de carrière tant dans le secteur public que privé, grâce à la formation pratique qu'ils ont reçue et aux compétences polyvalentes qu'ils ont acquises[cite: 3]. Ils travaillent dans de nombreux domaines tels que le Ministère de l'Agriculture et des Forêts, les Instituts de Recherche Agricole, les directions provinciales et de district de l'agriculture, les coopératives, les entreprises de semences et d'engrais, les organismes de production et de contrôle alimentaire, les projets d'amélioration des terres et d'irrigation, les entreprises d'aménagement paysager et les cabinets de conseil agricole[cite: 3]. De plus, la possibilité de poursuivre une carrière académique grâce à des études de troisième cycle est importante[cite: 3].</p>
+
+            <h3>Possibilités de Stages et de Formation en Entreprise[cite: 3]</h3>
+            <p>Grâce au modèle de formation en entreprise 7+1 mis en œuvre dans notre faculté, les étudiants acquièrent une expérience directe dans le secteur avant d'obtenir leur diplôme ; grâce aux collaborations établies avec des entreprises locales et nationales, ils peuvent effectuer des applications individuelles sur le terrain, en laboratoire et en entreprise[cite: 3]. Par ailleurs, l'acquisition d'une expérience professionnelle dans différentes zones géographiques est encouragée grâce aux programmes de chercheurs stagiaires du TÜBİTAK, à la mobilité de stage Erasmus+ et aux projets étudiants[cite: 3].</p>
+
+            <h3>Opportunités de Recherche et de Projets[cite: 3]</h3>
+            <p><strong>Infrastructure Interdisciplinaire, Culture de Projet Axée sur l'Application</strong><br>La Faculté d'Agriculture de la ÇOMÜ dispose d'une solide infrastructure de recherche et de projets avec ses 9 départements académiques couvrant différents domaines d'expertise. Chaque département offre à ses étudiants et universitaires la possibilité de produire des projets originaux grâce à ses laboratoires bien équipés, ses serres d'application, ses champs d'essai et ses centres de recherche spéciaux[cite: 3].</p>
+            <p>Dans nos départements de Protection des Plantes, d'Horticulture, de Grandes Cultures et de Zootechnie, des études intensives sont menées sur les essais de variétés développées contre les stress biotiques et abiotiques, la gestion intégrée des ravageurs, l'amélioration génétique et le bien-être animal[cite: 3]. Les départements de Science du Sol et de Nutrition des Plantes, ainsi que de Structures Agricoles et d'Irrigation, réalisent des analyses originales et des activités de R&D sur la santé des sols, les techniques de fertilisation, les systèmes d'irrigation et la gestion des terres[cite: 3]. Le département de Biotechnologie Agricole permet aux étudiants de découvrir les approches biotechnologiques contemporaines à travers des études sur la biologie moléculaire, le génie génétique et le génome végétal[cite: 3]. Le département d'Ingénierie des Machines et Technologies Agricole produit des projets d'ingénierie de haut niveau sur les technologies de capteurs, les robots agricoles autonomes et la mécanisation[cite: 3]. Le département d'Économie Agricole développe des solutions qui orientent le secteur grâce à des modélisations économiques sur le développement rural, l'analyse des politiques agricoles et la gestion des entreprises agricoles[cite: 3].</p>
+
+            <h3>Projets Étudiants et Réussites Scientifiques[cite: 3]</h3>
+            <p>Les étudiants de licence de chaque département participent à des projets du TÜBİTAK 2209-A/B, du BAP (Projets de Recherche Scientifique) et à des projets à financement externe sous la direction d'universitaires ; beaucoup de nos étudiants remportent des prix lors de congrès étudiants internationaux, de concours interdisciplinaires et d'événements basés sur l'innovation. Ces projets contribuent directement non seulement à la littérature scientifique, mais aussi au développement régional[cite: 3].</p>
+
+            <h3>Erasmus+, Farabi et Mobilité Internationale[cite: 3]</h3>
+            <p>La Faculté d'Agriculture de la ÇOMÜ vise à fournir à ses étudiants une expérience d'enseignement et de recherche au niveau international[cite: 3]. Dans le cadre du programme d'échange Erasmus+, nos étudiants peuvent étudier ou faire des stages pendant un ou deux semestres dans plus de 20 universités européennes avec lesquelles une coopération active est maintenue[cite: 3]. Avec le programme d'échange Farabi, des opportunités de mobilité académique sont offertes dans de nombreuses universités en Turquie[cite: 3]. De plus, un environnement d'apprentissage multiculturel est créé avec la présence d'étudiants internationaux étudiant dans notre faculté et d'universitaires étrangers participant à des projets, et l'analyse comparative de différents systèmes agricoles est encouragée[cite: 3].</p>
+
+            <h3>Activités Sociales et Culturelles[cite: 3]</h3>
+            <p><strong>Un Environnement Éducatif qui Prépare non seulement à une Profession, mais aussi à la Vie</strong><br>La Faculté d'Agriculture de la ÇOMÜ offre à ses étudiants une expérience universitaire riche non seulement sur le plan académique, mais aussi sur les plans social, culturel et sportif. Nos étudiants organisent des événements avec divers clubs et associations étudiantes en fonction de leurs centres d'intérêt, et participent activement aux projets scientifiques ainsi qu'aux activités de responsabilité sociale[cite: 3].</p>
+            <p><strong>Clubs et Associations Étudiantes</strong><br>Outre les clubs liés aux départements au sein de notre faculté, tels que l'Association de Zootechnie, l'Association des Étudiants en Protection des Plantes, le Club de Biotechnologie Agricole, le Club Sol et Environnement, et l'Association d'Économie Agricole, de nombreuses associations fonctionnant à l'échelle de l'université, comme les groupes de randonnée, le club de photographie ou les ateliers de théâtre, offrent aux étudiants l'opportunité de découvrir et de développer leurs passions[cite: 3].</p>
+
+            <h3>Vie de Campus, Sport et Art[cite: 3]</h3>
+            <p>Notre faculté fait partie d'un campus en pleine nature, situé juste au bord du détroit des Dardanelles (Çanakkale). Nos étudiants peuvent bénéficier gratuitement des installations situées sur le campus telles que : Complexe sportif couvert, Centre de remise en forme (Fitness), Piscine olympique[cite: 3]. De plus, l'amphithéâtre moderne de 400 places de notre faculté accueille de nombreuses organisations allant des séminaires scientifiques aux événements culturels[cite: 3].</p>
+
+            <h3>Richesse Culturelle : Çanakkale[cite: 3]</h3>
+            <p>Notre faculté est située dans la province de Çanakkale, qui se distingue par son identité historique et culturelle ; nos étudiants ont le privilège d'être à proximité de sites historiques et naturels tels que Troie, la péninsule de Gallipoli et Assos. La proximité du centre-ville et l'environnement de vie sûr font de Çanakkale un pôle éducatif attrayant pour les étudiants[cite: 3].</p>
+
+            <h3>Informations Supplémentaires et Avantages pour les Futurs Étudiants[cite: 3]</h3>
+            <ul>
+                <li><strong>Formation Pratique Solide :</strong> Outre la théorie, notre faculté forme ses diplômés en tant qu'individus bien équipés et prêts pour le secteur grâce à un modèle de formation axé sur la pratique sur le terrain, en laboratoire et dans des centres d'essais technologiques[cite: 3].</li>
+                <li><strong>Vaste Réseau Académique et Projets :</strong> Grâce au TÜBİTAK, aux projets de l'Union européenne, à Erasmus+ et à d'autres collaborations nationales/internationales, les étudiants participent directement aux processus de recherche scientifique et d'innovation[cite: 3].</li>
+                <li><strong>Technologies et Outils Avancés :</strong> Des laboratoires et des centres d'essais équipés de technologies modernes telles que l'imagerie assistée par drone, les robots agricoles et les systèmes de détection intelligents garantissent aux étudiants l'acquisition d'une expérience conforme aux exigences de l'époque[cite: 3].</li>
+                <li><strong>Emplacement Unique de Çanakkale :</strong> Étudier à Çanakkale, où l'histoire, la culture et la nature se mêlent, est une excellente opportunité non seulement pour le développement professionnel mais aussi pour le développement social et culturel[cite: 3].</li>
+                <li><strong>Opportunités de Carrière et Réussite des Diplômés :</strong> Les diplômés de notre faculté assument des fonctions importantes dans les institutions publiques, le secteur privé, la R&D, le conseil et l'entrepreneuriat ; notre taux d'emploi est élevé[cite: 3].</li>
+                <li><strong>Communautés Étudiantes Dynamiques :</strong> Grâce aux clubs de département et de faculté, et aux événements sociaux et culturels, les étudiants développent leurs compétences sociales tout en saisissant des opportunités de réseautage (networking)[cite: 3].</li>
+                <li><strong>Campus Moderne et Installations Sociales :</strong> Situé juste au bord du détroit, il offre une vie de campus agréable et saine avec son complexe sportif, sa piscine olympique et ses vastes espaces verts[cite: 3].</li>
+                <li><strong>Profil Étudiant International :</strong> Il est possible de recevoir une éducation dans un environnement multiculturel avec des étudiants venus de différents pays dans notre faculté ; ce qui élargit votre perspective mondiale[cite: 3].</li>
+                <li><strong>Modèle de Formation en Entreprise 7+1 :</strong> Grâce à une éducation imbriquée avec le secteur, les étudiants font un bon départ dans le monde des affaires en acquérant une expérience professionnelle avant d'obtenir leur diplôme[cite: 3].</li>
+            </ul>
+
+            <h3>Foire Aux Questions (FAQ)[cite: 3]</h3>
+            <ul>
+                <li><strong>Quels sont les départements de la Faculté d'Agriculture ?</strong> Notre faculté compte 9 départements : Horticulture, Protection des Plantes, Économie Agricole, Grandes Cultures, Biotechnologie Agricole, Structures Agricoles et Irrigation, Machines et Technologies Agricoles, Science du Sol et Nutrition des Plantes, et Zootechnie[cite: 3].</li>
+                <li><strong>Quel titre obtiennent les diplômés de la Faculté d'Agriculture ?</strong> Nos diplômés reçoivent le titre d'"Ingénieur Agronome" (Ziraat Mühendisi). Ce titre est valable quel que soit le département dont vous êtes diplômé[cite: 3].</li>
+                <li><strong>Quelle est la durée des études ?</strong> Le programme de licence (premier cycle) dure 4 ans. Il n'y a pas de programme préparatoire obligatoire, la langue d'enseignement est le turc[cite: 3].</li>
+                <li><strong>Y a-t-il des cours soutenus en anglais ou des opportunités Erasmus ?</strong> Oui, de nombreux cours bénéficient d'un soutien en ressources anglophones. De plus, il existe des opportunités d'étudier et de faire des stages en Europe dans le cadre d'Erasmus+[cite: 3].</li>
+                <li><strong>Y a-t-il une formation pratique ? Ou est-ce entièrement théorique ?</strong> Notre faculté adopte un modèle centré sur la formation pratique. Des cours pratiques intensifs sont dispensés dans les serres, les champs, les laboratoires et les centres d'essais[cite: 3].</li>
+                <li><strong>Est-il obligatoire de faire un stage ? Où pouvons-nous le faire ?</strong> Oui, il y a une obligation de stage. Il peut être effectué dans les ministères, les entreprises privées, les instituts de recherche ou les propres unités de l'université[cite: 3].</li>
+                <li><strong>Qu'est-ce que la formation en entreprise 7+1 ?</strong> Il s'agit d'un modèle qui consiste à passer un semestre de la dernière année directement dans le secteur. Les étudiants acquièrent de l'expérience en entreprise et se préparent au terrain avant l'obtention du diplôme[cite: 3].</li>
+                <li><strong>Comment sont les installations de laboratoire ?</strong> Notre faculté dispose de laboratoires spécialement équipés pour chaque département. L'utilisation active des laboratoires est possible dans de nombreux domaines tels que les sols, les plantes, l'alimentation, la biotechnologie, l'entomologie, etc[cite: 3].</li>
+                <li><strong>Quelles sont les installations du campus ?</strong> Notre campus dispose d'un complexe sportif, d'un centre de remise en forme, d'une piscine olympique, d'un restaurant universitaire (réfectoire), d'une bibliothèque et de clubs étudiants. Le campus est situé directement au bord du détroit des Dardanelles[cite: 3].</li>
+                <li><strong>Y a-t-il des possibilités de logement (dortoirs) ?</strong> Il existe des résidences d'État affiliées à l'Institution des Crédits et des Dortoirs (KYK) ainsi que des résidences privées. Des options d'hébergement sont disponibles à quelques pas du campus[cite: 3].</li>
+                <li><strong>Que fait un diplômé de la Faculté d'Agriculture ?</strong> Il peut travailler dans un large éventail de domaines allant de la production alimentaire à l'amélioration des plantes, de la gestion agricole au conseil. Il peut être nommé dans le secteur public, travailler dans le secteur privé ou créer sa propre entreprise[cite: 3].</li>
+                <li><strong>Y a-t-il une chance d'être nommé dans le secteur public ? Est-il possible de passer dans le secteur public via le KPSS ?</strong> Oui. Au fur et à mesure que des postes s'ouvrent dans des institutions publiques telles que le Ministère de l'Agriculture et des Forêts, les directions provinciales ou les instituts de recherche, il est possible d'y être nommé par le biais du KPSS (Examen de Sélection pour le Personnel de l'État)[cite: 3].</li>
+                <li><strong>Pouvons-nous créer notre propre entreprise ?</strong> Oui. Nos diplômés peuvent choisir la voie de l'entrepreneuriat en créant leurs propres serres, fermes et cabinets de conseil[cite: 3].</li>
+                <li><strong>Est-il possible de changer de département ?</strong> Des opportunités de transfert horizontal et de double cursus (double majeure) sont possibles pour les étudiants qui remplissent certaines conditions de réussite académique et de quotas[cite: 3].</li>
+                <li><strong>Le personnel académique de la Faculté d'Agriculture de la ÇOMÜ est-il solide ?</strong> Oui. Elle dispose d'un personnel académique solide, composé d'experts dans leurs domaines, ayant participé à de nombreux projets nationaux et internationaux, et ayant publié de nombreux travaux[cite: 3].</li>
+                <li><strong>Les étudiants peuvent-ils participer à des projets de recherche ?</strong> Oui. Les étudiants en licence peuvent également participer à des projets tels que le TÜBİTAK 2209-A ou le BAP, et acquérir une expérience en recherche[cite: 3].</li>
+                <li><strong>Y a-t-il des étudiants étrangers ?</strong> Oui. Dans le cadre des programmes de bourses pour l'étranger (YTB, Erasmus), de nombreux étudiants de premier cycle et de troisième cycle venant de différents pays étudient dans notre faculté[cite: 3].</li>
+                <li><strong>Comment est la vie étudiante à Çanakkale ?</strong> C'est une ville sûre, calme et accueillante pour les étudiants. Les événements culturels, les espaces sociaux sur le littoral et les sites historiques offrent aux étudiants une vie agréable[cite: 3].</li>
+                <li><strong>Est-il difficile d'obtenir une opportunité Erasmus ou un stage à l'étranger pendant ses études à la Faculté d'Agriculture ?</strong> Non, absolument pas. Nous avons des accords avec de nombreuses universités en Europe dans le cadre du programme Erasmus+. Nos étudiants qui remplissent les conditions de candidature peuvent facilement bénéficier de la mobilité d'études et de stage. De plus, notre université propose des cours de soutien et des préparations aux examens pour les compétences en langues étrangères[cite: 3].</li>
+                <li><strong>Dans quels domaines puis-je me spécialiser pendant mes études à la Faculté d'Agriculture ?</strong> Pendant le processus de formation, des opportunités de spécialisation sont offertes dans de nombreux domaines tels que la santé des plantes, l'analyse agricole, la biotechnologie, les systèmes d'irrigation, les machines agricoles, l'élevage et l'économie agricole grâce à des cours de département, des cours à option et des projets appliqués. Il est également possible d'approfondir ces domaines avec des programmes de troisième cycle[cite: 3].</li>
+            </ul>
         </div>
 
         <!-- ITALIANO -->
         <div id="it" class="lang-section">
             <h2>ITALIANO</h2>
-            <h3>UNIVERSITÀ ÇANAKKALE ONSEKİZ MART FACOLTÀ DI AGRARIA[cite: 1]</h3>
-            <p>La nostra facoltà ha iniziato le sue attività didattiche e formative nel 1995 nel villaggio di Üvecik, nel distretto di Ezine, con due dipartimenti, e dal 1998 si è trasferita nel campus di Terzioğlu[cite: 1]. Le attività didattiche continuano in 9 dipartimenti, con un totale di 97 membri del personale docente, di cui 82 professori[cite: 1].</p>
-            <p>Sotto l'egida della nostra facoltà, proseguiamo le nostre attività didattiche in nove dipartimenti con un totale di 1359 studenti di laurea triennale e 277 studenti iscritti ai corsi post-laurea[cite: 1]. Dalla sua fondazione a oggi, si sono laureati circa 4000 Ingegneri Agronomi[cite: 1]. Inoltre, in tutti i nostri dipartimenti sono disponibili programmi di laurea magistrale e di dottorato[cite: 1].</p>
+            <h3>UNIVERSITÀ ÇANAKKALE ONSEKİZ MART FACOLTÀ DI AGRARIA[cite: 3]</h3>
+            <p>La nostra facoltà ha iniziato le sue attività didattiche e formative nel 1995 nel villaggio di Üvecik, nel distretto di Ezine, con due dipartimenti, e dal 1998 si è trasferita nel campus di Terzioğlu. Le attività didattiche continuano in 9 dipartimenti, con un totale di 97 membri del personale docente, di cui 82 professori[cite: 3].</p>
+            <p>Sotto l'egida della nostra facoltà, proseguiamo le nostre attività didattiche in nove dipartimenti con un totale di 1359 studenti di laurea triennale e 277 studenti iscritti ai corsi post-laurea. Dalla sua fondazione a oggi, si sono laureati circa 4000 Ingegneri Agronomi. Inoltre, in tutti i nostri dipartimenti sono disponibili programmi di laurea magistrale e di dottorato[cite: 3].</p>
+            <p>La nostra Facoltà di Agraria, con il suo forte modello educativo basato sulla pratica, la produttività accademica e le collaborazioni internazionali, è una delle principali facoltà di agraria in Turchia. I nostri studenti, formati sul campo, si laureano non solo come professionisti dell'agricoltura di oggi, ma anche di domani, grazie ai nostri programmi supportati dalla scienza. Sia i ponti stabiliti con le università in Europa, sia le attività di Ricerca e Sviluppo (R&S) finanziate dall'esterno e condotte all'interno del Çanakkale Technopark e della nostra Facoltà, riflettono la forza scientifica e strategica della nostra istituzione[cite: 3].</p>
+
+            <h3>Programmi Offerti[cite: 3]</h3>
+            <p>La Facoltà di Agraria del ÇOMÜ offre un'istruzione nel campo dell'ingegneria agraria con un forte corpo accademico. Ai nostri studenti vengono offerte opportunità di formazione a vari livelli[cite: 3]:</p>
+            <ul>
+                <li><strong>Programmi di Laurea Triennale:</strong> La formazione universitaria è impartita in 9 diversi dipartimenti della nostra facoltà. I dipartimenti permettono agli studenti di specializzarsi in un'ampia gamma di settori, dalla produzione agricola alle innovazioni tecnologiche, e dalla zootecnia alle analisi economiche[cite: 3].</li>
+                <li><strong>Programmi di Laurea Magistrale:</strong> Con programmi di laurea magistrale incentrati sulla ricerca accademica e applicata, gli studenti possono approfondire i loro campi di competenza e partecipare a progetti nazionali e internazionali[cite: 3].</li>
+                <li><strong>Programmi di Dottorato:</strong> Viene offerta una formazione di dottorato in varie discipline per gli studenti che desiderano aumentare la propria capacità di ricerca scientifica. I dottorandi sviluppano progetti innovativi nei centri di R&S e nei laboratori della facoltà[cite: 3].</li>
+            </ul>
+
+            <h3>Infrastrutture[cite: 3]</h3>
+            <p>La Facoltà di Agraria del ÇOMÜ dispone di un'infrastruttura ampia e moderna per fornire ai suoi studenti e accademici un ambiente educativo e di ricerca contemporaneo[cite: 3]:</p>
+            <ul>
+                <li><strong>Laboratori:</strong> Sono presenti laboratori per l'analisi del suolo, le biotecnologie vegetali, il rilevamento di parassiti e malattie, il controllo di qualità degli alimenti, i sistemi di irrigazione, le macchine agricole e la zootecnia, attrezzati in base alle esigenze di ciascun dipartimento[cite: 3].</li>
+                <li><strong>Biblioteca:</strong> Un'ampia biblioteca annessa alla nostra facoltà è arricchita da risorse cartacee e digitali. Gli studenti possono accedere a libri, riviste e articoli aggiornati; possono svolgere lavori individuali e di gruppo nelle sale studio[cite: 3].</li>
+                <li><strong>Infrastruttura Informatica:</strong> I moderni laboratori informatici sono dotati di accesso a Internet ad alta velocità e sistemi di database. Inoltre, esiste una forte infrastruttura digitale per l'istruzione a distanza e l'accesso alle risorse online[cite: 3].</li>
+            </ul>
+
+            <h3>Opportunità di Carriera[cite: 3]</h3>
+            <p><strong>I Nostri Laureati Plasmano il Futuro dell'Agricoltura</strong><br>I laureati della Facoltà di Agraria del ÇOMÜ hanno ampie opportunità di carriera sia nel settore pubblico che in quello privato grazie alla formazione pratica ricevuta e alle competenze versatili acquisite[cite: 3]. Lavorano in molti settori come il Ministero dell'Agricoltura e delle Foreste, gli Istituti di Ricerca Agricola, le direzioni provinciali e distrettuali dell'agricoltura, le cooperative, le aziende di sementi e fertilizzanti, le organizzazioni di produzione e controllo alimentare, i progetti di bonifica dei terreni e di irrigazione, le aziende di architettura del paesaggio e gli studi di consulenza agricola[cite: 3]. Inoltre, c'è una forte possibilità di intraprendere una carriera accademica attraverso studi post-laurea[cite: 3].</p>
+
+            <h3>Opportunità di Tirocinio e Formazione sul Posto di Lavoro[cite: 3]</h3>
+            <p>Grazie al modello di formazione sul posto di lavoro 7+1 implementato nella nostra facoltà, gli studenti acquisiscono un'esperienza diretta nel settore prima di laurearsi; attraverso le collaborazioni instaurate con aziende locali e nazionali, possono fare pratica sul campo, nei laboratori e negli ambienti aziendali[cite: 3]. Inoltre, l'acquisizione di esperienza professionale in diverse aree geografiche è incoraggiata attraverso i programmi per ricercatori stagisti TÜBİTAK, la mobilità per tirocini Erasmus+ e i progetti studenteschi[cite: 3].</p>
+
+            <h3>Opportunità di Ricerca e Progetti[cite: 3]</h3>
+            <p><strong>Infrastruttura Interdisciplinaire, Cultura dei Progetti Orientata all'Applicazione</strong><br>La Facoltà di Agraria del ÇOMÜ dispone di una solida infrastruttura di ricerca e progettazione con i suoi 9 dipartimenti accademici che coprono diverse aree di competenza. Ogni dipartimento offre ai propri studenti e accademici l'opportunità di produrre progetti originali grazie a laboratori ben attrezzati, serre di applicazione, campi sperimentali e centri di ricerca speciali[cite: 3].</p>
+            <p>Nei nostri dipartimenti di Protezione delle Piante, Orticoltura, Coltivazioni Erbacee e Zootecnia, vengono condotti studi intensivi su prove varietali sviluppate contro stress biotici e abiotici, gestione integrata dei parassiti, miglioramento genetico e benessere animale[cite: 3]. I dipartimenti di Scienza del Suolo e Nutrizione delle Piante, e di Strutture Agricole e Irrigazione effettuano analisi originali e attività di R&S sulla salute del suolo, le tecniche di fertilizzazione, i sistemi di irrigazione e la gestione del territorio[cite: 3]. Il dipartimento di Biotecnologie Agrarie avvicina gli studenti agli approcci biotecnologici contemporanei con studi di biologia molecolare, ingegneria genetica e genoma vegetale[cite: 3]; Il dipartimento di Ingegneria delle Macchine e Tecnologie Agricole produce progetti di ingegneria avanzata sulle tecnologie dei sensori, robot agricoli autonomi e meccanizzazione[cite: 3]. Il dipartimento di Economia Agraria sviluppa soluzioni che guidano il settore con modelli economici incentrati sullo sviluppo rurale, l'analisi delle politiche agricole e la gestione delle imprese agricole[cite: 3].</p>
+
+            <h3>Progetti Studenteschi e Successi Scientifici[cite: 3]</h3>
+            <p>Gli studenti di laurea triennale in ogni dipartimento partecipano a progetti TÜBİTAK 2209-A/B, BAP (Progetti di Ricerca Scientifica) e a progetti finanziati esternamente sotto la guida di tutor accademici; molti dei nostri studenti vincono premi in congressi studenteschi internazionali, concorsi interdisciplinari ed eventi basati sull'innovazione. Questi progetti contribuiscono direttamente non solo alla letteratura scientifica, ma anche allo sviluppo regionale[cite: 3].</p>
+
+            <h3>Mobilità Erasmus+, Farabi e Internazionale[cite: 3]</h3>
+            <p>La Facoltà di Agraria del ÇOMÜ mira a fornire ai propri studenti un'esperienza di istruzione e ricerca a livello internazionale[cite: 3]. Nell'ambito del programma di scambio Erasmus+, i nostri studenti possono studiare o fare tirocini per uno o due semestri in oltre 20 università europee con le quali si mantengono collaborazioni attive[cite: 3]. Con il programma di scambio Farabi, vengono offerte opportunità di mobilità accademica in molte università all'interno della Turchia[cite: 3]. Inoltre, si crea un ambiente di apprendimento multiculturale grazie agli studenti internazionali che studiano nella nostra facoltà e agli accademici stranieri che partecipano ai progetti, incoraggiando l'analisi comparativa di diversi sistemi agricoli[cite: 3].</p>
+
+            <h3>Attività Sociali e Culturali[cite: 3]</h3>
+            <p><strong>Un Ambiente Educativo che Prepara non solo alla Professione, ma anche alla Vita</strong><br>La Facoltà di Agraria del ÇOMÜ offre ai suoi studenti una ricca esperienza universitaria non solo dal punto di vista accademico, ma anche sociale, culturale e sportivo. I nostri studenti organizzano eventi con vari club e associazioni studentesche in base ai loro interessi e partecipano attivamente sia a progetti scientifici che ad attività di responsabilità sociale[cite: 3].</p>
+            <p><strong>Club e Associazioni Studentesche</strong><br>Oltre ai club dipartimentali all'interno della nostra facoltà, come l'Associazione di Zootecnia, l'Associazione degli Studenti di Protezione delle Piante, il Club di Biotecnologie Agrarie, il Club Suolo e Ambiente e l'Associazione di Economia Agraria, molti gruppi che operano a livello universitario offrono agli studenti l'opportunità di scoprire e sviluppare i propri interessi, tra cui gruppi di escursionismo, club di fotografia e laboratori teatrali[cite: 3].</p>
+
+            <h3>Vita nel Campus, Sport e Arte[cite: 3]</h3>
+            <p>La nostra facoltà fa parte di un campus a stretto contatto con la natura, situato proprio sulle rive dello Stretto dei Dardanelli (Çanakkale). I nostri studenti possono usufruire gratuitamente delle strutture situate all'interno del campus, come: Palazzetto dello Sport, Centro Fitness, Piscina Olimpionica[cite: 3]. Inoltre, il moderno anfiteatro da 400 posti della nostra facoltà ospita numerose organizzazioni, che vanno dai seminari scientifici agli eventi culturali[cite: 3].</p>
+
+            <h3>Ricchezza Culturale: Çanakkale[cite: 3]</h3>
+            <p>La nostra facoltà si trova nella provincia di Çanakkale, che si distingue per la sua identità storica e culturale; i nostri studenti hanno il privilegio di essere vicini a siti storici e naturali come Troia, la Penisola di Gallipoli e Assos. La vicinanza al centro città e l'ambiente di vita sicuro rendono Çanakkale un centro educativo attraente per gli studenti[cite: 3].</p>
+
+            <h3>Informazioni Extra e Vantaggi per i Futuri Studenti[cite: 3]</h3>
+            <ul>
+                <li><strong>Forte Formazione Pratica:</strong> Oltre alla teoria, la nostra facoltà forma i suoi laureati come individui preparati e pronti per il settore attraverso un modello educativo orientato all'applicazione sul campo, in laboratorio e nei centri di collaudo tecnologico[cite: 3].</li>
+                <li><strong>Rete Accademica Estesa e Progetti:</strong> Grazie a TÜBİTAK, ai progetti dell'Unione Europea, all'Erasmus+ e ad altre collaborazioni nazionali/internazionali, gli studenti partecipano direttamente ai processi di ricerca scientifica e innovazione[cite: 3].</li>
+                <li><strong>Tecnologie e Strumenti Avanzati:</strong> Laboratori e centri di test dotati di tecnologie moderne, come l'imaging supportato da droni, robot agricoli e sistemi di rilevamento intelligente, assicurano che gli studenti acquisiscano un'esperienza in linea con le esigenze dell'epoca[cite: 3].</li>
+                <li><strong>Posizione Unica di Çanakkale:</strong> Studiare a Çanakkale, dove storia, cultura e natura si intrecciano, è una grande opportunità non solo per lo sviluppo professionale ma anche per quello sociale e culturale[cite: 3].</li>
+                <li><strong>Opportunità di Carriera e Successo dei Laureati:</strong> I laureati della nostra facoltà assumono ruoli importanti in istituzioni pubbliche, nel settore privato, in Ricerca e Sviluppo, nella consulenza e nell'imprenditoria; il nostro tasso di occupazione è alto[cite: 3].</li>
+                <li><strong>Comunità Studentesche Vivaci:</strong> Attraverso i club di dipartimento e di facoltà, e gli eventi sociali e culturali, gli studenti sviluppano le loro abilità sociali cogliendo opportunità di networking[cite: 3].</li>
+                <li><strong>Campus Moderno e Strutture Sociali:</strong> Situato direttamente sullo stretto, offre una vita nel campus piacevole e sana con il suo palazzetto dello sport, la piscina olimpionica e ampi spazi verdi[cite: 3].</li>
+                <li><strong>Profilo Studentesco Internazionale:</strong> C'è l'opportunità di ricevere un'istruzione in un ambiente multiculturale con studenti provenienti da paesi diversi all'interno della nostra facoltà; questo amplia la prospettiva globale[cite: 3].</li>
+                <li><strong>Modello di Formazione sul Posto di Lavoro 7+1:</strong> Grazie alla formazione integrata con il settore, gli studenti fanno un forte ingresso nel mondo del lavoro acquisendo esperienza prima di laurearsi[cite: 3].</li>
+            </ul>
+
+            <h3>Domande Frequenti (FAQ)[cite: 3]</h3>
+            <ul>
+                <li><strong>Quali dipartimenti ci sono nella Facoltà di Agraria?</strong> Ci sono 9 dipartimenti nella nostra facoltà: Orticoltura, Protezione delle Piante, Economia Agraria, Coltivazioni Erbacee, Biotecnologie Agrarie, Strutture Agricole e Irrigazione, Macchine e Tecnologie Agricole, Scienza del Suolo e Nutrizione delle Piante, e Zootecnia[cite: 3].</li>
+                <li><strong>Quale titolo ottengono i laureati della Facoltà di Agraria?</strong> I nostri laureati ottengono il titolo di "Ingegnere Agronomo" (Ziraat Mühendisi). Questo titolo è valido indipendentemente dal dipartimento da cui ci si laurea[cite: 3].</li>
+                <li><strong>Quanto dura la formazione?</strong> I corsi di laurea triennale durano 4 anni. Non c'è un programma preparatorio obbligatorio, la lingua di insegnamento è il turco[cite: 3].</li>
+                <li><strong>Ci sono corsi supportati in inglese o opportunità Erasmus?</strong> Sì, molti corsi ricevono supporto da risorse in inglese. Inoltre, ci sono opportunità di studiare e fare tirocini in Europa nell'ambito del programma Erasmus+[cite: 3].</li>
+                <li><strong>C'è una formazione pratica? O è completamente teorica?</strong> La nostra facoltà adotta un modello incentrato sulla formazione pratica. Vengono impartiti corsi pratici intensivi in serre, campi, laboratori e centri di test[cite: 3].</li>
+                <li><strong>Il tirocinio è obbligatorio? Dove possiamo farlo?</strong> Sì, c'è un programma di tirocinio obbligatorio. Può essere svolto presso ministeri, aziende private, istituti di ricerca o nelle unità stesse dell'università[cite: 3].</li>
+                <li><strong>Cos'è la formazione sul posto di lavoro 7+1?</strong> È un modello in cui si trascorre un semestre dell'ultimo anno direttamente nel settore. Gli studenti acquisiscono esperienza in azienda e si preparano per il campo prima di conseguire la laurea[cite: 3].</li>
+                <li><strong>Come sono le strutture di laboratorio?</strong> Nella nostra facoltà ci sono laboratori appositamente attrezzati per ogni dipartimento. L'uso attivo dei laboratori è possibile in molti campi come suoli, piante, alimentazione, biotecnologie ed entomologia[cite: 3].</li>
+                <li><strong>Quali sono le strutture del campus?</strong> Nel nostro campus ci sono un palazzetto dello sport, un centro fitness, una piscina olimpionica, una mensa, una biblioteca e club studenteschi. Il campus si trova proprio sulle rive dello Stretto dei Dardanelli[cite: 3].</li>
+                <li><strong>Ci sono possibilità di alloggio in dormitorio?</strong> Ci sono dormitori statali affiliati all'Istituzione per i Crediti e Gli Alloggi (KYK) e dormitori privati. Ci sono opzioni di alloggio a pochi passi dal campus[cite: 3].</li>
+                <li><strong>Cosa fa un laureato della Facoltà di Agraria?</strong> Può lavorare in una vasta gamma di settori, dalla produzione alimentare al miglioramento delle piante, dalla gestione delle fattorie alla consulenza. Può essere assunto nel settore pubblico, lavorare nel settore privato o avviare un'attività in proprio[cite: 3].</li>
+                <li><strong>C'è la possibilità di essere assunti nel settore pubblico? È possibile passare al settore pubblico tramite il KPSS?</strong> Sì. È possibile essere assunti tramite il KPSS (esame di stato) non appena si rendono disponibili posti in istituzioni pubbliche come il Ministero dell'Agricoltura e delle Foreste, le direzioni provinciali e gli istituti di ricerca[cite: 3].</li>
+                <li><strong>Possiamo avviare un'attività in proprio?</strong> Sì. I nostri laureati possono scegliere la strada dell'imprenditoria aprendo le proprie serre, fattorie e uffici di consulenza[cite: 3].</li>
+                <li><strong>È possibile trasferirsi tra i dipartimenti?</strong> Ci sono opportunità di trasferimento orizzontale e percorsi di doppia laurea per gli studenti che soddisfano determinati requisiti di successo accademico e relative quote[cite: 3].</li>
+                <li><strong>Il corpo accademico della Facoltà di Agraria del ÇOMÜ è forte?</strong> Sì. Dispone di un forte corpo accademico composto da esperti nei loro campi, che hanno partecipato a molti progetti nazionali e internazionali e hanno al loro attivo numerose pubblicazioni[cite: 3].</li>
+                <li><strong>Gli studenti possono partecipare a progetti di ricerca?</strong> Sì. Anche gli studenti di laurea triennale possono partecipare a progetti come TÜBİTAK 2209-A e BAP, e acquisire esperienza nel campo della ricerca[cite: 3].</li>
+                <li><strong>Ci sono studenti stranieri?</strong> Sì. Nell'ambito dei programmi di borse di studio per l'estero (YTB, Erasmus), molti studenti universitari e post-laurea provenienti da diversi paesi studiano nella nostra facoltà[cite: 3].</li>
+                <li><strong>Com'è la vita studentesca a Çanakkale?</strong> È una città sicura, tranquilla e a misura di studente. Gli eventi culturali, gli spazi sociali costieri e i siti storici offrono agli studenti una vita piacevole[cite: 3].</li>
+                <li><strong>È difficile ottenere un'opportunità Erasmus o un tirocinio all'estero mentre si studia alla Facoltà di Agraria?</strong> No, assolutamente no. Abbiamo accordi con molte università in Europa nell'ambito del programma Erasmus+. I nostri studenti che soddisfano i requisiti di candidatura possono facilmente beneficiare della mobilità sia per lo studio che per il tirocinio. Inoltre, la nostra università offre corsi di supporto e preparazione agli esami per lo sviluppo delle competenze in lingua straniera[cite: 3].</li>
+                <li><strong>In quali aree posso specializzarmi mentre studio alla Facoltà di Agraria?</strong> Durante il processo formativo vengono offerte opportunità di specializzazione in molti settori come la salute delle piante, l'analisi agricola, le biotecnologie, i sistemi di irrigazione, le macchine agricole, la zootecnia e l'economia agraria, attraverso corsi dipartimentali, corsi opzionali e progetti applicati. È anche possibile approfondire ulteriormente queste aree attraverso programmi post-laurea[cite: 3].</li>
+            </ul>
         </div>
 
         <!-- ESPAÑOL -->
         <div id="es" class="lang-section">
             <h2>ESPAÑOL</h2>
-            <h3>UNIVERSIDAD ÇANAKKALE ONSEKİZ MART FACULTAD DE AGRICULTURA[cite: 1]</h3>
-            <p>Nuestra facultad inició sus actividades educativas en 1995 en el pueblo de Üvecik, distrito de Ezine, con dos departamentos, y en 1998 se trasladó al Campus de Terzioğlu[cite: 1]. Las actividades educativas continúan en 9 departamentos con un total de 97 miembros del personal académico, 82 de los cuales son profesores[cite: 1].</p>
-            <p>Continuamos nuestras actividades educativas con un total de 1359 estudiantes de grado (licenciatura) matriculados y 277 estudiantes de posgrado en los nueve departamentos bajo el amparo de nuestra facultad[cite: 1]. Desde su creación, se han graduado alrededor de 4000 Ingenieros Agrónomos[cite: 1]. Además, hay programas de maestría y doctorado disponibles en todos nuestros departamentos[cite: 1].</p>
+            <h3>UNIVERSIDAD ÇANAKKALE ONSEKİZ MART FACULTAD DE AGRICULTURA[cite: 3]</h3>
+            <p>Nuestra facultad inició sus actividades educativas en 1995 en el pueblo de Üvecik, distrito de Ezine, con dos departamentos, y en 1998 se trasladó al Campus de Terzioğlu. Las actividades educativas continúan en 9 departamentos con un total de 97 miembros del personal académico, 82 de los cuales son profesores[cite: 3].</p>
+            <p>Continuamos nuestras actividades educativas con un total de 1359 estudiantes de grado (licenciatura) matriculados y 277 estudiantes de posgrado en los nueve departamentos bajo el amparo de nuestra facultad. Desde su creación, se han graduado alrededor de 4000 Ingenieros Agrónomos. Además, hay programas de maestría y doctorado disponibles en todos nuestros departamentos[cite: 3].</p>
+            <p>Nuestra Facultad de Agricultura es una de las principales facultades de agricultura de Turquía, gracias a su sólido modelo de educación basada en la práctica, su productividad académica y sus colaboraciones internacionales. Nuestros estudiantes, formados en el campo, se gradúan no solo como los profesionales agrícolas de hoy, sino también del mañana, a través de nuestros programas respaldados por la ciencia. Tanto los puentes construidos con universidades de Europa como las actividades de I+D financiadas externamente que se llevan a cabo dentro del Tecnoparque de Çanakkale y nuestra Facultad reflejan la fuerza científica y estratégica de nuestra institución[cite: 3].</p>
+
+            <h3>Programas Ofrecidos[cite: 3]</h3>
+            <p>La Facultad de Agricultura de la ÇOMÜ brinda educación con un sólido personal académico en el campo de la ingeniería agrícola. Se ofrecen diversas oportunidades de educación a nuestros estudiantes en diferentes niveles[cite: 3]:</p>
+            <ul>
+                <li><strong>Programas de Grado (Licenciatura):</strong> Se imparte educación de grado en 9 departamentos diferentes de nuestra facultad. Los departamentos permiten a los estudiantes especializarse en una amplia gama de áreas, desde la producción agrícola hasta las innovaciones tecnológicas, y desde la ganadería hasta el análisis económico[cite: 3].</li>
+                <li><strong>Programas de Maestría:</strong> Con programas de maestría enfocados en la investigación académica y aplicada, los estudiantes pueden profundizar en sus áreas de especialización y participar en proyectos nacionales e internacionales[cite: 3].</li>
+                <li><strong>Programmes de Doctorado:</strong> Se ofrece educación de doctorado en diversas disciplinas para los estudiantes que deseen aumentar su capacidad de investigación científica. Los estudiantes de doctorado desarrollan proyectos innovadores en los centros de I+D y laboratorios de la facultad[cite: 3].</li>
+            </ul>
+
+            <h3>Instalaciones de Infraestructura[cite: 3]</h3>
+            <p>La Facultad de Agricultura de la ÇOMÜ cuenta con una infraestructura amplia y moderna para proporcionar un entorno contemporáneo de educación e investigación a sus estudiantes y académicos[cite: 3]:</p>
+            <ul>
+                <li><strong>Laboratorios:</strong> Existen laboratorios de análisis de suelos, biotecnología vegetal, detección de plagas y enfermedades, control de calidad de alimentos, sistemas de riego, maquinaria agrícola y zootecnia, equipados según las necesidades de cada departamento[cite: 3].</li>
+                <li><strong>Biblioteca:</strong> Una gran biblioteca afiliada a nuestra facultad está enriquecida con recursos impresos y digitales. Los estudiantes pueden acceder a libros, revistas y artículos actualizados, y pueden realizar estudios individuales y grupales en las salas de lectura[cite: 3].</li>
+                <li><strong>Infraestructura Informática:</strong> Los modernos laboratorios de computación están equipados con acceso a internet de alta velocidad y sistemas de bases de datos. Además, existe una sólida infraestructura digital para la educación a distancia y el acceso a recursos en línea[cite: 3].</li>
+            </ul>
+
+            <h3>Oportunidades de Carrera[cite: 3]</h3>
+            <p><strong>Nuestros Graduados Están Dando Forma al Futuro de la Agricultura</strong><br>Los graduados de la Facultad de Agricultura de la ÇOMÜ tienen amplias oportunidades de carrera tanto en el sector público como en el privado, gracias a la educación aplicada que reciben y a las competencias versátiles que adquieren[cite: 3]. Trabajan en muchas áreas, como el Ministerio de Agricultura y Silvicultura, Institutos de Investigación Agrícola, direcciones provinciales y distritales de agricultura, cooperativas, empresas de semillas y fertilizantes, organizaciones de producción y control de alimentos, proyectos de recuperación de tierras y riego, empresas de aplicación paisajística y oficinas de consultoría agrícola[cite: 3]. Además, existe una gran posibilidad de seguir una carrera académica a través de la educación de posgrado[cite: 3].</p>
+
+            <h3>Oportunidades de Pasantías y Formación en el Lugar de Trabajo[cite: 3]</h3>
+            <p>Gracias al modelo de formación en el lugar de trabajo 7+1 implementado en nuestra facultad, los estudiantes adquieren experiencia directa en el sector antes de graduarse. A través de las colaboraciones establecidas con empresas locales y nacionales, pueden realizar prácticas de manera individual en entornos de campo, laboratorio y empresariales[cite: 3]. Además, se fomenta la adquisición de experiencia profesional en diferentes geografías a través de los programas de investigadores pasantes de TÜBİTAK, la movilidad de pasantías Erasmus+ y los proyectos estudiantiles[cite: 3].</p>
+
+            <h3>Oportunidades de Investigación y Proyectos[cite: 3]</h3>
+            <p><strong>Infraestructura Interdisciplinaria, Cultura de Proyectos Orientada a la Aplicación</strong><br>La Facultad de Agricultura de la ÇOMÜ cuenta con una sólida infraestructura de investigación y proyectos con sus 9 departamentos académicos que abarcan diferentes campos de especialización. Cada departamento ofrece a sus estudiantes y académicos la oportunidad de producir proyectos originales con sus laboratorios bien equipados, invernaderos de aplicación, campos de ensayo y centros de investigación especiales[cite: 3].</p>
+            <p>En nuestros departamentos de Protección Vegetal, Horticultura, Cultivos de Campo y Zootecnia, se llevan a cabo estudios intensivos sobre ensayos de variedades desarrolladas contra el estrés biótico y abiótico, manejo integrado de plagas, mejoramiento genético y bienestar animal[cite: 3]. Los departamentos de Ciencia del Suelo y Nutrición Vegetal, y de Estructuras Agrícolas y Riego, llevan a cabo análisis originales y actividades de I+D sobre la salud del suelo, técnicas de fertilización, sistemas de riego y gestión de tierras[cite: 3]. El departamento de Biotecnología Agrícola acerca los enfoques biotecnológicos contemporáneos a los estudiantes con estudios de biología molecular, ingeniería genética y genómica vegetal[cite: 3]. El departamento de Ingeniería de Maquinaria y Tecnologías Agrícolas produce proyectos de ingeniería avanzada sobre tecnologías de sensores, robots agrícolas autónomos y mecanización[cite: 3]. El departamento de Economía Agrícola desarrolla soluciones que guían al sector con modelos económicos sobre desarrollo rural, análisis de políticas agrícolas y gestión de empresas agrícolas[cite: 3].</p>
+
+            <h3>Proyectos Estudiantiles y Logros Científicos[cite: 3]</h3>
+            <p>Los estudiantes de grado de todos los departamentos participan en proyectos TÜBİTAK 2209-A/B, BAP (Proyectos de Investigación Científica) y proyectos con financiación externa bajo la dirección de académicos asesores; muchos de nuestros estudiantes ganan premios en congresos estudiantiles internacionales, concursos interdisciplinarios y eventos basados en la innovación. Estos proyectos contribuyen directamente no solo a la literatura científica, sino también al desarrollo regional[cite: 3].</p>
+
+            <h3>Erasmus+, Farabi y Movilidad Internacional[cite: 3]</h3>
+            <p>La Facultad de Agricultura de la ÇOMÜ tiene como objetivo brindar a sus estudiantes experiencia internacional en educación e investigación[cite: 3]. En el marco del programa de intercambio Erasmus+, nuestros estudiantes pueden estudiar o realizar prácticas durante uno o dos semestres en más de 20 universidades europeas con las que se mantiene una cooperación activa[cite: 3]. A través del programa de intercambio Farabi, se ofrecen oportunidades de movilidad académica en muchas universidades dentro de Turquía[cite: 3]. Además, se crea un entorno de aprendizaje multicultural con estudiantes internacionales que estudian en nuestra facultad y académicos extranjeros que participan en proyectos, y se fomenta el análisis comparativo de diferentes sistemas agrícolas[cite: 3].</p>
+
+            <h3>Actividades Sociales y Culturales[cite: 3]</h3>
+            <p><strong>Un Entorno Educativo Que Te Prepara No Solo Para Una Profesión, Sino Para La Vida</strong><br>La Facultad de Agricultura de la ÇOMÜ ofrece a sus estudiantes una rica experiencia universitaria no solo en el ámbito académico, sino también en el social, cultural y deportivo. Nuestros estudiantes organizan eventos con diversos clubes y sociedades estudiantiles de acuerdo a sus intereses, y participan activamente tanto en trabajos de responsabilidad social como en proyectos científicos[cite: 3].</p>
+            <p><strong>Clubes y Sociedades Estudiantiles</strong><br>Además de los clubes departamentales dentro de nuestra facultad, como la Sociedad de Zootecnia, la Sociedad de Estudiantes de Protección Vegetal, el Club de Biotecnología Agrícola, el Club de Suelo y Medio Ambiente y la Sociedad de Economía Agrícola, muchos grupos que operan en toda la universidad, como grupos de senderismo, el club de fotografía y talleres de teatro, ofrecen a los estudiantes la oportunidad de descubrir y desarrollar sus intereses[cite: 3].</p>
+
+            <h3>Vida en el Campus, Deportes y Artes[cite: 3]</h3>
+            <p>Nuestra facultad forma parte de un campus entrelazado con la naturaleza, ubicado justo a orillas del Estrecho de los Dardanelos (Çanakkale). Nuestros estudiantes pueden beneficiarse de las instalaciones ubicadas en el campus de forma gratuita, tales como: Pabellón Deportivo Cubierto, Gimnasio (Centro de Fitness), Piscina Olímpica[cite: 3]. Además, el moderno anfiteatro de 400 asientos perteneciente a nuestra facultad alberga muchas organizaciones, que van desde seminarios científicos hasta eventos culturales[cite: 3].</p>
+
+            <h3>Riqueza Cultural: Çanakkale[cite: 3]</h3>
+            <p>Nuestra facultad está ubicada en la provincia de Çanakkale, que destaca por su identidad histórica y cultural; nuestros estudiantes disfrutan del privilegio de estar cerca de sitios históricos y naturales como Troya, la Península de Galípoli y Assos. Su proximidad al centro de la ciudad y su entorno de vida seguro hacen de Çanakkale un centro educativo atractivo para los estudiantes[cite: 3].</p>
+
+            <h3>Información Adicional y Ventajas para Futuros Estudiantes[cite: 3]</h3>
+            <ul>
+                <li><strong>Sólida Educación Aplicada:</strong> Además de la teoría, nuestra facultad forma a sus graduados como personas bien equipadas y listas para el sector a través de un modelo educativo orientado a la aplicación en el campo, en laboratorios y en centros de pruebas tecnológicas[cite: 3].</li>
+                <li><strong>Amplia Red Académica y Proyectos:</strong> Gracias a TÜBİTAK, proyectos de la Unión Europea, Erasmus+ y otras colaboraciones nacionales e internacionales, los estudiantes participan directamente en los procesos de investigación científica e innovación[cite: 3].</li>
+                <li><strong>Tecnología y Herramientas Avanzadas:</strong> Los laboratorios y centros de pruebas equipados con tecnologías modernas, como imágenes respaldadas por drones, robots agrícolas y sistemas de detección inteligente, garantizan que los estudiantes adquieran una experiencia acorde a los requisitos de la época[cite: 3].</li>
+                <li><strong>La Ubicación Única de Çanakkale:</strong> Estudiar en Çanakkale, donde la historia, la cultura y la naturaleza se entrelazan, es una gran oportunidad no solo para el desarrollo profesional, sino también para el social y cultural[cite: 3].</li>
+                <li><strong>Oportunidades de Carrera y Éxito de los Graduados:</strong> Los graduados de nuestra facultad asumen funciones importantes en instituciones públicas, el sector privado, I+D, consultoría y emprendimiento; nuestra tasa de empleo es alta[cite: 3].</li>
+                <li><strong>Comunidades Estudiantiles Dinámicas:</strong> A través de los clubes de departamento y facultad, y los eventos sociales y culturales, los estudiantes desarrollan sus habilidades sociales al tiempo que aprovechan oportunidades de creación de redes (networking)[cite: 3].</li>
+                <li><strong>Campus Moderno e Instalaciones Sociales:</strong> Ubicado justo en el estrecho, ofrece una vida de campus agradable y saludable con su pabellón deportivo, piscina olímpica y amplias áreas verdes[cite: 3].</li>
+                <li><strong>Perfil Estudiantil Internacional:</strong> Existe la oportunidad de recibir educación en un entorno multicultural con estudiantes de diferentes países en nuestra facultad; esto amplía su perspectiva global[cite: 3].</li>
+                <li><strong>Modelo de Formación en el Lugar de Trabajo 7+1:</strong> Gracias a la educación entrelazada con el sector, los estudiantes tienen un fuerte comienzo en el mundo laboral al adquirir experiencia de trabajo antes de graduarse[cite: 3].</li>
+            </ul>
+
+            <h3>Preguntas Frecuentes (FAQ)[cite: 3]</h3>
+            <ul>
+                <li><strong>¿Qué departamentos hay en la Facultad de Agricultura?</strong> Hay 9 departamentos en nuestra facultad: Horticultura, Protección Vegetal, Economía Agrícola, Cultivos de Campo, Biotecnología Agrícola, Estructuras Agrícolas y Riego, Maquinaria y Tecnologías Agrícolas, Ciencia del Suelo y Nutrición Vegetal, y Zootecnia[cite: 3].</li>
+                <li><strong>¿Qué título reciben los graduados de la Facultad de Agricultura?</strong> Nuestros graduados reciben el título de "Ingeniero Agrónomo" (Ziraat Mühendisi). Este título es válido independientemente del departamento del que se gradúe[cite: 3].</li>
+                <li><strong>¿Cuánto dura el período de educación?</strong> La educación de grado dura 4 años. No hay un programa preparatorio obligatorio; el idioma de instrucción es el turco[cite: 3].</li>
+                <li><strong>¿Hay cursos apoyados en inglés u oportunidades Erasmus?</strong> Sí, muchos cursos reciben apoyo de recursos en inglés. Además, hay oportunidades para estudiar y realizar pasantías en Europa bajo el programa Erasmus+[cite: 3].</li>
+                <li><strong>¿Hay educación aplicada? ¿O es completamente teórica?</strong> Nuestra facultad adopta un modelo centrado en la educación aplicada. Se imparten cursos prácticos intensivos en invernaderos, campos, laboratorios y centros de pruebas[cite: 3].</li>
+                <li><strong>¿Es obligatorio realizar una pasantía? ¿Dónde podemos hacerla?</strong> Sí, hay una práctica (pasantía) obligatoria. Se puede realizar en ministerios, empresas privadas, institutos de investigación o en las propias unidades de la universidad[cite: 3].</li>
+                <li><strong>¿Qué es la formación en el lugar de trabajo 7+1?</strong> Es un modelo en el que se pasa un semestre del último año directamente en el sector. Los estudiantes adquieren experiencia en empresas y se preparan para el campo antes de graduarse[cite: 3].</li>
+                <li><strong>¿Cómo son las instalaciones del laboratorio?</strong> Hay laboratorios especialmente equipados para cada departamento en nuestra facultad. El uso activo de los laboratorios es posible en muchos campos, como suelos, plantas, alimentos, biotecnología y entomología[cite: 3].</li>
+                <li><strong>¿Cuáles son las instalaciones del campus?</strong> Nuestro campus cuenta con un pabellón deportivo, gimnasio, piscina olímpica, comedor, biblioteca y clubes estudiantiles. El campus se encuentra justo a orillas del Estrecho de los Dardanelos[cite: 3].</li>
+                <li><strong>¿Hay instalaciones de dormitorios?</strong> Hay dormitorios estatales afiliados a la Institución de Créditos y Dormitorios (KYK) y dormitorios privados. Hay opciones de alojamiento a poca distancia a pie del campus[cite: 3].</li>
+                <li><strong>¿Qué hace un graduado de la Facultad de Agricultura?</strong> Puede trabajar en una amplia gama de áreas, desde la producción de alimentos hasta el mejoramiento de plantas, y desde la gestión de granjas hasta la consultoría. Pueden ser designados en el sector público, trabajar en el sector privado o iniciar su propio negocio[cite: 3].</li>
+                <li><strong>¿Hay posibilidades de ser contratado por el gobierno? ¿Es posible el ingreso al sector público mediante el KPSS?</strong> Sí. A medida que se abren vacantes en instituciones públicas como el Ministerio de Agricultura y Silvicultura, direcciones provinciales e institutos de investigación, es posible ser asignado mediante el KPSS (Examen de Selección de Personal Público)[cite: 3].</li>
+                <li><strong>¿Podemos iniciar nuestro propio negocio?</strong> Sí. Nuestros graduados pueden elegir el camino del emprendimiento estableciendo sus propios invernaderos, granjas y oficinas de consultoría[cite: 3].</li>
+                <li><strong>¿Es posible el traslado entre departamentos?</strong> Las oportunidades de transferencia lateral y doble titulación están disponibles para los estudiantes que cumplen con ciertos requisitos de éxito académico y cupos[cite: 3].</li>
+                <li><strong>¿Es sólido el personal académico de la Facultad de Agricultura de la ÇOMÜ?</strong> Sí. Cuenta con un sólido personal académico compuesto por expertos en sus campos, que han participado en muchos proyectos nacionales e internacionales y han publicado ampliamente[cite: 3].</li>
+                <li><strong>¿Pueden los estudiantes participar en proyectos de investigación?</strong> Sí. Los estudiantes de grado también pueden participar en proyectos como TÜBİTAK 2209-A y BAP, y adquirir experiencia en investigación[cite: 3].</li>
+                <li><strong>¿Hay estudiantes extranjeros?</strong> Sí. En el marco de los programas de becas en el extranjero (YTB, Erasmus), muchos estudiantes de grado y posgrado de diferentes países estudian en nuestra facultad[cite: 3].</li>
+                <li><strong>¿Cómo es la vida estudiantil en Çanakkale?</strong> Es una ciudad segura, tranquila y amigable para los estudiantes. Los eventos culturales, las áreas sociales costeras y los sitios históricos ofrecen a los estudiantes una vida placentera[cite: 3].</li>
+                <li><strong>¿Es difícil conseguir una oportunidad de Erasmus o prácticas en el extranjero mientras se estudia en la Facultad de Agricultura?</strong> No, en absoluto. Tenemos convenios con muchas universidades de Europa en el marco del programa Erasmus+. Nuestros estudiantes que cumplen con los requisitos de solicitud pueden beneficiarse fácilmente de la movilidad de estudios y de pasantías. Además, nuestra universidad ofrece cursos de apoyo y preparación de exámenes para el dominio de idiomas extranjeros[cite: 3].</li>
+                <li><strong>¿En qué áreas puedo especializarme en la Facultad de Agricultura?</strong> Durante el proceso de formación, se ofrecen oportunidades para especializarse en muchas áreas, como sanidad vegetal, análisis agrícola, biotecnología, sistemas de riego, maquinaria agrícola, ganadería y economía agrícola, a través de cursos departamentales, cursos electivos y proyectos aplicados. También es posible profundizar en estas áreas con programas de posgrado[cite: 3].</li>
+            </ul>
         </div>
 
     </div>
