@@ -16,30 +16,27 @@
             padding: 0;
             background-color: #f4f6f9;
         }
-        .top-poster {
-            width: 100%;
-            text-align: center;
-            background-color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .top-poster img {
-            max-width: 900px;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
+        
+        /* 1. YAPIŞKAN MENÜ (EN ÜSTTE) */
         .navbar {
             position: sticky;
             top: 0;
             background-color: #003366;
-            padding: 15px 20px;
+            padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .nav-logo {
+            height: 50px; /* Logonun boyutu */
+            width: auto;
+            border-radius: 4px;
+        }
+        .nav-links {
+            flex: 1;
+            text-align: center;
         }
         .nav-links a {
             color: #fff;
@@ -52,6 +49,27 @@
         .nav-links a:hover {
             color: #ffcc00;
         }
+        /* Sağ tarafta menüyü ortalamak için görünmez boşluk */
+        .spacer {
+            width: 50px; 
+        }
+
+        /* 2. MENÜ ALTINDAKİ AFİŞ */
+        .poster-container {
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .poster-container img {
+            max-width: 900px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* 3. İÇERİK ALANI */
         .container {
             max-width: 900px;
             margin: 30px auto 40px auto;
@@ -61,7 +79,7 @@
             border-radius: 8px;
         }
         .lang-section {
-            padding-top: 60px; 
+            padding-top: 80px; /* Menü üstte sabit olduğu için başlıkların menü altında kalmasını engeller */
             margin-top: -40px; 
             border-bottom: 2px solid #eee;
             padding-bottom: 40px;
@@ -88,13 +106,11 @@
 </head>
 <body>
 
-    <!-- Afiş En Üstte -->
-    <div class="top-poster">
-        <img src="https://ziraat.comu.edu.tr/ziraat-logo-r174.html" alt="ÇOMÜ Ziraat Fakültesi Afiş">
-    </div>
-
-    <!-- Yapışkan Menü -->
+    <!-- YAPIŞKAN MENÜ (SOLDA LOGO, ORTADA LİNKLER) -->
     <div class="navbar">
+        <!-- Ziraat Logosu Dosya Adı: GitHub'a yüklediğiniz JPG/PNG adıyla aynı olmalı -->
+        <img src="ziraat logoR2.jpg" alt="ÇOMÜ Ziraat Logosu" class="nav-logo">
+        
         <div class="nav-links">
             <a href="#tr">TÜRKÇE</a> |
             <a href="#en">ENGLISH</a> |
@@ -103,6 +119,14 @@
             <a href="#it">ITALIANO</a> |
             <a href="#es">ESPAÑOL</a>
         </div>
+        
+        <div class="spacer"></div>
+    </div>
+
+    <!-- MENÜNÜN HEMEN ALTINDAKİ AFİŞ -->
+    <div class="poster-container">
+        <!-- Afiş Dosya Adı: GitHub'a yüklediğiniz JPG/PNG adıyla aynı olmalı -->
+        <img src="broşürson2.jpg" alt="ÇOMÜ Ziraat Fakültesi Afişi">
     </div>
 
     <div class="container">
@@ -110,13 +134,13 @@
         <!-- TÜRKÇE -->
         <div id="tr" class="lang-section">
             <h2>TÜRKÇE</h2>
-            <h3>ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ ZİRAAT FAKÜLTESİ</h3>
+            <h3>ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ ZİRAAT FAKÜLTESİ[cite: 3]</h3>
             <p>Fakültemiz 1995 yılında Ezine’ye bağlı Üvecik köyünde iki bölümle Eğitim-Öğretim faaliyetlerine başlamış, 1998 yılından itibaren Terzioğlu Kampüsüne taşınmıştır. Eğitim-Öğretim faaliyetleri, 9 bölüm altında, 82 öğretim üyesi olmak üzere toplam 97 öğretim elemanı ile devam etmektedir[cite: 3].</p>
             <p>Fakültemiz çatısı altında bulunan dokuz bölüm ile toplam 1359 kayıtlı lisans öğrencimiz, 277 adet Lisans üstü düzeyde kayıtlı öğrencimiz, ile Eğitim-Öğretim faaliyetlerini sürdürmekteyiz. Kuruluşundan günümüze, 4000 civarında Ziraat Mühendisi mezun edilmiştir. Ayrıca tüm bölümlerimizde yüksek lisans ve doktora programları mevcuttur[cite: 3].</p>
             <p>Ziraat Fakültemiz, uygulamaya dayalı güçlü eğitim modeliyle, akademik üretkenliği ve uluslararası iş birlikleriyle Türkiye’nin önde gelen ziraat fakültelerinden biridir. Sahada yetişen öğrencilerimiz, bilimle desteklenmiş programlarımızla yalnızca bugünün değil, geleceğin tarım profesyonelleri olarak mezun olmaktadır. Gerek Avrupa’daki üniversitelerle kurulan köprüler, gerekse Çanakkale Teknopark ’ta ve Fakültemiz dâhilinde dış kaynaklı yürütülen Ar-Ge faaliyetleri fakültemizin bilimsel ve stratejik gücünü yansıtmaktadır[cite: 3].</p>
             
             <h3>Sunulan Programlar[cite: 3]</h3>
-            <p>ÇOMÜ Ziraat Fakültesi, ziraat mühendisliği alanında güçlü bir akademik kadro ile eğitim vermektedir. Öğrencilerimize çeşitli seviyelerde eğitim imkânları sunulmaktadır:</p>
+            <p>ÇOMÜ Ziraat Fakültesi, ziraat mühendisliği alanında güçlü bir akademik kadro ile eğitim vermektedir. Öğrencilerimize çeşitli seviyelerde eğitim imkânları sunulmaktadır[cite: 3]:</p>
             <ul>
                 <li><strong>Lisans Programları:</strong> Fakültemizin 9 farklı bölümünde lisans eğitimi verilmektedir. Bölümler, öğrencilerin tarımsal üretimden teknolojik yeniliklere, hayvancılıktan ekonomik analizlere kadar geniş bir yelpazede uzmanlaşmasına olanak sağlar[cite: 3].</li>
                 <li><strong>Yüksek Lisans Programları:</strong> Akademik ve uygulamalı araştırma odaklı yüksek lisans programlarıyla, öğrenciler uzmanlık alanlarında derinleşebilir, ulusal ve uluslararası projelerde görev alabilir[cite: 3].</li>
@@ -334,7 +358,7 @@
             <p>Unsere Fakultät ist Teil eines Campus im Einklang mit der Natur, der direkt an der Dardanellen-Meerenge (Çanakkale) liegt. Unsere Studenten können die Einrichtungen auf dem Campus, wie zum Beispiel: Sporthalle, Fitnesscenter, Olympisches Schwimmbad kostenlos nutzen[cite: 3]. Darüber hinaus beherbergt das moderne Amphitheater unserer Fakultät mit 400 Sitzplätzen zahlreiche Veranstaltungen von wissenschaftlichen Seminaren bis hin zu kulturellen Events[cite: 3].</p>
 
             <h3>Kultureller Reichtum: Çanakkale[cite: 3]</h3>
-            <p>Unsere Fakultät befindet sich in der Provinz Çanakkale, die sich durch ihre historische und kulturelle Identität auszeichnet; Unsere Studenten genießen das Privileg, in der Nähe historischer und natürlicher Stätten wie Troja, der Halbinsel Gallipoli und Assos zu sein. Die Nähe zum Stadtzentrum und das sichere Lebensumfeld machen Çanakkale zu einem attraktiven Studienort für Studenten[cite: 3].</p>
+            <p>Unsere Fakultät befindet sich in der Provinz Çanakkale, die sich durch ihre historische und kulturelle Identität auszeichnet; Unsere Studenten genießen das Privileg, in der Nähe historischer und natürlicher Stätten wie Troja, der Halbinsel Gallipoli und Assos. Die Nähe zum Stadtzentrum und das sichere Lebensumfeld machen Çanakkale zu einem attraktiven Studienort für Studenten[cite: 3].</p>
 
             <h3>Zusätzliche Informationen und Vorteile für Studieninteressierte[cite: 3]</h3>
             <ul>
@@ -406,7 +430,7 @@
 
             <h3>Opportunités de Recherche et de Projets[cite: 3]</h3>
             <p><strong>Infrastructure Interdisciplinaire, Culture de Projet Axée sur l'Application</strong><br>La Faculté d'Agriculture de la ÇOMÜ dispose d'une solide infrastructure de recherche et de projets avec ses 9 départements académiques couvrant différents domaines d'expertise. Chaque département offre à ses étudiants et universitaires la possibilité de produire des projets originaux grâce à ses laboratoires bien équipés, ses serres d'application, ses champs d'essai et ses centres de recherche spéciaux[cite: 3].</p>
-            <p>Dans nos départements de Protection des Plantes, d'Horticulture, de Grandes Cultures et de Zootechnie, des études intensives sont menées sur les essais de variétés développées contre les stress biotiques et abiotiques, la gestion intégrée des ravageurs, l'amélioration génétique et le bien-être animal[cite: 3]. Les départements de Science du Sol et de Nutrition des Plantes, ainsi que de Structures Agricoles et d'Irrigation, réalisent des analyses originales et des activités de R&D sur la santé des sols, les techniques de fertilisation, les systèmes d'irrigation et la gestion des terres[cite: 3]. Le département de Biotechnologie Agricole permet aux étudiants de découvrir les approches biotechnologiques contemporaines à travers des études sur la biologie moléculaire, le génie génétique et le génome végétal[cite: 3]. Le département d'Ingénierie des Machines et Technologies Agricole produit des projets d'ingénierie de haut niveau sur les technologies de capteurs, les robots agricoles autonomes et la mécanisation[cite: 3]. Le département d'Économie Agricole développe des solutions qui orientent le secteur grâce à des modélisations économiques sur le développement rural, l'analyse des politiques agricoles et la gestion des entreprises agricoles[cite: 3].</p>
+            <p>Dans nos départements de Protection des Plantes, d'Horticulture, de Grandes Cultures et de Zootechnie, des études intensives sont menées sur les essais de variétés développées contre les stress biotiques et abioticiques, la gestion intégrée des ravageurs, l'amélioration génétique et le bien-être animal[cite: 3]. Les départements de Science du Sol et de Nutrition des Plantes, ainsi que de Structures Agricoles et d'Irrigation, réalisent des analyses originales et des activités de R&D sur la santé des sols, les techniques de fertilisation, les systèmes d'irrigation et la gestion des terres[cite: 3]. Le département de Biotechnologie Agricole permet aux étudiants de découvrir les approches biotechnologiques contemporaines à travers des études sur la biologie moléculaire, le génie génétique et le génome végétal[cite: 3]. Le département d'Ingénierie des Machines et Technologies Agricole produit des projets d'ingénierie de haut niveau sur les technologies de capteurs, les robots agricoles autonomes et la mécanisation[cite: 3]. Le département d'Économie Agricole développe des solutions qui orientent le secteur grâce à des modélisations économiques sur le développement rural, l'analyse des politiques agricoles et la gestion des entreprises agricoles[cite: 3].</p>
 
             <h3>Projets Étudiants et Réussites Scientifiques[cite: 3]</h3>
             <p>Les étudiants de licence de chaque département participent à des projets du TÜBİTAK 2209-A/B, du BAP (Projets de Recherche Scientifique) et à des projets à financement externe sous la direction d'universitaires ; beaucoup de nos étudiants remportent des prix lors de congrès étudiants internationaux, de concours interdisciplinaires et d'événements basés sur l'innovation. Ces projets contribuent directement non seulement à la littérature scientifique, mais aussi au développement régional[cite: 3].</p>
