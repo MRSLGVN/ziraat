@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -232,461 +231,488 @@
         // ************************************************************************
         const exceldenKopyalananVeri = `
 Sıra	Bölüm	Şube	Ders Kodu	Dersin Adı	Dersi Veren Öğretim Elemanı	Öğrenci Mevcudu	GÜN	SINIF	08:10	09:00	09:50	10:40	11:30	12:20	13:10	14:00	14:50	15:40	16:30
-342	ZO	2	ZTN-2004 / ZOO-2012	İstatistik	Mehmet MENDEŞ	35	PAZARTESİ	01	x	x	x	x	0	0	0	0	0	0	0
-391	TM	2	ZTM-2014	Akışkanlar Mekaniği	Yavuz Hakan ÖZDEMİR	22	PAZARTESİ	103	x	x	x	x	0	0	0	0	0	0	0
-78	BB	2	ZBB-2020 / BHB-2012	Fitopatoloji	Ahmet ULUDAĞ	14	PAZARTESİ	03	0	x	x	x	x	0	0	0	0	0	0
-94	TO	2	ZTO-2014 / TBB-2012	Fitopatoloji	Ali KARANFİL	15	PAZARTESİ	04	0	x	x	x	x	0	0	0	0	0	0
-95	ZO	2	ZOO-2010	Fitopatoloji	Ali KARANFİL	12	PAZARTESİ	04	0	x	x	x	x	0	0	0	0	0	0
-305	TBT	2	ZBY-2014	Toprak Bilimi ve Bitki Besleme	Ali SUNGUR	19	PAZARTESİ	05	0	x	x	x	x	0	0	0	0	0	0
-357	ZO	3	ZOO-3006	Hayvan Sağlığı ve Hijyen	Baver COŞKUN	27	PAZARTESİ	206	0	x	x	x	x	0	0	0	0	0	0
-369	BK	1	ZBK-1012 / BTK-1016	Zooloji	Çiğdem GÜL	47	PAZARTESİ	201	0	x	x	x	x	0	0	0	0	0	0
-371	ZO	1	ZOO-1002	Zooloji	Çiğdem GÜL	1	PAZARTESİ	201	0	x	x	x	x	0	0	0	0	0	0
-41	TE	2	ZTE-2010 / TAE-2008	Bahçe Bitkileri	F. Cem KUZUCU	40	PAZARTESİ	02	0	x	x	x	x	0	0	0	0	0	0
-147	TM	4	TMT-4002	Hasat-Harman Makinaları ve Teknolojileri	Gıyasettin ÇİÇEK	21	PAZARTESİ	06	0	x	x	x	x	0	0	0	0	0	0
-283	TO	1	ZTO-1008	Jeoloji	Hasan ÖZCAN	27	PAZARTESİ	203	0	x	x	x	x	0	0	0	0	0	0
-288	TO	4	TBB-4002	Toprak Etüd ve Haritalama	Hüseyin EKİNCİ	30	PAZARTESİ	102	0	x	x	x	x	0	0	0	0	0	0
-45	BK	2	ZBK-2012 / BTK-2012	Genel Meyvecilik	M. Ali GÜNDOĞDU	41	PAZARTESİ	101	0	x	x	x	x	0	0	0	0	0	0
-215	TYS	1	ZTY-1010 / TYS-1010	Ölçme Bilgisi	Okan ERKEN	48	PAZARTESİ	Prof.Dr H. TURHAN	0	x	x	x	x	0	0	0	0	0	0
-130	TM	1	TMT-1004	Mühendislik Resmi	Serkan ÖZDEMİR	5	PAZARTESİ	TM. Uyg.Lab.	0	x	x	x	x	0	0	0	0	0	0
-131	TM	1	ZTM-1006	Teknik Resim	Serkan ÖZDEMİR	31	PAZARTESİ	TM. Uyg.Lab.	0	x	x	x	x	0	0	0	0	0	0
-237	TYS	4	TYS-4004	Mesleki Bilgisayar Programları II	Umut MUCAN	10	PAZARTESİ	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
-111	TE	3	TAE-3008	Kıymet Takdiri ve Bilir Kişilik	Arif SEMERCİ	8	PAZARTESİ	104	0	x	x	x	0	0	0	0	0	0	0
-179	TYS	2	TYS-2016	Toprak Bitki Su İlişkileri	Gökhan ÇAMOĞLU	3	PAZARTESİ	105	0	x	x	x	0	0	0	0	0	0	0
-156	TM	3	TMT-3136	Mesleki İngilizce	Ünal ÜRKMEZ	17	PAZARTESİ	204	0	x	x	x	0	0	0	0	0	0	0
-64	BK	3	BTK-3008	Bitki Hastalıkları Epidemiyolojisi	Figen MERT	40	PAZARTESİ	202	0	x	x	0	0	0	0	0	0	0	0
-161	TBT	4	TRB-4002	Bitkilerde Hastalık ve Zararlılara Dayanıklılık	Hanife YANDAYAN	16	PAZARTESİ	106	0	0	0	x	x	x	0	0	0	0	0
-326	ZO	4	ZOO-4018	Koyun Yetiştirme	Aynur KONYALI	13	PAZARTESİ	205	0	0	0	x	x	0	0	0	0	0	0
-81	BK	3	BTK-3020	İnsektisitler	Burak POLAT	11	PAZARTESİ	202	0	0	0	x	x	0	0	0	0	0	0
-213	TB	1	ZTB-1006	Meteoroloji	İsmail TAŞ	41	PAZARTESİ	113	0	0	0	x	x	0	0	0	0	0	0
-212	TE	1	ZTE-1012	Meteoroloji	İsmail TAŞ	27	PAZARTESİ	113	0	0	0	x	x	0	0	0	0	0	0
-366	ZO	2	ZTN-2022	Süt Bilimi	Yonca YÜCEER	16	PAZARTESİ	103	0	0	0	0	x	x	x	x	0	0	0
-113	TE	3	TAE-3004	Tarımsal Örgütlenme ve Kooperatifçilik	Bengü EVEREST	5	PAZARTESİ	104	0	0	0	0	x	x	x	0	0	0	0
-404	TM	2	ZTM-20216	Elektrik ve Elektroniğin Temel İlkeleri	Semih ÖZTÜRK	21	PAZARTESİ	02	0	0	0	0	x	x	x	0	0	0	0
-405	TM	3	TMT-3004	Elektrik ve Elektroniğin Temel İlkeleri	Semih ÖZTÜRK	17	PAZARTESİ	105	0	0	0	0	x	x	x	0	0	0	0
-128	TBT	2	ZBY-2002	Ekonomi	Selma KAYALAK	18	PAZARTESİ	03	0	0	0	0	0	x	x	x	x	0	0
-158	BK	2	ZBK-2014	Mühendislik Mekaniği 	Ünal ÜRKMEZ	32	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	x	x	0	0
-224	TYS	3	TYS-3010	Sulamada İzleme ve Değerlendirme	Murat TEKİNER	19	PAZARTESİ	04	0	0	0	0	0	x	x	x	0	0	0
-402	TM	1	ZTM-1004 / TMT-1002	Mühendislik Matematiği	Saniye CAN	53	PAZARTESİ	102	0	0	0	0	0	x	x	x	0	0	0
-403	ZO	1	ZTN-1002	Mühendislik Matematiği	Saniye CAN	40	PAZARTESİ	102	0	0	0	0	0	x	x	x	0	0	0
-29	TB	2	TBİ-2006	Peyzaj Mimarlığı	Arda AKÇAL	4	PAZARTESİ	06	0	0	0	0	0	x	x	0	0	0	0
-28	TYS	1	TYS-1012	Peyzaj Mimarlığı	Arda AKÇAL	4	PAZARTESİ	06	0	0	0	0	0	x	x	0	0	0	0
-118	TE	2	ZTE-2020	Tarım Tarihi ve Deontolojisi	Damla ÖZSAYIN	17	PAZARTESİ	05	0	0	0	0	0	x	x	0	0	0	0
-336	TBT	1	TRB-1012	Hayvansal Üretim	Feyzi UĞUR	4	PAZARTESİ	206	0	0	0	0	0	x	x	0	0	0	0
-337	BB	1	BHB-1004	Hayvansal Üretim Sistemleri	Feyzi UĞUR	7	PAZARTESİ	206	0	0	0	0	0	x	x	0	0	0	0
-338	TB	1	TBİ-1010	Hayvansal Üretim Sistemleri	Feyzi UĞUR	3	PAZARTESİ	206	0	0	0	0	0	x	x	0	0	0	0
-180	TYS	2	ZTY-2012	Akıllı Tarım	Gökhan ÇAMOĞLU	14	PAZARTESİ	Bilgisayar Lab.	0	0	0	0	0	x	x	0	0	0	0
-139	TM	4	TMT-4122	Tarım Makinaları Tasarımı	Habib KOCABIYIK	17	PAZARTESİ	TM. Uyg.Lab.	0	0	0	0	0	0	x	x	x	x	0
-7	BB	2	ZBB-2010 / BHB-2014	Genel Meyvecilik	Hakan ENGİN	36	PAZARTESİ	201	0	0	0	0	0	0	x	x	x	x	0
-85	BK	3	BTK-3016	Bitki Parazit Nematotlar	Çiğdem GÜNEŞ	9	PAZARTESİ	203	0	0	0	0	0	0	x	x	0	0	0
-359	ZO	3	ZOO-3010	Genetik	Hakan ERDEM	29	PAZARTESİ	204	0	0	0	0	0	0	x	x	0	0	0
-248	TO	2	ZTO-2008	Ekoloji	Harun BAYTEKİN	18	PAZARTESİ	205	0	0	0	0	0	0	x	x	0	0	0
-289	TO	4	TBB-4018	Türkiye Toprakları	Hüseyin EKİNCİ	30	PAZARTESİ	106	0	0	0	0	0	0	x	x	0	0	0
-53	BK	4	BTK-4002	Tahıl ve Baklagil Zararlıları	İsmail KASAP	45	PAZARTESİ	101	0	0	0	0	0	0	x	x	0	0	0
-60	BK	1	ZBK-1002	Tarım Tarihi ve Deontolojisi	Uğur GÖZEL	43	PAZARTESİ	202	0	0	0	0	0	0	x	x	0	0	0
-79	TB	2	ZTB-2010 / TBİ-2010	Fitopatoloji	Ahmet ULUDAĞ	21	PAZARTESİ	06	0	0	0	0	0	0	0	x	x	x	x
-377	TBT	1	TRB-1002	Genel Kimya II	Diğdem ERDENER ÇIRALI	8	PAZARTESİ	104	0	0	0	0	0	0	0	x	x	x	x
-189	TYS	2	TYS-2008	Bilgisayar Destekli Tasarım	Murat YILDIRIM	13	PAZARTESİ	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
-191	TYS	2	ZTY-2006	Bilgisayar Destekli Teknik Çizim ve Tasarım	Murat YILDIRIM	17	PAZARTESİ	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
-278	TE	2	ZTE-2008 / TAE-2006	Tarla Bitkileri	Onur Sinan TÜRKMEN	43	PAZARTESİ	02	0	0	0	0	0	0	0	x	x	x	x
-310	TYS	1	ZTY-1008	Toprak Bilimi ve Bitki Besleme	Remzi İLAY	28	PAZARTESİ	105	0	0	0	0	0	0	0	x	x	x	x
-358	ZO	2	ZTN-2010	Genetik	Hakan ERDEM	20	PAZARTESİ	203	0	0	0	0	0	0	0	0	x	x	x
-209	TYS	4	TYS-4002	İklim Değişimi ve Kuraklık	İsmail TAŞ	10	PAZARTESİ	204	0	0	0	0	0	0	0	0	x	x	x
-400	TE	1	ZTE-1002 / TAE-1006	Matematik II	Saniye CAN	49	PAZARTESİ	113	0	0	0	0	0	0	0	0	x	x	x
-401	TO	1	ZTO-1006	Matematik II	Saniye CAN	34	PAZARTESİ	113	0	0	0	0	0	0	0	0	x	x	x
-349	ZO	4	ZOO-4012	Hayvan Refahı Temel Prensipler ve Uygulamalar	Cemil TÖLÜ	16	PAZARTESİ	04	0	0	0	0	0	0	0	0	x	x	0
-396	TE	3	TAE-3014	Tarım Hukuku	İlker KARAÖNDER	22	PAZARTESİ	106	0	0	0	0	0	0	0	0	x	x	0
-52	BK	3	BTK-3004	Akaroloji	İsmail KASAP	46	PAZARTESİ	202	0	0	0	0	0	0	0	0	x	x	0
-174	TO	2	ZTO-2012	Tarımsal Biyoteknoloji	Şemun TAYYAR	18	PAZARTESİ	205	0	0	0	0	0	0	0	0	x	x	0
-63	BK	4	BTK-4010	Sebze Zararlıları	Uğur GÖZEL	41	PAZARTESİ	101	0	0	0	0	0	0	0	0	x	x	0
-314	TO	4	TBB-4016	Topraksız Tarım	Yakup ÇIKILI	29	PAZARTESİ	102	0	0	0	0	0	0	0	0	x	x	0
-99	BK	2	BTK-2006	Araştırma Deneme Yöntemleri	Ali Kürşat ŞAHİN	4	PAZARTESİ	03	0	0	0	0	0	0	0	0	0	x	x
-152	TBT	2	ZBY-2022 	Akıllı Tarım	M. Burak BÜYÜKCAN	16	PAZARTESİ	05	0	0	0	0	0	0	0	0	0	x	x
-76	TM	2	ZTM-2004 / TMT-2002	Bitki Koruma	Ahmet ULUDAĞ	41	SALI	206	0	x	x	x	x	0	0	0	0	0	0
-324	ZO	3	ZOO-3004	Üreme ve Yapay Tohumama	Aynur KONYALI	30	SALI	03	0	x	x	x	x	0	0	0	0	0	0
-107	TE	3	TAE-3010	Tarımsal Proje Hazırlama Tekniği I	Duygu AKTÜRK	36	SALI	102	0	x	x	x	x	0	0	0	0	0	0
-40	TE	2	ZTE-2016	Temel Bilgisayar Programları	F. Cem KUZUCU	15	SALI	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
-148	TM	4	TMT-4014	Tarım Makinaları Planlama ve İşletmeciği	Gıyasettin ÇİÇEK	18	SALI	05	0	x	x	x	x	0	0	0	0	0	0
-354	ZO	4	ZOO-4026	Ruminant Besleme	Hande Işıl AKBAĞ	29	SALI	06	0	x	x	x	x	0	0	0	0	0	0
-159	TBT	2	ZBY-2004 / TRB-2004	Bitki Koruma	Hanife YANDAYAN	43	SALI	101	0	x	x	x	x	0	0	0	0	0	0
-22	TB	2	ZTB-2012	Bahçe Bitkileri	Harun ÇOBAN	27	SALI	204	0	x	x	x	x	0	0	0	0	0	0
-201	TYS	2	ZTY-2010	Akışkanlar Mekaniği	Muharrem Yetiş YAVUZ	14	SALI	103	0	x	x	x	x	0	0	0	0	0	0
-219	TB	1	ZTB-1002	Ölçme Bilgisi	Okan ERKEN	50	SALI	01	0	x	x	x	x	0	0	0	0	0	0
-378	TO	1	ZTO-1004	Kimya II	Sema EKİCİ	49	SALI	113	0	x	x	x	x	0	0	0	0	0	0
-379	ZO	1	ZTN-1004	Kimya II	Sema EKİCİ	40	SALI	113	0	x	x	x	x	0	0	0	0	0	0
-133	ZO	2	ZTN-2002	Teknik Resim 	Serkan ÖZDEMİR	20	SALI	TM. Uyg.Lab.	0	x	x	x	x	0	0	0	0	0	0
-97	TYS	1	ZTY-1002	Bitki Koruma	Şahin KÖK	34	SALI	02	0	x	x	x	x	0	0	0	0	0	0
-112	TE	4	TAE-4020	Tarım Sigortaları	Arif SEMERCİ	21	SALI	205	0	x	x	0	0	0	0	0	0	0	0
-117	TE	1	ZTE-1004	Akıllı Tarım	Damla ÖZSAYIN	27	SALI	104	0	x	x	0	0	0	0	0	0	0	0
-287	TO	3	TBB-3004	Toprak Mineralojisi	Hüseyin EKİNCİ	20	SALI	106	0	x	x	0	0	0	0	0	0	0	0
-171	TBT	4	TRB-4020	Genetiği Değiştirilmiş Organizmalar	İskender TİRYAKİ	13	SALI	105	0	x	x	0	0	0	0	0	0	0	0
-70	BK	2	ZBK-2004	Ekoloji	Levent EFİL	36	SALI	202	0	x	x	0	0	0	0	0	0	0	0
-69	BK	1	BTK-1018	Tarımsal Ekoloji	Levent EFİL	1	SALI	202	0	x	x	0	0	0	0	0	0	0	0
-61	BK	3	BTK-3002	Nematoloji	Uğur GÖZEL	43	SALI	201	0	x	x	0	0	0	0	0	0	0	0
-339	TM	1	ZTM-1010 / TMT-1006	Hayvansal Üretim	Feyzi UĞUR	33	SALI	Prof.Dr H. TURHAN	0	0	0	x	x	x	x	0	0	0	0
-178	TBT	4	TRB-4010	Biyoinformatik II	Uğur SARI	14	SALI	104	0	0	0	x	x	x	0	0	0	0	0
-25	BB	2	ZBB-2016 / BHB-2008	Peyzaj Tasarımında Kullanılan Bitkisel Materyaller	Arda AKÇAL	28	SALI	201	0	0	0	x	x	0	0	0	0	0	0
-84	BK	2	BTK-2016	Bitki Korumada Biyoteknoloji	Çiğdem GÜNEŞ	8	SALI	106	0	0	0	x	x	0	0	0	0	0	0
-286	TO	2	ZTO-2018	Jeomorfoloji	Hüseyin EKİNCİ	16	SALI	105	0	0	0	x	x	0	0	0	0	0	0
-71	BK	3	BTK-3026	Türkiye'de Bitki Sağlığı Uygulamaları	Levent EFİL	10	SALI	205	0	0	0	x	x	0	0	0	0	0	0
-103	TE	1	TAE-1002	Ekonomi	Sibel TAN	11	SALI	203	0	0	0	x	x	0	0	0	0	0	0
-281	TO	3	TBB-3016	Proje ve Bilimsel Eser Hazırlama Tekniği	Yasemin KAVDIR	24	SALI	202	0	0	0	x	x	0	0	0	0	0	0
-327	BK	1	ZBK-1010	Hayvansal Üretim	Aynur KONYALI	44	SALI	201	0	0	0	0	0	x	x	x	x	0	0
-109	TE	4	TAE-4014	Tarımsal Ürünlerin Maliyeti	Duygu AKTÜRK	10	SALI	105	0	0	0	0	0	x	x	x	0	0	0
-144	TM	3	TMT-3122	Ekim Bakım ve Gübreleme Makinaları	İsmail KAVDIR	17	SALI	TM. Uyg.Lab.	0	0	0	0	0	x	x	x	0	0	0
-280	TO	3	TBB-3002	Toprak Mekaniği ve Teknolojisi	Yasemin KAVDIR	28	SALI	102	0	0	0	0	0	x	x	x	0	0	0
-322	BK	2	BTK-2010	Bitki Besleme	Ali SÜMER	3	SALI	Bölüm Odası	0	0	0	0	0	x	x	0	0	0	0
-328	BK	1	BTK-1138	Hayvansal Üretim Sistemleri	Aynur KONYALI	2	SALI	201	0	0	0	0	0	x	x	0	0	0	0
-272	TB	4	TBİ-4018	Tahıl Baklagil ve Yem Bitkileri Zararlıları	Baboo Ali	13	SALI	02	0	0	0	0	0	x	x	0	0	0	0
-395	TO	2	ZTO-2002	Akıllı Tarım	Gökhan ÇAMOĞLU	19	SALI	205	0	0	0	0	0	x	x	0	0	0	0
-50	BB	2	ZBB-2006	Tarım Tarihi ve Deontolojisi	Hatice Nihan ÇİFTÇİ	21	SALI	204	0	0	0	0	0	x	x	0	0	0	0
-104	TE	2	ZTE-2002	Tarım Ekonomisi	Sibel TAN	18	SALI	206	0	0	0	0	0	x	x	0	0	0	0
-172	TBT	1	ZBY-1006 / TRB-1006	Ekoloji	Şemun TAYYAR	48	SALI	01	0	0	0	0	0	x	x	0	0	0	0
-132	TM	2	ZTM-2018	Mukavemet	Anıl ÇAY	21	SALI	03	0	0	0	0	0	0	x	x	x	x	0
-271	TB	2	ZTB-2008 / TBİ-2008	Entomoloji	Baboo Ali	36	SALI	04	0	0	0	0	0	0	x	x	x	x	0
-356	ZO	2	ZTN-2012	Hayvan Fizyolojisi	Baver COŞKUN	17	SALI	05	0	0	0	0	0	0	x	x	x	x	0
-72	BK	4	BTK-4006	Endüstri Bitkileri Zararlıları	Levent EFİL	39	SALI	104	0	0	0	0	0	0	x	x	x	0	0
-202	TYS	2	ZTY-2014 / TYS-2014	Sulama Mühendisliği	Muharrem Yetiş YAVUZ	28	SALI	06	0	0	0	0	0	0	x	x	x	0	0
-341	ZO	4	ZOO-4016	Kümes Hayvanları Yetiştirme	Ali KARABAYIR	27	SALI	101	0	0	0	0	0	0	x	x	0	0	0
-21	BB	1	ZBB-1002	Ekoloji	Harun ÇOBAN	27	SALI	202	0	0	0	0	0	0	x	x	0	0	0
-20	BB	1	BHB-1010	Tarımsal Ekoloji	Harun ÇOBAN	11	SALI	202	0	0	0	0	0	0	x	x	0	0	0
-285	TO	1	ZTO-1012	Toprak Bilimine Giriş	Hüseyin EKİNCİ	25	SALI	103	0	0	0	0	0	0	x	x	0	0	0
-116	TE	3	TAE-3018	Türkiye Ekonomisi	Özge Can NİYAZ ALTINOK	24	SALI	106	0	0	0	0	0	0	x	x	0	0	0
-317	TBT	2	TRB-2002	Bitki Besleme	Yakup ÇIKILI	4	SALI	Bölüm Odası	0	0	0	0	0	0	x	x	0	0	0
-372	ZO	1	ZTN-1008	Hayvan Biyolojisi ve Sistematiği	Cemal Varol TOK	28	SALI	206	0	0	0	0	0	0	0	x	x	x	x
-56	BB	2	ZBB-2018 / BHB-2010	Entomoloji	İsmail KASAP	12	SALI	205	0	0	0	0	0	0	0	x	x	x	x
-54	ZO	2	ZOO-2014	Entomoloji (Alttan Alanlar için)	İsmail KASAP	4	SALI	205	0	0	0	0	0	0	0	x	x	x	x
-343	TE	2	TAE-2002	İstatistik	Mehmet MENDEŞ	19	SALI	203	0	0	0	0	0	0	0	x	x	x	x
-196	TE	1	ZTE-1010	Teknik Resim	Murat YILDIRIM	23	SALI	113	0	0	0	0	0	0	0	x	x	x	x
-188	TYS	1	TYS-1002	Teknik Resim	Murat YILDIRIM	8	SALI	113	0	0	0	0	0	0	0	x	x	x	x
-308	TM	1	ZTM-1008	Toprak Bilimi ve Bitki Besleme	Remzi İLAY	32	SALI	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	x	x	x	x
-65	BK	3	BTK-3010	Bitki Mikolojisi	Figen MERT	48	SALI	01	0	0	0	0	0	0	0	x	x	0	0
-244	TB	4	TBİ-4006	Biyoenerji Bitkileri	Harun BAYTEKİN	29	SALI	02	0	0	0	0	0	0	0	x	x	0	0
-55	TO	2	TBB-2010	Entomoloji (Alttan Alanlar için)	İsmail KASAP	12	SALI	103	0	0	0	0	0	0	0	0	x	x	x
-231	TYS	4	TYS-4024	Tarımsal Atık Yönetimi	Sefa AKSU	11	SALI	106	0	0	0	0	0	0	0	0	x	x	x
-185	TYS	3	TYS-3002	Tarımsal İnşaat	Ünal KIZIL	18	SALI	105	0	0	0	0	0	0	0	0	x	x	x
-302	TO	3	TBB-3008	Toprak ve Su Kirliliği	Ali SUNGUR	24	SALI	204	0	0	0	0	0	0	0	0	x	x	0
-120	BB	1	ZBB-1012	Tarım Ekonomisi	Damla ÖZSAYIN	30	SALI	102	0	0	0	0	0	0	0	0	x	x	0
-121	TBT	2	TRB-2016	Tarım Ekonomisi	Damla ÖZSAYIN	9	SALI	102	0	0	0	0	0	0	0	0	x	x	0
-368	TBT	1	ZBY-1014 / TRB-1010	Biyolojik Sistematik	Çiğdem GÜL	40	SALI	201	0	0	0	0	0	0	0	0	0	x	x
-37	BB	3	BHB-3016	Bahçe Bitkilerinde Bilgisayar Kullanımı	F. Cem KUZUCU	33	SALI	Bilgisayar Lab.	0	0	0	0	0	0	0	0	0	x	x
-245	TB	4	TBİ-4016	Balarısı ve Flora	Harun BAYTEKİN	23	SALI	06	0	0	0	0	0	0	0	0	0	x	x
-394	TYS	2	ZTY-2008	Tarım Hukuku	İlker KARAÖNDER	16	SALI	104	0	0	0	0	0	0	0	0	0	x	x
-227	BK	1	ZBK-1008	Meteoroloji	Murat TEKİNER	49	SALI	01	0	0	0	0	0	0	0	0	0	x	x
-263	TB	1	ZTB-1008	Ekoloji	Onur HOCAOĞLU	46	SALI	202	0	0	0	0	0	0	0	0	0	x	x
-243	TB	1	TBİ-1006	Tarımsal Ekoloji	Onur HOCAOĞLU	10	SALI	202	0	0	0	0	0	0	0	0	0	x	x
-62	BK	3	BTK-3014	Tarımsal Savaşım II	Uğur GÖZEL	41	SALI	02	0	0	0	0	0	0	0	0	0	x	x
-455	BB	4	0	Mesleki Uygulama II	Bölüm Öğr. Elem - BB	7	ÇARŞAMBA	203	0	x	x	x	x	0	0	0	0	0	0
-450	BK	4	0	Bitki Klinikleri II	Bölüm Öğr. Elem - BK	38	ÇARŞAMBA	Seminer Sln.	0	x	x	x	x	0	0	0	0	0	0
-451	TB	3	0	Mesleki Uygulama II	Bölüm Öğr. Elem - TB	29	ÇARŞAMBA	204	0	x	x	x	x	0	0	0	0	0	0
-452	TBT	4	0	Mesleki Uygulama II	Bölüm Öğr. Elem - TBT	14	ÇARŞAMBA	205	0	x	x	x	x	0	0	0	0	0	0
-453	TE	4	0	Mesleki Uygulama II	Bölüm Öğr. Elem - TE	27	ÇARŞAMBA	206	0	x	x	x	x	0	0	0	0	0	0
-454	TO	4	0	Mesleki Uygulama II	Bölüm Öğr. Elem - TO	30	ÇARŞAMBA	06	0	x	x	x	x	0	0	0	0	0	0
-165	TBT	2	ZBY-2008 / TRB-2008	Tarla Bitkileri	Cem Ömer EGESEL	44	ÇARŞAMBA	105	0	x	x	x	x	0	0	0	0	0	0
-347	ZO	3	ZOO-3002	Hayvan Etolojisi	Cemil TÖLÜ	32	ÇARŞAMBA	101	0	x	x	x	x	0	0	0	0	0	0
-407	TM	2	ZTM-2008 / TMT-2014	İstatistik	Kumru URGANCI TEKİN	31	ÇARŞAMBA	Prof.Dr H. TURHAN	0	x	x	x	x	0	0	0	0	0	0
-406	TO	2	ZTO-2004 / TBB-2002	İstatistik	Kumru URGANCI TEKİN	39	ÇARŞAMBA	Prof.Dr H. TURHAN	0	x	x	x	x	0	0	0	0	0	0
-375	TBT	1	ZBY-1010 / TRB-1008	Zooloji	Murat TOSUNOĞLU	33	ÇARŞAMBA	113	0	x	x	x	x	0	0	0	0	0	0
-376	TE	1	ZTE-1008 / TAE-1008	Zooloji	Murat TOSUNOĞLU	34	ÇARŞAMBA	113	0	x	x	x	x	0	0	0	0	0	0
-217	TYS	4	TYS-4006	Mesleki Uygulama II	Okan ERKEN	9	ÇARŞAMBA	106	0	x	x	x	x	0	0	0	0	0	0
-239	BK	2	ZBK-2016	Coğrafi Bilgi Sistemleri	Umut MUCAN	43	ÇARŞAMBA	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
-446	TB	2	ZTB-2018	Mühendislik Mekaniği 	Volkan ESKİZEYBEK	27	ÇARŞAMBA	103	0	x	x	x	x	0	0	0	0	0	0
-228	TYS	3	TYS-3004	Malzeme Bilgisi	Sefa AKSU	18	ÇARŞAMBA	104	0	x	x	x	0	0	0	0	0	0	0
-444	TB	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	29	ÇARŞAMBA	ONLINE	0	x	x	0	0	0	0	0	0	0	0
-441	TO	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	26	ÇARŞAMBA	ONLINE	0	x	x	0	0	0	0	0	0	0	0
-408	TM	1	ZTM-1002 / TMT-1012	Fizik II	Mehmet TÜYSÜZ	53	ÇARŞAMBA	01	0	x	x	0	0	0	0	0	0	0	0
-409	ZO	1	ZTN-1006	Fizik II	Mehmet TÜYSÜZ	26	ÇARŞAMBA	01	0	x	x	0	0	0	0	0	0	0	0
-419	BB	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	31	ÇARŞAMBA	ONLINE	0	x	x	0	0	0	0	0	0	0	0
-420	BK	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	36	ÇARŞAMBA	ONLINE	0	x	x	0	0	0	0	0	0	0	0
-157	TM	4	TMT-4104	Mesleki Uygulama II	Ünal ÜRKMEZ	18	ÇARŞAMBA	TM. Uyg.Lab.	0	x	x	0	0	0	0	0	0	0	0
-329	TE	2	ZTE-2014	Hayvansal Üretim	Aynur KONYALI	19	ÇARŞAMBA	201	0	0	0	x	x	x	x	0	0	0	0
-262	TYS	2	TYS-2002	İstatistik	Fatih KAHRIMAN	21	ÇARŞAMBA	102	0	0	0	x	x	x	x	0	0	0	0
-388	ZO	1	ZOO-1004	Analitik Kimya	Serkan KARAKAYA	16	ÇARŞAMBA	01	0	0	0	x	x	x	0	0	0	0	0
-330	TE	2	TAE-2012	Hayvansal Üretim Sistemleri	Aynur KONYALI	8	ÇARŞAMBA	201	0	0	0	x	x	0	0	0	0	0	0
-437	BB	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	36	ÇARŞAMBA	ONLINE	0	0	0	x	x	0	0	0	0	0	0
-443	BK	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	36	ÇARŞAMBA	ONLINE	0	0	0	x	x	0	0	0	0	0	0
-160	TBT	3	TRB-3006	Moleküler Genetik	Hanife YANDAYAN	25	ÇARŞAMBA	202	0	0	0	x	x	0	0	0	0	0	0
-242	TB	4	TBİ-4014	Ürün Standartları ve Depolama	Mevlüt AKÇURA	23	ÇARŞAMBA	03	0	0	0	x	x	0	0	0	0	0	0
-425	TB	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	29	ÇARŞAMBA	ONLINE	0	0	0	x	x	0	0	0	0	0	0
-426	TO	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	28	ÇARŞAMBA	ONLINE	0	0	0	x	x	0	0	0	0	0	0
-134	TM	1	İSG-1002	İş Sağlığı ve Güvenliği II	Sarp Korkut SÜMER	33	ÇARŞAMBA	TM. Uyg.Lab.	0	0	0	x	x	0	0	0	0	0	0
-135	TM	3	TMT-3130	Tarım Traktörleri	Sarp Korkut SÜMER	20	ÇARŞAMBA	TM. Uyg.Lab.	0	0	0	0	0	x	x	x	0	0	0
-24	BB	4	BHB-4018	Kültür Sebzeleri II	Canan Öztokat KUZUCU	35	ÇARŞAMBA	202	0	0	0	0	0	x	x	0	0	0	0
-410	TBT	2	TRB-2006	Gıda Bilimi ve Teknolojisi	Nesrin Merve ÇELEBİ UZKUÇ	8	ÇARŞAMBA	03	0	0	0	0	0	x	x	0	0	0	0
-276	TB	2	ZTB-2006	Akıllı Tarım	Onur Sinan TÜRKMEN	30	ÇARŞAMBA	04	0	0	0	0	0	x	x	0	0	0	0
-253	TB	4	TBİ-4010	Organik Tarım	Ramazan ÇAKMAKÇI	27	ÇARŞAMBA	06	0	0	0	0	0	x	x	0	0	0	0
-382	BB	2	ZBB-2002	Malzeme Bilimi	Volkan ESKİZEYBEK	23	ÇARŞAMBA	113	0	0	0	0	0	x	x	0	0	0	0
-383	TO	2	ZTO-2010	Malzeme Bilimi	Volkan ESKİZEYBEK	19	ÇARŞAMBA	113	0	0	0	0	0	x	x	0	0	0	0
-384	ZO	2	ZTN-2006	Malzeme Bilimi	Volkan ESKİZEYBEK	21	ÇARŞAMBA	113	0	0	0	0	0	x	x	0	0	0	0
-108	TE	4	TAE-4058	Tarımsal İşletmelerin Planlaması	Duygu AKTÜRK	30	ÇARŞAMBA	01	0	0	0	0	0	0	x	x	x	x	0
-335	ZO	4	ZOO-4110	Sığır Yetiştirme	Feyzi UĞUR	28	ÇARŞAMBA	103	0	0	0	0	0	0	x	x	0	0	0
-439	TM	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	28	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	x	x	0	0	0
-445	TYS	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	28	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	x	x	0	0	0
-442	ZO	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	28	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	x	x	0	0	0
-170	TBT	3	TRB-3012	Mesleki İngilizce II	İskender TİRYAKİ	18	ÇARŞAMBA	106	0	0	0	0	0	0	x	x	0	0	0
-423	TBT	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	32	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	x	x	0	0	0
-421	TE	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	24	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	x	x	0	0	0
-68	BK	4	BTK-4008	Sebze Hastalıkları	Savaş KORKMAZ	41	ÇARŞAMBA	101	0	0	0	0	0	0	x	x	0	0	0
-255	TB	3	TBİ-3002	Yem Bitkileri	Altıngül ÖZASLAN PARLAK	32	ÇARŞAMBA	102	0	0	0	0	0	0	0	x	x	x	x
-363	TBT	2	ZBY-2016	Bakteriyoloji	Binnur M. YAPICI	16	ÇARŞAMBA	03	0	0	0	0	0	0	0	x	x	x	x
-23	BB	2	ZBB-2008 / BHB-2002	Genel Sebzecilik	Canan Öztokat KUZUCU	26	ÇARŞAMBA	104	0	0	0	0	0	0	0	x	x	x	x
-373	BB	1	ZBB-1010 / BHB-1002	Zooloji	Cemal Varol TOK	37	ÇARŞAMBA	113	0	0	0	0	0	0	0	x	x	x	x
-374	TB	1	ZTB-1012	Zooloji	Cemal Varol TOK	52	ÇARŞAMBA	113	0	0	0	0	0	0	0	x	x	x	x
-270	ZO	2	ZOO-2008	Çayır Mera Yönetimi ve Islahı	Fırat ALATÜRK	20	ÇARŞAMBA	201	0	0	0	0	0	0	0	x	x	x	x
-18	TB	2	TBİ-2012	Genel Meyvecilik	Neslihan EKİNCİ	14	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	x	x	x	x
-19	TO	2	ZTO-2016 / TBB-2014	Genel Meyvecilik	Neslihan EKİNCİ	31	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	x	x	x	x
-187	TE	2	ZTE-2012	Mühendislik Mekaniği	Ünal KIZIL	19	ÇARŞAMBA	202	0	0	0	0	0	0	0	x	x	x	x
-313	TO	4	TBB-4004	Gübrelemenin Temel İlkeleri	Yakup ÇIKILI	30	ÇARŞAMBA	203	0	0	0	0	0	0	0	x	x	x	x
-199	TYS	2	TYS-2006	Hidrolik	Muharrem Yetiş YAVUZ	14	ÇARŞAMBA	204	0	0	0	0	0	0	0	x	x	x	0
-6	BB	3	BHB-3014	Asma Fidanı Yetiştirme Tekniği	Alper DARDENİZ	30	ÇARŞAMBA	Dardanos Snf.	0	0	0	0	0	0	0	x	x	0	0
-290	TO	1	TBB-1012	Kariyer Planlama	Mustafa BAŞARAN	3	ÇARŞAMBA	205	0	0	0	0	0	0	0	x	x	0	0
-155	TM	2	ZTM-2010 / TMT-2008	Dinamik	Ünal ÜRKMEZ	26	ÇARŞAMBA	206	0	0	0	0	0	0	0	x	x	0	0
-168	BK	2	ZBK-2002	Genetik	Cem Ömer EGESEL	38	ÇARŞAMBA	105	0	0	0	0	0	0	0	0	x	x	x
-9	BB	4	BHB-4022	Budama Tekniği ve Fizyolojisi	Hakan ENGİN	5	ÇARŞAMBA	106	0	0	0	0	0	0	0	0	x	x	x
-169	TBT	3	TRB-3008	Bitki Islahı	İskender TİRYAKİ	27	ÇARŞAMBA	103	0	0	0	0	0	0	0	0	x	x	x
-143	TM	3	TMT-3106	Programlamaya Giriş	İsmail KAVDIR	17	ÇARŞAMBA	Bilgisayar Lab.	0	0	0	0	0	0	0	0	x	x	x
-254	TB	4	TBİ-4008	Alternatif Tarım ve Bitki Yetiştirme Teknikleri	Ramazan ÇAKMAKÇI	26	ÇARŞAMBA	04	0	0	0	0	0	0	0	0	x	x	x
-348	ZO	4	ZOO-4006	Sağlık Koruma Yönetimi	Cemil TÖLÜ	31	ÇARŞAMBA	101	0	0	0	0	0	0	0	0	x	x	0
-440	TBT	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	32	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	0	0	x	x	0
-438	TE	1	ATA-1102	Atatürk İlkeleri ve İnkılap Tarihi II	Gökhan BAYRAM	21	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	0	0	x	x	0
-422	TM	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	31	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	0	0	x	x	0
-424	TYS	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	33	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	0	0	x	x	0
-427	ZO	1	TDİ-1002	Türk Dili II	Özgür ÜSTÜN	27	ÇARŞAMBA	ONLINE	0	0	0	0	0	0	0	0	x	x	0
-149	TM	2	TMT-2012	Ölçme Kontrol ve Otomasyon	M. Burak BÜYÜKCAN	6	ÇARŞAMBA	Bölüm Odası	0	0	0	0	0	0	0	0	0	x	x
-105	TE	3	TAE-3012	Kırsal Kalkınma	Sibel TAN	17	ÇARŞAMBA	206	0	0	0	0	0	0	0	0	0	x	x
-57	BK	2	ZBK-2008 / BTK-2002	Entomoloji	Ali ÖZPINAR	46	PERŞEMBE	Prof.Dr H. TURHAN	x	x	x	x	0	0	0	0	0	0	0
-261	TBT	3	TRB-3004	Araştırma ve Deneme Yöntemleri	Fatih KAHRIMAN	24	PERŞEMBE	203	x	x	x	x	0	0	0	0	0	0	0
-351	ZO	1	ZTN-1010	Hayvan Tarımı	Hande Işıl AKBAĞ	0	PERŞEMBE	102	x	x	x	x	0	0	0	0	0	0	0
-220	BB	2	ZBB-2004	Ölçme Bilgisi	Okan ERKEN	23	PERŞEMBE	205	x	x	x	x	0	0	0	0	0	0	0
-344	ZO	1	ZOO-1008	Hayvansal Üretim Sistemleri	Cemil TÖLÜ	7	PERŞEMBE	102	x	x	0	0	0	0	0	0	0	0	0
-303	TE	2	ZTE-2006	Toprak Bilimi ve Bitki Besleme	Ali SUNGUR	19	PERŞEMBE	03	0	x	x	x	x	0	0	0	0	0	0
-295	TO	1	ZTO-1002	Mikrobiyoloji	Cafer TÜRKMEN	43	PERŞEMBE	02	0	x	x	x	x	0	0	0	0	0	0
-269	TM	2	ZTM-2002 / TMT-2006	Tarla Bitkileri	Fırat ALATÜRK	57	PERŞEMBE	113	0	x	x	x	x	0	0	0	0	0	0
-332	ZO	3	ZOO-3008	Rasyon Hazırlama	Kemal ÇELİK	30	PERŞEMBE	202	0	x	x	x	x	0	0	0	0	0	0
-204	ZO	2	ZTN-2014	Tarımsal Yapılar ve Sulama	Muharrem Yetiş YAVUZ	21	PERŞEMBE	204	0	x	x	x	x	0	0	0	0	0	0
-192	TYS	3	TYS-3006	Sulama Sistemlerinin Tasarımı	Murat YILDIRIM	24	PERŞEMBE	06	0	x	x	x	x	0	0	0	0	0	0
-291	TB	1	ZTB-1010	Toprak Bilgisi	Mustafa BAŞARAN	39	PERŞEMBE	01	0	x	x	x	x	0	0	0	0	0	0
-293	TM	1	TMT-1008	Toprak Bilgisi	Mustafa BAŞARAN	2	PERŞEMBE	01	0	x	x	x	x	0	0	0	0	0	0
-16	BB	1	ZBB-1006 / BHB-1012	Mikrobiyoloji	Neslihan EKİNCİ	36	PERŞEMBE	101	0	x	x	x	x	0	0	0	0	0	0
-252	TB	2	ZTB-2016	Mikrobiyoloji	Ramazan ÇAKMAKÇI	28	PERŞEMBE	04	0	x	x	x	x	0	0	0	0	0	0
-236	TYS	2	ZTY-2016	Coğrafi Bilgi Sistemleri	Umut MUCAN	20	PERŞEMBE	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
-235	TYS	2	TYS-2012	Tarımda Coğrafi Bilgi Sistemleri	Umut MUCAN	5	PERŞEMBE	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
-186	TYS	4	TYS-4010	Tarımsal Yapılar ve Tasarım	Ünal KIZIL	9	PERŞEMBE	05	0	x	x	x	x	0	0	0	0	0	0
-122	TYS	1	TYS-1006	Tarım Ekonomisi	Damla ÖZSAYIN	5	PERŞEMBE	206	0	x	x	x	0	0	0	0	0	0	0
-140	TM	3	TMT-3128	Bitki Koruma Makinaları ve Teknolojileri	Sakine ÖZPINAR	18	PERŞEMBE	TM. Uyg.Lab.	0	x	x	x	0	0	0	0	0	0	0
-129	TE	3	TAE-3006	Tarımsal Yayım ve Haberleşme	Sema Ezgi YÜCEER	23	PERŞEMBE	103	0	x	x	x	0	0	0	0	0	0	0
-26	BB	3	BHB-3002	Bahçe Bitkileri Fizyolojisi	Arda AKÇAL	36	PERŞEMBE	104	0	x	x	0	0	0	0	0	0	0	0
-360	ZO	4	ZOO-4004	Hayvan Islahı	Hakan ERDEM	25	PERŞEMBE	105	0	x	x	0	0	0	0	0	0	0	0
-250	TBT	1	ZBY-1002	Tarım Tarihi ve Deontolojisi	Harun BAYTEKİN	35	PERŞEMBE	201	0	x	x	0	0	0	0	0	0	0	0
-15	BB	4	BHB-4014	Bahçe Bitkileri Islahı	Zeliha GÖKBAYRAK	33	PERŞEMBE	106	0	x	x	0	0	0	0	0	0	0	0
-145	TM	4	TMT-4008	Ürün İşleme Teknolojileri	İsmail KAVDIR	9	PERŞEMBE	106	0	0	0	x	x	x	x	0	0	0	0
-30	BB	4	BHB-4016	Ilıman İklim Meyve Türleri	Engin GÜR	37	PERŞEMBE	201	0	0	0	x	x	0	0	0	0	0	0
-247	TE	1	TAE-1018	Tarımsal Ekoloji	Harun BAYTEKİN	8	PERŞEMBE	105	0	0	0	x	x	0	0	0	0	0	0
-2	BB	3	BHB-3004	Bahçe Bitkilerinde Biyoteknoloji	Murat ŞEKER	14	PERŞEMBE	104	0	0	0	x	x	0	0	0	0	0	0
-106	TE	4	TAE-4064	Tarım Politikası	Sibel TAN	28	PERŞEMBE	103	0	0	0	0	x	x	x	0	0	0	0
-58	BK	3	BTK-3012	Kentsel Entomoloji	Ali ÖZPINAR	13	PERŞEMBE	Prof.Dr H. TURHAN	0	0	0	0	x	x	0	0	0	0	0
-166	TBT	3	TRB-3002	Genetik Kaynakların Muhafazası	Cem Ömer EGESEL	25	PERŞEMBE	203	0	0	0	0	x	x	0	0	0	0	0
-125	BK	1	ZBK-1014	Ekonomi	Selma KAYALAK	45	PERŞEMBE	102	0	0	0	0	x	x	0	0	0	0	0
-126	TYS	1	ZTY-1006	Ekonomi	Selma KAYALAK	32	PERŞEMBE	102	0	0	0	0	x	x	0	0	0	0	0
-127	ZO	1	ZOO-1006	Ekonomi	Selma KAYALAK	3	PERŞEMBE	102	0	0	0	0	x	x	0	0	0	0	0
-183	BK	2	ZBK-2006	Ölçme Bilgisi	Gökhan ÇAMOĞLU	33	PERŞEMBE	01	0	0	0	0	0	x	x	x	x	0	0
-207	TYS	3	TYS-3008	Sulama Suyu Kalitesi ve Tuzluluk	İsmail TAŞ	18	PERŞEMBE	206	0	0	0	0	0	x	x	x	0	0	0
-214	TYS	2	TYS-2010	Bitki Fizyolojisi	Okan ERKEN	8	PERŞEMBE	03	0	0	0	0	0	x	x	x	0	0	0
-8	BB	3	BHB-3010	Bahçe Bitkileri Yetiştiriciliğinde İyi Tarım Uygulamaları	Hakan ENGİN	35	PERŞEMBE	201	0	0	0	0	0	x	x	0	0	0	0
-393	TE	2	ZTE-2004 	Tarım Hukuku	İlker KARAÖNDER	20	PERŞEMBE	04	0	0	0	0	0	x	x	0	0	0	0
-307	TO	4	TBB-4012	Toprak Yönetimi	Remzi İLAY	29	PERŞEMBE	05	0	0	0	0	0	x	x	0	0	0	0
-230	TYS	4	TYS-4012	Betonarme	Sefa AKSU	14	PERŞEMBE	205	0	0	0	0	0	x	x	0	0	0	0
-350	TBT	4	TRB-4006	Hayvan Islahı	Cemil TÖLÜ	0	PERŞEMBE	06	0	0	0	0	0	0	x	x	x	x	0
-340	TB	2	ZTB-2014	Hayvansal Üretim	Feyzi UĞUR	30	PERŞEMBE	203	0	0	0	0	0	0	x	x	x	x	0
-137	TM	2	ZTM-2012 / TMT-2010	Bilgisayar Destekli Tasarım II	Habib KOCABIYIK	45	PERŞEMBE	Bilgisayar Lab.	0	0	0	0	0	0	x	x	x	x	0
-362	TBT	4	TRB-4006	Hayvan Islahı	Hakan ERDEM	14	PERŞEMBE	06	0	0	0	0	0	0	x	x	x	x	0
-124	TE	3	TAE-3016	Ekonometri	Selma KAYALAK	38	PERŞEMBE	113	0	0	0	0	0	0	x	x	x	x	0
-448	TB	3	TBİ-3014	Apiterapi	Harun BAYTEKİN	26	PERŞEMBE	104	0	0	0	0	0	0	x	x	x	0	0
-292	TE	1	TAE-1028	Toprak Bilgisi	Mustafa BAŞARAN	7	PERŞEMBE	105	0	0	0	0	0	0	x	x	x	0	0
-294	TYS	1	TYS-1008	Toprak Bilgisi	Mustafa BAŞARAN	3	PERŞEMBE	105	0	0	0	0	0	0	x	x	x	0	0
-353	ZO	3	ZOO-3012	Üretim Fizyolojisi	Hande Işıl AKBAĞ	47	PERŞEMBE	02	0	0	0	0	0	0	x	x	0	0	0
-1	BB	1	ZBB-1004 / BHB-1008	Biyokimya	Murat ŞEKER	41	PERŞEMBE	102	0	0	0	0	0	0	x	x	0	0	0
-380	TBT	2	ZBY-2006	Gıda Bilimi ve Güvenliği	Murat ZORBA	17	PERŞEMBE	204	0	0	0	0	0	0	x	x	0	0	0
-67	BK	4	BTK-4004	Meyve ve Bağ Hastalıkları	Savaş KORKMAZ	42	PERŞEMBE	102	0	0	0	0	0	0	x	x	0	0	0
-385	BK	1	ZBK-1004 / BTK-1026	Biyokimya	Selin SAĞBAŞ SUNER	45	PERŞEMBE	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	0	0	0
-386	TB	1	TBİ-1004	Biyokimya	Selin SAĞBAŞ SUNER	14	PERŞEMBE	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	0	0	0
-387	TO	2	ZTO 2006	Biyokimya	Selin SAĞBAŞ SUNER	17	PERŞEMBE	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	0	0	0
-267	TB	4	TBİ-4002	Çayır Mera Islahı	Fırat ALATÜRK	29	PERŞEMBE	04	0	0	0	0	0	0	0	x	x	x	x
-146	TM	1	ZTM-1012	Tarım Makinelerine Giriş	Gıyasettin ÇİÇEK	35	PERŞEMBE	TM. Uyg.Lab.	0	0	0	0	0	0	0	x	x	x	x
-153	TBT	1	ZBY-1004 	Ölçme Bilgisi 	M. Burak BÜYÜKCAN	37	PERŞEMBE	201	0	0	0	0	0	0	0	x	x	x	x
-141	TM	4	TMT-4010	Bahçe Makinaları ve Teknolojileri	Sakine ÖZPINAR	21	PERŞEMBE	103	0	0	0	0	0	0	0	x	x	x	x
-238	TYS	4	TYS-4014	Arazi Toplulaştırması	Umut MUCAN	9	PERŞEMBE	205	0	0	0	0	0	0	0	x	x	x	x
-318	TE	2	TAE-2010	Bitki Besleme	Yakup ÇIKILI	5	PERŞEMBE	106	0	0	0	0	0	0	0	x	x	x	x
-312	TO	3	TBB-3006	Bitki Besleme	Yakup ÇIKILI	20	PERŞEMBE	106	0	0	0	0	0	0	0	x	x	x	x
-119	TE	4	TAE-4022	Proje ve Risk Yönetimi	Damla ÖZSAYIN	23	PERŞEMBE	05	0	0	0	0	0	0	0	x	x	x	0
-320	TO	4	TBB-4020	Organik Tarımda Toprak ve Çevre	Ali SÜMER	29	PERŞEMBE	202	0	0	0	0	0	0	0	x	x	0	0
-190	TYS	2	ZTY-2004	Mühendislik Ölçmeleri	Murat YILDIRIM	15	PERŞEMBE	03	0	0	0	0	0	0	0	0	x	x	x
-251	TB	1	TBİ-1008	Mikrobiyoloji	Ramazan ÇAKMAKÇI	6	PERŞEMBE	206	0	0	0	0	0	0	0	0	x	x	x
-229	TYS	3	TYS-3012	Seralarda Sulama Yönetimi	Sefa AKSU	18	PERŞEMBE	02	0	0	0	0	0	0	0	0	x	x	x
-301	TO	2	TBB-2004	Toprak Bilgisi	Ali SUNGUR	10	PERŞEMBE	102	0	0	0	0	0	0	0	0	x	x	0
-223	BB	1	ZBB-1008	Meteoroloji	Okan ERKEN	33	PERŞEMBE	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	0	x	x	0
-91	BK	2	BTK-2014	Bitki Korumada Akıllı Tarım	Ali KARANFİL	6	PERŞEMBE	105	0	0	0	0	0	0	0	0	0	x	x
-395	ZO	2	ZTN-2008	Tarım Hukuku	İlker KARAÖNDER	22	PERŞEMBE	01	0	0	0	0	0	0	0	0	0	x	x
-200	TYS	1	ZTY-1004	Tarım Tarihi ve Deontolojisi	Muharrem Yetiş YAVUZ	24	PERŞEMBE	104	0	0	0	0	0	0	0	0	0	x	x
-3	BB	3	BHB-3006	Bahçe Bitkileri Yetiştirme Tekniği	Murat ŞEKER	33	PERŞEMBE	101	0	0	0	0	0	0	0	0	0	x	x
-173	TBT	2	ZBY-2020 / TRB-2014	Bilimsel Araştırma Yazım	Şemun TAYYAR	11	PERŞEMBE	204	0	0	0	0	0	0	0	0	0	x	x
-282	TO	4	TBB-4110	Toprak Islahı ve Düzenleyiciler	Yasemin KAVDIR	29	PERŞEMBE	202	0	0	0	0	0	0	0	0	0	x	x
-93	TE	2	ZTE-2018 / TAE-2014	Bitki Koruma	Ali KARANFİL	35	CUMA	01	x	x	x	x	0	0	0	0	0	0	0
-66	BK	2	ZBK-2010 / BTK-2004	Fitopatoloji	Savaş KORKMAZ	44	CUMA	113	x	x	x	x	0	0	0	0	0	0	0
-428	BB	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	3	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-429	BK	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	0	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-434	TB	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	1	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-432	TBT	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	1	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-430	TE	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	0	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-431	TM	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	0	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-435	TO	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	3	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-433	TYS	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	0	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-436	ZO	1	YDİ-1102	Yabancı Dil II (İngilizce)	Gökhan HINIZ	1	CUMA	ONLINE	x	x	0	0	0	0	0	0	0	0	0
-264	BB	2	ZBB-2012	Tarla Bitkileri	Onur HOCAOĞLU	21	CUMA	101	0	x	x	x	x	0	0	0	0	0	0
-266	BB	2	BHB-2004	Tarla Bitkileri Yetiştiriciliği	Onur HOCAOĞLU	20	CUMA	101	0	x	x	x	x	0	0	0	0	0	0
-184	TYS	2	ZTY-2002 / TYS-2004	Mukavemet	Ünal KIZIL	33	CUMA	205	0	x	x	x	x	0	0	0	0	0	0
-274	TB	3	TBİ-3004	Endüstri Bitkileri II	Bahri İZCİ	30	CUMA	202	0	x	x	x	0	0	0	0	0	0	0
-83	SKS	4	SKS-4014	Pestisitlerin Uygulamadan Sonraki Akıbetleri	Burak POLAT	35	CUMA	02	0	x	x	x	0	0	0	0	0	0	0
-38	SKS	3	FSD	Tarımsal Web Tasarımı 	F. Cem KUZUCU	57	CUMA	Bilgisayar Lab.	0	x	x	x	0	0	0	0	0	0	0
-258	TB	2	ZTB-2002 / TBİ-2002	Genetik	Fatih KAHRIMAN	48	CUMA	201	0	x	x	x	0	0	0	0	0	0	0
-447	SKS	3	SKS	Takım Sporları	Güner GÜNAY	85	CUMA	Hasan Mefs. Spr.Sln	0	x	x	x	0	0	0	0	0	0	0
-392	SKS	4	SKS	Genel Sanat Tarihi II	Mürvet HARMAN	36	CUMA	102	0	x	x	x	0	0	0	0	0	0	0
-411	BB	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	31	CUMA	AMFİ	0	0	x	x	0	0	0	0	0	0	0
-414	TBT	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	31	CUMA	AMFİ	0	0	x	x	0	0	0	0	0	0	0
-417	TO	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	26	CUMA	AMFİ	0	0	x	x	0	0	0	0	0	0	0
-415	TYS	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	30	CUMA	AMFİ	0	0	x	x	0	0	0	0	0	0	0
-154	TM	1	TMT-1010	Mühendisliğe Giriş	Ünal ÜRKMEZ	1	CUMA	TM. Uyg.Lab.	0	0	x	x	0	0	0	0	0	0	0
-176	TBT	2	ZBY-2018 / TRB-2018	Laboratuvar Teknikleri ve Kullanımı	Uğur SARI	38	CUMA	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
-399	TYS	1	ZTY-1012	Bitki Sistematiği	Tülay TÜTENOCAKLI	26	CUMA	104	0	0	0	0	x	x	x	x	0	0	0
-59	FSD	3	FSD-3058	Böceklerin Tozlaşmadaki Rolü	Ali ÖZPINAR	10	CUMA	03	0	0	0	0	x	x	x	0	0	0	0
-321	FSD	3	FSD	Bitkilerde Beslenme Bozuklukları	Ali SÜMER	36	CUMA	102	0	0	0	0	x	x	x	0	0	0	0
-27	FSD	3	FSD	Hobi Amaçlı Süs Bitkisi Yetiştiriciliği	Arda AKÇAL	35	CUMA	202	0	0	0	0	x	x	x	0	0	0	0
-275	FSD	3	FSD	Tıbbi ve Aromatik Bitkiler	Bahri İZCİ	7	CUMA	06	0	0	0	0	x	x	x	0	0	0	0
-86	SKS	4	SKS-4010	Böceklerin Dünyası	Çiğdem GÜNEŞ	21	CUMA	103	0	0	0	0	x	x	x	0	0	0	0
-10	FSD	3	FSD	Meyve Yetiştirme İlkeleri	Hakan ENGİN	19	CUMA	106	0	0	0	0	x	x	x	0	0	0	0
-246	FSD	3	FSD	Permakültür	Harun BAYTEKİN	8	CUMA	201	0	0	0	0	x	x	x	0	0	0	0
-142	FSD	3	FSD	Yenilenebilir Enerji Kaynakları	Sakine ÖZPINAR	15	CUMA	105	0	0	0	0	x	x	x	0	0	0	0
-136	FSD	3	FSD	Tarımda İş Güvenliği	Sarp Korkut SÜMER	38	CUMA	TM. Uyg.Lab.	0	0	0	0	x	x	x	0	0	0	0
-36	FSD	3	FSD	Bahçe Bitkilerinde Topraksız Tarım 	Seçkin KAYA	56	CUMA	113	0	0	0	0	x	x	x	0	0	0	0
-412	BK	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	43	CUMA	AMFİ	0	0	0	0	x	x	0	0	0	0	0
-416	TB	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	35	CUMA	AMFİ	0	0	0	0	x	x	0	0	0	0	0
-413	TE	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	26	CUMA	AMFİ	0	0	0	0	x	x	0	0	0	0	0
-418	ZO	1	İSG-1002	İş Sağlığı ve Güvenliği II	Adem Yavuz VURAL	24	CUMA	AMFİ	0	0	0	0	x	x	0	0	0	0	0
-334	TB	2	TBİ-2014	Hayvan Besleme Ekolojisi	Kemal ÇELİK	29	CUMA	101	0	0	0	0	0	x	x	0	0	0	0
-331	ZO	2	ZOO-2004	Hayvan Besleme Ekolojisi	Kemal ÇELİK	13	CUMA	101	0	0	0	0	0	x	x	0	0	0	0
-218	BB	1	BHB-1006	Ölçme Bilgisi	Okan ERKEN	24	CUMA	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	x	0	0
-221	TE	2	TAE-2004	Ölçme Bilgisi	Okan ERKEN	17	CUMA	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	x	0	0
-100	BK	1	ZBK-1006	Temel Bilgisayar Programları	Ali Kürşat ŞAHİN	34	CUMA	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
-323	BB	2	ZBB-2014 / BHB-2006	Bitki Besleme	Ali SÜMER	58	CUMA	01	0	0	0	0	0	0	0	x	x	x	x
-256	BK	2	BTK-2008	Tarla Bitkileri Yetiştiriciliği	Altıngül ÖZASLAN PARLAK	7	CUMA	203	0	0	0	0	0	0	0	x	x	x	x
-449	ZO	4	0	Mesleki Uygulama II	Bölüm Öğr. Elem - ZO	25	CUMA	205	0	0	0	0	0	0	0	x	x	x	x
-298	TE	1	ZTE-1006	Mikrobiyoloji	Cafer TÜRKMEN	37	CUMA	101	0	0	0	0	0	0	0	x	x	x	x
-11	TBT	2	ZBY-2010 / TRB-2010	Bahçe Bitkileri	Hakan ENGİN	23	CUMA	03	0	0	0	0	0	0	0	x	x	x	x
-151	TM	4	TMT-4012	İmalat Yöntemleri ve Takım Tezgahları	M. Burak BÜYÜKCAN	15	CUMA	TM. Uyg.Lab.	0	0	0	0	0	0	0	x	x	x	x
-197	TB	1	ZTB-1004	Teknik Resim	Murat YILDIRIM	36	CUMA	113	0	0	0	0	0	0	0	x	x	x	x
-198	TO	1	ZTO-1010	Teknik Resim	Murat YILDIRIM	28	CUMA	113	0	0	0	0	0	0	0	x	x	x	x
-364	TBT	1	TRB-1004	Genel Mikrobiyoloji	N. Nükhet ZORBA	4	CUMA	Müh. Fak. C-106	0	0	0	0	0	0	0	x	x	x	x
-365	TBT	1	ZBY-1008	Mikrobiyoloji	N. Nükhet ZORBA	33	CUMA	Müh. Fak. C-106	0	0	0	0	0	0	0	x	x	x	x
-233	ZO	2	ZTN-2018	Hayvan Barınakları	Sefa AKSU	18	CUMA	04	0	0	0	0	0	0	0	x	x	x	x
-31	TM	2	ZTM-2006 / TMT-2004	Bahçe Bitkileri	Serkan CANDAR	30	CUMA	06	0	0	0	0	0	0	0	x	x	x	x
-32	ZO	2	ZOO-2002	Bahçe Bitkileri	Serkan CANDAR	6	CUMA	06	0	0	0	0	0	0	0	x	x	x	x
-316	TB	2	ZTB-2004 / TBİ-2004	Bitki Besleme	Yakup ÇIKILI	76	CUMA	201	0	0	0	0	0	0	0	x	x	x	x
-299	TE	1	TAE-1004	Mikrobiyoloji	Cafer TÜRKMEN	47	CUMA	101	0	0	0	0	0	0	0	x	x	x	0
-241	TB	3	TBİ-3006	Bitki Islahı	Mevlüt AKÇURA	47	CUMA	202	0	0	0	0	0	0	0	x	x	x	0
-257	ZO	2	ZOO-2006	Tarla Bitkileri	Altıngül ÖZASLAN PARLAK	7	CUMA	103	0	0	0	0	0	0	0	x	x	0	0
-35	BB	3	BHB-3008	Örtüaltı Sebzeciliği	Seçkin KAYA	33	CUMA	102	0	0	0	0	0	0	0	x	x	0	0
-398	TYS	1	TYS-1014	İleri Matematik	Mehmet GÜMÜŞ	11	CUMA	02	0	0	0	0	0	0	0	0	x	x	x
-397	TYS	1	ZTY-1014	Mühendislik Matematiği	Mehmet GÜMÜŞ	37	CUMA	02	0	0	0	0	0	0	0	0	x	x	x
-49	BB	4	BHB-4024	Kültür Mantarı Yetiştiriciliği	Tolga SARIYER	32	CUMA	102	0	0	0	0	0	0	0	0	0	x	x
-164	TBT	1	ZBY-1002	Tarım Tarihi ve Deontolojisi	Cem Ömer EGESEL	0	-	8-14. Haftalar	0	x	x	0	0	0	0	0	0	0	0
-370	TO	1	TBB-1006	Zooloji	Çiğdem GÜL	7	-	SADECE SINAV	0	0	0	0	0	0	x	x	x	0	0
-222	TO	2	TBB-2008	Ölçme Bilgisi	Okan ERKEN	9	-	SADECE SINAV	0	0	0	0	0	0	0	0	x	x	x
-77	TYS	1	ZTY-1002	Bitki Koruma	Ahmet ULUDAĞ	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-74	BK	3	BTK-3022	Yabancı Ot Mücadelesi ve İlaçları	Ahmet ULUDAĞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-75	FSD	3	FSD-3050	Yabancı Otlarla Bütünleşik Mücadele	Ahmet ULUDAĞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-90	BK	2	BTK-2016	Bitki Korumada Biyoteknoloji	Ali KARANFİL	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-89	BK	1	BTK-1032	Mikrobiyoloji	Ali KARANFİL	2	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
-92	BK	3	STJ-3002	Staj II	Ali KARANFİL	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-102	SKS	4	SKS-4019	Adli Entomoloji	Ali Kürşat ŞAHİN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-101	FSD	3	FSD-3004	Entegre Mücadele	Ali Kürşat ŞAHİN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-98	BK	1	BTK-1024	İstatistik	Ali Kürşat ŞAHİN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-319	TO	3	STJ-3002	Staj II	Ali SÜMER	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-306	TBT	2	ZBY-2014	Toprak Bilimi ve Bitki Besleme	Ali SÜMER	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-304	TE	2	ZTE-2006	Toprak Bilimi ve Bitki Besleme	Ali SÜMER	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-325	ZO	4	ZOO-4022	Keçi Yetiştirme	Aynur KONYALI	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-273	TB	3	STJ-3002	Staj II	Bahri İZCİ	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-114	TE	4	TAE-4012	Tarımsal Finansman	Bengü EVEREST	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-115	FSD	3	FSD	Tarımsal Örgütlenme	Bengü EVEREST	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-80	BK	2	BTK-2014	Bitki Korumada Akıllı Tarım	Burak POLAT	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-300	TB	4	TBİ-4020	Çevresel Etki Değerlendirme	Cafer TÜRKMEN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-296	TO	4	TBB-4022	Toprak Ekosistemi	Cafer TÜRKMEN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-297	FSD	3	FSD	Toprak Ekosistemi ve Çevre	Cafer TÜRKMEN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-167	FSD	3	FSD	Tarımsal İngilizce	Cem Ömer EGESEL	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-345	ZO	1	ZTN-1010	Hayvan Tarımı	Cemil TÖLÜ	36	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-346	ZO	3	STJ-3002	Staj II	Cemil TÖLÜ	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-87	TE	2	ZTE-2018 / TAE-2014	Bitki Koruma	Çiğdem GÜNEŞ	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-88	TM	2	ZTM-2004 / TMT-2002	Bitki Koruma	Çiğdem GÜNEŞ	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-110	FSD	3	FSD	Bitkisel ve Hayvansal Ürünlerin Maliyeti	Duygu AKTÜRK	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-367	TM	3	TMT-3132	Coğrafi Bilgi Sistemlerine Giriş	Emre ÖZELKAN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-39	FSD	3	FSD	Tohum ve Fide Yetiştirme Teknikleri	F. Cem KUZUCU	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-260	ZO	2	ZOO-2006	Tarla Bitkileri	Fatih KAHRIMAN	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-259	BK	2	BTK-2008	Tarla Bitkileri Yetiştiriciliği	Fatih KAHRIMAN	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-268	TE	2	ZTE-2008 / TAE-2006	Tarla Bitkileri	Fırat ALATÜRK	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-309	TM	1	ZTM-1008	Toprak Bilimi ve Bitki Besleme	Gizem Aksu	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-311	TYS	1	ZTY-1008	Toprak Bilimi ve Bitki Besleme	Gizem Aksu	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-181	TYS	4	TYS-4022	Görüntü İşleme	Gökhan ÇAMOĞLU	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-182	FSD	3	FSD	Uzaktan Algılama ve Coğrafi Bilgi Sist.	Gökhan ÇAMOĞLU	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-138	TM	3	STJ-3002	Staj II	Habib KOCABIYIK	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-361	FSD	3	FSD	Ev ve Laboratuvar Hayvanları Yetiştir.	Hakan ERDEM	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-352	ZO	2	ZTN-2012	Hayvan Fizyolojisi	Hande Işıl AKBAĞ	0	-	8-14 Hafta	0	0	0	0	0	0	0	0	0	0	0
-162	TBT	4	TRB-4018	Hayvan Biyoteknolojisi	Hanife YANDAYAN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-163	FSD	3	FSD	Moleküler Genetiğe Giriş	Hanife YANDAYAN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-249	ZO	4	ZOO-4014	Balarısı ve Flora	Harun BAYTEKİN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-284	TO	4	TBB-4024	Coğrafi Bilgi Sistemleri	Hasan ÖZCAN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-51	BB	4	BHB-4020	Sebze Tohum Teknolojisi	Hatice Nihan ÇİFTÇİ	4	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-205	TYS	1	TYS-1004	Grafiksel Analiz	İsmail TAŞ	6	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
-211	FSD	3	FSD	İklim Değişimi ve Kuraklık	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-206	TYS	3	TYS-3004	Malzeme Bilgisi	İsmail TAŞ	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-210	TYS	4	TYS-4016	Sulama Sistemlerinde Fertigasyon	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-208	TYS	3	TYS-3016	Uygulamalı Hidroloji	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-333	ZO	4	ZOO-4024	Yem Mikrobiyolojisi	Kemal ÇELİK	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-73	FSD	3	FSD-3070	Yaban Arıları	Levent EFİL	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-43	BB	3	BHB-3006	Bahçe Bitkileri Yetiştirme Tekniği	M. Ali GÜNDOĞDU	0	-	11-15. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-42	BB	1	ZBB-1004 / BHB-1008	Biyokimya	M. Ali GÜNDOĞDU	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-44	BB	4	BHB-4016	Ilıman İklim Meyve Türleri	M. Ali GÜNDOĞDU	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-150	TM	3	TMT-3124	Biyolojik Malzemenin Mühendislik Özellikleri	M. Burak BÜYÜKCAN	3	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
-203	TYS	3	TYS-3018	Havza ve Su Yönetimi	Muharrem Yetiş YAVUZ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-4	BB	4	BHB-4014	Bahçe Bitkileri Islahı	Murat ŞEKER	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-5	BB	4	BHB-4022	Budama Tekniği ve Fizyolojisi	Murat ŞEKER	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-225	TYS	3	TYS-3014	Sulama Şebekeleri Yönetimi	Murat TEKİNER	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-226	FSD	3	FSD	Tarımsal Üretimde Sistem Mühendisliği	Murat TEKİNER	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-195	FSD	3	FSD	Basınçlı Sulama Sist. Tasarımı	Murat YILDIRIM	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-193	TYS	4	TYS-4018	Otomasyon	Murat YILDIRIM	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-194	TYS	4	TYS-4020	Proje Hazırlama Tekniği	Murat YILDIRIM	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-381	ZO	2	ZTN-2020	Gıda Bilimi ve Güvenliği	Murat ZORBA	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-17	FSD	3	FSD	Meyve ve Sebzelerin Soğukta Muhafaza İlkeleri	Neslihan EKİNCİ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-216	TYS	3	STJ-3002	Staj II	Okan ERKEN	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-265	TO	2	TBB-2006	Tarla Bitkileri	Onur HOCAOĞLU	19	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
-277	TB	4	TBİ-4012	Bitki Doku Kültürleri	Onur Sinan TÜRKMEN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-279	TM	2	ZTM-2002 / TMT-2006	Tarla Bitkileri	Onur Sinan TÜRKMEN	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-34	BB	1	ZBB-1002	Ekoloji	Seçkin KAYA	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-33	BB	1	BHB-1010	Tarımsal Ekoloji	Seçkin KAYA	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-232	FSD	3	FSD	Tarımsal Yapılar	Sefa AKSU	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-234	TBT	2	ZBY-2012 / TRB-2012	Tarımsal Yapılar ve Sulama	Sefa AKSU	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-123	TE	3	STJ-3002	Staj II	Selma KAYALAK	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-355	FSD	3	FSD	R ile Veri Analizine Giriş	Soner YİĞİT	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-96	FSD	3	FSD-3026	Tarımsal Savaşımda İnsektisitler	Şahin KÖK	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-390	TO	4	TBB-4024	Coğrafi Bilgi Sistemleri	Timuçin EVEREST	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-389	TO	1	ZTO-1008	Jeoloji	Timuçin EVEREST	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-47	BB	3	BHB-3006	Bahçe Bitkileri Yetiştirme Tekniği	Tolga SARIYER	0	-	5-10 Haftalar	0	0	0	0	0	0	0	0	0	0	0
-46	BB	1	ZBB-1006 / BHB-1012	Mikrobiyoloji	Tolga SARIYER	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-48	BB	4	BHB-4010	Minör Sebzeler	Tolga SARIYER	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-175	TBT	2	TRB-2020	Hücre Biyolojisine Giriş	Uğur SARI	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-177	TBT	3	STJ-3002	Staj II	Uğur SARI	-	-	-	0	0	0	0	0	0	0	0	0	0	0
-240	ZO	2	ZTN-2016	Tarımda Coğrafi Bilgi Sistemleri	Umut MUCAN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-315	FSD	3	FSD	Bitki Besleme ve Gübreleme	Yakup ÇIKILI	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-12	BB	3	BHB-3004	Bahçe Bitkilerinde Biyoteknoloji	Zeliha GÖKBAYRAK	0	-	8-14. Haftalar	0	0	0	0	0	0	0	0	0	0	0
-14	BB	4	BHB-4012	Özel Bağcılık	Zeliha GÖKBAYRAK	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
-13	BB	3	BHB-3012	Proje Hazırlama Tekniği	Zeliha GÖKBAYRAK	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+1	BB	2	ZBB-2007	Akıllı Tarım	Gökhan ÇAMOĞLU	0	PAZARTESİ	201	0	x	x	0	0	0	0	0	0	0	0
+2	BK	2	ZBK-2007	Akıllı Tarım	Gökhan ÇAMOĞLU	0	PAZARTESİ	201	0	x	x	0	0	0	0	0	0	0	0
+3	TO	3	ZTO-3001	Akışkanlar Mekaniği	M. Yetiş YAVUZ	0	ÇARŞAMBA	101	0	0	0	0	0	0	x	x	x	x	0
+4	TYS	2	TYS-2005	Akışkanlar Mekaniği	M. Yetiş YAVUZ	0	ÇARŞAMBA	101	0	0	0	0	0	0	x	x	x	x	0
+5	TM	3	TMT-3003	Akışkanlar Mekaniği	Yavuz Hakan ÖZDEMİR	0	ÇARŞAMBA	Spor Bil. Fak. D-302	0	0	0	0	x	x	0	0	0	0	0
+6	TO	2	ZTO-2001 / TBB-2001	Analitik Kimya	Serkan KARAKAYA	0	PAZARTESİ	105	0	0	0	0	0	0	x	x	x	x	0
+7	TO	3	TBB-3005	Araştırma Deneme Metotları	Mevlüt AKÇURA	0	SALI	201	0	x	x	x	x	0	0	0	0	0	0
+8	TM	3	TMT-3101	Araştırma Deneme Yöntemleri	Mevlüt AKÇURA	0	SALI	201	0	x	x	x	0	0	0	0	0	0	0
+9	TO	3	ZTO-3003	Araştırma ve Deneme Yöntemleri	Mevlüt AKÇURA	0	SALI	201	0	x	x	x	x	0	0	0	0	0	0
+10	BB	3	ZBB-3005 / BHB-3001	Araştırma ve Deneme Yöntemleri	Serkan CANDAR	0	PAZARTESİ	204	0	0	0	0	0	0	x	x	Lb	Lb	0
+11	TB	3	ZTB-3007 / TBİ-3007	Araştırma ve Deneme Yöntemleri	Mevlüt AKÇURA	0	SALI	201	0	x	x	x	x	0	0	0	0	0	0
+12	ZO	3	ZTN-3011 / ZOO-3005	Araştırma ve Deneme Yöntemleri	Soner YİĞİT	0	ÇARŞAMBA	113	0	x	x	x	x	0	0	0	0	0	0
+13	TM	4	TMT-4113	Araştırma ve Sunum Teknikleri	M. Burak BÜYÜKCAN	0	SALI	105	0	x	x	x	x	0	0	0	0	0	0
+14	TO	4	TBB-4009	Arazi Kullanım Planlaması	Hasan ÖZCAN	0	SALI	106	0	0	0	0	0	0	0	0	x	x	0
+15	BB	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+16	BK	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+17	TE	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+18	TM	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+19	TBT	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+20	TYS	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+21	TO	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	0	0	0
+22	ZO	1	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	0	0	0
+23	TB	5	ATA-1101	Atatürk İlkeleri ve İnkılap Tarihi I	Gökhan BAYRAM	0	SALI	Prof.Dr H. TURHAN	0	0	0	0	0	0	x	x	0	0	0
+24	TYS	4	TYS-4017	Atık Su Yönetimi	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+25	BB	3	ZBB-3017 / BHB-3007	Bahçe Bitki Organik Tarım	Seçkin KAYA	0	ÇARŞAMBA	204	0	0	0	0	0	0	0	0	x	x	0
+26	TYS	2	ZTY-2011 / TYS-2015	Bahçe Bitkileri	Harun ÇOBAN	0	SALI	201	0	0	0	0	0	0	x	x	Lb	Lb	0
+27	ZO	2	0	Seçmeli 	5. Gurup	BB	SALI	201	0	0	0	0	0	0	x	x	Lb	Lb	0
+28	BB	3	ZBB-3019 / BHB-3019	Bahçe Bitkileri Yetiştiriciğinde Çevresel Stres	Arda AKÇAL	0	PERŞEMBE	204	0	0	0	0	0	0	0	0	x	x	0
+29	BB	3	ZBB-3021 / BHB-3021	Bahçe Bitkileri Yetiştiriciliğinde Teknolojik Uygulamalar	F. Cem KUZUCU	0	PERŞEMBE	204	0	0	0	x	x	0	0	0	0	0	0
+30	BB	4	BHB-4019	Bahçe Ürünlerinin Muhafaza ve Pazara Hazırlık	Neslihan EKİNCİ	0	PAZARTESİ	203	0	0	0	0	0	0	x	Lb	Lb	0	0
+31	TYS	3	ZTY-3011	Betonarme	Ünal KIZIL	0	SALI	0	0	0	0	0	x	x	x	0	0	0	0
+32	TE	2	ZTE-2011	Bilgisayar Destekli Tasarım	Umut MUCAN	0	ÇARŞAMBA	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
+33	TM	2	ZTM-2011 / TMT-2011	Bilgisayar Destekli Tasarım I	Habib KOCABIYIK	0	PERŞEMBE	TM. Uyg.Lab.	0	0	0	0	0	0	x	x	x	x	0
+34	ZO	1	ZTN-1007 / ZOO-1009	Bilim, Üniversite ve Yaşam	Aynur KONYALI	0	PAZARTESİ	106	0	0	0	0	0	0	x	x	0	0	0
+35	TE	3	ZTE-3015	Bilimsel Araştırma Yöntemleri	Bengü EVEREST	0	PAZARTESİ	03	0	0	0	0	0	0	x	x	0	0	0
+36	BB	4	BHB-4001	Bitirme Ödevi I	Bölüm Öğr. Elem - BB	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+37	TBT	4	TRB-4007	Bitirme Ödevi I	Bölüm Öğr. Elem - TBT	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+38	TB	4	TBİ-4003	Bitirme Ödevi I	Bölüm Öğr. Elem - TB	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+39	TO	4	TBB-4005	Bitirme Ödevi I	Bölüm Öğr. Elem - TO	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+40	ZO	4	ZOO-4007	Bitirme Ödevi I	Bölüm Öğr. Elem - ZO	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+41	BK	4	BTK-4001	Bitirme Ödevi I	Figen MERT	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+42	TYS	4	TYS-4003	Bitirme Ödevi I	Bölüm Öğr. Elem - TYS	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+43	BK	3	BTK-3011	Bitki Bakteriyolojisi	Savaş KORKMAZ	0	PAZARTESİ	206	0	0	0	0	0	0	0	0	x	x	0
+44	TO	3	ZTO-3015	Bitki Besin Maddesi Semptomları	Ali SÜMER	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+45	TO	4	TBB-4017	Bitki Besin Maddesi Semptomları	Ali SÜMER	0	ÇARŞAMBA	105	0	0	0	0	0	0	0	0	x	x	0
+46	TBT	3	ZBY-3005 / TRB-3003	Bitki Doku Kültürü	Uğur SARI	0	PERŞEMBE	104	0	x	x	x	x	0	0	0	0	0	0
+47	ZO	2	ZTN-2005	Bitki Fizyolojisi	Yakup ÇIKILI	ZO	PAZARTESİ	201	0	0	0	0	0	0	x	x	x	x	0
+48	BK	2	ZBK-2001 / BTK-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	0	PERŞEMBE	01	0	x	x	x	Lb	0	0	0	0	0	0
+49	TE	1	ZTE-1011	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	0	PERŞEMBE	103	0	x	x	x	x	0	0	0	0	0	0
+50	TE	2	TAE-2009	Bitki Fizyolojisi	Ramazan ÇAKMAKÇI	0	PERŞEMBE	103	0	x	x	0	0	0	0	0	0	0	0
+51	BB	2	ZBB-2001 / BHB-2001	Bitki Fizyolojisi	Harun ÇOBAN	0	PERŞEMBE	202	0	x	x	Lb	Lb	0	0	0	0	0	0
+52	TBT	2	ZBY-2007 / TRB-2013	Bitki Fizyolojisi	Cem Ömer EGESEL	0	ÇARŞAMBA	205	0	x	x	x	x	0	0	0	0	0	0
+53	TYS	2	ZTY-2017	Bitki Fizyolojisi	Okan ERKEN	0	PAZARTESİ	103	0	0	0	0	0	0	x	x	Lb	Lb	0
+54	TB	2	ZTB-2001 / TBİ-2001	Bitki Fizyolojisi	Fatih KAHRIMAN	0	PAZARTESİ	102	0	0	0	0	0	0	x	x	x	Lb	0
+55	TO	3	ZTO-3007 / TBB-3007	Bitki Fizyolojisi	Yakup ÇIKILI	0	PAZARTESİ	201	0	0	0	0	0	0	x	x	x	x	0
+56	TO	4	TBB-4021	Bitki Fizyolojisi ve Biyokimyası	Gizem AKSU	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+57	TBT	4	TRB-4001	Bitki Islahında Biyoteknolojik Uygulamalar	İskender TİRYAKİ	0	SALI	104	0	0	0	0	0	0	x	x	x	0	0
+58	BK	4	BTK-4005	Bitki Klinikleri I	Ali KARANFİL	0	ÇARŞAMBA	Seminer Sln.	0	x	x	x	x	0	0	0	0	0	0
+59	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+60	TYS	2	TYS-2007	Bitki Koruma	Ali KARANFİL	0	SALI	06	0	0	0	0	x	x	x	0	0	0	0
+61	BK	4	BTK-4025	Bitki Koruma Ürünlerinin Organizasyonu	Burak POLAT	0	SALI	205	0	0	0	x	x	0	0	0	0	0	0
+62	BK	3	ZBK-3013	Bitki Korumada Biyoteknoloji	Çiğdem GÜNEŞ	0	ÇARŞAMBA	105	0	x	x	0	0	0	0	0	0	0	0
+63	BK	4	BTK-4027	Bitki Korumada Pestisit Uygulamaları	Levent EFİL	0	PAZARTESİ	205	0	0	0	0	0	0	x	x	0	0	0
+64	BK	3	ZBK-3005	Bitki Mikolojisi	Figen MERT	0	PERŞEMBE	206	0	x	x	Lb	Lb	0	0	0	0	0	0
+65	BK	3	ZBK-3015 / BTK-3005	Bitki Virolojisi	Savaş KORKMAZ	0	PAZARTESİ	206	0	0	0	0	0	0	x	x	0	0	0
+66	BK	3	ZBK-3019	Bitkilerde Hastalık Gelişimi	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+67	TBT	4	TRB-4013	Biyogüvenlik	Şemun TAYYAR	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+68	TBT	4	TRB-4009	Biyoinformatik I	Uğur SARI	0	PAZARTESİ	104	0	0	0	0	0	0	x	x	x	0	0
+69	TBT	2	ZBY-2005 / TRB-2005	Biyokimya	Cahit AKGÜL	0	CUMA	102	0	0	0	x	x	0	0	0	0	0	0
+70	TB	2	ZTB-2015	Biyokimya	Cahit AKGÜL	0	CUMA	102	0	0	0	x	x	0	0	0	0	0	0
+71	ZO	2	ZTN-2007	Biyokimya	Hande Işıl AKBAĞ	ZO	PAZARTESİ	05	0	0	0	x	x	0	0	0	0	0	0
+72	TM	4	TMT-4109	Biyokütle ve Tarımsal Atık Yönetimi	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+73	TM	1	ZTM-1005	Biyoloji	Mustafa Kemal AKBULUT	0	CUMA	03	0	x	x	x	x	0	0	0	0	0	0
+74	TB	3	ZTB-3003 / TBİ-3003	Biyoteknoloji	Onur Sinan TÜRKMEN	0	PAZARTESİ	101	0	x	x	x	Lb	0	0	0	0	0	0
+75	TBT	3	ZBY-3007 / TRB-3005	Biyoteknolojiye Giriş	Şemun TAYYAR	0	ÇARŞAMBA	204	0	x	x	x	x	0	0	0	0	0	0
+76	TE	1	ZTE-1005 / TAE-1107	Botanik	H. Nihan ÇİFTÇİ	0	ÇARŞAMBA	05	0	0	0	x	x	Lb	Lb	0	0	0	0
+77	TYS	1	TYS-1015	Botanik	Tülay TÜTENOCAKLI	0	CUMA	101	0	0	0	x	x	0	0	0	0	0	0
+78	TB	1	ZTB-1005 / TBİ-1007	Botanik	Tülay TÜTENOCAKLI	0	CUMA	101	0	0	0	x	x	x	Lb	0	0	0	0
+79	TO	1	ZTO-1005 / TBB-1009	Botanik	Tülay TÜTENOCAKLI	0	CUMA	101	0	0	0	x	x	x	Lb	0	0	0	0
+80	BB	1	ZBB-1005 / BHB-1011	Botanik	Canan Öztokat KUZUCU	0	PERŞEMBE	202	0	0	0	x	x	Lb	Lb	0	0	0	0
+81	BK	1	ZBK-1005 / BTK-1003	Botanik	Ahmet ULUDAĞ	0	ÇARŞAMBA	103	0	0	0	0	0	0	x	x	x	Lb	0
+82	TBT	1	ZBY-1005 / TRB-1109	Botanik	Müge Teker YILDIZ	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	x	x	x	x
+83	ZO	1	ZTN-1005 / ZOO-1007	Botanik	Müge Teker YILDIZ	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	x	x	x	x
+84	BK	3	ZBK-3017 / BTK-3003	Böcek Ekolojisi	Ali ÖZPINAR	0	ÇARŞAMBA	205	0	0	0	0	0	0	0	0	x	x	0
+85	BK	3	ZBK-3011 / BTK-3009	Böcek Morfolojisi ve Fizyolojisi	Uğur GÖZEL	0	CUMA	206	0	0	0	0	x	x	0	0	0	0	0
+86	BK	3	ZBK-3007 / BTK-3007	Böcek Sistematiği	Şahin KÖK	0	PERŞEMBE	206	0	0	0	0	0	0	x	x	Lb	Lb	0
+87	ZO	3	ZTN-3003	Büyükbaş Hayvan Yetiştirme	Feyzi UĞUR	0	ÇARŞAMBA	113	0	0	0	0	0	x	x	x	0	0	0
+88	TE	2	ZTE-2015	Coğrafi Bilgi Sistemleri	Melis İNALPULAT	0	CUMA	103	0	x	x	x	x	0	0	0	0	0	0
+89	TM	3	ZTM-3013	Coğrafi Bilgi Sistemleri	Timuçin EVEREST	0	PERŞEMBE	103	0	0	0	0	0	0	0	x	x	x	x
+90	TO	2	ZTO-2003	Coğrafi Bilgi Sistemleri	Hasan Özcan	0	PERŞEMBE	103	0	0	0	0	0	0	0	x	x	x	x
+91	TB	4	TBİ-4001	Çayır Mera Yönetimi	Fırat ALATÜRK	0	PAZARTESİ	106	0	0	0	0	0	0	0	0	x	x	Lb
+92	ZO	4	ZOO-4015	Çevre ve Sürdürülebilirliği	Aynur KONYALI	0	PERŞEMBE	205	0	0	0	0	0	0	0	0	x	x	0
+93	TYS	3	TYS-3015	Çevresel Etki Değerlendirmesi	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+94	TO	3	ZTO-3019	Çevresel Etki Değerlendirmesi	Hasan Özcan	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+95	TB	4	TBİ-4011	Çim Tekniği	Harun BAYTEKİN	0	ÇARŞAMBA	106	0	x	x	0	0	0	0	0	0	0	0
+96	BK	4	BTK-4021	Depolanmış Ürün Hastalıkları	Ahmet ULUDAĞ	0	SALI	205	0	x	x	0	0	0	0	0	0	0	0
+97	BK	4	BTK-4013	Depolanmış Ürün Zararlıları	İsmail KASAP	0	PAZARTESİ	205	0	0	0	0	0	0	0	0	x	x	0
+98	TYS	2	ZTY-2009 / TYS-2013	Diferansiyel Denklemler	Mehmet GÜMÜŞ	0	SALI	06	0	x	x	x	0	0	0	0	0	0	0
+99	TM	2	ZTM-2003 / TMT-2009	Diferansiyel Denklemler	Saniye CAN	0	SALI	113	0	0	0	0	0	x	x	x	0	0	0
+100	TE	3	TAE-3009	Doğal Kaynaklar ve Çevre Ekonomisi	Sibel TAN	0	PAZARTESİ	03	0	x	x	0	0	0	0	0	0	0	0
+101	BB	4	BHB-4011	Doku Kültürü Teknikleri	Zeliha GÖKBAYRAK	0	ÇARŞAMBA	203	0	0	0	0	0	0	0	0	x	x	0
+102	TYS	4	TYS-4001	Drenaj Sistemlerinin Tasarımı	İsmail TAŞ	0	PAZARTESİ	05	0	0	0	0	0	0	x	x	x	x	0
+103	TE	2	ZTE-2017	Ekoloji	Harun BAYTEKİN	0	SALI	106	0	x	x	0	0	0	0	0	0	0	0
+104	ZO	1	ZTN-1011	Ekonomi	Selma KAYALAK	0	SALI	102	0	x	x	0	0	0	0	0	0	0	0
+105	TM	2	ZTM-2005	Ekonomi	Selma KAYALAK	0	SALI	102	0	x	x	0	0	0	0	0	0	0	0
+106	TB	2	ZTB-2005	Ekonomi	Selma KAYALAK	0	SALI	102	0	x	x	0	0	0	0	0	0	0	0
+107	TE	2	ZTE-2001	Ekonomi	Sibel TAN	0	SALI	106	0	0	0	x	x	0	0	0	0	0	0
+108	TYS	4	TYS-4021	Elektrik ve Elektroniğin Temel İlkeleri	Murat YILDIRIM	0	PERŞEMBE	06	0	0	0	0	0	0	0	0	x	x	x
+109	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+110	BK	4	BTK-4009	Endüstri Bitkileri Hastalıkları	Ali KARANFİL	0	PAZARTESİ	205	0	x	x	0	0	0	0	0	0	0	0
+111	TB	3	ZTB-3005 / TBİ-3011	Endüstri Bitkileri I	Ramazan ÇAKMAKÇI	0	ÇARŞAMBA	106	0	0	0	0	0	0	x	x	x	0	0
+112	TBT	3	ZBY-3013 / TRB-3009	Enstrümental Analiz	İsmet KAYA	0	SALI	06	0	0	0	0	0	0	0	x	x	0	0
+113	TO	2	ZTO-2013	Entomoloji	Levent Efil	0	ÇARŞAMBA	102	0	0	0	0	0	0	x	x	x	Lb	0
+114	ZO	2	ZTN-2023	Seçmeli 	3. Gurup	BK	ÇARŞAMBA	102	0	0	0	0	0	0	x	x	x	Lb	0
+115	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+116	TM	3	ZTM-3011 / TMT-3105	Ergonomi	Sarp Korkut SÜMER	0	PERŞEMBE	TM. Uyg.Lab.	0	x	x	x	x	0	0	0	0	0	0
+117	BB	3	ZBB-3015 / BHB-3009	Fide ve Fidan Yetiştiriciliği	F. Cem KUZUCU	0	ÇARŞAMBA	203	0	x	x	Lb	Lb	0	0	0	0	0	0
+118	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+119	BK	3	ZBK-3021	Fitopatolojide Moleküler Biyoloji	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+120	BB	1	ZBB-1001 / BHB-1101	Fizik	Afşar KABAŞ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	0	x	x	x
+121	BK	1	ZBK-1001 / BTK-1111	Fizik	Afşar KABAŞ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	0	x	x	x
+122	TE	1	ZTE-1001 / TAE-1101	Fizik	Afşar KABAŞ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	0	0	0	x	x	x
+123	TM	1	ZTM-1001 / TMT-1001	Fizik	Mehmet TÜYSÜZ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	x	0	0	0
+124	TBT	1	ZBY-1001 / TRB-1001	Fizik	Mehmet TÜYSÜZ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	x	0	0	0
+125	TYS	1	ZTY-1001 / TYS-1007	Fizik	Mehmet TÜYSÜZ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	x	0	0	0
+126	TB	1	ZTB-1001 / TBİ-1001	Fizik	Sibel ŞEN	0	PAZARTESİ	01	0	x	x	x	0	0	0	0	0	0	0
+127	TO	1	ZTO-1001 / TBB-1001	Fizik	Sibel ŞEN	0	PAZARTESİ	01	0	x	x	x	0	0	0	0	0	0	0
+128	ZO	1	ZTN-1001 / ZOO-1001	Fizik	Sibel ŞEN	0	PAZARTESİ	01	0	x	x	x	0	0	0	0	0	0	0
+129	TYS	4	TYS-4019	Fotogrometri	Melis İNALPULAT	0	PERŞEMBE	06	0	0	0	0	0	x	x	Lb	0	0	0
+130	BB	3	ZBB-3009 / BHB-3005	Genel Bağcılık	Alper DARDENİZ	0	SALI	204	0	0	0	0	0	0	x	x	0	0	0
+131	TBT	1	TRB-1003	Genel Kimya I	Ömer Faruk ÖZTÜRK	0	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+132	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+133	BK	2	ZBK-2013 / BTK-2005	Genel Sebzecilik	Canan Öztokat KUZUCU	0	SALI	202	0	0	0	0	0	0	x	x	Lb	Lb	0
+134	TB	2	TBİ-2013	Genel Sebzecilik	Canan Öztokat KUZUCU	0	SALI	202	0	0	0	0	0	0	x	x	Lb	0	0
+135	TO	2	ZTO-2009 / TBB-2013	Genel Sebzecilik	Tolga SARIYER	0	CUMA	201	0	0	0	0	0	0	x	x	Lb	Lb	0
+136	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+137	BK	2	BTK-2003	Genetik	Cem Ömer EGESEL	0	PERŞEMBE	01	0	0	0	0	0	x	x	0	0	0	0
+138	BB	2	ZBB-2003 / BHB-2003	Genetik	Murat ŞEKER	0	CUMA	203	0	0	0	x	x	x	0	0	0	0	0
+139	TBT	2	ZBY-2003 / TRB-2003	Genetik	İskender TİRYAKİ	0	PERŞEMBE	205	0	0	x	x	x	0	0	0	0	0	0
+140	ZO	3	ZTN-3017	Genetik Kaynakların Muhafazası	Cem Ömer EGESEL	0	PAZARTESİ	Seminer Sln.	0	0	0	0	0	0	0	x	x	x	x
+141	TBT	4	TRB-4003	Genetik Mühendisliği	Hanife YANDAYAN	0	PAZARTESİ	104	0	0	x	x	x	0	0	0	0	0	0
+142	BK	2	BTK-2009	Gıda Bilimi ve Güvenliği	Murat ZORBA	0	PAZARTESİ	113	0	0	0	x	x	0	0	0	0	0	0
+143	TE	2	ZTE-2005 / TAE-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	0	PAZARTESİ	113	0	x	x	0	0	0	0	0	0	0	0
+144	TB	2	ZTB-2007 / TBİ-2007	Gıda Bilimi ve Güvenliği	Murat ZORBA	0	PAZARTESİ	113	0	0	0	x	x	0	0	0	0	0	0
+145	TO	2	ZTO-2017 / TBB-2005	Gıda Bilimi ve Güvenliği	Murat ZORBA	0	PAZARTESİ	113	0	x	x	0	0	0	0	0	0	0	0
+146	ZO	2	ZOO-2003	Gıda Bilimi ve Güvenliği	Murat ZORBA	0	0	SADECE SINAV	0	0	0	x	x	0	0	0	0	0	0
+147	BB	2	ZBB-2009 / BHB-2007	Gıda Bilimi ve Güvenliği	Hakan ENGİN	0	PAZARTESİ	204	0	0	0	x	x	0	0	0	0	0	0
+148	TE	3	ZTE-3017	Girişimcilik ve Sektörel Etkileşim	Bengü EVEREST	0	SALI	03	0	0	0	0	0	0	0	0	x	x	0
+149	TYS	3	ZTY-3015	Grafiksel Analiz	İsmail TAŞ	0	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+150	TM	4	TMT-4001	Hassas Tarım Teknolojileri	Sakine ÖZPINAR	0	PAZARTESİ	TM. Uyg.Lab.	0	x	x	x	x	0	0	0	0	0	0
+151	ZO	3	ZOO-3003	Hayvan Anatomisi	Baver COŞKUN	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+152	TBT	2	ZBY-2017 / TRB-2007	Hayvan Anatomisi Fizyolojisi	Baver COŞKUN	0	PERŞEMBE	206	0	0	0	0	0	0	0	0	x	x	0
+153	ZO	3	ZOO-3011	Hayvan Barınakları	Sefa AKSU	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+154	ZO	3	ZOO-3001	Hayvan Besleme Biyokimyası	Hande Işıl AKBAĞ	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+155	ZO	3	ZOO-3013	Hayvan Fizyolojisi	Hande Işıl Akbağ	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+156	ZO	4	ZOO-4009	Hayvan Hastalıkları	Baver COŞKUN	0	PERŞEMBE	205	0	0	0	0	0	0	x	x	0	0	0
+157	ZO	4	ZOO-4005	Hayvan Islahına Giriş	Hakan ERDEM	0	PAZARTESİ	106	0	x	x	0	0	0	0	0	0	0	0
+158	ZO	2	ZTN-2003 / ZOO-2005	Hayvan ve Çevresi	Cemil Tölü	ZO	SALI	203	0	0	0	x	x	0	0	0	0	0	0
+159	ZO	4	ZOO-4019	Hayvan ve Organik Üretim	Cemil TÖLÜ	0	SALI	102	0	0	0	0	0	0	x	x	0	0	0
+160	TO	2	TBB-2015	Hayvan Yetiştirme	Feyzi UĞUR	0	SALI	01	0	0	0	0	0	0	0	x	x	0	0
+161	ZO	4	ZOO-4011	Hayvan Yetiştirme	Feyzi UĞUR	0	PAZARTESİ	201	0	0	0	x	x	x	x	0	0	0	0
+162	TE	3	ZTE-3019	Hayvancılık İşletme Ekonomisi	Damla ÖZSAYIN	0	ÇARŞAMBA	03	0	0	0	0	0	0	0	0	0	x	x
+163	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+164	TBT	2	ZBY-2009	Hayvansal Üretim	Aynur KONYALI	0	PAZARTESİ	202	0	x	x	x	x	0	0	0	0	0	0
+165	TYS	2	ZTY-2005 / TYS-2009	Hayvansal Üretim	Aynur KONYALI	0	PAZARTESİ	202	0	x	x	x	x	0	0	0	0	0	0
+166	BB	2	ZBB-2017	Hayvansal Üretim	Feyzi UĞUR	0	SALI	01	0	0	0	0	0	0	0	x	x	x	x
+167	TO	2	ZTO-2011	Hayvansal Üretim	Feyzi UĞUR	0	SALI	01	0	0	0	0	0	0	0	x	x	x	x
+168	TM	4	TMT-4121	Hayvansal Üretim Makinaları ve Teknolojileri	Sakine ÖZPINAR	0	PERŞEMBE	105	0	x	x	x	x	0	0	0	0	0	0
+169	BK	3	BTK-3001	Herboloji	Ahmet ULUDAĞ	0	PAZARTESİ	206	0	x	x	x	x	0	0	0	0	0	0
+170	TYS	3	ZTY-3009	Hidrolik	M. Yetiş YAVUZ	0	SALI	0	0	x	x	x	0	0	0	0	0	0	0
+171	TYS	3	ZTY-3001 / TYS-3003	Hidroloji	İsmail TAŞ	0	ÇARŞAMBA	0	0	x	x	x	x	0	0	0	0	0	0
+172	BB	4	BHB-4009	Ilıman İklim Meyve Türleri I	Engin Gür	0	PERŞEMBE	203	0	0	0	0	0	0	x	Lb	Lb	0	0
+173	TYS	2	ZTY-2001	İstatistik	Fatih KAHRIMAN	0	ÇARŞAMBA	202	0	x	x	x	x	0	0	0	0	0	0
+174	TE	2	ZTE-2003	İstatistik	Mehmet MENDEŞ	0	PERŞEMBE	106	0	0	0	x	x	x	x	0	0	0	0
+175	BB	2	ZBB-2005 / BHB-2013	İstatistik	Murat ŞEKER	0	PERŞEMBE	203	0	0	0	0	0	0	0	x	x	Lb	Lb
+176	BK	2	ZBK-2003	İstatistik	Ali Kürşat ŞAHİN	0	ÇARŞAMBA	01	0	0	0	0	0	0	x	x	x	Lb	0
+177	TBT	2	ZBY-2001 / TRB-2001	İstatistik	??	0	SALI	101	0	x	x	x	x	0	0	0	0	0	0
+178	TB	2	ZTB-2003 / TBİ-2003	İstatistik	Fatih KAHRIMAN	0	ÇARŞAMBA	202	0	x	x	x	x	0	0	0	0	0	0
+179	TE	3	TAE-3005	İstatistik II	Selma KAYALAK	0	PAZARTESİ	03	0	0	0	0	0	0	0	0	x	x	x
+180	TM	3	ZTM-3003	İstatistik II	Mevlüt AKÇURA	0	SALI	201	0	x	x	x	x	0	0	0	0	0	0
+181	BB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	0	0	0	0	x	x	0	0	0	0
+182	BK	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	0	0	0	0	x	x	0	0	0	0
+183	TE	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	0	0	x	x	0	0	0	0	0	0
+184	TM	1	İSG-1001	İş Sağlığı ve Güvenliği I	Sarp Korkut SÜMER	0	SALI	TM. Uyg.Lab.	0	0	0	x	x	0	0	0	0	0	0
+185	TBT	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	0	0	x	x	0	0	0	0	0	0
+186	TYS	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	x	x	0	0	0	0	0	0	0	0
+187	TB	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	x	x	0	0	0	0	0	0	0	0
+188	TO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	x	x	0	0	0	0	0	0	0	0
+189	ZO	1	İSG-1001	İş Sağlığı ve Güvenliği I	Ediz Sait Yörü	0	CUMA	AMFİ	0	0	0	x	x	0	0	0	0	0	0
+190	TYS	1	TYS-1003	Jeoloji	Hüseyin EKİNCİ	0	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+191	TO	4	TBB-4011	Jeomorfoloji	Hüseyin EKİNCİ	0	SALI	103	0	0	0	0	0	0	0	0	0	x	x
+192	ZO	4	ZOO-4003	Kanatlı Hayvan Besleme	Kemal ÇELİK	0	SALI	04	0	x	x	x	x	0	0	0	0	0	0
+193	TBT	3	ZBY-3015	Kantitatif Genetik	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+194	TBT	3	TRB-3011	Kantitatif Genetik ve Analizleri	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+195	BB	1	ZBB-1007 / BHB-1013	Kariyer Planlama	H. Nihan ÇİFTÇİ	0	ÇARŞAMBA	104	0	0	0	x	x	0	0	0	0	0	0
+196	BK	1	ZBK-1007 / BTK-1013	Kariyer Planlama	Ali Kürşat ŞAHİN	0	SALI	206	0	x	x	0	0	0	0	0	0	0	0
+197	TE	1	ZTE-1007 / TAE-1013	Kariyer Planlama	Selma KAYALAK	0	PAZARTESİ	Seminer Sln.	0	0	0	x	x	0	0	0	0	0	0
+198	TM	1	ZTM-1013 / TMT-1013	Kariyer Planlama	M. Burak BÜYÜKCAN	0	PERŞEMBE	102	0	0	0	x	x	0	0	0	0	0	0
+199	TBT	1	ZBY-1007 / TRB-1011	Kariyer Planlama	Cem Ömer EGESEL	0	PERŞEMBE	02	0	0	0	x	x	0	0	0	0	0	0
+200	TYS	1	ZTY-1007 / TYS-1017	Kariyer Planlama	M. Yetiş YAVUZ	0	ÇARŞAMBA	104	0	x	x	0	0	0	0	0	0	0	0
+201	TB	1	ZTB-1007 / TBİ-1009	Kariyer Planlama	Onur HOCAOĞLU	0	PAZARTESİ	01	0	0	0	0	0	0	x	x	0	0	0
+202	TO	3	TBB-3009	Kartoğrafya	Hasan ÖZCAN	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+203	BB	4	BHB-4005	Kesme Çiçek Yetiştirme Teknikleri	Arda AKÇAL	0	PERŞEMBE	203	0	x	x	0	0	0	0	0	0	0	0
+204	TE	2	TAE-2003	Kırsal Sosyoloji	Sema Ezgi YÜCEER PALA	0	ÇARŞAMBA	202	0	0	0	0	0	0	0	0	x	x	0
+205	TYS	3	TYS-3001	Kırsal Yerleşim Planlaması	Melis İNALPULAT	0	PAZARTESİ	0	0	0	0	0	0	x	x	x	0	0	0
+206	BB	1	ZBB-1003 / BHB-1003	Kimya	Selin SAĞBAŞ SUNER	0	PERŞEMBE	01	0	0	0	0	0	0	0	x	x	x	x
+207	BK	1	ZBK-1003 / BTK-1007	Kimya	Selin SAĞBAŞ SUNER	0	PERŞEMBE	01	0	0	0	0	0	0	0	x	x	x	x
+208	TE	1	ZTE-1003 / TAE-1003	Kimya	Selin SAĞBAŞ SUNER	0	PERŞEMBE	01	0	0	0	0	0	0	0	x	x	x	x
+209	TM	1	ZTM-1003 / TMT-1003	Kimya	Ali BİLİCİ	0	PERŞEMBE	02	0	0	0	0	0	0	x	x	x	x	0
+210	TBT	1	ZBY-1003	Kimya	Ali BİLİCİ	0	PERŞEMBE	02	0	0	0	0	0	0	x	x	x	x	0
+211	TYS	1	ZTY-1003 / TYS-1009	Kimya	Ali BİLİCİ	0	PERŞEMBE	02	0	0	0	0	0	0	x	x	x	x	0
+212	TB	1	ZTB-1003 / TBİ-1003	Kimya	Elif KARACAN YELDİR	0	PERŞEMBE	101	0	0	0	0	0	0	x	x	x	x	0
+213	TO	1	ZTO-1003 / TBB-1003	Kimya	Elif KARACAN YELDİR	0	PERŞEMBE	101	0	0	0	0	0	0	x	x	x	x	0
+214	ZO	1	ZTN-1003 / ZOO-1003	Kimya	Elif KARACAN YELDİR	0	PERŞEMBE	101	0	0	0	0	0	0	x	x	x	x	0
+215	TM	4	TMT-4119	Koruyucu Toprak İşleme ve Doğrudan Ekim	Sakine ÖZPINAR	0	PERŞEMBE	105	0	0	0	0	0	0	x	x	x	x	0
+216	ZO	3	ZTN-3001	Küçükbaş Hayvan Yetiştirme	Aynur KONYALI	0	ÇARŞAMBA	113	0	0	0	0	0	0	0	0	x	x	x
+217	BB	4	BHB-4013	Kültür Sebzeleri I	Canan Öztokat KUZUCU	0	PERŞEMBE	203	0	0	0	x	x	0	0	0	0	0	0
+218	TM	3	ZTM-3005 / TMT-3107	Makine Elemanları	Mehmet Yazar	0	ÇARŞAMBA	06	0	0	0	0	0	0	x	x	x	0	0
+219	TE	3	ZTE-3001 / TAE-3017	Makroekonomi	Özge Can Niyaz ALTINOK	0	SALI	02	0	0	0	x	x	0	0	0	0	0	0
+220	TM	2	TMT-2001	Malzeme Bilgisi	Volkan ESKİZEYBEK	0	SALI	113	0	x	x	x	x	0	0	0	0	0	0
+221	TM	2	ZTM-2001	Malzeme Bilimi	Volkan ESKİZEYBEK	0	SALI	113	0	0	0	x	x	0	0	0	0	0	0
+222	TB	2	ZTB-2011	Malzeme Bilimi	Volkan ESKİZEYBEK	0	SALI	113	0	0	0	x	x	0	0	0	0	0	0
+223	BK	3	ZBK-3001	Malzeme Bilimi	Volkan ESKİZEYBEK	0	SALI	113	0	x	x	0	0	0	0	0	0	0	0
+224	TE	3	ZTE-3009	Malzeme Bilimi	Volkan ESKİZEYBEK	0	SALI	113	0	x	x	0	0	0	0	0	0	0	0
+225	TBT	3	ZBY-3001	Malzeme Bilimi	Volkan ESKİZEYBEK	0	SALI	113	0	x	x	0	0	0	0	0	0	0	0
+226	TB	1	ZTB-1009 / TBİ-1105	Matematik	Selin TÜRKMEN	0	ÇARŞAMBA	103	0	x	x	x	0	0	0	0	0	0	0
+227	BB	1	ZBB-1009 / BHB-1105	Matematik	Saniye CAN	0	PAZARTESİ	113	0	0	0	0	0	x	x	x	0	0	0
+228	BK	1	ZBK-1009 / BTK-1109	Matematik	Saniye CAN	0	PAZARTESİ	113	0	0	0	0	0	x	x	x	0	0	0
+229	TE	1	ZTE-1009 / TAE-1005	Matematik	Saniye CAN	0	PAZARTESİ	113	0	0	0	0	0	x	x	x	0	0	0
+230	TM	1	ZTM-1009 / TMT-1005	Matematik	Saniye CAN	0	PAZARTESİ	113	0	0	0	0	0	0	0	0	x	x	x
+231	TBT	1	ZBY-1009 / TRB-1005	Matematik	Saniye CAN	0	PAZARTESİ	113	0	0	0	0	0	0	0	0	x	x	x
+232	TYS	1	ZTY-1009 / TYS-1011	Matematik	Saniye CAN	0	SALI	113	0	0	0	0	0	0	0	0	x	x	x
+233	TO	1	ZTO-1007 / TBB-1005	Matematik	Saniye CAN	0	SALI	113	0	0	0	0	0	0	0	0	x	x	x
+234	ZO	1	ZTN-1009 / ZOO-1005	Matematik	Saniye CAN	0	SALI	113	0	0	0	0	0	0	0	0	x	x	x
+235	TM	4	TMT-4111	Matematiksel Modelleme İlkeleri	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+236	TM	3	ZTM-3017 / TMT-3119	Mekanizma Tekniği	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+237	TM	3	TMT-3115	Meliorasyon Makinaları	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+238	TYS	4	TYS-4013	Mesleki Bilgisayar Programları I	Umut MUCAN	0	CUMA	Bilgisayar Lab.	x	x	x	x	0	0	0	0	0	0	0
+239	TYS	3	TYS-3017	Mesleki İngilizce	Ünal KIZIL	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+240	BB	4	BHB-4007	Mesleki İngilizce	Zeliha GÖKBAYRAK	0	PAZARTESİ	203	0	0	0	x	x	0	0	0	0	0	0
+241	TBT	3	ZBY-3009 / TRB-3007	Mesleki İngilizce I	Hanife YANDAYAN	0	SALI	206	0	0	0	0	0	x	x	0	0	0	0
+242	TE	4	TAE-4005	Mesleki Uygulama I	Bölüm Öğr. Elem - TE	0	ÇARŞAMBA	04	0	x	x	x	x	0	0	0	0	0	0
+243	TO	4	TBB-4007	Mesleki Uygulama I	Bölüm Öğr. Elem - TO	0	PERŞEMBE	06	0	x	x	x	x	0	0	0	0	0	0
+244	TB	3	ZTB-3009 / TBİ-3009	Mesleki Uygulama I	Bölüm Öğr. Elem - TB	0	SALI	Seminer Sln.	0	0	0	0	0	0	x	x	x	x	0
+245	BB	4	BHB-4003	Mesleki Uygulama I	Bölüm Öğr. Elem - BB	0	SALI	Bölüm Lab.	0	Lb	Lb	Lb	Lb	0	0	0	0	0	0
+246	TM	4	TMT-4103	Mesleki Uygulama I	M. Burak Büyükcan	0	ÇARŞAMBA	TM. Uyg.Lab.	0	0	0	0	x	x	0	0	0	0	0
+247	TBT	4	TRB-4005	Mesleki Uygulama I	Bölüm Öğr. Elem - TBT	0	SALI	104	0	x	x	x	x	0	0	0	0	0	0
+248	TYS	4	TYS-4005	Mesleki Uygulama I	Okan ERKEN	0	ÇARŞAMBA	01	0	x	x	x	x	0	0	0	0	0	0
+249	TO	1	ZTO-1009 / TBB-1007	Meteoroloji	Melis İNALPULAT	0	ÇARŞAMBA	102	0	0	0	x	x	0	0	0	0	0	0
+250	BB	1	BHB-1009	Meteoroloji	Sefa AKSU	0	SALI	02	0	x	x	0	0	0	0	0	0	0	0
+251	BK	1	BTK-1001	Meteoroloji	Melis İNALPULAT	0	ÇARŞAMBA	102	0	0	0	x	x	0	0	0	0	0	0
+252	TE	1	TAE-1109	Meteoroloji	Sefa AKSU	0	SALI	02	0	x	x	0	0	0	0	0	0	0	0
+253	TYS	1	ZTY-1011 / TYS-1005	Meteoroloji	İsmail TAŞ	0	PERŞEMBE	101	0	0	0	x	x	0	0	0	0	0	0
+254	BK	4	BTK-4003	Meyve ve Bağ Zararlıları	Ali ÖZPINAR	0	PAZARTESİ	205	0	0	0	x	x	0	0	0	0	0	0
+255	TM	4	TMT-4105	Mezuniyet Tezi	Bölüm Öğr. Elem - TM	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+256	TE	4	TAE-4007	Mezuniyet Tezi	Bölüm Öğr. Elem - TE	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+257	TE	2	ZTE-2013	Mikro Ekonomi	Arif SEMERCİ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+258	TE	3	TAE-3003	Mikro Ekonomi	Arif SEMERCİ	0	PAZARTESİ	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+259	BK	1	ZBK-1011	Mikrobiyoloji	Ali KARANFİL	0	SALI	203	0	0	0	0	0	0	x	x	Lb	Lb	0
+260	ZO	3	ZTN-3015	Moleküler Biyoloji	Hanife YANDAYAN	0	PERŞEMBE	05	0	0	0	0	0	0	0	x	x	x	x
+261	TB	4	TBİ-4007	Moleküler Biyoloji	Hanife YANDAYAN	0	SALI	104	0	0	0	0	0	0	0	0	0	x	x
+262	TBT	3	ZBY-3003 / TRB-3001	Moleküler Biyoloji	Hanife YANDAYAN	0	PERŞEMBE	201	0	0	0	0	0	0	x	x	0	0	0
+263	TBT	4	TRB-4015	Moleküler Biyolojide Kullanılan Yöntemler	Hanife YANDAYAN	0	ÇARŞAMBA	106	0	0	0	x	x	0	0	0	0	0	0
+264	TBT	4	TRB-4017	Moleküler Tarım	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+265	TM	3	ZTM-3009	Motor Teknolojileri	Sarp Korkut SÜMER	0	SALI	TM. Uyg.Lab.	0	0	0	0	0	0	x	x	x	x	0
+266	TM	1	ZTM-1007	Mühendisliğe Giriş	Ünal ÜRKMEZ	0	SALI	05	0	0	0	0	0	0	x	x	0	0	0
+267	TM	1	TMT-1107	Mühendislik Biyolojisi	Mustafa Kemal AKBULUT	0	CUMA	03	0	x	x	x	x	0	0	0	0	0	0
+268	ZO	3	ZTN-3005	Mühendislik Mekaniği	Volkan ESKİZEYBEK	0	PAZARTESİ	02	0	x	x	x	x	0	0	0	0	0	0
+269	BB	3	ZBB-3003	Mühendislik Mekaniği	F. Göksel PEKİTKAN	0	SALI	204	0	x	x	x	x	0	0	0	0	0	0
+270	TYS	2	TYS-2001	Mühendislik Ölçmeleri	Murat YILDIRIM	0	PERŞEMBE	202	0	0	0	0	0	x	x	Lb	0	0	0
+271	TM	2	ZTM-2007/ TMT-2007	Mühendislik Termodinamiği	Habib KOCABIYIK	0	ÇARŞAMBA	206	0	0	x	x	x	0	0	0	0	0	0
+272	TBT	2	ZBY-2015 / TRB-2011	Organik Kimya	Fatma AYDIN	0	PERŞEMBE	113	0	0	0	0	0	0	x	x	0	0	0
+273	BK	4	BTK-4019	Organik Tarımda Hastalıklarla Mücadele	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+274	BK	4	BTK-4011	Organik Tarımda Zararlılarla Mücadele	Ali ÖZPINAR	0	ÇARŞAMBA	205	0	0	0	0	0	0	x	x	0	0	0
+275	BK	4	BTK-4023	Orman Bitkileri Zararlıları	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+276	TO	2	ZTO-2005	Ölçme Bilgisi	Okan ERKEN	0	PERŞEMBE	03	0	x	x	x	x	0	0	0	0	0	0
+277	ZO	2	ZOO-2013	Ölçme Bilgisi	Okan ERKEN	0	0	SADECE SINAV	0	x	x	x	0	0	0	0	0	0	0
+278	ZO	3	ZTN-3007	Ölçme Bilgisi	Okan ERKEN	0	SALI	03	0	x	x	x	x	0	0	0	0	0	0
+279	TM	2	ZTM-2015	Ölçme Kontrol ve Otomasyon	M. Burak BÜYÜKCAN	0	ÇARŞAMBA	206	0	0	0	0	0	0	x	x	x	x	0
+280	TO	4	TBB-4019	Örtüaltı Yetiştiriciliğinde Gübreleme	Gizem AKSU	0	ÇARŞAMBA	105	0	0	0	0	0	0	x	x	0	0	0
+281	BB	3	BHB-3011	Pazarlama	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+282	TM	4	TMT-4117	Pazarlama ve Girişimcilik	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+283	TYS	1	ZTY-1013	Peyzaj Mimarlığı	Arda AKÇAL	0	PAZARTESİ	06	0	0	0	0	0	0	0	0	x	x	0
+284	TM	3	ZTM-3001	Programlamaya Giriş	İsmail KAVDIR	0	PAZARTESİ	103	0	x	x	x	x	0	0	0	0	0	0
+285	TM	3	ZTM-3015 / TMT-3109	Sensörler ve Kontrol Sistemleri	F. Göksel PEKİTKAN	0	CUMA	103	0	0	0	0	x	x	Lb	Lb	0	0	0
+286	TM	4	TMT-4107	Sera Mekanizasyonu	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+287	TYS	3	TYS-3005	Sera Yapım Tekniği	Sefa AKSU	0	PAZARTESİ	0	0	x	x	x	x	0	0	0	0	0	0
+288	TYS	3	ZTY-3003 / TYS-3007	Sistem Mühendisliği	Murat TEKİNER	0	PAZARTESİ	0	0	0	0	0	0	0	0	0	x	x	x
+289	TBT	4	TRB-4011	Sitogenetik	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+290	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+291	BK	3	STJ-3001	Staj I	Çiğdem GÜNEŞ	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+292	TE	3	STJ-3001	Staj I	Selma KAYALAK	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+293	TM	3	STJ-3001	Staj I	Bölüm Öğr. Elem - TM	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+294	TBT	3	STJ-3001	Staj I	Uğur SARI	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+295	TYS	3	STJ-3001	Staj I	Melis İNALPULAT	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+296	TB	3	STJ-3001	Staj I	Bahri İZCİ	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+297	TO	3	STJ-3001	Staj I	Bölüm Öğr. Elem - TO	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+298	ZO	3	STJ-3001	Staj I	Cemil TÖLÜ	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+299	BB	3	STJ-3001	Staj I (Alttan Alan Öğrenciler İçin)	Tolga SARIYER	0	-	-	0	0	0	0	0	0	0	0	0	0	0
+300	TM	2	ZTM-2013	Statik	Anıl ÇAY	0	PAZARTESİ	102	0	x	x	x	0	0	0	0	0	0	0
+301	TYS	2	ZTY-2015 / TYS-2019	Statik	Ünal KIZIL	0	PERŞEMBE	113	0	0	0	0	0	0	0	0	x	x	x
+302	TM	2	TMT-2013	Statik ve Mukavemet	Anıl ÇAY	0	PAZARTESİ	102	0	x	x	x	x	0	0	0	0	0	0
+303	TYS	4	TYS-4009	Su Kaynaklarının Planlanması	Gökhan ÇAMOĞLU	0	SALI	05	0	0	0	0	0	0	0	0	x	x	x
+304	BB	4	BHB-4015	Subtropik İklim Meyve Türleri	M. Ali GÜNDOĞDU	0	ÇARŞAMBA	203	0	0	0	x	x	0	0	0	0	0	0
+305	TYS	2	TYS-2003	Sulama Gübreleme İlişkileri	İsmail TAŞ	0	-	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+306	TM	4	TMT-4115	Sulama Makinaları ve Teknolojileri	İsmail KAVDIR	0	SALI	205	0	0	0	0	0	0	x	x	Lb	Lb	0
+307	TYS	3	ZTY-3007	Sulama Sistemlerinin Tasarımı	Murat YILDIRIM	0	SALI	0	0	0	0	0	0	0	0	x	x	x	x
+308	TYS	3	ZTY-3019	Sulama Şebekeleri Yönetimi	Murat TEKİNER	0	ÇARŞAMBA	0	0	0	0	0	0	x	x	x	0	0	0
+309	TB	4	TBİ-4009	Sürdürülebilir Tarım	Harun BAYTEKİN	0	ÇARŞAMBA	106	0	0	0	0	0	0	x	x	0	0	0
+310	TO	4	TBB-4003	Sürdürülebilir Toprak Verimliliği	Yakup ÇIKILI	0	PAZARTESİ	06	0	x	x	x	x	0	0	0	0	0	0
+311	BK	4	BTK-4017	Süs Bitkileri Hastalıkları	Ali KARANFİL	0	ÇARŞAMBA	104	0	0	0	0	0	0	0	0	x	x	0
+312	BB	3	ZBB-3007 / BHB-3003	Süs Bitkileri Yetiştiriciliği	Arda AKÇAL	0	ÇARŞAMBA	204	0	0	0	0	0	0	x	x	0	0	0
+313	TYS	4	TYS-4015	Taban Suyu İzleme ve Değerlendirme	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+314	TB	4	TBİ-4013	Tahıl Baklagil ve Yem Bitkileri Hastalıkları	Baboo ALİ	0	ÇARŞAMBA	106	0	0	0	0	0	0	0	0	x	x	0
+315	BK	4	BTK-4007	Tahıl ve Baklagil Hastalıkları	Figen MERT	0	SALI	101	0	0	0	0	0	0	x	x	0	0	0
+316	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+317	TB	3	ZTB-3001 / TBİ-3001	Tahıllar	Mevlüt AKÇURA	0	PERŞEMBE	102	0	0	0	0	0	0	x	x	x	x	0
+318	BB	2	BHB-2005	Tarım Ekonomisi	Damla ÖZSAYIN	0	CUMA	113	0	x	x	0	0	0	0	0	0	0	0
+319	BK	2	BTK-2007	Tarım Ekonomisi	Damla ÖZSAYIN	0	CUMA	113	0	x	x	0	0	0	0	0	0	0	0
+320	TM	2	TMT-2005	Tarım Ekonomisi	Damla ÖZSAYIN	0	CUMA	113	0	0	0	x	x	0	0	0	0	0	0
+321	TB	2	TBİ-2005	Tarım Ekonomisi	Damla ÖZSAYIN	0	CUMA	113	0	x	x	0	0	0	0	0	0	0	0
+322	TO	2	ZTO-2007 / TBB-2003	Tarım Ekonomisi	Damla ÖZSAYIN	0	CUMA	113	0	0	0	x	x	0	0	0	0	0	0
+323	ZO	2	ZTN-2015	Seçmeli 	2. Gurup	TE	CUMA	113	0	0	0	x	x	x	x	0	0	0	0
+324	TE	2	TAE-2001	Tarım Ekonomisi	Sibel TAN	0	ÇARŞAMBA	202	0	0	0	0	0	0	x	x	0	0	0
+325	TE	3	ZTE-3003	Tarım Ekonomisi İstatistiği	Selma KAYALAK	0	PAZARTESİ	03	0	0	0	0	0	0	0	0	x	x	x
+326	TB	1	ZTB-1011	Tarım Hukuku	İlker KARAÖNDER	0	PERŞEMBE	206	0	0	0	x	x	0	0	0	0	0	0
+327	TE	2	TAE-2005	Tarım Makinaları	M. Burak BÜYÜKCAN	0	SALI	02	0	0	0	0	0	0	x	x	x	x	0
+328	ZO	2	ZOO-2011	Tarım Makineleri	Ünal ÜRKMEZ	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+329	TE	3	TAE-3007	Tarım Tarihi ve Deontolojisi	Damla ÖZSAYIN	0	PERŞEMBE	03	0	0	0	0	0	0	x	x	0	0	0
+330	TE	4	TAE-4013	Tarıma Dayalı Sanayi	Arif SEMERCİ	0	SALI	04	0	0	0	0	0	0	x	x	0	0	0
+331	TM	3	ZTM-3019	Tarımda İnsansız Hava Aracı Teknolojisi	Ünal ÜRKMEZ	0	ÇARŞAMBA	06	0	0	0	0	0	0	0	0	0	x	x
+332	TBT	3	ZBY-3011 / TRB-3013	Tarımda Kalite ve Standardizasyon	Cem Ömer EGESEL	0	ÇARŞAMBA	104	0	0	0	0	0	0	x	x	0	0	0
+333	TM	4	TMT-4123	Tarımda Makina Kullanım Teknikleri	Serkan ÖZDEMİR	0	ÇARŞAMBA	TM. Uyg.Lab.	0	0	0	0	0	0	x	x	x	x	0
+334	TO	4	TBB-4015	Tarımsal Atık Yönetimi	Remzi İLAY	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+335	ZO	2	ZOO-2007	Tarımsal Biyoteknoloji	Şemun TAYYAR	0	0	SADECE SINAV	0	0	0	0	0	0	x	x	x	x	0
+336	ZO	3	ZTN-3013	Tarımsal Biyoteknoloji	Şemun TAYYAR	0	SALI	102	0	0	0	0	0	0	0	x	x	x	x
+337	TYS	3	ZTY-3005	Tarımsal İnşaat ve Malzeme Bilgisi	Sefa AKSU	0	PERŞEMBE	0	0	x	x	x	x	0	0	0	0	0	0
+338	TE	3	ZTE-3011	Tarımsal Kıymet Takdiri ve Bilirkişilik	Arif SEMERCİ	0	CUMA	03	0	x	x	x	0	0	0	0	0	0	0
+339	TE	3	TAE-3011	Tarımsal Kuruluşlar ve Organizasyon	Arif SEMERCİ	0	ÇARŞAMBA	03	0	0	0	0	0	x	x	0	0	0	0
+340	TO	2	TBB-2011	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	0	ÇARŞAMBA	201	0	x	x	x	0	0	0	0	0	0	0
+341	ZO	2	ZTN-2027	Seçmeli 	4. Gurup	TM	ÇARŞAMBA	201	0	x	x	x	x	0	0	0	0	0	0
+342	TO	3	ZTO-3005	Tarımsal Mekanizasyon	Ünal ÜRKMEZ	0	ÇARŞAMBA	201	0	x	x	x	x	0	0	0	0	0	0
+343	TE	2	ZTE-2009	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	0	SALI	02	0	0	0	0	0	0	x	x	x	x	0
+344	TBT	2	ZBY-2011	Tarımsal Mekanizasyon	M. Burak BÜYÜKCAN	0	SALI	02	0	0	0	0	0	0	x	x	x	x	0
+345	TYS	2	ZTY-2007 / TYS-2011	Tarımsal Mekanizasyon	Serkan ÖZDEMİR	0	PERŞEMBE	201	0	x	x	x	x	0	0	0	0	0	0
+346	TB	2	TBİ-2011	Tarımsal Mekanizasyon	Serkan ÖZDEMİR	0	PERŞEMBE	201	0	x	x	x	x	0	0	0	0	0	0
+347	TB	3	ZTB-3011	Tarımsal Mekanizasyon	Serkan ÖZDEMİR	0	PERŞEMBE	201	0	x	x	x	x	0	0	0	0	0	0
+348	BB	2	ZBB-2013 / BHB-2011	Tarımsal Mekanizasyon	Gıyasettin Çiçek	0	PAZARTESİ	101	0	0	0	0	0	0	0	x	x	x	x
+349	BK	2	ZBK-2011 / BTK-2013	Tarımsal Mekanizasyon	Gıyasettin Çiçek	0	PAZARTESİ	101	0	0	0	0	0	0	0	x	x	x	x
+350	TYS	3	ZTY-3013 / TYS-3013	Tarımsal Meteoroloji	İsmail TAŞ	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+351	TE	4	TAE-4003	Tarımsal Muhasebe	Duygu AKTÜRK	0	ÇARŞAMBA	04	0	0	0	0	0	0	x	x	x	0	0
+352	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+353	TE	3	ZTE-3007 / TAE-3013	Tarımsal Pazarlama	Bengü EVEREST	0	ÇARŞAMBA	03	0	0	0	0	0	0	0	x	x	0	0
+354	TE	4	TAE-4009	Tarımsal Proje Haz. Tek. II	Duygu AKTÜRK	0	SALI	04	0	0	0	0	0	0	0	0	x	x	x
+355	ZO	4	ZOO-4023	Tarımsal Proje Hazırlama Tekniği	Duygu AKTÜRK	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+356	BK	3	ZBK-3003 / BTK-3013	Tarımsal Savaşım l	Figen MERT	0	SALI	206	0	0	0	x	x	0	0	0	0	0	0
+357	BB	2	ZBB-2011 / BHB-2009	Tarımsal Yapılar ve Sulama	Murat TEKİNER	0	ÇARŞAMBA	101	0	x	x	x	x	0	0	0	0	0	0
+358	BK	2	ZBK-2009 / BTK-2011	Tarımsal Yapılar ve Sulama	Murat TEKİNER	0	ÇARŞAMBA	101	0	x	x	x	x	0	0	0	0	0	0
+359	TB	2	ZTB-2009 / TBİ-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	0	ÇARŞAMBA	02	0	0	0	0	0	0	x	x	x	x	0
+360	TO	2	TBB-2009	Tarımsal Yapılar ve Sulama	İsmail TAŞ	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+361	TE	2	ZTE-2007 / TAE-2011	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	0	PAZARTESİ	202	0	0	0	0	0	0	x	x	x	x	0
+362	TM	2	ZTM-2009 / TMT-2003	Tarımsal Yapılar ve Sulama	Murat YILDIRIM	0	PAZARTESİ	202	0	0	0	0	0	0	x	x	x	x	0
+363	TM	3	ZTM-3019	Tarımda İnsansız Hava Aracı Teknolojisi	Ünal ÜRKMEZ	0	PERŞEMBE	Bölüm Lab.	0	0	0	0	0	Lb	Lb	0	0	0	0
+364	TB	3	TBİ-3005	Tarımsal Yayım ve Haberleşme	Sema Ezgi YÜCEER PALA	0	ÇARŞAMBA	04	0	0	0	0	0	0	0	0	0	x	x
+365	TO	2	ZTO-2015	Tarla Bitkileri	Onur HOCAOĞLU	0	SALI	01	0	0	0	x	x	x	Lb	0	0	0	0
+366	TYS	2	ZTY-2013 / TYS-2017	Tarla Bitkileri	Altıngül Özaslan PARLAK	0	CUMA	206	0	0	0	0	0	0	0	x	x	x	x
+367	ZO	2	ZTN-2009	Seçmeli 	1. Gurup	TB	PERŞEMBE	102	0	x	x	x	x	0	0	0	0	0	0
+368	BK	2	ZBK-2017	Tarla Bitkileri	Fatih KAHRIMAN	0	CUMA	201	0	0	0	x	x	Lb	Lb	0	0	0	0
+369	TB	2	ZTB-2013	Tarla Tarımı	Onur HOCAOĞLU	0	PAZARTESİ	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+370	ZO	4	ZOO-4017	Tavuk Yetiştirme	Ali KARABAYIR	0	SALI	204	0	0	0	0	0	0	0	0	x	x	0
+371	TBT	2	ZBY-2013	Teknik Resim	Umut MUCAN	0	PAZARTESİ	203	0	0	0	0	0	0	0	x	x	Lb	Lb
+372	BK	2	ZBK-2005	Teknik Resim	Gıyasettin ÇİÇEK	0	SALI	202	0	x	x	x	x	0	0	0	0	0	0
+373	TYS	2	ZTY-2003	Teknik Resim	Murat YILDIRIM	0	CUMA	Prof.Dr H. TURHAN	0	x	x	x	x	0	0	0	0	0	0
+374	TE	1	TAE-1011	Temel Bilgi Teknoloji Kullanımı	F. Cem KUZUCU	0	SALI	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
+375	BK	1	BTK-1005	Temel Bilgi Teknoloji Kullanımı	Ali Kürşat ŞAHİN	0	PERŞEMBE	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
+376	BB	1	BHB-1007	Temel Bilgi Teknolojisi Kullanımı	F. Cem KUZUCU	0	ÇARŞAMBA	Bilgisayar Lab.	0	0	0	0	0	0	x	x	x	x	0
+377	TM	1	TMT-1009	Temel Bilgi Teknolojisi Kullanımı	Serkan ÖZDEMİR	0	CUMA	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
+378	TBT	1	TRB-1007	Temel Bilgi Teknolojisi Kullanımı	Uğur SARI	0	PAZARTESİ	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
+379	TYS	1	TYS-1101	Temel Bilgi Teknolojisi Kullanımı	Umut MUCAN	0	SALI	Bilgisayar Lab.	0	0	0	x	x	x	x	0	0	0	0
+380	TO	1	ZTO-1011	Temel Bilgisayar Programları	F. Cem KUZUCU	0	PAZARTESİ	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
+381	TB	2	ZTB-2017	Temel Bilgisayar Programları	Onur Sinan TÜRKMEN	0	PERŞEMBE	Bilgisayar Lab.	0	0	0	0	0	0	0	x	x	x	x
+382	BB	1	ZBB-1011	Temel Bilgisayar Uygulamaları	F. Cem KUZUCU	0	ÇARŞAMBA	Bilgisayar Lab.	0	0	0	0	0	0	x	x	x	x	0
+383	TM	1	ZTM-1011	Temel Bilgisayar Uygulamaları	Serkan ÖZDEMİR	0	CUMA	Bilgisayar Lab.	0	0	0	0	0	0	0	0	0	0	0
+384	TBT	1	ZBY-1011	Temel Bilgisayar Uygulamaları	Uğur SARI	0	PAZARTESİ	Bilgisayar Lab.	0	x	x	x	x	0	0	0	0	0	0
+385	TYS	1	ZTY-1005	Temel Bilgisayar Uygulamaları	Umut MUCAN	0	SALI	Bilgisayar Lab.	0	0	0	x	x	x	x	0	0	0	0
+386	TM	3	TMT-3113	Termik Motorlar	Sarp Korkut SÜMER	0	SALI	TM. Uyg.Lab.	0	0	0	0	0	0	x	x	x	0	0
+387	BB	3	ZBB-3001	Termodinamik	Gıyasettin ÇİÇEK	0	PAZARTESİ	204	0	x	x	x	x	0	0	0	0	0	0
+388	BK	3	ZBK-3009	Tohum Kaynaklı Patojenler	Ali KARANFİL	0	CUMA	206	0	0	0	0	0	0	x	x	0	0	0
+389	TBT	3	ZBY-3017 / TRB-3015	Tohumluk Bilimi ve Teknolojisi	İskender TİRYAKİ	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+390	TB	3	ZTB-3013	Tohumluk Bilimi ve Teknolojisi	Bahri İZCİ	0	PAZARTESİ	02	0	0	0	0	0	0	x	x	x	0	0
+391	TB	4	TBİ-4005	Tohumluk Bilimi ve Teknolojisi	Bahri İZCİ	0	PAZARTESİ	02	0	0	0	0	0	0	x	x	0	0	0
+392	BK	2	BTK-2015	Toprak Bilgisi	Ali SUNGUR	0	PAZARTESİ	Seminer Sln.	0	0	0	0	0	x	x	0	0	0	0
+393	ZO	2	ZOO-2009	Toprak Bilgisi	Ali SUNGUR	0	0	SADECE SINAV	0	x	x	x	x	0	0	0	0	0	0
+394	BB	2	ZBB-2015 / BHB-2015	Toprak Bilgisi	Mustafa BAŞARAN	0	ÇARŞAMBA	201	0	0	0	0	0	0	x	x	x	x	0
+395	TBT	2	TRB-2009	Toprak Bilgisi	Mustafa BAŞARAN	0	ÇARŞAMBA	201	0	0	0	0	0	0	x	x	0	0	0
+396	BK	2	ZBK-2015	Toprak Bilimi ve Bitki Besleme	Ali Sungur	0	PERŞEMBE	202	0	0	0	0	0	0	0	x	x	x	x
+397	ZO	2	ZTN-2001	Toprak Bilimi ve Bitki Besleme	Ali Sungur	ZO	PERŞEMBE	202	0	0	0	0	0	0	0	x	x	x	x
+398	TYS	3	ZTY-3017	Toprak Bitki Su İlişkileri	Gökhan ÇAMOĞLU	0	ÇARŞAMBA	0	0	0	0	0	0	0	0	0	x	x	x
+399	TO	3	ZTO-3011 / TBB-3003	Toprak Biyolojisi	Cafer TÜRKMEN	0	PERŞEMBE	104	0	0	0	0	0	0	x	x	x	x	0
+400	TO	4	TBB-4025	Toprak Ekosistemi	Cafer TÜRKMEN	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+401	TO	3	ZTO-3009 / TBB-3001	Toprak Fiziği	Yasemin KAVDIR	0	PERŞEMBE	04	0	x	x	x	x	0	0	0	0	0	0
+402	TO	4	TBB-4001	Toprak Genesisi ve Sınıflandırma	Hüseyin EKİNCİ	0	SALI	103	0	0	0	0	0	x	x	x	x	0	0
+403	TM	3	ZTM-3007 / TMT-3111	Toprak İşleme Makineleri	Sakine ÖZPINAR	0	ÇARŞAMBA	TM. Uyg.Lab.	x	x	x	x	0	0	0	0	0	0	0
+404	TO	3	ZTO-3013 / TBB-3011	Toprak Kimyası	Ali SUNGUR	0	SALI	105	0	0	0	0	0	0	x	x	x	x	0
+405	TM	3	TMT-3117	Toprak Mekaniği	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+406	TO	3	ZTO-3017	Toprak Mineralojisi	Hüseyin EKİNCİ	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+407	TYS	4	TYS-4007	Toprak Su Yapılarının Tasarımı	Murat TEKİNER	0	PAZARTESİ	05	0	x	x	Lb	Lb	0	0	0	0	0	0
+408	TB	4	TBİ-4017	Toprak ve Su Koruma	0	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+409	TO	4	TBB-4013	Toprak ve Su Koruma	Mustafa BAŞARAN	0	PAZARTESİ	06	0	0	0	0	0	0	x	x	0	0	0
+410	TYS	3	TYS-3011	Toprak ve Su Koruma Mühendisliği	Murat TEKİNER	0	PERŞEMBE	0	0	0	0	0	0	x	x	x	0	0	0
+411	BB	4	BHB-4017	Topraksız Tarım	Seçkin KAYA	0	ÇARŞAMBA	203	0	0	0	0	0	0	x	x	0	0	0
+412	BB	3	ZBB-3011 / BHB-3013	Tropik İlkim Meyve Türleri	Murat ŞEKER	0	PERŞEMBE	204	0	x	x	0	0	0	0	0	0	0	0
+413	BB	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+414	BK	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+415	TE	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	x	x	0	0	0	0	0	0	0	0
+416	TM	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+417	TBT	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+418	TYS	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	x	x	0	0	0	0	0	0
+419	TB	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	0	0	0	0
+420	TO	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	0	0	0	0
+421	ZO	1	TDİ-1101	Türk Dili I	Özgür ÜSTÜN	0	ÇARŞAMBA	Prof.Dr H. TURHAN	0	0	0	0	0	x	x	0	0	0	0
+422	TE	3	ZTE-3013	Türkiye Ekonomisi	Özge Can Niyaz ALTINOK	0	SALI	03	0	0	0	0	0	0	x	x	0	0	0
+423	TE	4	TAE-4011	Uluslararası Pazarlama	Bengü EVEREST	0	PAZARTESİ	04	0	x	x	x	0	0	0	0	0	0	0
+424	TYS	4	TYS-4011	Uzaktan Algılama	Melis İNALPULAT	0	SALI	05	0	0	0	0	x	x	Lb	Lb	0	0	0
+425	TO	4	TBB-4023	Uzaktan Algılama	Hasan Özcan	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+426	TE	3	ZTE-3005	Üretim Ekonomisi	Duygu AKTÜRK	0	PERŞEMBE	113	0	0	x	x	x	0	0	0	0	0	0
+427	TE	4	TAE-4001	Üretim Ekonomisi	Duygu AKTÜRK	0	PERŞEMBE	113	0	0	x	x	x	0	0	0	0	0	0
+428	BB	4	BHB-4041	Üzüm Kurutma Tekniği	Harun ÇOBAN	0	PAZARTESİ	203	0	x	x	0	0	0	0	0	0	0	0
+429	BB	3	ZBB-3013 / BHB-3015	Üzümsü Meyveler	Zeliha GÖKBAYRAK	0	PERŞEMBE	204	0	0	0	0	0	0	x	x	0	0	0
+430	BB	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+431	BK	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+432	TE	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+433	TM	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+434	TBT	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+435	TYS	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+436	TB	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+437	TO	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+438	ZO	1	YDİ-1101	Yabancı Dil I	Gökhan HINIZ	0	CUMA	ONLINE	x	0	0	0	0	0	0	0	0	0	0
+439	BK	3	BTK-3015	Yabancı Ot Meselesi	Ahmet ULUDAĞ	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+440	ZO	2	ZOO-2001	Yem Bitkileri	Altıngül Özaslan PARLAK	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+441	BK	4	BTK-4015	Yem Bitkileri Hastalıkları	0	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+442	ZO	3	ZTN-3009	Yem Bitkileri ve Mera	Altıngül Özaslan Parlak	0	PERŞEMBE	05	0	x	x	x	Lb	0	0	0	0	0	0
+443	ZO	4	ZOO-4021 / 18ZOO487	Yem Katkıları	Kemal ÇELİK	0	PAZARTESİ	04	0	0	0	0	0	0	0	x	x	0	0
+444	ZO	4	ZOO-4001	Yem Toksikolojisi	Kemal ÇELİK	0	PERŞEMBE	106	0	x	x	0	0	0	0	0	0	0	0
+445	TB	4	TBİ-4015	Yemeklik Tane Baklagiller	Altıngül Özaslan PARLAK	0	PAZARTESİ	106	0	0	0	x	x	0	0	0	0	0	0
+446	ZO	3	ZOO-3007	Yemler Bilgisi ve Teknolojisi	Kemal ÇELİK	0	0	SADECE SINAV	0	0	0	0	0	0	0	0	0	0	0
+447	BK	3	BTK-3017	Yeni Zararlılarla Mücadele Stratejileri	Levent EFİL	0	ÇARŞAMBA	105	0	0	0	x	x	0	0	0	0	0	0
+448	TE	4	TAE-4015	Yetişkinlerin Eğitimi ve Sunum Teknikleri	Selma KAYALAK	0	PAZARTESİ	Bölüm Odası	0	0	0	0	0	x	x	x	0	0	0
+449	TYS	3	TYS-3009	Zemin Mekaniği	Sefa AKSU	0	PERŞEMBE	0	0	0	0	0	0	0	0	0	x	x	x
+450	SKS	4	0	Meyve ve Sebzelerin İnsan Besin Sağlığı Açısından Önemi	Hakan ENGİN	0	CUMA	04	0	0	0	x	x	x	0	0	0	0	0
+451	SKS	4	0	Bitki Birlikteliği	Zeliha GÖKBAYRAK	0	CUMA	05	0	0	0	x	x	x	0	0	0	0	0
+452	FSD	3	0	İyi Tarım Uygulamaları	Hakan ENGİN	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+453	FSD	3	0	Fidancılık Teknikleri	Neslihan EKİNCİ	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+454	FSD	3	0	Organik Tarımın Temel İlkeleri	Seçkin KAYA	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+455	FSD	3	0	Zeytin Yetiştiriciliği ve Zeytinyağı Üretimi	M. Ali GÜNDOĞDU	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+456	FSD	3	0	Zeytin ve Zeytinyağı Tadım ve Farkındalığı	M. Ali GÜNDOĞDU	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+457	FSD	3	0	Bitki Korumada Yeni Gelişmeler	Levent EFİL	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+458	SKS	4	0	Böceklerin Dünyası	Çiğdem GÜNEŞ	0	CUMA	06	0	0	0	x	x	x	0	0	0	0	0
+459	SKS	4	0	Adli Entomoloji	Ali Kürşat ŞAHİN	0	CUMA	104	0	0	0	x	x	x	0	0	0	0	0
+460	SKS	4	0	Pestisitlerin Uygulamadan Sonraki Akıbetleri	Burak POLAT	0	CUMA	105	0	0	0	x	x	x	0	0	0	0	0
+461	FSD	3	0	Entegre Mücadele	İpek YAŞAR	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+462	FSD	3	0	Bitki Hekimliği	Savaş KORKMAZ	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+463	FSD	3	0	Evsel Zararlılar ve Mücadelesi	Ali ÖZPINAR	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+464	FSD	3	0	Tarımsal Savaş Mekanizasyonu 	Ünal ÜRKMEZ	0	CUMA	TM. Uyg.Lab.	0	0	0	0	0	0	0	0	x	x	x
+465	FSD	3	0	Tarım Makineleri Kullanım Teknikleri 	M. Burak BÜYÜKCAN	0	-	AÇILMIYOR	0	0	0	0	0	0	0	0	x	x	x
+466	FSD	3	0	Hassas Tarım Teknolojileri	F. Göksel Pekitkan	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+467	FSD	3	0	Tarımsal İngilizce I	Cem Ömer EGESEL	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+468	FSD	3	0	Moleküler Biyolojiye Giriş	Hanife YANDAYAN	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+469	FSD	3	0	Genetiği Değiştirilmiş Organizmalar	İskender TİRYAKİ	0	0	AÇILMIYOR	0	0	0	0	0	0	0	0	0	0	0
+470	FSD	3	0	Sulamanın Temel İlkeleri 	Gökhan ÇAMOĞLU	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+471	FSD	3	0	Bilgisayar Destekli Çizim 	Umut MUCAN	0	CUMA	Bilgisayar Lab.	0	0	0	0	x	x	x	0	0	0	0
+472	FSD	3	0	Kuraklık ve Su Kaynakları	İsmail TAŞ	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+473	FSD	3	0	Dijital Tarım ve AB Yeşil Mutabakat Politikaları	Ünal KIZIL	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+474	FSD	3	0	Temel Elektronik ve PIC16F84 Programlama	Murat YILDIRIM	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+475	FSD	3	0	Kırsal Yerleşim ve Kalkınma Planlanması	Melis İNALPULAT	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+476	FSD	3	0	Toprak ve İnsan 	Ali Sungur	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+477	FSD	3	0	Laboratuvar Tekniği 	Ali Sümer	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+478	FSD	3	0	Gübreler ve Gübreleme	Yakup ÇIKILI	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+479	FSD	3	0	Topraksız Tarım Teknikleri	Yakup ÇIKILI	0	CUMA	0	0	0	0	0	0	0	0	0	x	x	x
+480	SKS	4	0	Sportif Balıkçılık	Ali İŞMEN	0	CUMA	106	0	0	0	x	x	x	0	0	0	0	0
+481	SKS	4	0	Temel ve İleri Fotoğrafçılık Teknikleri	Zayde AYVAZ	0	CUMA	204	0	0	0	x	x	x	0	0	0	0	0
+482	SKS	4	0	Genel Sanat Tarihi 	Mürüvvet HARMAN	0	CUMA	205	0	0	0	x	x	x	0	0	0	0	0
 `; 
         // ************************************************************************
         // VERİ ALANI SONU
@@ -729,14 +755,16 @@ Sıra	Bölüm	Şube	Ders Kodu	Dersin Adı	Dersi Veren Öğretim Elemanı	Öğren
                         const saatIndex = 9 + i; 
                         const saatDurumu = sutunlar[saatIndex] ? sutunlar[saatIndex].toString().trim().toLowerCase() : "";
                         
-                        if (saatDurumu === 'x') {
+                        // Hem 'x' hem de 'lb' durumlarını yakala
+                        if (saatDurumu === 'x' || saatDurumu === 'lb') {
                             islenmisVeri.push({
                                 bolum: bolum,
                                 sube: sube,
                                 ogretimElemani: hoca,
                                 dersAdi: dersAdi,
                                 gun: gun,
-                                derslik: derslik,
+                                // Eğer saat durumu 'lb' ise derslik adını değiştir
+                                derslik: saatDurumu === 'lb' ? "Bölüm Laboratuvarı" : derslik,
                                 saatIndex: i,
                                 saatMetni: saatBasliklari[i]
                             });
